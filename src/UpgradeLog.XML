@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="ERP">
+</Property><Property Name="解决方案文件" Value="D:\OA综合版11\OA综合版\ERP.sln">
+</Property><Property Name="用户选项文件" Value="D:\OA综合版11\OA综合版\ERP.suo">
+</Property><Property Name="Date" Value="2011年4月6日">
+</Property><Property Name="Time" Value="15:47">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="ERP.sln" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\ERP.sln">
+</Event><Event ErrorLevel="0" Project="" Source="ERP.suo" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\ERP.suo">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\BLL.csproj" Description="项目文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\BLL.csproj">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPAnPai.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPAnPai.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPBaoJia.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPBaoJia.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPBaoXiao.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPBaoXiao.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPBBSBanKuai.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPBBSBanKuai.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPBBSTieZi.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPBBSTieZi.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPBook.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPBook.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPBookJieHuan.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPBookJieHuan.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPBuMen.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPBuMen.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPBuyChanPin.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPBuyChanPin.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPBuyOrder.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPBuyOrder.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPCarInfo.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPCarInfo.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPCarShiYong.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPCarShiYong.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPCarWeiHu.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPCarWeiHu.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPContract.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPContract.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPContractChanPin.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPContractChanPin.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPCustomFuWu.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPCustomFuWu.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPCustomHuiFang.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPCustomHuiFang.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPCustomInfo.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPCustomInfo.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPCustomNeed.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPCustomNeed.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPCYDIC.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPCYDIC.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPDangAn.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPDangAn.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPDanWeiInfo.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPDanWeiInfo.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPDengJi.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPDengJi.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPFileList.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPFileList.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPForm.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPForm.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPFormType.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPFormType.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPGongGao.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPGongGao.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPGuDing.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPGuDing.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPGuDingJiLu.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPGuDingJiLu.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPJiangCheng.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPJiangCheng.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPJiaoSe.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPJiaoSe.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPJinDu.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPJinDu.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPJSDIC.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPJSDIC.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPJuanKu.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPJuanKu.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPKaoHe.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPKaoHe.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPKaoHeRW.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPKaoHeRW.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPKaoHeXM.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPKaoHeXM.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPKaoQin.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPKaoQin.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPKaoQinSetting.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPKaoQinSetting.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPLanEmail.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPLanEmail.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPLinkLog.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPLinkLog.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPLinkMan.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPLinkMan.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPLiRun.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPLiRun.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPMeeting.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPMeeting.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPMoBan.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPMoBan.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPMobile.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPMobile.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPNetEmail.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPNetEmail.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPOfficething.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPOfficething.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPPeiXun.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPPeiXun.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPPeiXunRiJi.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPPeiXunRiJi.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPPeiXunXiaoGuo.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPPeiXunXiaoGuo.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPPinShen.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPPinShen.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPProduct.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPProduct.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPProject.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPProject.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPRedHead.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPRedHead.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPRenShiHeTong.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPRenShiHeTong.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPRiZhi.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPRiZhi.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPShenPi.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPShenPi.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPShiShi.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPShiShi.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPShouKuan.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPShouKuan.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPSongYang.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPSongYang.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPSource.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPSource.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPSupplyLink.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPSupplyLink.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPSupplys.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPSupplys.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPSystemSetting.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPSystemSetting.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPTalkInfo.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPTalkInfo.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPTalkOnlineUser.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPTalkOnlineUser.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPTalkSetting.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPTalkSetting.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPTelFile.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPTelFile.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPTiXing.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPTiXing.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPTongXunLu.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPTongXunLu.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPTouSu.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPTouSu.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPUser.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPUser.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPPOPAndSMTP.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPPOPAndSMTP.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPUserDesk.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPUserDesk.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPVote.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPVote.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPWorkFlow.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPWorkFlow.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPWorkFlowJieDian.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPWorkFlowJieDian.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPWorkPlan.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPWorkPlan.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPWorkRiZhi.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPWorkRiZhi.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPWorkToDo.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPWorkToDo.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPYinZhang.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPYinZhang.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPYinZhangLog.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPYinZhangLog.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\Properties\AssemblyInfo.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\ERPHuiBao.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\BLL\ERPHuiBao.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\BLL.csproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="BLL" Source="BLL\BLL.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\Common.csproj" Description="项目文件已成功备份为 D:\OA综合版11\OA综合版\Backup\Common\Common.csproj">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\ConfigHelper.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\Common\ConfigHelper.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\DataCache.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\Common\DataCache.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\DataToExcel.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\Common\DataToExcel.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\DataValidate.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\Common\DataValidate.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\DEncrypt\DEncrypt.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\Common\DEncrypt\DEncrypt.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\DEncrypt\DESEncrypt.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\Common\DEncrypt\DESEncrypt.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\DEncrypt\HashEncode.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\Common\DEncrypt\HashEncode.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\DEncrypt\RSACryption.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\Common\DEncrypt\RSACryption.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\INIFile.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\Common\INIFile.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\MessageBox.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\Common\MessageBox.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\PageValidate.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\Common\PageValidate.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\Properties\AssemblyInfo.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\Common\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\PublicMethod.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\Common\PublicMethod.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\RMB.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\Common\RMB.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\StringPlus.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\Common\StringPlus.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\TimeParser.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\Common\TimeParser.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\Common.csproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="Common" Source="Common\Common.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="DBUtility" Source="DBUtility\DBUtility.csproj" Description="项目文件已成功备份为 D:\OA综合版11\OA综合版\Backup\DBUtility\DBUtility.csproj">
+</Event><Event ErrorLevel="0" Project="DBUtility" Source="DBUtility\DbHelperSQL.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\DBUtility\DbHelperSQL.cs">
+</Event><Event ErrorLevel="0" Project="DBUtility" Source="DBUtility\Properties\AssemblyInfo.cs" Description="文件已成功备份为 D:\OA综合版11\OA综合版\Backup\DBUtility\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="DBUtility" Source="DBUtility\DBUtility.csproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="DBUtility" Source="DBUtility\DBUtility.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="ERP.sln" Description="成功转换解决方案">
+</Event><Event ErrorLevel="3" Project="" Source="ERP.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\BLL.csproj" Description="扫描完成: 项目文件不需要升级。">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\Common.csproj" Description="扫描完成: 项目文件不需要升级。">
+</Event><Event ErrorLevel="0" Project="DBUtility" Source="DBUtility\DBUtility.csproj" Description="扫描完成: 项目文件不需要升级。">
+</Event></UpgradeLog>
