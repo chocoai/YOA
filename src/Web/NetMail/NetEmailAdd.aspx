@@ -1,4 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="NetEmailAdd.aspx.cs" Inherits="NetMail_NetEmailAdd" %>
+<%@ Register Assembly="CKEditor.NET" Namespace="CKEditor.NET" TagPrefix="CKEditor" %>
 <html>
 	<head>
 		<title>企业OA综合管理平台</title>
@@ -68,9 +69,7 @@
             <td align="right" style="width: 170px; height: 25px; background-color: #cccccc">
                 邮件内容：</td>
             <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
-            
-            <asp:TextBox ID="TxtContent" runat="server" style="display:none;"></asp:TextBox>
-        <IFRAME src="../eWebEditor/ewebeditor.htm?id=TxtContent&style=mini" frameborder='0' scrolling='no' width='99%' height='350'></IFRAME>
+            <CKEditor:CKEditorControl ID="TxtContent" BasePath="~/ckeditor" runat="server" UIColor="#BFEE62" Language="zh-cn" EnterMode="BR"></CKEditor:CKEditorControl>
             
             </td>
         </tr>

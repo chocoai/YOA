@@ -1,8 +1,22 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="WorkRiZhiModify.aspx.cs" Inherits="Work_WorkRiZhiModify" %>
+<%@ Register Assembly="CKEditor.NET" Namespace="CKEditor.NET" TagPrefix="CKEditor" %>
 <html>
 	<head>
 		<title>企业OA综合管理平台</title>
   <LINK href="../Style/Style.css" type="text/css" rel="STYLESHEET">
+ <link href="../Style/jquery-ui/jquery-ui.min.css" rel="stylesheet" />
+    <script src="../Scripts/jQuery/jquery-3.1.1.min.js"></script>
+    <script src="../Scripts/jquery-ui/jquery-ui.min.js"></script>
+    <script src="../Scripts/Public.js"></script>
+    <script type="text/javascript">
+        var dialog;
+        function selectConditionCallback(returndata) {
+            $('#<%=TextBox5.ClientID%>').val(returndata);
+            if (dialog != null) {
+                dialog.dialog("close");
+            }
+        }
+    </script>
   <script language="javascript">
   function PrintTable()
     {
@@ -45,16 +59,14 @@
                 日志类型：</td>
             <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
                 <asp:TextBox ID="TextBox5" runat="server" Width="150px"></asp:TextBox>
-                <img class="HerCss" onclick="var wName;var RadNum=Math.random();wName=window.showModalDialog('../Main/SelectCondition.aspx?TableName=ERPWorkRiZhi&LieName=TypeStr&Radstr='+RadNum,'','dialogWidth:350px;DialogHeight=400px;status:no;help:no;resizable:yes;');if(wName==null){}else{document.getElementById('TextBox5').value=wName;}"
+                <img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPWorkRiZhi&LieName=TypeStr&callbackFun=selectConditionCallback',500,350);"
                     src="../images/Button/search.gif" /></td>
         </tr>
         <tr>
             <td align="right" style="width: 170px; height: 25px; background-color: #cccccc">
                 详细内容：</td>
             <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
-                <asp:TextBox ID="TxtContent" runat="server" Style="display: none"></asp:TextBox>
-                <iframe frameborder="0" height="350" scrolling="no" src="../eWebEditor/ewebeditor.htm?id=TxtContent&style=mini"
-                    width="99%"></iframe>
+                 <CKEditor:CKEditorControl ID="TxtContent" BasePath="~/ckeditor" runat="server" UIColor="#BFEE62" Language="zh-cn" EnterMode="BR"></CKEditor:CKEditorControl>
             </td>
         </tr>
         </table></div>

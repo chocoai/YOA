@@ -34,9 +34,8 @@
             }
                        
            function  sendFromChild()  
-            {       
-                window.returnValue=CheckSelect();  
-                window.close();  
+		    {
+               window.parent["<%=Request["callbackFun"] %>"](CheckSelect());
             } 
             
             function  CCC()  

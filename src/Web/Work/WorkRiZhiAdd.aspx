@@ -1,48 +1,29 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="WorkRiZhiAdd.aspx.cs" Inherits="Work_WorkRiZhiAdd" %>
+
 <%@ Register Assembly="CKEditor.NET" Namespace="CKEditor.NET" TagPrefix="CKEditor" %>
 <html>
 <head>
     <title>企业OA综合管理平台</title>
     <link href="../Style/Style.css" type="text/css" rel="STYLESHEET">
-    <script language="javascript">
+    <link href="../Style/jquery-ui/jquery-ui.min.css" rel="stylesheet" />
+    <script src="../Scripts/jQuery/jquery-3.1.1.min.js"></script>
+    <script src="../Scripts/jquery-ui/jquery-ui.min.js"></script>
+    <script src="../Scripts/Public.js"></script>
+    <script type="text/javascript">
+        var dialog;
+        function selectConditionCallback(returndata) {
+            $('#<%=TextBox5.ClientID%>').val(returndata);
+            if (dialog != null) {
+                dialog.dialog("close");
+            }
+        }
+    </script>
+     <script  type="text/javascript">
         function PrintTable() {
             document.getElementById("PrintHide").style.visibility = "hidden"
             print();
             document.getElementById("PrintHide").style.visibility = "visible"
         }
-    </script>
-    <script type="text/javascript">
-        function myShowModalDialog(url, width, height, fn) {
-            if (navigator.userAgent.indexOf("Chrome") > 0) {
-                window.returnCallBackValue354865588 = fn;
-                var paramsChrome = 'height=' + height + ', width=' + width + ', top=' + (((window.screen.height - height) / 2) - 50) +
-                    ',left=' + ((window.screen.width - width) / 2) + ',toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no';
-                window.open(url, "newwindow", paramsChrome);
-            }
-            else {
-                var params = 'dialogWidth:' + width + 'px;dialogHeight:' + height + 'px;status:no;dialogLeft:'
-                            + ((window.screen.width - width) / 2) + 'px;dialogTop:' + (((window.screen.height - height) / 2) - 50) + 'px;';
-                var tempReturnValue = window.showModalDialog(url, "", params);
-                fn.call(window, tempReturnValue);
-            }
-        }
-        function myReturnValue(value) {
-            if (navigator.userAgent.indexOf("Chrome") > 0) {
-                window.opener.returnCallBackValue354865588.call(window.opener, value);
-            }
-            else {
-                window.returnValue = value;
-            }
-        }
-        //父窗体调用方法
-        //myShowModalDialog("Channel-Operation-" + $(this).attr("data-id"), 500, 300, function (v) {
-        //    if (v == 1) {
-        //        loadList();
-        //    }
-        //});
-        //子窗体传值方法
-        //myReturnValue(1);
-        //window.close();
     </script>
 </head>
 <body>
@@ -76,14 +57,13 @@
                     <td align="right" style="width: 170px; height: 25px; background-color: #cccccc">日志类型：</td>
                     <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
                         <asp:TextBox ID="TextBox5" runat="server" Width="150px"></asp:TextBox>
-                        <img class="HerCss" onclick="var wName;var RadNum=Math.random();wName=window.open('../Main/SelectCondition.aspx?TableName=ERPWorkRiZhi&LieName=TypeStr&Radstr='+RadNum,'','dialogWidth:350px;DialogHeight=400px;status:no;help:no;resizable:yes;');if(wName==null){}else{document.getElementById('TextBox5').value=wName;}"
+                        <img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPWorkRiZhi&LieName=TypeStr&callbackFun=selectConditionCallback',500,350);"
                             src="../images/Button/search.gif" /></td>
                 </tr>
                 <tr>
                     <td align="right" style="width: 170px; height: 25px; background-color: #cccccc">详细内容：</td>
                     <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
-                      <%--  <asp:TextBox ID="TxtContent" runat="server" Style="display: none"></asp:TextBox>--%>
-                       <CKEditor:CKEditorControl ID="TxtContent" BasePath="~/ckeditor" runat="server" UIColor="#BFEE62" Language="zh-cn" EnterMode="BR"></CKEditor:CKEditorControl>
+                        <CKEditor:CKEditorControl ID="TxtContent" BasePath="~/ckeditor" runat="server" UIColor="#BFEE62" Language="zh-cn" EnterMode="BR"></CKEditor:CKEditorControl>
                     </td>
                 </tr>
             </table>

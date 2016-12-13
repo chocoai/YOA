@@ -98,8 +98,8 @@
                        
            function  sendFromChild()  
             {       
-                //window.returnValue=CheckSelect();  
-                window.returnValue=document.getElementById('TextBox4').value;
+               //window.returnValue=CheckSelect();  
+               window.parent["<%=Request["callbackFun"] %>"](document.getElementById('TextBox4').value);
                 window.close();  
             } 
             

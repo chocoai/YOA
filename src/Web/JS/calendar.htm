@@ -1,4 +1,6 @@
-<title> - -请选择日期 - -</title><script>
+<title> - -请选择日期 - -</title>
+<script src="../Scripts/jQuery/jquery-3.1.1.min.js"></script>
+<script>
 //*************************日历控件***************************
 // cody by zwl 2008-7-16
 // 说明:返回值为 一个字符串
@@ -6,25 +8,22 @@
 // 使用方法  : 
 // var dataString = showModalDialog("calendar.htm", "dd日mm月yyyy年" ,"dialogWidth:286px;dialogHeight:221px;status:no;help:no;");
 
+    function GetQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]); return null;
+    }
 
 var userFormatString;
+userFormatString = "yyyy-mm--dd";
 
-if(window.dialogArguments ==null)
-{
- userFormatString = "yyyy-mm--dd";
-}
-else
-{
- userFormatString = window.dialogArguments;
-}
 
 with(new Date()){
  var Nyear = getYear();
  var Nmonth =  getMonth() +1;
  var Ndate =  getDate();
 }
-
-window.returnValue = new dataObj(Nyear,Nmonth,Ndate ).getDateString(userFormatString);
+window.parent[GetQueryString("callbackFun")](new dataObj(Nyear, Nmonth, Ndate).getDateString(userFormatString));
 
 window.document.onclick = function(){
  var obj = window.event.srcElement;
@@ -39,7 +38,7 @@ window.document.onclick = function(){
   Ndate = obj.id.split("-")[2];
   window.currentActiveItem = obj;
   window.currentSelectDate = window.currentActiveItem.id;
-  window.currentActiveItem.runtimeStyle.cssText = "background:url(../images/bg.gif) no-repeat 12px 6px;color:#000;padding-top:1px;font-weight:bold";
+  //window.currentActiveItem.runtimeStyle.cssText = "background:url(../images/bg.gif) no-repeat 12px 6px;color:#000;padding-top:1px;font-weight:bold";
  }
 }
 
@@ -57,12 +56,12 @@ window.document.onclick = function(){
 }
 
 window.onload = function(){
- window.document.attachEvent("onclick" , doCmd);
- window.document.attachEvent("onmouseover" , buttonOver);
- window.document.attachEvent("onmouseout" , buttonOut);
- window.document.attachEvent("onmousedown" , buttonDown);
- window.document.attachEvent("onmouseup" , buttonUp);
- window.document.attachEvent("ondblclick" ,
+ $(window.document).bind("onclick" , doCmd);
+ $(window.document).bind("onmouseover", buttonOver);
+ $(window.document).bind("onmouseout", buttonOut);
+ $(window.document).bind("onmousedown", buttonDown);
+ $(window.document).bind("onmouseup", buttonUp);
+ $(window.document).bind("ondblclick",
    function()
    {
      var obj = window.event.srcElement;
