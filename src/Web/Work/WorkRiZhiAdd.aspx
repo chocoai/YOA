@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="WorkRiZhiAdd.aspx.cs" Inherits="Work_WorkRiZhiAdd" %>
-
+<%@ Register Assembly="CKEditor.NET" Namespace="CKEditor.NET" TagPrefix="CKEditor" %>
 <html>
 <head>
     <title>企业OA综合管理平台</title>
@@ -82,9 +82,8 @@
                 <tr>
                     <td align="right" style="width: 170px; height: 25px; background-color: #cccccc">详细内容：</td>
                     <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
-                        <asp:TextBox ID="TxtContent" runat="server" Style="display: none"></asp:TextBox>
-                        <iframe frameborder="0" height="350" scrolling="no" src="../eWebEditor/ewebeditor.htm?id=TxtContent&style=mini"
-                            width="99%"></iframe>
+                      <%--  <asp:TextBox ID="TxtContent" runat="server" Style="display: none"></asp:TextBox>--%>
+                       <CKEditor:CKEditorControl ID="TxtContent" BasePath="~/ckeditor" runat="server" UIColor="#BFEE62" Language="zh-cn" EnterMode="BR"></CKEditor:CKEditorControl>
                     </td>
                 </tr>
             </table>
