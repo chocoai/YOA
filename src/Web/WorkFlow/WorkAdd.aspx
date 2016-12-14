@@ -4,6 +4,19 @@
 		<title>企业OA综合管理平台</title>
   <LINK href="../Style/Style.css" type="text/css" rel="STYLESHEET">
   <script type="text/javascript" language="javascript" src="../JS/calendar.js"></script>
+         <link href="../Style/jquery-ui/jquery-ui.min.css" rel="stylesheet" />
+    <script src="../Scripts/jQuery/jquery-3.1.1.min.js"></script>
+    <script src="../Scripts/jquery-ui/jquery-ui.min.js"></script>
+    <script src="../Scripts/Public.js"></script>
+    <script type="text/javascript">
+        var dialog;
+        function selectUserCallback(returndata) {
+            $('#<%=TextBox5.ClientID%>').val(returndata);
+            if (dialog != null) {
+                dialog.dialog("close");
+            }
+        }
+    </script>
   <script language="javascript">
       function selectyinzhang(imgidstr)
         {
@@ -133,7 +146,7 @@
                 审批人选择：</td>
             <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
                 <asp:TextBox ID="TextBox5" runat="server" Width="349px"></asp:TextBox>
-                <img class="HerCss" onclick="var wName;var RadNum=Math.random();wName=window.showModalDialog('../Main/SelectUser.aspx?TableName=ERPUser&LieName=UserName&Condition='+document.getElementById('TextBox2').value+'&Radstr='+RadNum,'','dialogWidth:350px;DialogHeight=400px;status:no;help:no;resizable:yes;');if(wName==null){}else{document.getElementById('TextBox5').value=wName;}"
+                <img class="HerCss" onclick="openDialog('../Main/SelectUser.aspx?TableName=ERPUser&LieName=UserName&Condition='+document.getElementById('TextBox2').value+'&callbackFun=selectUserCallback',350,400)"
                     src="../images/Button/search.gif" /><asp:CheckBox ID="CHKSMS" runat="server" Checked="True" /><img
                         src="../images/TreeImages/@sms.gif" />短消息<asp:CheckBox ID="CHKMOB" runat="server" /><img
                             src="../images/TreeImages/mobile_sms.gif" />短信</td>
