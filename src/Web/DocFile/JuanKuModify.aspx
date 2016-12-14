@@ -3,6 +3,31 @@
 	<head>
 		<title>企业OA综合管理平台</title>
   <LINK href="../Style/Style.css" type="text/css" rel="STYLESHEET">
+        <link href="../Style/jquery-ui/jquery-ui.min.css" rel="stylesheet" />
+    <script src="../Scripts/jQuery/jquery-3.1.1.min.js"></script>
+    <script src="../Scripts/jquery-ui/jquery-ui.min.js"></script>
+    <script src="../Scripts/Public.js"></script>
+    <script type="text/javascript">
+        var dialog;
+        function selectConditionNameCallback(returndata) {
+            $('#<%=txtJuanKuName.ClientID%>').val(returndata);
+            if (dialog != null) {
+                dialog.dialog("close");
+            }
+        }
+        function selectConditionNumCallback(returndata) {
+            $('#<%=txtJuanKuSerils.ClientID%>').val(returndata);
+            if (dialog != null) {
+                dialog.dialog("close");
+            }
+        }
+        function selectConditionDepartCallback(returndata) {
+            $('#<%=txtSuoShuBuMen.ClientID%>').val(returndata);
+            if (dialog != null) {
+                dialog.dialog("close");
+            }
+        }
+    </script>
   <script language="javascript">
   function PrintTable()
     {
@@ -37,7 +62,7 @@
 	</td>
 	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
 		<asp:TextBox id="txtJuanKuName" runat="server" Width="350px"></asp:TextBox>
-		<img class="HerCss" onclick="var wName;var RadNum=Math.random();wName=window.showModalDialog('../Main/SelectCondition.aspx?TableName=ERPJuanKu&LieName=JuanKuName&Radstr='+RadNum,'','dialogWidth:350px;DialogHeight=400px;status:no;help:no;resizable:yes;');if(wName==null){}else{document.getElementById('txtJuanKuName').value=wName;}"  src="../images/Button/search.gif" />
+		<img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPJuanKu&LieName=JuanKuName&callbackFun=selectConditionNameCallback',350,400)"  src="../images/Button/search.gif" />
 		<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtJuanKuName" ErrorMessage="*该项不可以为空"></asp:RequiredFieldValidator>
 	</td></tr>
 	<tr>
@@ -46,7 +71,7 @@
 	</td>
 	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
 		<asp:TextBox id="txtJuanKuSerils" runat="server" Width="350px"></asp:TextBox>
-		<img class="HerCss" onclick="var wName;var RadNum=Math.random();wName=window.showModalDialog('../Main/SelectCondition.aspx?TableName=ERPJuanKu&LieName=JuanKuSerils&Radstr='+RadNum,'','dialogWidth:350px;DialogHeight=400px;status:no;help:no;resizable:yes;');if(wName==null){}else{document.getElementById('txtJuanKuSerils').value=wName;}"  src="../images/Button/search.gif" />
+		<img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPJuanKu&LieName=JuanKuSerils&callbackFun=selectConditionNumCallback',350,400)"  src="../images/Button/search.gif" />
 	</td></tr>
 	<tr>
 	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">
@@ -54,7 +79,7 @@
 	</td>
 	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
 		<asp:TextBox id="txtSuoShuBuMen" runat="server" Width="350px"></asp:TextBox>
-		<img class="HerCss" onclick="var wName;var RadNum=Math.random();wName=window.showModalDialog('../Main/SelectCondition.aspx?TableName=ERPBuMen&LieName=BuMenName&Radstr='+RadNum,'','dialogWidth:350px;DialogHeight=400px;status:no;help:no;resizable:yes;');if(wName==null){}else{document.getElementById('txtSuoShuBuMen').value=wName;}"  src="../images/Button/search.gif" />
+		<img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPBuMen&LieName=BuMenName&callbackFun=selectConditionDepartCallback',350,400)"  src="../images/Button/search.gif" />
 	</td></tr>
 	<tr>
 	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">

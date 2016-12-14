@@ -16,7 +16,7 @@ strFrame+='</style>';
 strFrame+='<scr' + 'ipt>';
 strFrame+='var datelayerx,datelayery;';
 strFrame+='var bDrag;';
-strFrame+='function document.onmousemove()';
+strFrame += 'document.onmousemove=function()';
 strFrame+='{if(bDrag && window.event.button==1)';
 strFrame+='    {var DateLayer=parent.document.all.endDateLayer.style;';
 strFrame+='        DateLayer.posLeft += window.event.clientX-datelayerx;';
@@ -93,7 +93,7 @@ strFrame+=' title="点击这里选择时间" align=center width=42>' ;
 strFrame+='                    <span id=meizzSecondHead></span></td>';
 strFrame+='             </tr></table></td></tr></table></div>';
 
-window.frames.endDateLayer.document.writeln(strFrame);
+window.frames.endDateLayer.document.write(strFrame);
 window.frames.endDateLayer.document.close();        //解决ie进度条不结束的问题
 
 
@@ -197,7 +197,7 @@ var meizzTheSecond=new Date().getSeconds();//定义秒变量的初始值
 
 var meizzWDay=new Array(37);    //定义写日期的数组
 
-function document.onclick() //任意点击时关闭该控件    //ie6的情况可以由下面的切换焦点处理代替
+document.onclick=function() //任意点击时关闭该控件    //ie6的情况可以由下面的切换焦点处理代替
 { 
     with(window.event)
     {
@@ -206,7 +206,7 @@ function document.onclick() //任意点击时关闭该控件    //ie6的情况�
     }
 }
 
-function document.onkeyup()        //按Esc键关闭，切换焦点关闭
+document.onkeyup = function ()        //按Esc键关闭，切换焦点关闭
 {
     if (window.event.keyCode==27){
         if(outObject)outObject.blur();

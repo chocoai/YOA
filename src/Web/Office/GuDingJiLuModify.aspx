@@ -3,6 +3,32 @@
 	<head>
 		<title>CN-Soft 2009 网络智能办公系统</title>
   <LINK href="../Style/Style.css" type="text/css" rel="STYLESHEET">
+        <link href="../Style/jquery-ui/jquery-ui.min.css" rel="stylesheet" />
+    <script src="../Scripts/jQuery/jquery-3.1.1.min.js"></script>
+    <script src="../Scripts/jquery-ui/jquery-ui.min.js"></script>
+    <script src="../Scripts/Public.js"></script>
+    <script type="text/javascript">
+        var dialog;
+        function selectConditionThingNameCallback(returndata) {
+            $('#<%=txtGDName.ClientID%>').val(returndata);
+            if (dialog != null) {
+                dialog.dialog("close");
+            }
+        }
+        function selectConditionThingCategoryCallback(returndata) {
+            $('#<%=txtZJType.ClientID%>').val(returndata);
+            if (dialog != null) {
+                dialog.dialog("close");
+            }
+        }
+       
+        function selectConditionThingDatetimeCallback(returndata) {
+            $('#<%=txtZJDate.ClientID%>').val(returndata);
+            if (dialog != null) {
+                dialog.dialog("close");
+            }
+        }
+    </script>
   <script language="javascript">
   function PrintTable()
     {
@@ -37,7 +63,7 @@
 	</td>
 	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
 		<asp:TextBox id="txtGDName" runat="server" Width="350px"></asp:TextBox>
-		<img class="HerCss" onclick="var wName;var RadNum=Math.random();wName=window.showModalDialog('../Main/SelectCondition.aspx?TableName=ERPGuDing&LieName=GDName&Radstr='+RadNum,'','dialogWidth:350px;DialogHeight=400px;status:no;help:no;resizable:yes;');if(wName==null){}else{document.getElementById('txtGDName').value=wName;}"  src="../images/Button/search.gif" />
+		<img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPGuDing&LieName=GDName&callbackFun=selectConditionThingNameCallback',350,400)"  src="../images/Button/search.gif" />
 		<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtGDName" ErrorMessage="*该项不可以为空"></asp:RequiredFieldValidator>
 	</td></tr>
 	<tr>
@@ -46,7 +72,7 @@
 	</td>
 	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
 		<asp:TextBox id="txtZJType" runat="server" Width="350px"></asp:TextBox>
-		<img class="HerCss" onclick="var wName;var RadNum=Math.random();wName=window.showModalDialog('../Main/SelectCondition.aspx?TableName=ERPGuDingJiLu&LieName=ZJType&Radstr='+RadNum,'','dialogWidth:350px;DialogHeight=400px;status:no;help:no;resizable:yes;');if(wName==null){}else{document.getElementById('txtZJType').value=wName;}"  src="../images/Button/search.gif" />
+		<img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPGuDingJiLu&LieName=ZJType&callbackFun=selectConditionThingCategoryCallback',350,400)"  src="../images/Button/search.gif" />
 	</td></tr>
 	<tr>
 	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">
@@ -54,7 +80,7 @@
 	</td>
 	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
 		<asp:TextBox id="txtZJDate" runat="server" Width="350px"></asp:TextBox>
-		<img class="HerCss" onclick="var dataString = showModalDialog('../JS/calendar.htm', 'yyyy-mm-dd' ,'dialogWidth:286px;dialogHeight:221px;status:no;help:no;');if(dataString==null){}else{document.getElementById('txtZJDate').value=dataString;}" src="../images/Button/search.gif" />
+		<img class="HerCss" onclick="openDialog('../JS/calendar.htm?callbackFun=selectConditionThingDatetimeCallback',286,221)" src="../images/Button/search.gif" />
 	</td></tr>
 	<tr>
 	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">

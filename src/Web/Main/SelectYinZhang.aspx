@@ -13,7 +13,7 @@
 		<script  language="javascript">
            function  sendFromChild()  
             {       
-                window.returnValue=document.getElementById('DropDownList1').value;  
+               window.parent["<%=Request["callbackFun"] %>"](document.getElementById('DropDownList1').value);
 //                window.close();  
             }
             

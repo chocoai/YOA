@@ -1,4 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TieZiView.aspx.cs" Inherits="BBS_TieZiView" %>
+<%@ Register Assembly="CKEditor.NET" Namespace="CKEditor.NET" TagPrefix="CKEditor" %>
 <html>
 	<head>
 		<title>企业OA综合管理平台</title>
@@ -58,9 +59,7 @@
                 <td align="right" valign="top"  style="width: 170px; height: 25px; background-color: #ffffff">
                     回复帖子：</td>
                 <td style="padding-left: 5px; background-color: #ffffff" valign="top">
-                    <asp:TextBox ID="TxtContent" runat="server" Style="display: none"></asp:TextBox>
-                    <iframe frameborder="0" height="150" scrolling="no" src="../eWebEditor/ewebeditor.htm?id=TxtContent&style=mini"
-                        width="99%"></iframe>
+                    <CKEditor:CKEditorControl ID="TxtContent" BasePath="~/ckeditor" runat="server" UIColor="#BFEE62" Language="zh-cn" EnterMode="BR"></CKEditor:CKEditorControl>
                     <br />
                     <asp:Button ID="Button1" runat="server" Font-Bold="False" OnClick="Button1_Click"
                         Text="回复信息" /></td>
