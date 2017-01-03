@@ -186,7 +186,7 @@
 
                                                                     </asp:TreeNode>
 
-                                                                   <%-- <asp:TreeNode ImageUrl="~/images/TreeImages/hrms.gif" Text="人力资源管理" Value="人力资源管理" SelectAction="Expand">
+                                                                    <asp:TreeNode ImageUrl="~/images/TreeImages/hrms.gif" Text="人力资源管理" Value="人力资源管理" SelectAction="Expand">
 
                                                                         <asp:TreeNode ImageUrl="~/images/TreeImages/hrms.gif" Text="人事档案" Value="A003" NavigateUrl="../SystemManage/SystemUser.aspx?Type=serch" Target="rform"></asp:TreeNode>
                                                                         <asp:TreeNode ImageUrl="~/images/TreeImages/hrms.gif" Text="人事合同" Value="A004" NavigateUrl="../HRNew/RenShiHeTong.aspx" Target="rform"></asp:TreeNode>
@@ -221,9 +221,9 @@
                                                                         <asp:TreeNode ImageUrl="~/images/TreeImages/attendance.gif" Text="考勤明细" Value="041" NavigateUrl="../HR/KaoQinMingXi.aspx" Target="rform"></asp:TreeNode>
                                                                         <asp:TreeNode ImageUrl="~/images/TreeImages/finance.gif" Text="考勤查询统计" Value="042" NavigateUrl="../HR/KaoQingChaXunTongJi.aspx" Target="rform"></asp:TreeNode>
 
-                                                                    </asp:TreeNode>--%>
+                                                                    </asp:TreeNode>
 
-                                                                   <%-- <asp:TreeNode ImageUrl="~/images/TreeImages/hrms.gif" Text="客户管理CRM" Value="客户管理CRM" SelectAction="Expand">
+                                                                    <asp:TreeNode ImageUrl="~/images/TreeImages/hrms.gif" Text="客户管理CRM" Value="客户管理CRM" SelectAction="Expand">
                                                                         <asp:TreeNode ImageUrl="~/images/TreeImages/hrms.gif" Text="我的客户" Value="我的客户" SelectAction="Expand">
                                                                             <asp:TreeNode ImageUrl="~/images/TreeImages/hrms.gif" Text="客户信息" Value="C001" NavigateUrl="../CRM/MyCustom.aspx" Target="rform"></asp:TreeNode>
                                                                             <asp:TreeNode ImageUrl="~/images/TreeImages/hrms.gif" Text="客户联系人" Value="C002" NavigateUrl="../CRM/MyCustomLinkMan.aspx?CustomName=" Target="rform"></asp:TreeNode>
@@ -280,7 +280,7 @@
                                                                         <asp:TreeNode ImageUrl="~/images/TreeImages/hrms.gif" Text="采购订单登记" Value="A015" NavigateUrl="../Supply/BuyDengJi.aspx" Target="rform"></asp:TreeNode>
                                                                         <asp:TreeNode ImageUrl="~/images/TreeImages/hrms.gif" Text="采购订单管理" Value="A016" NavigateUrl="../Supply/BuyOrder.aspx" Target="rform"></asp:TreeNode>
                                                                         <asp:TreeNode ImageUrl="~/images/TreeImages/hrms.gif" Text="订单产品记录" Value="A017" NavigateUrl="../Supply/BuyLog.aspx?OrderName=" Target="rform"></asp:TreeNode>
-                                                                    </asp:TreeNode>--%>
+                                                                    </asp:TreeNode>
                                                                     <asp:TreeNode ImageUrl="~/images/TreeImages/office_Product.gif" Text="办公用品管理" Value="办公用品管理" SelectAction="Expand">
                                                                         <asp:TreeNode ImageUrl="~/images/TreeImages/diary.gif" Text="办公用品申请" Value="A018" NavigateUrl="../Office/OfficeShengQing.aspx" Target="rform"></asp:TreeNode>
                                                                         <asp:TreeNode ImageUrl="~/images/TreeImages/office_Product.gif" Text="办公用品管理" Value="A019" NavigateUrl="../Office/Officething.aspx" Target="rform"></asp:TreeNode>
@@ -289,18 +289,18 @@
                                                                         <asp:TreeNode ImageUrl="~/images/TreeImages/@asset.gif" Text="固定资产管理" Value="A020" NavigateUrl="../Office/GuDing.aspx" Target="rform"></asp:TreeNode>
                                                                         <asp:TreeNode ImageUrl="~/images/TreeImages/@asset.gif" Text="资产折旧记录" Value="A021" NavigateUrl="../Office/GuDingJiLu.aspx?GDName=" Target="rform"></asp:TreeNode>
                                                                     </asp:TreeNode>
-                                                                 <%--   <asp:TreeNode ImageUrl="~/images/TreeImages/book.gif" Text="图书管理" Value="图书管理" SelectAction="Expand">
+                                                                    <asp:TreeNode ImageUrl="~/images/TreeImages/book.gif" Text="图书管理" Value="图书管理" SelectAction="Expand">
                                                                         <asp:TreeNode ImageUrl="~/images/TreeImages/book.gif" Text="图书管理" Value="A022" NavigateUrl="../Office/Book.aspx" Target="rform"></asp:TreeNode>
                                                                         <asp:TreeNode ImageUrl="~/images/TreeImages/book.gif" Text="图书借阅登记" Value="A023" NavigateUrl="../Office/BookJieHuan.aspx" Target="rform"></asp:TreeNode>
                                                                         <asp:TreeNode ImageUrl="~/images/TreeImages/book.gif" Text="图书借阅管理" Value="A024" NavigateUrl="../Office/BookJieHuanOK.aspx" Target="rform"></asp:TreeNode>
-                                                                    </asp:TreeNode>--%>
+                                                                    </asp:TreeNode>
 
                                                                     <asp:TreeNode ImageUrl="~/images/TreeImages/file_folder.gif" Text="档案文书管理" Value="档案文书管理" SelectAction="Expand">
                                                                         <asp:TreeNode ImageUrl="~/images/TreeImages/file_folder.gif" Text="卷库管理" Value="A025" NavigateUrl="../DocFile/JuanKu.aspx" Target="rform"></asp:TreeNode>
                                                                         <asp:TreeNode ImageUrl="~/images/TreeImages/file_folder.gif" Text="档案管理" Value="A026" NavigateUrl="../DocFile/DangAn.aspx?JuanKuName=" Target="rform"></asp:TreeNode>
                                                                         <asp:TreeNode ImageUrl="~/images/TreeImages/file_folder.gif" Text="档案销毁" Value="A027" NavigateUrl="../DocFile/DangAnDel.aspx" Target="rform"></asp:TreeNode>
                                                                     </asp:TreeNode>
-                                                                <%-- <asp:TreeNode ImageUrl="~/images/TreeImages/file_folder.gif" Text="培训管理" Value="培训管理" SelectAction="Expand">
+                                                                 <asp:TreeNode ImageUrl="~/images/TreeImages/file_folder.gif" Text="培训管理" Value="培训管理" SelectAction="Expand">
                                                                         <asp:TreeNode ImageUrl="~/images/TreeImages/file_folder.gif" Text="培训信息" Value="A028" NavigateUrl="../DocFile/PeiXun.aspx" Target="rform"></asp:TreeNode>
                                                                         <asp:TreeNode ImageUrl="~/images/TreeImages/file_folder.gif" Text="培训日志" Value="A029" NavigateUrl="../DocFile/PeiXunRiJi.aspx?PeiXunName=" Target="rform"></asp:TreeNode>
                                                                         <asp:TreeNode ImageUrl="~/images/TreeImages/file_folder.gif" Text="效果评估" Value="A030" NavigateUrl="../DocFile/PeiXunXiaoGuo.aspx?PeiXunName=" Target="rform"></asp:TreeNode>
@@ -323,7 +323,7 @@
                                                                         <asp:TreeNode ImageUrl="~/images/TreeImages/vehicle.gif" Text="车辆维护管理" Value="F010" NavigateUrl="../Car/CarWeiHuOK.aspx" Target="rform"></asp:TreeNode>
                                                                         <asp:TreeNode ImageUrl="~/images/TreeImages/vehicle.gif" Text="车辆信息管理" Value="F011" NavigateUrl="../Car/CarInfo.aspx" Target="rform"></asp:TreeNode>
 
-                                                                    </asp:TreeNode>--%>
+                                                                    </asp:TreeNode>
 
                                                                     <asp:TreeNode ImageUrl="~/images/TreeImages/@hrms.gif" Text="组织机构信息" Value="组织机构信息" SelectAction="Expand">
                                                                         <asp:TreeNode ImageUrl="~/images/TreeImages/@hrms.gif" Text="单位信息查询" Value="043" NavigateUrl="../SystemManage/DanWeiInfo.aspx?Type=serch" Target="rform"></asp:TreeNode>
