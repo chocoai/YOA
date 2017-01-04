@@ -16,6 +16,61 @@
                 dialog.dialog("close");
             }
         }
+        function selectContractStatusConditionCallback(returndata) {
+            $('#<%=txtNowState.ClientID%>').val(returndata);
+            if (dialog != null) {
+                dialog.dialog("close");
+            }
+        }
+        function selectContractNoConditionCallback(returndata) {
+            $('#<%=txtSerils.ClientID%>').val(returndata);
+            if (dialog != null) {
+                dialog.dialog("close");
+            }
+        }
+        function selecContractTypeConditionCallback(returndata) {
+            $('#<%=txtTypeStr.ClientID%>').val(returndata);
+            if (dialog != null) {
+                dialog.dialog("close");
+            }
+        }
+        function selectJingYeConditionCallback(returndata) {
+            $('#<%=txtJingYe.ClientID%>').val(returndata);
+            if (dialog != null) {
+                dialog.dialog("close");
+            }
+        }
+        function selectBaoMiXieYiConditionCallback(returndata) {
+            $('#<%=txtBaoMiXieYi.ClientID%>').val(returndata);
+            if (dialog != null) {
+                dialog.dialog("close");
+            }
+        }
+        function selectQianYueDateConditionCallback(returndata) {
+            $('#<%=txtQianYueDate.ClientID%>').val(returndata);
+            if (dialog != null) {
+                dialog.dialog("close");
+            }
+        }
+        function selectManYueDateConditionCallback(returndata) {
+            $('#<%=txtManYueDate.ClientID%>').val(returndata);
+            if (dialog != null) {
+                dialog.dialog("close");
+            }
+        }
+        function selectJianZhengJiGuanConditionCallback(returndata) {
+            $('#<%=txtJianZhengJiGuan.ClientID%>').val(returndata);
+            if (dialog != null) {
+                dialog.dialog("close");
+            }
+        }
+        function selectJianZhengDateConditionCallback(returndata) {
+            $('#<%=txtJianZhengDate.ClientID%>').val(returndata);
+            if (dialog != null) {
+                dialog.dialog("close");
+            }
+        }
+        
     </script>
     <script language="javascript">
         function PrintTable() {
@@ -49,7 +104,7 @@
                     </td>
                     <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
                         <asp:TextBox ID="txtHeTongUser" runat="server" Width="350px"></asp:TextBox>
-                        <img class="HerCss" onclick="openDialog('../Main/SelectUser.aspx?TableName=ERPUser&LieName=UserName&callbackFun=selectUserConditionCallback',500,350)" src="../images/Button/search.gif" />
+                        <img class="HerCss" onclick="openDialog('../Main/SelectUser.aspx?TableName=ERPUser&LieName=UserName&callbackFun=selectUserConditionCallback',500,400)" src="../images/Button/search.gif" />
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtHeTongUser" ErrorMessage="*该项不可以为空"></asp:RequiredFieldValidator>
                     </td>
                 </tr>
@@ -58,7 +113,7 @@
                     </td>
                     <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
                         <asp:TextBox ID="txtNowState" runat="server" Width="350px"></asp:TextBox>
-                        <img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPRenShiHeTong&LieName=NowState&callbackFun=selectConditionCallback',350,400)" src="../images/Button/search.gif" />
+                        <img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPRenShiHeTong&LieName=NowState&callbackFun=selectContractStatusConditionCallback',350,400)" src="../images/Button/search.gif" />
                     </td>
                 </tr>
                 <tr>
@@ -66,7 +121,7 @@
                     </td>
                     <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
                         <asp:TextBox ID="txtSerils" runat="server" Width="350px"></asp:TextBox>
-                        <img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPRenShiHeTong&LieName=Serils&callbackFun=selectConditionCallback',350,400)" src="../images/Button/search.gif" />
+                        <img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPRenShiHeTong&LieName=Serils&callbackFun=selectContractNoConditionCallback',350,400)" src="../images/Button/search.gif" />
                     </td>
                 </tr>
                 <tr>
@@ -74,7 +129,7 @@
                     </td>
                     <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
                         <asp:TextBox ID="txtTypeStr" runat="server" Width="350px"></asp:TextBox>
-                        <img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPRenShiHeTong&LieName=TypeStr&callbackFun=selectConditionCallback',350,400)" src="../images/Button/search.gif" />
+                        <img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPRenShiHeTong&LieName=TypeStr&callbackFun=selecContractTypeConditionCallback',350,400)" src="../images/Button/search.gif" />
                     </td>
                 </tr>
                 <tr>
@@ -82,7 +137,7 @@
                     </td>
                     <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
                         <asp:TextBox ID="txtJingYe" runat="server" Width="350px"></asp:TextBox>
-                        <img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPRenShiHeTong&LieName=JingYe&callbackFun=selectConditionCallback',350,400)" src="../images/Button/search.gif" />
+                        <img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPRenShiHeTong&LieName=JingYe&callbackFun=selectJingYeConditionCallback',350,400)" src="../images/Button/search.gif" />
                     </td>
                 </tr>
                 <tr>
@@ -90,7 +145,7 @@
                     </td>
                     <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
                         <asp:TextBox ID="txtBaoMiXieYi" runat="server" Width="350px"></asp:TextBox>
-                        <img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPRenShiHeTong&LieName=BaoMiXieYi&callbackFun=selectConditionCallback',350,400)" src="../images/Button/search.gif" />
+                        <img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPRenShiHeTong&LieName=BaoMiXieYi&callbackFun=selectBaoMiXieYiConditionCallback',350,400)" src="../images/Button/search.gif" />
                     </td>
                 </tr>
                 <tr>
@@ -98,7 +153,7 @@
                     </td>
                     <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
                         <asp:TextBox ID="txtQianYueDate" runat="server" Width="350px"></asp:TextBox>
-                        <img class="HerCss" onclick="openDialog('../JS/calendar.htm?callbackFun=selectConditionCallback', 286,221)" src="../images/Button/search.gif" />
+                        <img class="HerCss" onclick="openDialog('../JS/calendar.htm?callbackFun=selectQianYueDateConditionCallback', 286,221)" src="../images/Button/search.gif" />
                     </td>
                 </tr>
                 <tr>
@@ -114,7 +169,7 @@
                     </td>
                     <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
                         <asp:TextBox ID="txtJianZhengJiGuan" runat="server" Width="350px"></asp:TextBox>
-                        <img class="HerCss" onclick="var wName;var RadNum=Math.random();wName=window.showModalDialog('../Main/SelectCondition.aspx?TableName=ERPRenShiHeTong&LieName=JianZhengJiGuan&Radstr='+RadNum,'','dialogWidth:350px;DialogHeight=400px;status:no;help:no;resizable:yes;');if(wName==null){}else{document.getElementById('txtJianZhengJiGuan').value=wName;}" src="../images/Button/search.gif" />
+                        <img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPRenShiHeTong&LieName=JianZhengJiGuan&callbackFun=selectJianZhengJiGuanConditionCallback',350,400)" src="../images/Button/search.gif" />
                     </td>
                 </tr>
                 <tr>
@@ -122,7 +177,7 @@
                     </td>
                     <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
                         <asp:TextBox ID="txtJianZhengDate" runat="server" Width="350px"></asp:TextBox>
-                        <img class="HerCss" onclick="var dataString = showModalDialog('../JS/calendar.htm', 'yyyy-mm-dd' ,'dialogWidth:286px;dialogHeight:221px;status:no;help:no;');if(dataString==null){}else{document.getElementById('txtJianZhengDate').value=dataString;}" src="../images/Button/search.gif" />
+                        <img class="HerCss" onclick="openDialog('../JS/calendar.htm?callbackFun=selectJianZhengDateConditionCallback',286,221)" src="../images/Button/search.gif" />
                     </td>
                 </tr>
                 <tr>

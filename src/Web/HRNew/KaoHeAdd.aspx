@@ -3,6 +3,19 @@
 	<head>
 		<title>企业OA综合管理平台</title>
   <LINK href="../Style/Style.css" type="text/css" rel="STYLESHEET">
+         <link href="../Style/jquery-ui/jquery-ui.min.css" rel="stylesheet" />
+    <script src="../Scripts/jQuery/jquery-3.1.1.min.js"></script>
+    <script src="../Scripts/jquery-ui/jquery-ui.min.js"></script>
+    <script src="../Scripts/Public.js"></script>
+    <script type="text/javascript">
+        var dialog;
+        function selectKaoHeTitleConditionCallback(returndata) {
+            $('#<%=txtKaoHeTitle.ClientID%>').val(returndata);
+            if (dialog != null) {
+                dialog.dialog("close");
+            }
+        }
+    </script>
   <script language="javascript">
   function PrintTable()
     {
@@ -37,7 +50,7 @@
 	</td>
 	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
 		<asp:TextBox id="txtKaoHeTitle" runat="server" Width="350px"></asp:TextBox>
-		<img class="HerCss" onclick="var wName;var RadNum=Math.random();wName=window.showModalDialog('../Main/SelectCondition.aspx?TableName=ERPKaoHe&LieName=KaoHeTitle&Radstr='+RadNum,'','dialogWidth:350px;DialogHeight=400px;status:no;help:no;resizable:yes;');if(wName==null){}else{document.getElementById('txtKaoHeTitle').value=wName;}"  src="../images/Button/search.gif" />
+		<img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPKaoHe&LieName=KaoHeTitle&callbackFun=selectConditionCallback',350,400)"  src="../images/Button/search.gif" />
 		<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtKaoHeTitle" ErrorMessage="*该项不可以为空"></asp:RequiredFieldValidator>
 	</td></tr>
 	<tr>
@@ -46,7 +59,7 @@
 	</td>
 	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
 		<asp:TextBox id="txtKaoHeUser" runat="server" Width="350px"></asp:TextBox>
-		<img class="HerCss" onclick="var wName;var RadNum=Math.random();wName=window.showModalDialog('../Main/SelectUser.aspx?TableName=ERPUser&LieName=UserName&Radstr='+RadNum,'','dialogWidth:350px;DialogHeight=400px;status:no;help:no;resizable:yes;');if(wName==null){}else{document.getElementById('txtKaoHeUser').value=wName;}" src="../images/Button/search.gif" />
+		<img class="HerCss" onclick="openDialog('../Main/SelectUser.aspx?TableName=ERPUser&LieName=UserName&callbackFun=selectConditionCallback',350,400)" src="../images/Button/search.gif" />
 	</td></tr>
 	<tr>
 	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">
@@ -54,7 +67,7 @@
 	</td>
 	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
 		<asp:TextBox id="txtKaoHeType" runat="server" Width="350px"></asp:TextBox>
-		<img class="HerCss" onclick="var wName;var RadNum=Math.random();wName=window.showModalDialog('../Main/SelectCondition.aspx?TableName=ERPKaoHe&LieName=KaoHeType&Radstr='+RadNum,'','dialogWidth:350px;DialogHeight=400px;status:no;help:no;resizable:yes;');if(wName==null){}else{document.getElementById('txtKaoHeType').value=wName;}"  src="../images/Button/search.gif" />
+		<img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPKaoHe&LieName=KaoHeType&callbackFun=selectConditionCallback',350,400)"  src="../images/Button/search.gif" />
 	</td></tr>
 	<tr>
 	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">
@@ -62,7 +75,7 @@
 	</td>
 	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
 		<asp:TextBox id="txtKaoHeDate" runat="server" Width="350px"></asp:TextBox>
-		<img class="HerCss" onclick="var dataString = showModalDialog('../JS/calendar.htm', 'yyyy-mm-dd' ,'dialogWidth:286px;dialogHeight:221px;status:no;help:no;');if(dataString==null){}else{document.getElementById('txtKaoHeDate').value=dataString;}" src="../images/Button/search.gif" />
+		<img class="HerCss" onclick="openDialog('../JS/calendar.htm?callbackFun=selectConditionCallback',286,221)" src="../images/Button/search.gif" />
 	</td></tr>
 	<tr>
 	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">
@@ -70,7 +83,7 @@
 	</td>
 	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
 		<asp:TextBox id="txtXiangMuFen" runat="server" Width="350px"></asp:TextBox>
-		<img class="HerCss" onclick="var wName;var RadNum=Math.random();wName=window.showModalDialog('../Main/SelectCondition.aspx?TableName=ERPKaoHe&LieName=XiangMuFen&Radstr='+RadNum,'','dialogWidth:350px;DialogHeight=400px;status:no;help:no;resizable:yes;');if(wName==null){}else{document.getElementById('txtXiangMuFen').value=wName;}"  src="../images/Button/search.gif" />
+		<img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPKaoHe&LieName=XiangMuFen&callbackFun=selectConditionCallback',350,400)"  src="../images/Button/search.gif" />
 	&nbsp;<a href="LookDefile.aspx?Type=XM" target="_blank" >【查看考核项目】</a>
 	</td></tr>
 	<tr>
@@ -79,7 +92,7 @@
 	</td>
 	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
 		<asp:TextBox id="txtRenWuFen" runat="server" Width="350px"></asp:TextBox>
-		<img class="HerCss" onclick="var wName;var RadNum=Math.random();wName=window.showModalDialog('../Main/SelectCondition.aspx?TableName=ERPKaoHe&LieName=RenWuFen&Radstr='+RadNum,'','dialogWidth:350px;DialogHeight=400px;status:no;help:no;resizable:yes;');if(wName==null){}else{document.getElementById('txtRenWuFen').value=wName;}"  src="../images/Button/search.gif" />
+		<img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPKaoHe&callbackFun=selectConditionCallback',350,400)"  src="../images/Button/search.gif" />
 	&nbsp;<a href="LookDefile.aspx?Type=RW" target="_blank" >【查看考核任务】</a>
 	</td></tr>
 	<tr>
@@ -88,7 +101,7 @@
 	</td>
 	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
 		<asp:TextBox id="txtKaoHeJieLun" runat="server" Width="350px"></asp:TextBox>
-		<img class="HerCss" onclick="var wName;var RadNum=Math.random();wName=window.showModalDialog('../Main/SelectCondition.aspx?TableName=ERPKaoHe&LieName=KaoHeJieLun&Radstr='+RadNum,'','dialogWidth:350px;DialogHeight=400px;status:no;help:no;resizable:yes;');if(wName==null){}else{document.getElementById('txtKaoHeJieLun').value=wName;}"  src="../images/Button/search.gif" />
+		<img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPKaoHe&LieName=KaoHeJieLun&callbackFun=selectConditionCallback',350,400)"  src="../images/Button/search.gif" />
 	</td></tr>
 	<tr>
 	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">
