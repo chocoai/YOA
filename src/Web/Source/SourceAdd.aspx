@@ -3,6 +3,37 @@
 	<head>
 		<title>CN-Soft 2009 网络智能办公系统</title>
   <LINK href="../Style/Style.css" type="text/css" rel="STYLESHEET">
+        <link href="../Style/jquery-ui/jquery-ui.min.css" rel="stylesheet" />
+    <script src="../Scripts/jQuery/jquery-3.1.1.min.js"></script>
+    <script src="../Scripts/jquery-ui/jquery-ui.min.js"></script>
+    <script src="../Scripts/Public.js"></script>
+    <script type="text/javascript">
+        var dialog;
+        function selectSourceNameConditionCallback(returndata) {
+            $('#<%=txtSourceName.ClientID%>').val(returndata);
+            if (dialog != null) {
+                dialog.dialog("close");
+            }
+        }
+        function selectShengQingUserConditionCallback(returndata) {
+            $('#<%=txtShengQingUser.ClientID%>').val(returndata);
+            if (dialog != null) {
+                dialog.dialog("close");
+            }
+        }
+        function selectShiYongUserConditionCallback(returndata) {
+            $('#<%=txtShiYongUser.ClientID%>').val(returndata);
+            if (dialog != null) {
+                dialog.dialog("close");
+            }
+        }
+        function selectShiYongShiXianConditionCallback(returndata) {
+            $('#<%=txtShiYongShiXian.ClientID%>').val(returndata);
+            if (dialog != null) {
+                dialog.dialog("close");
+            }
+        }
+    </script>
   <script language="javascript">
   function PrintTable()
     {
@@ -37,7 +68,7 @@
 	</td>
 	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
 		<asp:TextBox id="txtSourceName" runat="server" Width="350px"></asp:TextBox>
-		<img class="HerCss" onclick="var wName;var RadNum=Math.random();wName=window.showModalDialog('../Main/SelectCondition.aspx?TableName=ERPSource&LieName=SourceName&Radstr='+RadNum,'','dialogWidth:350px;DialogHeight=400px;status:no;help:no;resizable:yes;');if(wName==null){}else{document.getElementById('txtSourceName').value=wName;}"  src="../images/Button/search.gif" />
+		<img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPSource&LieName=SourceName&callbackFun=selectSourceNameConditionCallback',350,400)"  src="../images/Button/search.gif" />
 		<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtSourceName" ErrorMessage="*该项不可以为空"></asp:RequiredFieldValidator>
 	</td></tr>
 	<tr>
@@ -46,7 +77,7 @@
 	</td>
 	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
 		<asp:TextBox id="txtShengQingUser" runat="server" Width="350px"></asp:TextBox>
-		<img class="HerCss" onclick="var wName;var RadNum=Math.random();wName=window.showModalDialog('../Main/SelectUser.aspx?TableName=ERPUser&LieName=UserName&Radstr='+RadNum,'','dialogWidth:350px;DialogHeight=400px;status:no;help:no;resizable:yes;');if(wName==null){}else{document.getElementById('txtShengQingUser').value=wName;}" src="../images/Button/search.gif" />
+		<img class="HerCss" onclick="openDialog('../Main/SelectUser.aspx?TableName=ERPUser&LieName=UserName&callbackFun=selectShengQingUserConditionCallback',350,400)" src="../images/Button/search.gif" />
 	</td></tr>
 	<tr>
 	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">
@@ -54,7 +85,7 @@
 	</td>
 	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
 		<asp:TextBox id="txtShiYongUser" runat="server" Width="350px"></asp:TextBox>
-		<img class="HerCss" onclick="var wName;var RadNum=Math.random();wName=window.showModalDialog('../Main/SelectUser.aspx?TableName=ERPUser&LieName=UserName&Radstr='+RadNum,'','dialogWidth:350px;DialogHeight=400px;status:no;help:no;resizable:yes;');if(wName==null){}else{document.getElementById('txtShiYongUser').value=wName;}" src="../images/Button/search.gif" />
+		<img class="HerCss" onclick="openDialog('../Main/SelectUser.aspx?TableName=ERPUser&LieName=UserName&callbackFun=selectShiYongUserConditionCallback',350,400)" src="../images/Button/search.gif" />
 	</td></tr>
 	<tr>
 	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">
@@ -62,7 +93,7 @@
 	</td>
 	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
 		<asp:TextBox id="txtShiYongShiXian" runat="server" Width="350px"></asp:TextBox>
-		<img class="HerCss" onclick="var wName;var RadNum=Math.random();wName=window.showModalDialog('../Main/SelectCondition.aspx?TableName=ERPSource&LieName=ShiYongShiXian&Radstr='+RadNum,'','dialogWidth:350px;DialogHeight=400px;status:no;help:no;resizable:yes;');if(wName==null){}else{document.getElementById('txtShiYongShiXian').value=wName;}"  src="../images/Button/search.gif" />
+		<img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPSource&LieName=ShiYongShiXian&callbackFun=selectShiYongShiXianConditionCallback',350,400)"  src="../images/Button/search.gif" />
 	</td></tr>
 	<tr>
 	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">

@@ -2,6 +2,31 @@
 <html>
 	<head>
 		<title>企业OA综合管理平台</title>
+        <link href="../Style/jquery-ui/jquery-ui.min.css" rel="stylesheet" />
+    <script src="../Scripts/jQuery/jquery-3.1.1.min.js"></script>
+    <script src="../Scripts/jquery-ui/jquery-ui.min.js"></script>
+    <script src="../Scripts/Public.js"></script>
+    <script type="text/javascript">
+        var dialog;
+        function selectUserConditionCallback(returndata) {
+            $('#<%=TextBox1.ClientID%>').val(returndata);
+            if (dialog != null) {
+                dialog.dialog("close");
+            }
+        }
+        function selectStartDateConditionCallback(returndata) {
+            $('#<%=TextBox2.ClientID%>').val(returndata);
+            if (dialog != null) {
+                dialog.dialog("close");
+            }
+        }
+        function selectEndDateConditionCallback(returndata) {
+            $('#<%=TextBox3.ClientID%>').val(returndata);
+            if (dialog != null) {
+                dialog.dialog("close");
+            }
+        }
+    </script>
   <LINK href="../Style/Style.css" type="text/css" rel="STYLESHEET">
 </head>
 <SCRIPT LANGUAGE="JavaScript">
@@ -108,14 +133,14 @@
          <tr>
              <td colspan="2" style="border-bottom: #006633 1px dashed; height: 30px" valign="middle">
                  &nbsp; &nbsp; 用户名：<asp:TextBox ID="TextBox1" runat="server" Height="20px" Width="80px"></asp:TextBox><img
-                     class="HerCss" onclick="var wName;var RadNum=Math.random();wName=window.showModalDialog('../Main/SelectUser.aspx?TableName=ERPUser&LieName=UserName&Radstr='+RadNum,'','dialogWidth:350px;DialogHeight=400px;status:no;help:no;resizable:yes;');if(wName==null){}else{document.getElementById('TextBox1').value=wName;}"
+                     class="HerCss" onclick="openDialog('../Main/SelectUser.aspx?TableName=ERPUser&LieName=UserName&callbackFun=selectUserConditionCallback',350,400)"
                      src="../images/Button/search.gif" />&nbsp; 起至日期：<asp:TextBox ID="TextBox2" runat="server"
                          Height="20px" Width="80px"></asp:TextBox>
-                 <img class="HerCss" onclick="var dataString = showModalDialog('../JS/calendar.htm', 'yyyy-mm-dd' ,'dialogWidth:286px;dialogHeight:221px;status:no;help:no;');if(dataString==null){}else{document.getElementById('TextBox2').value=dataString;}"
+                 <img class="HerCss" onclick="openDialog('../JS/calendar.htm?callbackFun=selectStartDateConditionCallback', 286,221)"
                      src="../images/Button/search.gif" />
                  ~
                  <asp:TextBox ID="TextBox3" runat="server" Height="20px" Width="80px"></asp:TextBox>
-                 <img class="HerCss" onclick="var dataString = showModalDialog('../JS/calendar.htm', 'yyyy-mm-dd' ,'dialogWidth:286px;dialogHeight:221px;status:no;help:no;');if(dataString==null){}else{document.getElementById('TextBox3').value=dataString;}"
+                 <img class="HerCss" onclick="openDialog('../JS/calendar.htm?callbackFun=selectEndDateConditionCallback',286,221)"
                      src="../images/Button/search.gif" />
                  <asp:ImageButton ID="ImageButton4" runat="server" ImageAlign="AbsMiddle" ImageUrl="../images/Button/BtnSerch.jpg"
                      OnClick="ImageButton4_Click" />

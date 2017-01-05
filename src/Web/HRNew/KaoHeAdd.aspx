@@ -15,6 +15,43 @@
                 dialog.dialog("close");
             }
         }
+        function selectKaoHeUserConditionCallback(returndata) {
+            $('#<%=txtKaoHeUser.ClientID%>').val(returndata);
+            if (dialog != null) {
+                dialog.dialog("close");
+            }
+        }
+        function selectKaoHeTypeConditionCallback(returndata) {
+            $('#<%=txtKaoHeType.ClientID%>').val(returndata);
+            if (dialog != null) {
+                dialog.dialog("close");
+            }
+        }
+        function selectKaoHeDateConditionCallback(returndata) {
+            $('#<%=txtKaoHeDate.ClientID%>').val(returndata);
+            if (dialog != null) {
+                dialog.dialog("close");
+            }
+        }
+        function selectXiangMuFenConditionCallback(returndata) {
+            $('#<%=txtXiangMuFen.ClientID%>').val(returndata);
+            if (dialog != null) {
+                dialog.dialog("close");
+            }
+        }
+        function selectRenWuFenConditionCallback(returndata) {
+            $('#<%=txtRenWuFen.ClientID%>').val(returndata);
+            if (dialog != null) {
+                dialog.dialog("close");
+            }
+        }
+        function selectKaoHeJieLunConditionCallback(returndata) {
+            $('#<%=txtKaoHeJieLun.ClientID%>').val(returndata);
+            if (dialog != null) {
+                dialog.dialog("close");
+            }
+        }
+        
     </script>
   <script language="javascript">
   function PrintTable()
@@ -50,7 +87,7 @@
 	</td>
 	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
 		<asp:TextBox id="txtKaoHeTitle" runat="server" Width="350px"></asp:TextBox>
-		<img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPKaoHe&LieName=KaoHeTitle&callbackFun=selectConditionCallback',350,400)"  src="../images/Button/search.gif" />
+		<img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPKaoHe&LieName=KaoHeTitle&callbackFun=selectKaoHeTitleConditionCallback',350,400)"  src="../images/Button/search.gif" />
 		<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtKaoHeTitle" ErrorMessage="*该项不可以为空"></asp:RequiredFieldValidator>
 	</td></tr>
 	<tr>
@@ -59,7 +96,7 @@
 	</td>
 	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
 		<asp:TextBox id="txtKaoHeUser" runat="server" Width="350px"></asp:TextBox>
-		<img class="HerCss" onclick="openDialog('../Main/SelectUser.aspx?TableName=ERPUser&LieName=UserName&callbackFun=selectConditionCallback',350,400)" src="../images/Button/search.gif" />
+		<img class="HerCss" onclick="openDialog('../Main/SelectUser.aspx?TableName=ERPUser&LieName=UserName&callbackFun=selectKaoHeUserConditionCallback',350,400)" src="../images/Button/search.gif" />
 	</td></tr>
 	<tr>
 	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">
@@ -67,7 +104,7 @@
 	</td>
 	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
 		<asp:TextBox id="txtKaoHeType" runat="server" Width="350px"></asp:TextBox>
-		<img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPKaoHe&LieName=KaoHeType&callbackFun=selectConditionCallback',350,400)"  src="../images/Button/search.gif" />
+		<img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPKaoHe&LieName=KaoHeType&callbackFun=selectKaoHeTypeConditionCallback',350,400)"  src="../images/Button/search.gif" />
 	</td></tr>
 	<tr>
 	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">
@@ -75,7 +112,7 @@
 	</td>
 	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
 		<asp:TextBox id="txtKaoHeDate" runat="server" Width="350px"></asp:TextBox>
-		<img class="HerCss" onclick="openDialog('../JS/calendar.htm?callbackFun=selectConditionCallback',286,221)" src="../images/Button/search.gif" />
+		<img class="HerCss" onclick="openDialog('../JS/calendar.htm?callbackFun=selectKaoHeDateConditionCallback',286,221)" src="../images/Button/search.gif" />
 	</td></tr>
 	<tr>
 	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">
@@ -83,7 +120,7 @@
 	</td>
 	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
 		<asp:TextBox id="txtXiangMuFen" runat="server" Width="350px"></asp:TextBox>
-		<img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPKaoHe&LieName=XiangMuFen&callbackFun=selectConditionCallback',350,400)"  src="../images/Button/search.gif" />
+		<img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPKaoHe&LieName=XiangMuFen&callbackFun=selectXiangMuFenConditionCallback',350,400)"  src="../images/Button/search.gif" />
 	&nbsp;<a href="LookDefile.aspx?Type=XM" target="_blank" >【查看考核项目】</a>
 	</td></tr>
 	<tr>
@@ -92,7 +129,7 @@
 	</td>
 	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
 		<asp:TextBox id="txtRenWuFen" runat="server" Width="350px"></asp:TextBox>
-		<img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPKaoHe&callbackFun=selectConditionCallback',350,400)"  src="../images/Button/search.gif" />
+		<img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPKaoHe&LieName=RenWuFen&callbackFun=selectRenWuFenConditionCallback',350,400)"  src="../images/Button/search.gif" />
 	&nbsp;<a href="LookDefile.aspx?Type=RW" target="_blank" >【查看考核任务】</a>
 	</td></tr>
 	<tr>
@@ -101,7 +138,7 @@
 	</td>
 	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
 		<asp:TextBox id="txtKaoHeJieLun" runat="server" Width="350px"></asp:TextBox>
-		<img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPKaoHe&LieName=KaoHeJieLun&callbackFun=selectConditionCallback',350,400)"  src="../images/Button/search.gif" />
+		<img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPKaoHe&LieName=KaoHeJieLun&callbackFun=selectKaoHeJieLunConditionCallback',350,400)"  src="../images/Button/search.gif" />
 	</td></tr>
 	<tr>
 	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">

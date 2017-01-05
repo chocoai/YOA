@@ -3,6 +3,31 @@
 	<head>
 		<title>企业OA综合管理平台</title>
   <LINK href="../Style/Style.css" type="text/css" rel="STYLESHEET">
+        <link href="../Style/jquery-ui/jquery-ui.min.css" rel="stylesheet" />
+    <script src="../Scripts/jQuery/jquery-3.1.1.min.js"></script>
+    <script src="../Scripts/jquery-ui/jquery-ui.min.js"></script>
+    <script src="../Scripts/Public.js"></script>
+    <script type="text/javascript">
+        var dialog;
+        function selectCheckerConditionCallback(returndata) {
+            $('#<%=TextBox1.ClientID%>').val(returndata);
+            if (dialog != null) {
+                dialog.dialog("close");
+            }
+        }
+        function selectStartDateConditionCallback(returndata) {
+            $('#<%=TextBox3.ClientID%>').val(returndata);
+            if (dialog != null) {
+                dialog.dialog("close");
+            }
+        }
+        function selectEndDateConditionCallback(returndata) {
+            $('#<%=TextBox4.ClientID%>').val(returndata);
+            if (dialog != null) {
+                dialog.dialog("close");
+            }
+        }
+    </script>
   <script language="javascript">
   function PrintTable()
     {
@@ -37,7 +62,7 @@
                 审批人：</td>
                 <td style="background-color: #ffffff; height: 25px; padding-left:5px;" >
                     <asp:TextBox ID="TextBox1" runat="server" Width="100px"></asp:TextBox>
-                    <img class="HerCss" onclick="var wName;var RadNum=Math.random();wName=window.showModalDialog('../Main/SelectUser.aspx?TableName=ERPUser&LieName=UserName&Radstr='+RadNum,'','dialogWidth:350px;DialogHeight=400px;status:no;help:no;resizable:yes;');if(wName==null){}else{document.getElementById('TextBox1').value=wName;}"
+                    <img class="HerCss" onclick="openDialog('../Main/SelectUser.aspx?TableName=ERPUser&LieName=UserName&callbackFun=selectCheckerConditionCallback',350,400)"
                         src="../images/Button/search.gif" />&nbsp;
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TextBox1"
                         ErrorMessage="*该项不能为空"></asp:RequiredFieldValidator></td>
@@ -53,7 +78,7 @@
                 开始时间：</td>
             <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
                 <asp:TextBox ID="TextBox3" runat="server" Width="150px"></asp:TextBox>
-                <img class="HerCss" onclick="var dataString = showModalDialog('../JS/calendar.htm', 'yyyy-mm-dd' ,'dialogWidth:286px;dialogHeight:221px;status:no;help:no;');if(dataString==null){}else{document.getElementById('TextBox3').value=dataString;}"
+                <img class="HerCss" onclick="openDialog('../JS/calendar.htm?callbackFun=selectStartDateConditionCallback',286,221)"
                     src="../images/Button/search.gif" />
                 <asp:DropDownList ID="DropDownList1" runat="server">
                     <asp:ListItem>00</asp:ListItem>
@@ -153,7 +178,7 @@
                 结束时间：</td>
             <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
                 <asp:TextBox ID="TextBox4" runat="server" Width="150px"></asp:TextBox>
-                <img class="HerCss" onclick="var dataString = showModalDialog('../JS/calendar.htm', 'yyyy-mm-dd' ,'dialogWidth:286px;dialogHeight:221px;status:no;help:no;');if(dataString==null){}else{document.getElementById('TextBox4').value=dataString;}"
+                <img class="HerCss" onclick="openDialog('../JS/calendar.htm?callbackFun=selectEndDateConditionCallback',286,221)"
                     src="../images/Button/search.gif" />&nbsp;<asp:DropDownList ID="DropDownList3" runat="server">
                         <asp:ListItem>00</asp:ListItem>
                         <asp:ListItem>01</asp:ListItem>

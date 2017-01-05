@@ -1,8 +1,46 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="MeetingModify.aspx.cs" Inherits="Meeting_MeetingModify" %>
+<%@ Register Assembly="CKEditor.NET" Namespace="CKEditor.NET" TagPrefix="CKEditor" %>
 <html>
 	<head>
 		<title>企业OA综合管理平台</title>
   <LINK href="../Style/Style.css" type="text/css" rel="STYLESHEET">
+        <link href="../Style/jquery-ui/jquery-ui.min.css" rel="stylesheet" />
+    <script src="../Scripts/jQuery/jquery-3.1.1.min.js"></script>
+    <script src="../Scripts/jquery-ui/jquery-ui.min.js"></script>
+    <script src="../Scripts/Public.js"></script>
+    <script type="text/javascript">
+        var dialog;
+        function selectJoinerConditionCallback(returndata) {
+            $('#<%=TextBox4.ClientID%>').val(returndata);
+            if (dialog != null) {
+                dialog.dialog("close");
+            }
+        }
+        function selectAddressConditionCallback(returndata) {
+            $('#<%=TextBox5.ClientID%>').val(returndata);
+            if (dialog != null) {
+                dialog.dialog("close");
+            }
+        }
+function selectHolderConditionCallback(returndata) {
+            $('#<%=TextBox6.ClientID%>').val(returndata);
+            if (dialog != null) {
+                dialog.dialog("close");
+            }
+        }
+function selectStartDateConditionCallback(returndata) {
+            $('#<%=TextBox7.ClientID%>').val(returndata);
+            if (dialog != null) {
+                dialog.dialog("close");
+            }
+        }
+function selectEndDateConditionCallback(returndata) {
+            $('#<%=TextBox8.ClientID%>').val(returndata);
+            if (dialog != null) {
+                dialog.dialog("close");
+            }
+        }
+    </script>
   <script language="javascript">
   function PrintTable()
     {
@@ -56,7 +94,7 @@
                 会议出席人：</td>
             <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
                 <asp:TextBox ID="TextBox4" runat="server" Width="350px"></asp:TextBox>
-                <img class="HerCss" onclick="var wName;var RadNum=Math.random();wName=window.showModalDialog('../Main/SelectUser.aspx?TableName=ERPUser&LieName=UserName&Radstr='+RadNum,'','dialogWidth:350px;DialogHeight=400px;status:no;help:no;resizable:yes;');if(wName==null){}else{document.getElementById('TextBox4').value=wName;}"
+                <img class="HerCss" onclick="openDialog('../Main/SelectUser.aspx?TableName=ERPUser&LieName=UserName&callbackFun=selectJoinerConditionCallback',350,400)"
                     src="../images/Button/search.gif" /></td>
         </tr>
         <tr>
@@ -64,7 +102,7 @@
                 网络会议室IP地址：</td>
             <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
                 <asp:TextBox ID="TextBox5" runat="server" Width="350px"></asp:TextBox>
-                <img class="HerCss" onclick="var wName;var RadNum=Math.random();wName=window.showModalDialog('../Main/SelectCondition.aspx?TableName=ERPMeeting&LieName=WangLuoHuiYiShiIP&Radstr='+RadNum,'','dialogWidth:350px;DialogHeight=400px;status:no;help:no;resizable:yes;');if(wName==null){}else{document.getElementById('TextBox5').value=wName;}"
+                <img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPMeeting&LieName=WangLuoHuiYiShiIP&callbackFun=selectAddressConditionCallback',350,400)"
                     src="../images/Button/search.gif" />
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="TextBox5"
                     Display="Dynamic" ErrorMessage="*该项不可以为空"></asp:RequiredFieldValidator></td>
@@ -74,7 +112,7 @@
                 会议主持人：</td>
             <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
                 <asp:TextBox ID="TextBox6" runat="server" Width="350px"></asp:TextBox>
-                <img class="HerCss" onclick="var wName;var RadNum=Math.random();wName=window.showModalDialog('../Main/SelectUser.aspx?TableName=ERPUser&LieName=UserName&Radstr='+RadNum,'','dialogWidth:350px;DialogHeight=400px;status:no;help:no;resizable:yes;');if(wName==null){}else{document.getElementById('TextBox6').value=wName;}"
+                <img class="HerCss" onclick="openDialog('../Main/SelectUser.aspx?TableName=ERPUser&LieName=UserName&callbackFun=selectHolderConditionCallback',350,400)"
                     src="../images/Button/search.gif" /></td>
         </tr>
         <tr>
@@ -82,7 +120,7 @@
                 开始时间：</td>
             <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
                 <asp:TextBox ID="TextBox7" runat="server" Width="150px"></asp:TextBox>
-                <img class="HerCss" onclick="var dataString = showModalDialog('../JS/calendar.htm', 'yyyy-mm-dd' ,'dialogWidth:286px;dialogHeight:221px;status:no;help:no;');if(dataString==null){}else{document.getElementById('TextBox7').value=dataString;}"
+                <img class="HerCss" onclick="openDialog('../JS/calendar.htm?callbackFun=selectStartDateConditionCallback',286,221)"
                     src="../images/Button/search.gif" />
                 <asp:DropDownList ID="DropDownList1" runat="server">
                     <asp:ListItem>00</asp:ListItem>
@@ -182,7 +220,7 @@
                 结束时间：</td>
             <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
                 <asp:TextBox ID="TextBox8" runat="server" Width="150px"></asp:TextBox>
-                <img class="HerCss" onclick="var dataString = showModalDialog('../JS/calendar.htm', 'yyyy-mm-dd' ,'dialogWidth:286px;dialogHeight:221px;status:no;help:no;');if(dataString==null){}else{document.getElementById('TextBox8').value=dataString;}"
+                <img class="HerCss" onclick="openDialog('../JS/calendar.htm?callbackFun=selectEndDateConditionCallback',286,221)"
                     src="../images/Button/search.gif" />&nbsp;<asp:DropDownList ID="DropDownList3" runat="server">
                         <asp:ListItem>00</asp:ListItem>
                         <asp:ListItem>01</asp:ListItem>
@@ -280,9 +318,7 @@
             <td align="right" style="width: 170px; height: 25px; background-color: #cccccc">
                 会议纪要：</td>
             <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
-                <asp:TextBox ID="TxtContent" runat="server" Style="display: none"></asp:TextBox>
-                <iframe frameborder="0" height="350" scrolling="no" src="../eWebEditor/ewebeditor.htm?id=TxtContent&style=mini"
-                    width="99%"></iframe>
+                <CKEditor:CKEditorControl ID="TxtContent" BasePath="~/ckeditor" runat="server" UIColor="#BFEE62" Language="zh-cn" EnterMode="BR"></CKEditor:CKEditorControl>
             </td>
         </tr>
         </table></div>

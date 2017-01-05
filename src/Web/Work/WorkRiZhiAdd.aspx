@@ -57,7 +57,7 @@
                     <td align="right" style="width: 170px; height: 25px; background-color: #cccccc">日志类型：</td>
                     <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
                         <asp:TextBox ID="TextBox5" runat="server" Width="150px"></asp:TextBox>
-                        <img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPWorkRiZhi&LieName=TypeStr&callbackFun=selectConditionCallback',500,350);"
+                        <img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPWorkRiZhi&LieName=TypeStr&callbackFun=selectConditionCallback',350,400);"
                             src="../images/Button/search.gif" /></td>
                 </tr>
                 <tr>
