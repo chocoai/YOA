@@ -86,9 +86,7 @@
             <td align="right" style="width: 170px; height: 25px; background-color: #cccccc">
                 开始时间：</td>
             <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
-                <asp:TextBox ID="TextBox2" runat="server" Width="150px"></asp:TextBox>
-                <img class="HerCss" onclick="openDialog('../JS/calendar.htm?callbackFun=selectCalendarStartCallback',286,221);"
-                    src="../images/Button/search.gif" />
+                <asp:TextBox ID="TextBox2" runat="server" Width="150px"  CssClass="Wdate" onclick="WdatePicker()" ></asp:TextBox>
                 <asp:DropDownList ID="DropDownList1" runat="server">
                     <asp:ListItem>00</asp:ListItem>
                     <asp:ListItem>01</asp:ListItem>
@@ -187,9 +185,7 @@
             <td align="right" style="width: 170px; height: 25px; background-color: #cccccc">
                 结束时间：</td>
             <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
-                <asp:TextBox ID="TextBox3" runat="server" Width="150px"></asp:TextBox>
-                <img class="HerCss" onclick="openDialog('../JS/calendar.htm?callbackFun=selectCalendarEndCallback',286,221);"
-                    src="../images/Button/search.gif" />&nbsp;<asp:DropDownList ID="DropDownList3" runat="server">
+                <asp:TextBox ID="TextBox3" runat="server" Width="150px" CssClass="Wdate" onclick="WdatePicker()" ></asp:TextBox><asp:DropDownList ID="DropDownList3" runat="server">
                         <asp:ListItem>00</asp:ListItem>
                         <asp:ListItem>01</asp:ListItem>
                         <asp:ListItem>02</asp:ListItem>
@@ -286,9 +282,7 @@
             <td align="right" style="width: 170px; height: 25px; background-color: #cccccc">
                 提醒时间：</td>
             <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
-                <asp:TextBox ID="TextBox4" runat="server" Width="150px"></asp:TextBox>
-                <img class="HerCss" onclick="openDialog('../JS/calendar.htm?callbackFun=selectCalendarReminderCallback',286,221);"
-                    src="../images/Button/search.gif" />&nbsp;<asp:DropDownList ID="DropDownList5" runat="server">
+                <asp:TextBox ID="TextBox4" runat="server" Width="150px" CssClass="Wdate" onclick="WdatePicker()" ></asp:TextBox><asp:DropDownList ID="DropDownList5" runat="server">
                         <asp:ListItem>00</asp:ListItem>
                         <asp:ListItem>01</asp:ListItem>
                         <asp:ListItem>02</asp:ListItem>

@@ -8,6 +8,8 @@
     <script src="../Scripts/jQuery/jquery-3.1.1.min.js"></script>
     <script src="../Scripts/jquery-ui/jquery-ui.min.js"></script>
     <script src="../Scripts/Public.js"></script>
+    <script src="../My97DatePicker/WdatePicker.js"></script>
+    <link href="../My97DatePicker/skin/WdatePicker.css" rel="stylesheet" />
     <script type="text/javascript">
         var dialog;
         function selectUserConditionCallback(returndata) {
@@ -152,16 +154,14 @@
                     <td style="width: 170px; height: 25px; background-color: #cccccc" align="right">签约日期：
                     </td>
                     <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
-                        <asp:TextBox ID="txtQianYueDate" runat="server" Width="350px"></asp:TextBox>
-                        <img class="HerCss" onclick="openDialog('../JS/calendar.htm?callbackFun=selectQianYueDateConditionCallback', 286,221)" src="../images/Button/search.gif" />
+                        <asp:TextBox ID="txtQianYueDate" runat="server" Width="350px"  CssClass="Wdate" onclick="WdatePicker()" ></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
                     <td style="width: 170px; height: 25px; background-color: #cccccc" align="right">满约日期：
                     </td>
                     <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
-                        <asp:TextBox ID="txtManYueDate" runat="server" Width="350px"></asp:TextBox>
-                        <img class="HerCss" onclick="openDialog('../JS/calendar.htm?callbackFun=selectConditionCallback', 286,221)" src="../images/Button/search.gif" />
+                        <asp:TextBox ID="txtManYueDate" runat="server" Width="350px"  CssClass="Wdate" onclick="WdatePicker()" ></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
@@ -176,8 +176,7 @@
                     <td style="width: 170px; height: 25px; background-color: #cccccc" align="right">鉴证日期：
                     </td>
                     <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
-                        <asp:TextBox ID="txtJianZhengDate" runat="server" Width="350px"></asp:TextBox>
-                        <img class="HerCss" onclick="openDialog('../JS/calendar.htm?callbackFun=selectJianZhengDateConditionCallback',286,221)" src="../images/Button/search.gif" />
+                        <asp:TextBox ID="txtJianZhengDate" runat="server" Width="350px"  CssClass="Wdate" onclick="WdatePicker()" ></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
