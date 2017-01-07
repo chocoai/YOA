@@ -23,15 +23,15 @@ public partial class Work_RiChengModify : System.Web.UI.Page
             this.TxtContent.Text = Model.ContentStr;
             this.TextBox5.Text = Model.TypeStr;
 
-            this.TextBox2.Text = Model.TimeStart.ToString().Split(' ')[0];
+            this.TextBox2.Text = Model.TimeStart.Value.ToString("yyyy-MM-dd");
             this.DropDownList1.SelectedValue = DateTime.Parse(Model.TimeStart.ToString()).Hour.ToString("D2");
             this.DropDownList2.SelectedValue = DateTime.Parse(Model.TimeStart.ToString()).Minute.ToString("D2");
 
-            this.TextBox3.Text = Model.TimeEnd.ToString().Split(' ')[0];
+            this.TextBox3.Text = Model.TimeEnd.Value.ToString("yyyy-MM-dd");
             this.DropDownList3.SelectedValue = DateTime.Parse(Model.TimeEnd.ToString()).Hour.ToString("D2");
             this.DropDownList4.SelectedValue = DateTime.Parse(Model.TimeEnd.ToString()).Minute.ToString("D2");
 
-            this.TextBox4.Text = Model.TimeTiXing.ToString().Split(' ')[0];
+            this.TextBox4.Text = Model.TimeTiXing.Value.ToString("yyyy-MM-dd");
             this.DropDownList5.SelectedValue = DateTime.Parse(Model.TimeTiXing.ToString()).Hour.ToString("D2");
             this.DropDownList6.SelectedValue = DateTime.Parse(Model.TimeTiXing.ToString()).Minute.ToString("D2");
 

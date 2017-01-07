@@ -3,6 +3,19 @@
 	<head>
 		<title>企业OA综合管理平台</title>
   <LINK href="../Style/Style.css" type="text/css" rel="STYLESHEET">
+        <link href="../Style/jquery-ui/jquery-ui.min.css" rel="stylesheet" />
+    <script src="../Scripts/jQuery/jquery-3.1.1.min.js"></script>
+    <script src="../Scripts/jquery-ui/jquery-ui.min.js"></script>
+    <script src="../Scripts/Public.js"></script>
+    <script type="text/javascript">
+        var dialog;
+        function selectConditionCallback(returndata) {
+            $('#<%=TextBox2.ClientID%>').val(returndata);
+            if (dialog != null) {
+                dialog.dialog("close");
+            }
+        }
+    </script>
 </head>
 <SCRIPT LANGUAGE="JavaScript">
 		  		  var a;    
@@ -104,7 +117,7 @@
                 <td align="right" valign="middle" style="border-bottom: #006633 1px dashed; height: 30px;">
                     主题：<asp:TextBox ID="TextBox1" runat="server" Height="20px" Width="65px"></asp:TextBox>
                     业务员：<asp:TextBox ID="TextBox2" runat="server" Height="20px" Width="65px"></asp:TextBox><img
-                        class="HerCss" onclick="var wName;var RadNum=Math.random();wName=window.showModalDialog('../Main/SelectUser.aspx?TableName=ERPUser&LieName=UserName&Radstr='+RadNum,'','dialogWidth:350px;DialogHeight=400px;status:no;help:no;resizable:yes;');if(wName==null){}else{document.getElementById('TextBox2').value=wName;}"
+                        class="HerCss" onclick="openDialog('../Main/SelectUser.aspx?TableName=ERPUser&LieName=UserName&callbackFun=selectConditionCallback',350,400);"
                         src="../images/Button/search.gif" />
                     <asp:ImageButton
                         ID="ImageButton4" runat="server" ImageAlign="AbsMiddle" ImageUrl="../images/Button/BtnSerch.jpg"

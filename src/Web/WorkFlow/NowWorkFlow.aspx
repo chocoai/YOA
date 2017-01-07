@@ -3,6 +3,31 @@
 	<head>
 		<title>企业OA综合管理平台</title>
   <LINK href="../Style/Style.css" type="text/css" rel="STYLESHEET">
+        <link href="../Style/jquery-ui/jquery-ui.min.css" rel="stylesheet" />
+    <script src="../Scripts/jQuery/jquery-3.1.1.min.js"></script>
+    <script src="../Scripts/jquery-ui/jquery-ui.min.js"></script>
+    <script src="../Scripts/Public.js"></script>
+    <script type="text/javascript">
+        var dialog;
+        function selectNameConditionCallback(returndata) {
+            $('#<%=TextBox1.ClientID%>').val(returndata);
+            if (dialog != null) {
+                dialog.dialog("close");
+            }
+        }
+        function selectFormConditionCallback(returndata) {
+            $('#<%=TextBox2.ClientID%>').val(returndata);
+            if (dialog != null) {
+                dialog.dialog("close");
+            }
+        }
+        function selectCreaterConditionCallback(returndata) {
+            $('#<%=TextBox3.ClientID%>').val(returndata);
+            if (dialog != null) {
+                dialog.dialog("close");
+            }
+        }
+    </script>
 </head>
 <SCRIPT LANGUAGE="JavaScript">
 		  		  var a;    
@@ -101,11 +126,14 @@
                 <td valign="middle" style="border-bottom: #006633 1px dashed; height: 30px; ">&nbsp;<img src="../images/BanKuaiJianTou.gif" />
                 <a class="hei" href="../Main/MyDesk.aspx">桌面</a>&nbsp;>>&nbsp;工作流程&nbsp;>>&nbsp;待办工作</td>
                 <td align="right" valign="middle" style="border-bottom: #006633 1px dashed; height: 30px;">
-                    工作名称：<asp:TextBox ID="TextBox1" runat="server" Height="20px" Width="60px"></asp:TextBox><img class="HerCss" onclick="var wName;var RadNum=Math.random();wName=window.showModalDialog('../Main/SelectCondition.aspx?TableName=ERPWorkToDo&LieName=WorkName&Radstr='+RadNum,'','dialogWidth:350px;DialogHeight=400px;status:no;help:no;resizable:yes;');if(wName==null){}else{document.getElementById('TextBox1').value=wName;}"
+                    工作名称：<asp:TextBox ID="TextBox1" runat="server" Height="20px" Width="60px"></asp:TextBox>
+                    <img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPWorkToDo&LieName=WorkName&callbackFun=selectNameConditionCallback',350,400);"
                         src="../images/Button/search.gif" />
-                    表单：<asp:TextBox ID="TextBox2" runat="server" Height="20px" Width="60px"></asp:TextBox><img class="HerCss" onclick="var wName;var RadNum=Math.random();wName=window.showModalDialog('../Main/SelectCondition.aspx?TableName=ERPWorkToDo&LieName=FormName&Radstr='+RadNum,'','dialogWidth:350px;DialogHeight=400px;status:no;help:no;resizable:yes;');if(wName==null){}else{document.getElementById('TextBox2').value=wName;}"
+                    表单：<asp:TextBox ID="TextBox2" runat="server" Height="20px" Width="60px"></asp:TextBox>
+                    <img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPWorkToDo&LieName=FormName&callbackFun=selectFormConditionCallback',350,400);"
                         src="../images/Button/search.gif" />
-                    创建人：<asp:TextBox ID="TextBox3" runat="server" Height="20px" Width="60px"></asp:TextBox><img class="HerCss" onclick="var wName;var RadNum=Math.random();wName=window.showModalDialog('../Main/SelectUser.aspx?TableName=ERPUser&LieName=UserName&Radstr='+RadNum,'','dialogWidth:350px;DialogHeight=400px;status:no;help:no;resizable:yes;');if(wName==null){}else{document.getElementById('TextBox3').value=wName;}"
+                    创建人：<asp:TextBox ID="TextBox3" runat="server" Height="20px" Width="60px"></asp:TextBox>
+                    <img class="HerCss" onclick="openDialog('../Main/SelectUser.aspx?TableName=ERPUser&LieName=UserName&callbackFun=selectCreaterConditionCallback',350,400);"
                         src="../images/Button/search.gif" />
                     <asp:ImageButton
                         ID="ImageButton4" runat="server" ImageAlign="AbsMiddle" ImageUrl="../images/Button/BtnSerch.jpg"
