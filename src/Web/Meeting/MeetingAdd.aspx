@@ -8,6 +8,8 @@
     <script src="../Scripts/jQuery/jquery-3.1.1.min.js"></script>
     <script src="../Scripts/jquery-ui/jquery-ui.min.js"></script>
     <script src="../Scripts/Public.js"></script>
+        <script src="../My97DatePicker/WdatePicker.js"></script>
+    <link href="../My97DatePicker/skin/WdatePicker.css" rel="stylesheet" />
     <script type="text/javascript">
         var dialog;
         function selectJoinerConditionCallback(returndata) {
@@ -121,9 +123,7 @@ function selectEndDateConditionCallback(returndata) {
             <td align="right" style="width: 170px; height: 25px; background-color: #cccccc">
                 开始时间：</td>
             <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
-                <asp:TextBox ID="TextBox7" runat="server" Width="150px"></asp:TextBox>
-                <img class="HerCss" onclick="openDialog('../JS/calendar.htm?callbackFun=selectStartDateConditionCallback',286,221)"
-                    src="../images/Button/search.gif" />
+                <asp:TextBox ID="TextBox7" runat="server" Width="150px" CssClass="Wdate" onclick="WdatePicker()"></asp:TextBox>
                 <asp:DropDownList ID="DropDownList1" runat="server">
                     <asp:ListItem>00</asp:ListItem>
                     <asp:ListItem>01</asp:ListItem>
@@ -221,9 +221,8 @@ function selectEndDateConditionCallback(returndata) {
             <td align="right" style="width: 170px; height: 25px; background-color: #cccccc">
                 结束时间：</td>
             <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
-                <asp:TextBox ID="TextBox8" runat="server" Width="150px"></asp:TextBox>
-                <img class="HerCss" onclick="openDialog('../JS/calendar.htm?callbackFun=selectEndDateConditionCallback',286,221)"
-                    src="../images/Button/search.gif" />&nbsp;<asp:DropDownList ID="DropDownList3" runat="server">
+                <asp:TextBox ID="TextBox8" runat="server" Width="150px" CssClass="Wdate" onclick="WdatePicker()"></asp:TextBox>
+                <asp:DropDownList ID="DropDownList3" runat="server">
                         <asp:ListItem>00</asp:ListItem>
                         <asp:ListItem>01</asp:ListItem>
                         <asp:ListItem>02</asp:ListItem>

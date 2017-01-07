@@ -7,6 +7,8 @@
     <script src="../Scripts/jQuery/jquery-3.1.1.min.js"></script>
     <script src="../Scripts/jquery-ui/jquery-ui.min.js"></script>
     <script src="../Scripts/Public.js"></script>
+        <script src="../My97DatePicker/WdatePicker.js"></script>
+    <link href="../My97DatePicker/skin/WdatePicker.css" rel="stylesheet" />
     <script type="text/javascript">
         var dialog;
         function selectConditionThingNameCallback(returndata) {
@@ -79,8 +81,7 @@
 		’€æ…»’∆⁄£∫
 	</td>
 	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
-		<asp:TextBox id="txtZJDate" runat="server" Width="350px"></asp:TextBox>
-		<img class="HerCss" onclick="openDialog('../JS/calendar.htm?callbackFun=selectConditionThingDatetimeCallback',286,221)" src="../images/Button/search.gif" />
+		<asp:TextBox id="txtZJDate" runat="server" Width="350px" CssClass="Wdate" onclick="WdatePicker()"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">

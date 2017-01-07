@@ -8,6 +8,8 @@
     <script src="../Scripts/jQuery/jquery-3.1.1.min.js"></script>
     <script src="../Scripts/jquery-ui/jquery-ui.min.js"></script>
     <script src="../Scripts/Public.js"></script>
+        <script src="../My97DatePicker/WdatePicker.js"></script>
+    <link href="../My97DatePicker/skin/WdatePicker.css" rel="stylesheet" />
     <script type="text/javascript">
         var dialog;
         function selectCarNameConditionCallback(returndata) {
@@ -120,14 +122,14 @@
 		起始时间：
 	</td>
 	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
-		<asp:TextBox id="txtQiShiTime" onfocus="setday(this)" runat="server" Width="350px"></asp:TextBox>&nbsp;
+		<asp:TextBox id="txtQiShiTime" runat="server" Width="350px" CssClass="Wdate" onclick="WdatePicker()"></asp:TextBox>&nbsp;
 	</td></tr>
 	<tr>
 	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">
 		结束时间：
 	</td>
 	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
-		<asp:TextBox id="txtJieShuTime" onfocus="setday(this)" runat="server" Width="350px"></asp:TextBox>&nbsp;
+		<asp:TextBox id="txtJieShuTime" runat="server" Width="350px" CssClass="Wdate" onclick="WdatePicker()"></asp:TextBox>&nbsp;
 	</td></tr>
 	<tr>
 	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">

@@ -7,6 +7,8 @@
     <script src="../Scripts/jQuery/jquery-3.1.1.min.js"></script>
     <script src="../Scripts/jquery-ui/jquery-ui.min.js"></script>
     <script src="../Scripts/Public.js"></script>
+        <script src="../My97DatePicker/WdatePicker.js"></script>
+    <link href="../My97DatePicker/skin/WdatePicker.css" rel="stylesheet" />
     <script type="text/javascript">
         var dialog;
         function selectDepartConditionCallback(returndata) {
@@ -135,13 +137,10 @@
                  &nbsp; &nbsp; 所属部门：<asp:TextBox ID="TextBox1" runat="server" Height="20px" Width="80px"></asp:TextBox><img
                         class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPBuMen&LieName=BuMenName&callbackFun=selectDepartConditionCallback',350,400)"
                         src="../images/Button/search.gif" />&nbsp; 起至日期：<asp:TextBox ID="TextBox2" runat="server"
-                            Height="20px" Width="80px"></asp:TextBox>
-                    <img class="HerCss" onclick="openDialog('../JS/calendar.htm?callbackFun=selectStartDateConditionCallback',286,221)"
-                        src="../images/Button/search.gif" />
+                            Height="20px" Width="80px" CssClass="Wdate" onclick="WdatePicker()"></asp:TextBox>
                     ~
-                    <asp:TextBox ID="TextBox3" runat="server" Height="20px" Width="80px"></asp:TextBox>
-                    <img class="HerCss" onclick="openDialog('../JS/calendar.htm?callbackFun=selectEndDateConditionCallback',286,221)"
-                        src="../images/Button/search.gif" />
+                    <asp:TextBox ID="TextBox3" runat="server" Height="20px" Width="80px" CssClass="Wdate" onclick="WdatePicker()"></asp:TextBox>
+      
                     <asp:ImageButton
                         ID="ImageButton4" runat="server" ImageAlign="AbsMiddle" ImageUrl="../images/Button/BtnSerch.jpg"
                         OnClick="ImageButton4_Click" />&nbsp;&nbsp;&nbsp;&nbsp;</td>
