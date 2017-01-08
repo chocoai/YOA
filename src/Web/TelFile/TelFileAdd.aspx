@@ -8,6 +8,14 @@
     <script src="../Scripts/jQuery/jquery-3.1.1.min.js"></script>
     <script src="../Scripts/jquery-ui/jquery-ui.min.js"></script>
     <script src="../Scripts/Public.js"></script>
+    <link href="../bootstrap-3.3.0/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="../bootstrap-3.3.0/js/bootstrap.min.js"></script>
+    <script src="../ckfinder/ckfinder.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            CKFinder.setupCKEditor();
+        });
+    </script>
     <script type="text/javascript">
         var dialog;
         function selectUserCallback(returndata) {
@@ -54,14 +62,14 @@
                 <tr>
                     <td align="right" style="width: 170px; background-color: #cccccc; height: 25px;">文件主题：</td>
                     <td style="background-color: #ffffff; height: 25px; padding-left: 5px;">
-                        <asp:TextBox ID="TextBox1" runat="server" Width="350px"></asp:TextBox>
+                        <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" Width="350px"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TextBox1"
                             ErrorMessage="*该项不可以为空"></asp:RequiredFieldValidator></td>
                 </tr>
                 <tr>
                     <td align="right" style="width: 170px; height: 25px; background-color: #cccccc">接收人：</td>
                     <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
-                        <asp:TextBox ID="TextBox2" runat="server" Width="350px"></asp:TextBox>
+                        <asp:TextBox ID="TextBox2" runat="server" Width="350px" CssClass="form-control"></asp:TextBox>
                         <img class="HerCss" onclick="openDialog('../Main/SelectUser.aspx?TableName=ERPUser&LieName=UserName&callbackFun=selectUserCallback',350,400);"
                             src="../images/Button/search.gif" /><asp:CheckBox ID="CHKSMS" runat="server" Checked="True" /><img
                                 src="../images/TreeImages/@sms.gif" />短消息<asp:CheckBox ID="CHKMOB" runat="server" /><img
@@ -70,14 +78,14 @@
                 <tr>
                     <td align="right" style="width: 170px; height: 25px; background-color: #cccccc">文件类别：</td>
                     <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
-                        <asp:TextBox ID="TextBox3" runat="server" Width="350px"></asp:TextBox>
+                        <asp:TextBox ID="TextBox3" runat="server" Width="350px"  CssClass="form-control"></asp:TextBox>
                         <img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPTelFile&LieName=FileType&callbackFun=selectConditionCallback',350,400);"
                             src="../images/Button/search.gif" /></td>
                 </tr>
                 <tr>
                     <td align="right" style="width: 170px; height: 25px; background-color: #cccccc">穿越后归档到：</td>
                     <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
-                        <asp:DropDownList ID="DropDownList1" runat="server" Width="350px">
+                        <asp:DropDownList ID="DropDownList1" runat="server" Width="350px"  CssClass="form-control">
                             <asp:ListItem Value="0">不归档查看</asp:ListItem>
                         </asp:DropDownList></td>
                 </tr>
