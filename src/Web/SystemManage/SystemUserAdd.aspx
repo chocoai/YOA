@@ -3,6 +3,93 @@
 	<head>
 		<title>企业OA综合管理平台</title>
   <LINK href="../Style/Style.css" type="text/css" rel="STYLESHEET">  
+         <link href="../Style/jquery-ui/jquery-ui.min.css" rel="stylesheet" />
+    <script src="../Scripts/jQuery/jquery-3.1.1.min.js"></script>
+    <script src="../Scripts/jquery-ui/jquery-ui.min.js"></script>
+    <script src="../Scripts/Public.js"></script>
+        <script src="../My97DatePicker/WdatePicker.js"></script>
+    <link href="../My97DatePicker/skin/WdatePicker.css" rel="stylesheet" />
+    <script type="text/javascript">
+        var dialog;
+        function selectDepartConditionCallback(returndata) {
+            $('#<%=TextBox5.ClientID%>').val(returndata);
+            if (dialog != null) {
+                dialog.dialog("close");
+            }
+        }
+        function selectRoleConditionCallback(returndata) {
+            $('#<%=TextBox6.ClientID%>').val(returndata);
+            if (dialog != null) {
+                dialog.dialog("close");
+            }
+        }
+        function selectTitleConditionCallback(returndata) {
+            $('#<%=TextBox7.ClientID%>').val(returndata);
+            if (dialog != null) {
+                dialog.dialog("close");
+            }
+        }
+        function selectOnlineConditionCallback(returndata) {
+            $('#<%=TextBox8.ClientID%>').val(returndata);
+            if (dialog != null) {
+                dialog.dialog("close");
+            }
+        }
+        function selectSexConditionCallback(returndata) {
+            $('#<%=TextBox10.ClientID%>').val(returndata);
+            if (dialog != null) {
+                dialog.dialog("close");
+            }
+        }
+        function selectNationConditionCallback(returndata) {
+            $('#<%=TextBox13.ClientID%>').val(returndata);
+            if (dialog != null) {
+                dialog.dialog("close");
+            }
+        }
+        function selectMarrierConditionCallback(returndata) {
+            $('#<%=TextBox15.ClientID%>').val(returndata);
+            if (dialog != null) {
+                dialog.dialog("close");
+            }
+        }
+        function selectPolicyConditionCallback(returndata) {
+            $('#<%=TextBox16.ClientID%>').val(returndata);
+            if (dialog != null) {
+                dialog.dialog("close");
+            }
+        }
+        function selectBorthPlaceConditionCallback(returndata) {
+            $('#<%=TextBox17.ClientID%>').val(returndata);
+            if (dialog != null) {
+                dialog.dialog("close");
+            }
+        }
+        function selectDegreeConditionCallback(returndata) {
+            $('#<%=TextBox19.ClientID%>').val(returndata);
+            if (dialog != null) {
+                dialog.dialog("close");
+            }
+        }
+        function selectWorkLevelConditionCallback(returndata) {
+            $('#<%=TextBox20.ClientID%>').val(returndata);
+            if (dialog != null) {
+                dialog.dialog("close");
+            }
+        }
+        function selectSchoolConditionCallback(returndata) {
+            $('#<%=TextBox21.ClientID%>').val(returndata);
+            if (dialog != null) {
+                dialog.dialog("close");
+            }
+        }
+        function selectProfesionConditionCallback(returndata) {
+            $('#<%=TextBox22.ClientID%>').val(returndata);
+            if (dialog != null) {
+                dialog.dialog("close");
+            }
+        }
+    </script>
   <script language="javascript">
   function PrintTable()
     {
@@ -72,7 +159,7 @@
                 所属部门：</td>
             <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
                 <asp:TextBox ID="TextBox5" runat="server" Width="350px"></asp:TextBox>
-                <img class="HerCss" onclick="var wName;var RadNum=Math.random();wName=window.showModalDialog('../Main/SelectCondition.aspx?TableName=ERPBuMen&LieName=BuMenName&Radstr='+RadNum,'','dialogWidth:350px;DialogHeight=400px;status:no;help:no;resizable:yes;');if(wName==null){}else{document.getElementById('TextBox5').value=wName;}"
+                <img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPBuMen&LieName=BuMenName&callbackFun=selectDepartConditionCallback',350,400);"
                     src="../images/Button/search.gif" /></td>
         </tr>
         <tr>
@@ -80,7 +167,7 @@
                 所属角色：</td>
             <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
                 <asp:TextBox ID="TextBox6" runat="server" Width="350px"></asp:TextBox>
-                <img class="HerCss" onclick="var wName;var RadNum=Math.random();wName=window.showModalDialog('../Main/SelectCondition.aspx?TableName=ERPJiaoSe&LieName=JiaoSeName&Radstr='+RadNum,'','dialogWidth:350px;DialogHeight=400px;status:no;help:no;resizable:yes;');if(wName==null){}else{document.getElementById('TextBox6').value=wName;}"
+                <img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPJiaoSe&LieName=JiaoSeName&callbackFun=selectRoleConditionCallback',350,400);"
                     src="../images/Button/search.gif" /></td>
         </tr>
         <tr>
@@ -88,7 +175,7 @@
                 职位：</td>
             <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
                 <asp:TextBox ID="TextBox7" runat="server" Width="350px"></asp:TextBox>
-                <img class="HerCss" onclick="var wName;var RadNum=Math.random();wName=window.showModalDialog('../Main/SelectCondition.aspx?TableName=ERPUser&LieName=ZhiWei&Radstr='+RadNum,'','dialogWidth:350px;DialogHeight=400px;status:no;help:no;resizable:yes;');if(wName==null){}else{document.getElementById('TextBox7').value=wName;}"
+                <img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPUser&LieName=ZhiWei&callbackFun=selectTitleConditionCallback',350,400);"
                     src="../images/Button/search.gif" /></td>
         </tr>
         <tr>
@@ -96,7 +183,7 @@
                 在岗状态：</td>
             <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
                 <asp:TextBox ID="TextBox8" runat="server" Width="350px"></asp:TextBox>
-                <img class="HerCss" onclick="var wName;var RadNum=Math.random();wName=window.showModalDialog('../Main/SelectCondition.aspx?TableName=ERPUser&LieName=ZaiGang&Radstr='+RadNum,'','dialogWidth:350px;DialogHeight=400px;status:no;help:no;resizable:yes;');if(wName==null){}else{document.getElementById('TextBox8').value=wName;}"
+                <img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPUser&LieName=ZaiGang&callbackFun=selectOnlineConditionCallback',350,400);"
                     src="../images/Button/search.gif" /></td>
         </tr>
         <tr>
@@ -119,7 +206,7 @@
                 性别：</td>
             <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
                 <asp:TextBox ID="TextBox10" runat="server" Width="350px"></asp:TextBox>
-                <img class="HerCss" onclick="var wName;var RadNum=Math.random();wName=window.showModalDialog('../Main/SelectCondition.aspx?TableName=ERPUser&LieName=Sex&Radstr='+RadNum,'','dialogWidth:350px;DialogHeight=400px;status:no;help:no;resizable:yes;');if(wName==null){}else{document.getElementById('TextBox10').value=wName;}"
+                <img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPUser&LieName=Sex&callbackFun=selectSexConditionCallback',350,400);"
                     src="../images/Button/search.gif" /></td>
         </tr>
         <tr>
@@ -136,15 +223,15 @@
             <td align="right" style="width: 170px; height: 25px; background-color: #cccccc">
                 出生日期：</td>
             <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
-                <asp:TextBox ID="TextBox12" runat="server" Width="350px"></asp:TextBox>
-                <img class="HerCss" onclick="var dataString = showModalDialog('../JS/calendar.htm', 'yyyy-mm-dd' ,'dialogWidth:286px;dialogHeight:221px;status:no;help:no;');if(dataString==null){}else{document.getElementById('TextBox12').value=dataString;}" src="../images/Button/search.gif" /></td>
+                <asp:TextBox ID="TextBox12" runat="server" Width="350px"  CssClass="Wdate" onclick="WdatePicker()"></asp:TextBox>
+             </td>
         </tr>
         <tr>
             <td align="right" style="width: 170px; height: 25px; background-color: #cccccc">
                 民族：</td>
             <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
                 <asp:TextBox ID="TextBox13" runat="server" Width="350px"></asp:TextBox>
-                <img class="HerCss" onclick="var wName;var RadNum=Math.random();wName=window.showModalDialog('../Main/SelectCondition.aspx?TableName=ERPUser&LieName=MingZu&Radstr='+RadNum,'','dialogWidth:350px;DialogHeight=400px;status:no;help:no;resizable:yes;');if(wName==null){}else{document.getElementById('TextBox13').value=wName;}"
+                <img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPUser&LieName=MingZu&callbackFun=selectNationConditionCallback',350,400);"
                     src="../images/Button/search.gif" /></td>
         </tr>
         <tr>
@@ -158,7 +245,7 @@
                 婚姻状况：</td>
             <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
                 <asp:TextBox ID="TextBox15" runat="server" Width="350px"></asp:TextBox>
-                <img class="HerCss" onclick="var wName;var RadNum=Math.random();wName=window.showModalDialog('../Main/SelectCondition.aspx?TableName=ERPUser&LieName=HunYing&Radstr='+RadNum,'','dialogWidth:350px;DialogHeight=400px;status:no;help:no;resizable:yes;');if(wName==null){}else{document.getElementById('TextBox15').value=wName;}"
+                <img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPUser&LieName=HunYing&callbackFun=selectMarrierConditionCallback',350,400);"
                     src="../images/Button/search.gif" /></td>
         </tr>
         <tr>
@@ -166,7 +253,7 @@
                 政治面貌：</td>
             <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
                 <asp:TextBox ID="TextBox16" runat="server" Width="350px"></asp:TextBox>
-                <img class="HerCss" onclick="var wName;var RadNum=Math.random();wName=window.showModalDialog('../Main/SelectCondition.aspx?TableName=ERPUser&LieName=ZhengZhiMianMao&Radstr='+RadNum,'','dialogWidth:350px;DialogHeight=400px;status:no;help:no;resizable:yes;');if(wName==null){}else{document.getElementById('TextBox16').value=wName;}"
+                <img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPUser&LieName=ZhengZhiMianMao&callbackFun=selectPolicyConditionCallback',350,400);"
                     src="../images/Button/search.gif" /></td>
         </tr>
         <tr>
@@ -174,7 +261,7 @@
                 籍贯：</td>
             <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
                 <asp:TextBox ID="TextBox17" runat="server" Width="350px"></asp:TextBox>
-                <img class="HerCss" onclick="var wName;var RadNum=Math.random();wName=window.showModalDialog('../Main/SelectCondition.aspx?TableName=ERPUser&LieName=JiGuan&Radstr='+RadNum,'','dialogWidth:350px;DialogHeight=400px;status:no;help:no;resizable:yes;');if(wName==null){}else{document.getElementById('TextBox17').value=wName;}"
+                <img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPUser&callbackFun=selectBorthPlaceConditionCallback',350,400);"
                     src="../images/Button/search.gif" /></td>
         </tr>
         <tr>
@@ -188,7 +275,7 @@
                 学历：</td>
             <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
                 <asp:TextBox ID="TextBox19" runat="server" Width="350px"></asp:TextBox>
-                <img class="HerCss" onclick="var wName;var RadNum=Math.random();wName=window.showModalDialog('../Main/SelectCondition.aspx?TableName=ERPUser&LieName=XueLi&Radstr='+RadNum,'','dialogWidth:350px;DialogHeight=400px;status:no;help:no;resizable:yes;');if(wName==null){}else{document.getElementById('TextBox19').value=wName;}"
+                <img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPUser&LieName=XueLi&callbackFun=selectDegreeConditionCallback',350,400);"
                     src="../images/Button/search.gif" /></td>
         </tr>
         <tr>
@@ -196,7 +283,7 @@
                 职称：</td>
             <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
                 <asp:TextBox ID="TextBox20" runat="server" Width="350px"></asp:TextBox>
-                <img class="HerCss" onclick="var wName;var RadNum=Math.random();wName=window.showModalDialog('../Main/SelectCondition.aspx?TableName=ERPUser&LieName=ZhiCheng&Radstr='+RadNum,'','dialogWidth:350px;DialogHeight=400px;status:no;help:no;resizable:yes;');if(wName==null){}else{document.getElementById('TextBox20').value=wName;}"
+                <img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPUser&LieName=ZhiCheng&callbackFun=selectWorkLevelConditionCallback',350,400);"
                     src="../images/Button/search.gif" /></td>
         </tr>
         <tr>
@@ -204,7 +291,7 @@
                 毕业院校：</td>
             <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
                 <asp:TextBox ID="TextBox21" runat="server" Width="350px"></asp:TextBox>
-                <img class="HerCss" onclick="var wName;var RadNum=Math.random();wName=window.showModalDialog('../Main/SelectCondition.aspx?TableName=ERPUser&LieName=BiYeYuanXiao&Radstr='+RadNum,'','dialogWidth:350px;DialogHeight=400px;status:no;help:no;resizable:yes;');if(wName==null){}else{document.getElementById('TextBox21').value=wName;}"
+                <img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPUser&LieName=BiYeYuanXiao&callbackFun=selectSchoolConditionCallback',350,400);"
                     src="../images/Button/search.gif" /></td>
         </tr>
         <tr>
@@ -212,22 +299,21 @@
                 专业：</td>
             <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
                 <asp:TextBox ID="TextBox22" runat="server" Width="350px"></asp:TextBox>
-                <img class="HerCss" onclick="var wName;var RadNum=Math.random();wName=window.showModalDialog('../Main/SelectCondition.aspx?TableName=ERPUser&LieName=ZhuanYe&Radstr='+RadNum,'','dialogWidth:350px;DialogHeight=400px;status:no;help:no;resizable:yes;');if(wName==null){}else{document.getElementById('TextBox22').value=wName;}"
+                <img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPUser&LieName=ZhuanYe&callbackFun=selectProfesionConditionCallback',350,400);"
                     src="../images/Button/search.gif" /></td>
         </tr>
         <tr>
             <td align="right" style="width: 170px; height: 25px; background-color: #cccccc">
                 参加工作时间：</td>
             <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
-                <asp:TextBox ID="TextBox23" runat="server" Width="350px"></asp:TextBox>
-                <img class="HerCss" onclick="var dataString = showModalDialog('../JS/calendar.htm', 'yyyy-mm-dd' ,'dialogWidth:286px;dialogHeight:221px;status:no;help:no;');if(dataString==null){}else{document.getElementById('TextBox23').value=dataString;}" src="../images/Button/search.gif" /></td>
+                <asp:TextBox ID="TextBox23" runat="server" Width="350px"  CssClass="Wdate" onclick="WdatePicker()"></asp:TextBox></td>
         </tr>
         <tr>
             <td align="right" style="width: 170px; height: 25px; background-color: #cccccc">
                 加入本单位时间：</td>
             <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
-                <asp:TextBox ID="TextBox24" runat="server" Width="350px"></asp:TextBox>
-                <img class="HerCss" onclick="var dataString = showModalDialog('../JS/calendar.htm', 'yyyy-mm-dd' ,'dialogWidth:286px;dialogHeight:221px;status:no;help:no;');if(dataString==null){}else{document.getElementById('TextBox24').value=dataString;}" src="../images/Button/search.gif" /></td>
+                <asp:TextBox ID="TextBox24" runat="server" Width="350px" CssClass="Wdate" onclick="WdatePicker()"></asp:TextBox>
+               </td>
         </tr>
         <tr>
             <td align="right" style="width: 170px; height: 25px; background-color: #cccccc">

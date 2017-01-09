@@ -4,6 +4,9 @@
 <head>
     <title>企业OA综合管理平台</title>
     <link href="../Style/Style.css" type="text/css" rel="STYLESHEET">
+    <script src="../Scripts/jQuery/jquery-3.1.1.min.js"></script>
+    <link href="../bootstrap-3.3.0/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="../bootstrap-3.3.0/js/bootstrap.min.js"></script>
     <script language="javascript">
         function visible_click() {
             if (td1.className == "") {
@@ -86,9 +89,19 @@
 
                                             <table width="185" height="100%" border="0" cellpadding="0" cellspacing="0">
                                                 <tr>
-                                                    <td height="28" background="../images/Tree_01.jpg">
-                    
-                                                    </td><%--                                    &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #ffffff">导航&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="hei" target="rform" href="OnlineUser.aspx">组织</a>&nbsp;&nbsp;<a class="hei" target="rform" href="../Mobile/MobileSms.aspx">短信</a>&nbsp;&nbsp;<a class="hei" target="rform" href="../LanEmail/LanEmailShou.aspx">邮件</a></span>--%>
+                                                    <td style="height:20px; background-color:#FFFFFF;" >
+                                                        <ul class="nav nav-tabs" role="tablist" style="margin-left:10px;">
+                                                            <li role="presentation" class="active"><a target="rform" href="OnlineUser.aspx"><span class="glyphicon glyphicon-user"></span></a></li>
+                                                            <li role="presentation"><a target="rform" href="../Mobile/MobileSms.aspx"><span class="glyphicon glyphicon-comment"></span></a></li>
+                                                            <li role="presentation"><a target="rform" href="../LanEmail/LanEmailShou.aspx"><span class="glyphicon glyphicon-envelope"></span</a></li>
+                                                        </ul>
+                                                       <%-- &nbsp;&nbsp;&nbsp;&nbsp;
+                                                        <span style="color: #ffffff">导航&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                            <a class="hei" target="rform" href="OnlineUser.aspx">组织</a>&nbsp;&nbsp;
+                                                            <a class="hei" target="rform" href="../Mobile/MobileSms.aspx">短信</a>
+                                                            &nbsp;&nbsp;<a class="hei" target="rform" href="../LanEmail/LanEmailShou.aspx">邮件</a>
+                                                        </span>--%>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td background="../images/Tree_03.jpg" style="padding-bottom: 3px; padding-top: 5px; padding-left: 10px; padding-right: 10px;">
@@ -223,7 +236,7 @@
 
                                                                     </asp:TreeNode>
 
-<%--                                                                    <asp:TreeNode ImageUrl="~/images/TreeImages/hrms.gif" Text="客户管理CRM" Value="客户管理CRM" SelectAction="Expand">
+                                                                    <%--                                                                    <asp:TreeNode ImageUrl="~/images/TreeImages/hrms.gif" Text="客户管理CRM" Value="客户管理CRM" SelectAction="Expand">
                                                                         <asp:TreeNode ImageUrl="~/images/TreeImages/hrms.gif" Text="我的客户" Value="我的客户" SelectAction="Expand">
                                                                             <asp:TreeNode ImageUrl="~/images/TreeImages/hrms.gif" Text="客户信息" Value="C001" NavigateUrl="../CRM/MyCustom.aspx" Target="rform"></asp:TreeNode>
                                                                             <asp:TreeNode ImageUrl="~/images/TreeImages/hrms.gif" Text="客户联系人" Value="C002" NavigateUrl="../CRM/MyCustomLinkMan.aspx?CustomName=" Target="rform"></asp:TreeNode>
@@ -289,7 +302,7 @@
                                                                         <asp:TreeNode ImageUrl="~/images/TreeImages/@asset.gif" Text="固定资产管理" Value="A020" NavigateUrl="../Office/GuDing.aspx" Target="rform"></asp:TreeNode>
                                                                         <asp:TreeNode ImageUrl="~/images/TreeImages/@asset.gif" Text="资产折旧记录" Value="A021" NavigateUrl="../Office/GuDingJiLu.aspx?GDName=" Target="rform"></asp:TreeNode>
                                                                     </asp:TreeNode>
-                                                                  <%--  <asp:TreeNode ImageUrl="~/images/TreeImages/book.gif" Text="图书管理" Value="图书管理" SelectAction="Expand">
+                                                                    <%--  <asp:TreeNode ImageUrl="~/images/TreeImages/book.gif" Text="图书管理" Value="图书管理" SelectAction="Expand">
                                                                         <asp:TreeNode ImageUrl="~/images/TreeImages/book.gif" Text="图书管理" Value="A022" NavigateUrl="../Office/Book.aspx" Target="rform"></asp:TreeNode>
                                                                         <asp:TreeNode ImageUrl="~/images/TreeImages/book.gif" Text="图书借阅登记" Value="A023" NavigateUrl="../Office/BookJieHuan.aspx" Target="rform"></asp:TreeNode>
                                                                         <asp:TreeNode ImageUrl="~/images/TreeImages/book.gif" Text="图书借阅管理" Value="A024" NavigateUrl="../Office/BookJieHuanOK.aspx" Target="rform"></asp:TreeNode>
@@ -300,7 +313,7 @@
                                                                         <asp:TreeNode ImageUrl="~/images/TreeImages/file_folder.gif" Text="档案管理" Value="A026" NavigateUrl="../DocFile/DangAn.aspx?JuanKuName=" Target="rform"></asp:TreeNode>
                                                                         <asp:TreeNode ImageUrl="~/images/TreeImages/file_folder.gif" Text="档案销毁" Value="A027" NavigateUrl="../DocFile/DangAnDel.aspx" Target="rform"></asp:TreeNode>
                                                                     </asp:TreeNode>
-                                                                 <asp:TreeNode ImageUrl="~/images/TreeImages/file_folder.gif" Text="培训管理" Value="培训管理" SelectAction="Expand">
+                                                                    <asp:TreeNode ImageUrl="~/images/TreeImages/file_folder.gif" Text="培训管理" Value="培训管理" SelectAction="Expand">
                                                                         <asp:TreeNode ImageUrl="~/images/TreeImages/file_folder.gif" Text="培训信息" Value="A028" NavigateUrl="../DocFile/PeiXun.aspx" Target="rform"></asp:TreeNode>
                                                                         <asp:TreeNode ImageUrl="~/images/TreeImages/file_folder.gif" Text="培训日志" Value="A029" NavigateUrl="../DocFile/PeiXunRiJi.aspx?PeiXunName=" Target="rform"></asp:TreeNode>
                                                                         <asp:TreeNode ImageUrl="~/images/TreeImages/file_folder.gif" Text="效果评估" Value="A030" NavigateUrl="../DocFile/PeiXunXiaoGuo.aspx?PeiXunName=" Target="rform"></asp:TreeNode>
@@ -355,7 +368,7 @@
 
                                                                     </asp:TreeNode>
 
-<%--
+                                                                    <%--
                                                                     <asp:TreeNode ImageUrl="~/images/TreeImages/vote.gif" Text="附件程序" Value="附件程序" SelectAction="Expand">
                                                                         <asp:TreeNode ImageUrl="~/images/TreeImages/system.gif" Text="电话区号查询" Value="059" NavigateUrl="../Appendix/TelCode.aspx" Target="rform"></asp:TreeNode>
                                                                         <asp:TreeNode ImageUrl="~/images/TreeImages/system.gif" Text="邮政编码查询" Value="060" NavigateUrl="../Appendix/YouZhengCode.aspx" Target="rform"></asp:TreeNode>
