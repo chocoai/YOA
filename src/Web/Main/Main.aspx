@@ -470,14 +470,11 @@
                 </td>
             </tr>
             <tr>
-                <td height="20" colspan="2" background="../images/BottomBg.gif" valign="middle">
+                <td height="20px" colspan="2" background="../images/BottomBg.gif" valign="middle">
                     <table border="0" cellpadding="0" cellspacing="0" class="small" width="100%">
                         <tr>
-                            <td valign="middle">&nbsp;&nbsp;<iframe name="bform" frameborder="0" marginheight="0" marginwidth="0" width="150px" height="20px"
+                            <td valign="middle">&nbsp;&nbsp;<iframe name="bform" frameborder="0" marginheight="0" marginwidth="0" width="500px" height="20px"
                                 src="Blank.aspx" border="0"></iframe>
-
-                                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                                    &nbsp;
                                     <asp:Label ID="Label1" runat="server" Font-Bold="True" ForeColor="Red" Text=""
                                         Visible="True"></asp:Label></td>
                         </tr>

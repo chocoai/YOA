@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="WorkAdd.aspx.cs" Inherits="WorkFlow_WorkAdd" ValidateRequest="false" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="WorkAdd.aspx.cs" Inherits="WorkFlow_WorkAdd" %>
 <html>
 	<head>
 		<title>政务OA</title>

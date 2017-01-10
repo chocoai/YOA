@@ -3,6 +3,9 @@
 	<head>
 		<title>政务OA</title>
   <LINK href="../Style/Style.css" type="text/css" rel="STYLESHEET">
+        <script src="../Scripts/jQuery/jquery-3.1.1.min.js"></script>
+    <script src="../bootstrap-3.3.0/js/bootstrap.min.js"></script>
+    <link href="../bootstrap-3.3.0/css/bootstrap.min.css" rel="stylesheet" />
   <script language="javascript">
   function PrintTable()
     {
@@ -48,8 +51,8 @@
         <table style="width: 100%" bgcolor="#999999" border="0" cellpadding="2" cellspacing="1">
         <tr>
             
-            <td align="center" style="height: 25px; background-color: #ffffff" background="../images/BGLine.png">
-                <asp:CheckBoxList ID="CheckBoxList1" runat="server" RepeatColumns="8" RepeatDirection="Horizontal" Width="100%">
+            <td align="center" style="height: 25px; background-color: #ffffff">
+                <asp:CheckBoxList ID="CheckBoxList1" runat="server" RepeatColumns="8"  CssClass="table table-striped table-hover"  RepeatDirection="Horizontal" Width="100%">
                    <asp:ListItem Value="001">办公桌--内部邮件--收件箱--查看</asp:ListItem>
                     <asp:ListItem Value="001a">添加</asp:ListItem>                    
                     <asp:ListItem Value="001d">删除</asp:ListItem>
