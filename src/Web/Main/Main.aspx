@@ -2,7 +2,7 @@
 
 <html>
 <head>
-    <title>企业OA综合管理平台</title>
+    <title>政务OA</title>
     <link href="../Style/Style.css" type="text/css" rel="STYLESHEET">
     <script src="../Scripts/jQuery/jquery-3.1.1.min.js"></script>
     <link href="../bootstrap-3.3.0/css/bootstrap.min.css" rel="stylesheet" />
@@ -28,7 +28,8 @@
                 <td height="50" background="../images/TitleBg.gif" width="52%">
                     <img src="../images/product.png" /></td>
                 <td height="50" background="../images/TitleBg.gif" width="48%" align="right">
-                    <script language="JavaScript">
+                    <%=DateTime.Now.ToString("yyyy年M月d日") %>
+                   <%-- <script language="JavaScript">
                         today = new Date();
                         function initArray() {
                             this.length = initArray.arguments.length
@@ -50,7 +51,7 @@
                              today.getDate(), "日   ",
                              d[today.getDay() + 1],
                              "");
-                    </script>
+                    </script>--%>
                     &nbsp;<img align="absMiddle" src="../images/time.gif" />
                     <span id="t1">
                         <script language="javascript">todaytime1 = new Date(); t1.innerText = todaytime1.getHours() + '：' + todaytime1.getMinutes() + '：' + todaytime1.getSeconds();</script>

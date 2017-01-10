@@ -12,7 +12,7 @@
 
 <SCRIPT language=javascript src="../JS/ShowWorkFlow.js"></SCRIPT>
 <META content="MSHTML 6.00.3790.3041" name=GENERATOR>
-    <title>企业OA综合管理平台</title>
+    <title>政务OA</title>
 </head>
 <body  leftMargin=2 opMargin=2>
     <form id="form1" runat="server">

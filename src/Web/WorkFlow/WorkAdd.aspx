@@ -1,9 +1,8 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="WorkAdd.aspx.cs" Inherits="WorkFlow_WorkAdd" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="WorkAdd.aspx.cs" Inherits="WorkFlow_WorkAdd" ValidateRequest="false" %>
 <html>
 	<head>
-		<title>企业OA综合管理平台</title>
+		<title>政务OA</title>
   <LINK href="../Style/Style.css" type="text/css" rel="STYLESHEET">
-  <script type="text/javascript" language="javascript" src="../JS/calendar.js"></script>
          <link href="../Style/jquery-ui/jquery-ui.min.css" rel="stylesheet" />
     <script src="../Scripts/jQuery/jquery-3.1.1.min.js"></script>
     <script src="../Scripts/jquery-ui/jquery-ui.min.js"></script>
@@ -16,21 +15,21 @@
                 dialog.dialog("close");
             }
         }
+        function selectyinzhangCallback(returndata) {
+            if (returndata == null || returndata == "")
+            {
+            }
+            else
+            {        
+                //alert(imgidstr);
+                imgidstr.src = "http://" + window.location.host + "<%=System.Configuration.ConfigurationManager.AppSettings["OARoot"] %>/UploadFile/" + returndata;  
+            }
+        }
     </script>
   <script language="javascript">
       function selectyinzhang(imgidstr)
         {
-            
-            var wName;
-            var RadNum=Math.random();
-            wName=window.showModalDialog('../Main/SelectYinZhang.aspx?Radstr='+RadNum,'','dialogWidth:350px;DialogHeight=400px;status:no;help:no;resizable:yes;');            
-            if(wName==null||wName=="")
-            {}
-            else
-            {        
-                //alert(imgidstr);
-                imgidstr.src="http://"+window.location.host+"<%=System.Configuration.ConfigurationManager.AppSettings["OARoot"] %>/UploadFile/"+wName;  
-            }
+          openDialog('../Main/SelectYinZhang.aspx?callbackFun=selectyinzhangCallback', 350, 400);
         }
   function PrintTable()
     {

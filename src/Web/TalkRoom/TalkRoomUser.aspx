@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TalkRoomUser.aspx.cs" Inherits="TalkRoom_TalkRoomUser" %>
 <html>
 	<head>
-		<title>企业OA综合管理平台</title>
+		<title>政务OA</title>
   <LINK href="../Style/Style.css" type="text/css" rel="STYLESHEET">
   <meta http-equiv="refresh" content="60" />
 </head>

@@ -1,7 +1,7 @@
 <%@ Page Language="C#" AutoEventWireup="true" CodeFile="ReadFile.aspx.cs" Inherits="DsoFramer_ReadFile" %>
 <html>
 	<head>
-		<title>企业OA综合管理平台</title>
+		<title>政务OA</title>
   <LINK href="../Style/Style.css" type="text/css" rel="STYLESHEET">  
   
         <meta content="Microsoft Visual Studio .NET 7.1" name="GENERATOR">

@@ -1,7 +1,7 @@
 <%@ Page Language="C#" AutoEventWireup="true" CodeFile="JSDICAdd.aspx.cs" Inherits="Car_JSDICAdd" %>
 <html>
 	<head>
-		<title>企业OA综合管理平台</title>
+		<title>政务OA</title>
   <LINK href="../Style/Style.css" type="text/css" rel="STYLESHEET"><link href="../Style/jquery-ui/jquery-ui.min.css" rel="stylesheet" />
     <script src="../Scripts/jQuery/jquery-3.1.1.min.js"></script>
     <script src="../Scripts/jquery-ui/jquery-ui.min.js"></script>

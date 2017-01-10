@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Blank.aspx.cs" Inherits="Address_UserList0" %>
 <html>
 	<head>
-		<title>企业OA综合管理平台</title>
+		<title>政务OA</title>
 		<META HTTP-EQUIV=REFRESH CONTENT="5;URL='OnlineCount.aspx'">
   <LINK href="../Style/Style.css" type="text/css" rel="STYLESHEET">
 </head>

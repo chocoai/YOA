@@ -5,7 +5,7 @@
 <html>
 <head runat="server">
     <meta name="viewport" content="width=device-width" />
-    <title>企业OA综合管理平台</title>
+    <title>政务OA</title>
     <script src="Scripts/jquery.js"></script>
     <style>
         body {

@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="SerilsSetting.aspx.cs" Inherits="SerilsSetting" %>
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head id="Head1" runat="server">
-    <title>企业OA综合管理平台</title>
+    <title>政务OA</title>
     <LINK href="Style/Style.css" type="text/css" rel="STYLESHEET">
 </head>
 <body>

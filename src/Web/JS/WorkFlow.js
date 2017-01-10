@@ -160,7 +160,7 @@ function drawLine()
 }
 
 //表单加载完成
-function document.onreadystatechange()
+document.onreadystatechange = function ()
 {
    if (document.readyState=='complete')
    {

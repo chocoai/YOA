@@ -2,10 +2,8 @@
 <%@ Register Assembly="CKEditor.NET" Namespace="CKEditor.NET" TagPrefix="CKEditor" %>
 <html>
 <head>
-    <title>企业OA综合管理平台</title>
+    <title>政务OA</title>
     <link href="../Style/Style.css" type="text/css" rel="STYLESHEET">
-
-    <script type="text/javascript" language="javascript" src="../JS/calendar.js"></script>
     <link href="../Style/jquery-ui/jquery-ui.min.css" rel="stylesheet" />
     <script src="../Scripts/jQuery/jquery-3.1.1.min.js"></script>
     <script src="../Scripts/jquery-ui/jquery-ui.min.js"></script>
@@ -39,37 +37,37 @@
         }
 
         function formset(str) {
-            var myck_editor = CKEDITOR.instances.TxtContent；
+            var myck_editor = CKEDITOR.instances.TxtContent;
             var cValue = parseInt(20000 * Math.random());
             //Math.random()
 
             //常规控件
             if (str == "1") {
-                myck_editor.insertHTML('<input id="Text1"  name="' + cValue + '"  type="text"  style="border-left:0px;border-top:0px;border-right:0px;border-bottom:1px   solid   #000000"/>');
+                myck_editor.insertHtml('<input id="Text1"  name="' + cValue + '"  type="text"  style="border-left:0px;border-top:0px;border-right:0px;border-bottom:1px   solid   #000000"/>');
             }
 
             if (str == "2") {
-                myck_editor.insertHTML('<textarea id="TextArea1" name="' + cValue + '"   cols="20" rows="2"  style="SCROLLBAR-FACE-COLOR:   #AAAAAA;   SCROLLBAR-HIGHLIGHT-COLOR:   #D8D8D8;  SCROLLBAR-SHADOW-COLOR:   #D8D8D8;   SCROLLBAR-3DLIGHT-COLOR:   #D8D8D8;   SCROLLBAR-ARROW-COLOR:   #D8D8D8;   SCROLLBAR-TRACK-COLOR:   #D8D8D8;   SCROLLBAR-DARKSHADOW-COLOR:   #D8D8D8; border-left:0px;border-top:0px;border-right:0px;border-bottom:1px   solid   #000000 " ></textarea>');
+                myck_editor.insertHtml('<textarea id="TextArea1" name="' + cValue + '"   cols="20" rows="2"  style="SCROLLBAR-FACE-COLOR:   #AAAAAA;   SCROLLBAR-HIGHLIGHT-COLOR:   #D8D8D8;  SCROLLBAR-SHADOW-COLOR:   #D8D8D8;   SCROLLBAR-3DLIGHT-COLOR:   #D8D8D8;   SCROLLBAR-ARROW-COLOR:   #D8D8D8;   SCROLLBAR-TRACK-COLOR:   #D8D8D8;   SCROLLBAR-DARKSHADOW-COLOR:   #D8D8D8; border-left:0px;border-top:0px;border-right:0px;border-bottom:1px   solid   #000000 " ></textarea>');
 
             }
 
             if (str == "3") {
-                myck_editor.insertHTML('<input id="Checkbox1"  name="' + cValue + '"   type="checkbox"  />');
+                myck_editor.insertHtml('<input id="Checkbox1"  name="' + cValue + '"   type="checkbox"  />');
             }
 
             if (str == "12") {
-                myck_editor.insertHTML('<input id="Text1"  name="' + cValue + '"  type="text"  style="IME-MODE: disabled;border-left:0px;border-top:0px;border-right:0px;border-bottom:1px   solid   #000000"  onkeypress="var k=event.keyCode; return (k>=48&&k<=57)||k==46" onpaste="return !/\D/.test(clipboardData.getData(\'text\'))"  ondragenter="return false"/>');
+                myck_editor.insertHtml('<input id="Text1"  name="' + cValue + '"  type="text"  style="IME-MODE: disabled;border-left:0px;border-top:0px;border-right:0px;border-bottom:1px   solid   #000000"  onkeypress="var k=event.keyCode; return (k>=48&&k<=57)||k==46" onpaste="return !/\D/.test(clipboardData.getData(\'text\'))"  ondragenter="return false"/>');
             }
 
             if (str == "13") {
                 var num = Math.random();
-                myck_editor.insertHTML('<input id="' + num + '" name="' + cValue + '"  type="text"  onclick="setday(this)"   value=""  style="border-left:0px;border-top:0px;border-right:0px;border-bottom:1px   solid   #000000"/>');
+                myck_editor.insertHtml('<input id="' + num + '" name="' + cValue + '"  type="text"  onclick="setday(this)"   value=""  style="border-left:0px;border-top:0px;border-right:0px;border-bottom:1px   solid   #000000"/>');
             }
 
             //<input id="WorkTime" type="text"  onclick="Jscript:var sID ;sID = event.srcElement.id; DateSelect(sID);" />
             if (str == "14") {
                 var num = Math.random();
-                myck_editor.insertHTML('<img class="HerCss" name="img' + cValue + '" id="img' + cValue + '" onclick="selectyinzhang(img' + cValue + ');"  src="../images/NoYz.gif" />');
+                myck_editor.insertHtml('<img class="HerCss" name="img' + cValue + '" id="img' + cValue + '" onclick="selectyinzhang(img' + cValue + ');"  src="../images/NoYz.gif" />');
             }
 
             //宏控件
@@ -78,24 +76,24 @@
 
 
             if (str == "4") {
-                myck_editor.insertHTML('<input readonly id="Text2" name="' + cValue + '"  type="text" value="宏控件-用户姓名" style="border-left:0px;border-top:0px;border-right:0px;border-bottom:1px   solid   #000000"/>');
+                myck_editor.insertHtml('<input readonly id="Text2" name="' + cValue + '"  type="text" value="宏控件-用户姓名" style="border-left:0px;border-top:0px;border-right:0px;border-bottom:1px   solid   #000000"/>');
             }
 
             if (str == "5") {
-                myck_editor.insertHTML('<input readonly id="Text2" name="' + cValue + '"  type="text" value="宏控件-用户部门" style="border-left:0px;border-top:0px;border-right:0px;border-bottom:1px   solid   #000000"/>');
+                myck_editor.insertHtml('<input readonly id="Text2" name="' + cValue + '"  type="text" value="宏控件-用户部门" style="border-left:0px;border-top:0px;border-right:0px;border-bottom:1px   solid   #000000"/>');
             }
 
             if (str == "6") {
-                myck_editor.insertHTML('<input readonly id="Text2"  name="' + cValue + '"   type="text" value="宏控件-用户角色" style="border-left:0px;border-top:0px;border-right:0px;border-bottom:1px   solid   #000000"/>');
+                myck_editor.insertHtml('<input readonly id="Text2"  name="' + cValue + '"   type="text" value="宏控件-用户角色" style="border-left:0px;border-top:0px;border-right:0px;border-bottom:1px   solid   #000000"/>');
             }
 
             if (str == "7") {
-                myck_editor.insertHTML('<input readonly id="Text2"  name="' + cValue + '"  type="text" value="宏控件-用户职位" style="border-left:0px;border-top:0px;border-right:0px;border-bottom:1px   solid   #000000"/>');
+                myck_editor.insertHtml('<input readonly id="Text2"  name="' + cValue + '"  type="text" value="宏控件-用户职位" style="border-left:0px;border-top:0px;border-right:0px;border-bottom:1px   solid   #000000"/>');
             }
 
 
             if (str == "8") {
-                myck_editor.insertHTML('<input readonly id="Text2"  name="' + cValue + '"  type="text" value="宏控件-当前时间(日期)" style="border-left:0px;border-top:0px;border-right:0px;border-bottom:1px   solid   #000000"/>');
+                myck_editor.insertHtml('<input readonly id="Text2"  name="' + cValue + '"  type="text" value="宏控件-当前时间(日期)" style="border-left:0px;border-top:0px;border-right:0px;border-bottom:1px   solid   #000000"/>');
             }
 
         }
@@ -104,13 +102,14 @@
 
     <script language="javascript">
         function settiaojian() {
+            var myck_editor = CKEDITOR.instances.TxtContent;
             var ziduanname = document.getElementById("DropDownList1").value.split('[')[0];
             var ziduanleixing = document.getElementById("DropDownList1").value.split('[')[1];
             if (ziduanleixing == "常规型]") {
-                myck_editor.insertHTML('<input id="Text3"  name="' + "TIaoJianZiDuan_" + ziduanname + '"  type="text"  style="border-left:0px;border-top:0px;border-right:0px;border-bottom:1px   solid   #000000"/>');
+                myck_editor.insertHtml('<input id="Text3"  name="' + "TIaoJianZiDuan_" + ziduanname + '"  type="text"  style="border-left:0px;border-top:0px;border-right:0px;border-bottom:1px   solid   #000000"/>');
             }
             else {
-                myck_editor.insertHTML('<input id="Text3"  name="' + "TIaoJianZiDuan_" + ziduanname + '"  type="text"  style="IME-MODE: disabled;border-left:0px;border-top:0px;border-right:0px;border-bottom:1px   solid   #000000"  onkeypress="var k=event.keyCode; return (k>=48&&k<=57)||k==46" onpaste="return !/\D/.test(clipboardData.getData(\'text\'))"  ondragenter="return false"/>');
+                myck_editor.insertHtml('<input id="Text3"  name="' + "TIaoJianZiDuan_" + ziduanname + '"  type="text"  style="IME-MODE: disabled;border-left:0px;border-top:0px;border-right:0px;border-bottom:1px   solid   #000000"  onkeypress="var k=event.keyCode; return (k>=48&&k<=57)||k==46" onpaste="return !/\D/.test(clipboardData.getData(\'text\'))"  ondragenter="return false"/>');
             }
         }
 

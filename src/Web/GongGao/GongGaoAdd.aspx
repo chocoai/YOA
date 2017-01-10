@@ -3,7 +3,7 @@
 <%@ Register Assembly="CKEditor.NET" Namespace="CKEditor.NET" TagPrefix="CKEditor" %>
 <html>
 <head>
-    <title>企业OA综合管理平台</title>
+    <title>政务OA</title>
     <link href="../Style/Style.css" type="text/css" rel="STYLESHEET">
     <script language="javascript">
         function PrintTable() {
