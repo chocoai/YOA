@@ -6,7 +6,7 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Web", "Web\", "{4AE53402-2BF5-4786-85EB-A78E56091E82}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
-		ProjectReferences = "{1779321D-1013-4510-86B0-B1D7700EDD4F}|BLL.dll;{B2CB0F25-F746-413B-BB57-4E22596AAF98}|DBUtility.dll;{2BD96671-63CA-4DED-9798-FBA5A57922B6}|Common.dll;{fc4500a9-8e83-46b0-87fa-86d44ab79aa7}|CKEditor.NET.dll;"
+		ProjectReferences = "{1779321D-1013-4510-86B0-B1D7700EDD4F}|BLL.dll;{B2CB0F25-F746-413B-BB57-4E22596AAF98}|DBUtility.dll;{2BD96671-63CA-4DED-9798-FBA5A57922B6}|Common.dll;{fc4500a9-8e83-46b0-87fa-86d44ab79aa7}|CKEditor.NET.dll;{0fac7937-3cdd-41f6-9dc8-c743c9f727f1}|AspNetPager.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/Web"
 		Debug.AspNetCompiler.PhysicalPath = "Web\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\Web\"
@@ -33,6 +33,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBUtility", "DBUtility\DBUtility.csproj", "{B2CB0F25-F746-413B-BB57-4E22596AAF98}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CKEditor.NET", "CKEditor.NET\CKEditor.NET.csproj", "{FC4500A9-8E83-46B0-87FA-86D44AB79AA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetPager", "AspNetPager\AspNetPager.csproj", "{0FAC7937-3CDD-41F6-9DC8-C743C9F727F1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -96,6 +98,18 @@ Global
 		{FC4500A9-8E83-46B0-87FA-86D44AB79AA7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FC4500A9-8E83-46B0-87FA-86D44AB79AA7}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{FC4500A9-8E83-46B0-87FA-86D44AB79AA7}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{0FAC7937-3CDD-41F6-9DC8-C743C9F727F1}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{0FAC7937-3CDD-41F6-9DC8-C743C9F727F1}.Debug|.NET.Build.0 = Debug|Any CPU
+		{0FAC7937-3CDD-41F6-9DC8-C743C9F727F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FAC7937-3CDD-41F6-9DC8-C743C9F727F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FAC7937-3CDD-41F6-9DC8-C743C9F727F1}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{0FAC7937-3CDD-41F6-9DC8-C743C9F727F1}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{0FAC7937-3CDD-41F6-9DC8-C743C9F727F1}.Release|.NET.ActiveCfg = Release|Any CPU
+		{0FAC7937-3CDD-41F6-9DC8-C743C9F727F1}.Release|.NET.Build.0 = Release|Any CPU
+		{0FAC7937-3CDD-41F6-9DC8-C743C9F727F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FAC7937-3CDD-41F6-9DC8-C743C9F727F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FAC7937-3CDD-41F6-9DC8-C743C9F727F1}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{0FAC7937-3CDD-41F6-9DC8-C743C9F727F1}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

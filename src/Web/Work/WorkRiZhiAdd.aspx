@@ -9,6 +9,7 @@
     <script src="../Scripts/jQuery/jquery-3.1.1.min.js"></script>
     <script src="../Scripts/jquery-ui/jquery-ui.min.js"></script>
     <script src="../Scripts/Public.js"></script>
+    <script src="../CKFinderScripts/ckfinder.js"></script>
     <script type="text/javascript">
         var dialog;
         function selectConditionCallback(returndata) {
@@ -17,6 +18,10 @@
                 dialog.dialog("close");
             }
         }
+        $(function () {
+            CKFinder.setupCKEditor();
+        });
+        
     </script>
      <script  type="text/javascript">
         function PrintTable() {

@@ -24,6 +24,7 @@ public class Startup {
          * Keep in mind that the logger should be initialized only once and before any other
          * CKFinder method is invoked.
          */
+        LoggerManager.LoggerAdapterFactory = new NLogLoggerAdapterFactory();
         /*
          * Register the "local" type backend file system.
          */

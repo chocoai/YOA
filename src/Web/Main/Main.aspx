@@ -428,7 +428,7 @@
                                                     <td height="27" background="../images/BackWhite.gif">
                                                         <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                                             <tr>
-                                                                <td>&nbsp;&nbsp;&nbsp; &nbsp;<a class="bai" target="rform" href="../NetMail/NetMailShou.aspx"><img align="absMiddle" height="16" border="0" src="../images/TreeImages/webmail.gif" width="16" />&nbsp;Internet 邮件&nbsp;</a>
+                                                                <td>&nbsp;&nbsp;&nbsp; &nbsp;<a class="bai glyphicon glyphicon-envelope" target="rform" href="../NetMail/NetMailShou.aspx">&nbsp;Internet邮件</a>
                                                                     &nbsp;&nbsp;<a class="bai" target="rform" href="../Meeting/MyMeeting.aspx"><img align="absMiddle" height="16" border="0" src="../images/TreeImages/vmeet.gif" width="16" />&nbsp;我的会议&nbsp;</a>
                                                                     &nbsp;&nbsp;<a class="bai" target="rform" href="../DocCenter/DocCenter.aspx?Type=个人文件&DirID=0"><img align="absMiddle" height="16" border="0" src="../images/TreeImages/file_folder.gif" width="16" />&nbsp;个人文件柜&nbsp;</a>
                                                                     &nbsp;&nbsp;<a class="bai" target="rform" href="../LanEmail/LanEmailShou.aspx"><img align="absMiddle" height="16" border="0" src="../images/TreeImages/email.gif" width="16" />&nbsp;内部邮件&nbsp;</a>

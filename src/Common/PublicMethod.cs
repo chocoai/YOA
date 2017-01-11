@@ -248,11 +248,11 @@ namespace ZWL.Common
         //在RowDataBound事件时使用
         public static void GridViewRowDataBound(GridViewRowEventArgs e)
         {
-            if (e.Row.RowType == DataControlRowType.DataRow)
-            {
-                e.Row.Attributes.Add("onmouseover", "c=this.style.backgroundColor;this.style.backgroundColor='#E4F4FF'");
-                e.Row.Attributes.Add("onmouseout", "this.style.backgroundColor=c;");
-            }
+            //if (e.Row.RowType == DataControlRowType.DataRow)
+            //{
+            //    e.Row.Attributes.Add("onmouseover", "c=this.style.backgroundColor;this.style.backgroundColor='#E4F4FF'");
+            //    e.Row.Attributes.Add("onmouseout", "this.style.backgroundColor=c;");
+            //}
         }
         //判断GridView里面被选中的ID
         public static string CheckCbx(GridView GVData, string CheckBoxName, string LabID)
