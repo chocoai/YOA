@@ -12,9 +12,6 @@ using Wuqi.Webdiyer;
 
 public partial class LanEmail_LanEmailShou : System.Web.UI.Page
 {
-    protected void AspNetPager1_PageChanged(object src, EventArgs e) {
-        DataBindToGridview();
-    }
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!Page.IsPostBack)
@@ -27,6 +24,10 @@ public partial class LanEmail_LanEmailShou : System.Web.UI.Page
             ImageButton3.Visible = ZWL.Common.PublicMethod.StrIFIn("|001d|", ZWL.Common.PublicMethod.GetSessionValue("QuanXian"));
             ImageButton2.Visible = ZWL.Common.PublicMethod.StrIFIn("|001e|", ZWL.Common.PublicMethod.GetSessionValue("QuanXian"));
         }
+    }
+    protected void AspNetPager1_PageChanged(object src, EventArgs e)
+    {
+        DataBindToGridview();
     }
     public void DataBindToGridview()
     {

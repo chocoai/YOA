@@ -105,10 +105,17 @@
         <div>
             <table style="width: 100%" border="0" cellpadding="0" cellspacing="0">
                 <tr>
-                    <td valign="middle" style="border-bottom: #006633 1px dashed; height: 30px;">&nbsp;<img src="../images/BanKuaiJianTou.gif" />
-                        <a class="hei" href="../Main/MyDesk.aspx">桌面</a>&nbsp;>>&nbsp;内部邮件&nbsp;>>&nbsp;收件箱
+                    <td colspan="2" valign="middle" style="height: 30px;" >
+                        <ol class="breadcrumb">
+                            <li><a href="../Main/MyDesk.aspx">桌面</a></li>
+                            <li>内部邮件</li>
+                            <li class="active">收件箱</li>
+                        </ol>
+
                     </td>
-                    <td align="right" valign="middle" style="border-bottom: #006633 1px dashed;">
+                </tr>
+                <tr>
+                    <td colspan="2"  class="filter_box" >
                         <div class="form-group">
                             主题：<asp:TextBox ID="TextBox1" CssClass="form-control" runat="server" Width="150px">
                             </asp:TextBox>
@@ -133,11 +140,9 @@
             <table style="width: 100%">
                 <tr>
                     <td>
-                        <asp:GridView ID="GVData" CssClass="table-striped table-hover table-condensed" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False"
+                        <asp:GridView ID="GVData" CssClass="table table-striped table-hover" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False"
                             OnRowDataBound="GVData_RowDataBound" PageSize="15"
-                            Width="100%">
-                            <%--<PagerSettings Mode="NumericFirstLast" Visible="False" />
-                    <PagerStyle BackColor="LightSteelBlue" HorizontalAlign="Right" />--%>
+                            Width="100%" CellPadding="0" GridLines="None">
                             <HeaderStyle BackColor="#006599" Font-Size="12px" ForeColor="White" Height="20px" />
                             <Columns>
                                 <asp:TemplateField>
@@ -175,7 +180,7 @@
                             <EmptyDataTemplate>
                                 <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                     <tr>
-                                        <td align="center" style="border-right: black 1px; border-top: black 1px; border-left: black 1px; border-bottom: black 1px; background-color: whitesmoke;">该列表中暂时无数据！</td>
+                                        <td align="center">该列表中暂时无数据！</td>
                                     </tr>
                                 </table>
                             </EmptyDataTemplate>
@@ -183,16 +188,10 @@
                     </td>
                 </tr>
                 <tr>
-                    <td style="border-top: #000000 1px solid; border-bottom: #000000 1px solid">
-                       <%-- <webdiyer:AspNetPager ID="AspNetPager1" runat="server"
-                             OnPageChanged="AspNetPager1_PageChanged" CurrentPageButtonPosition="Center"
-                            Width="100%" HorizontalAlign="center" AlwaysShowFirstLastPageNumber="true" PagingButtonSpacing="10" FirstPageText="首页"
-                            LastPageText="尾页" NextPageText="下一页" PrevPageText="上一页">
-                        </webdiyer:AspNetPager>--%>
+                    <td>
+                        <webdiyer:AspNetPager ID="AspNetPager1" runat="server" Width="100%" UrlPaging="false" CssClass="pagination" LayoutType="Ul" PagingButtonLayoutType="UnorderedList" PagingButtonSpacing="0" CurrentPageButtonClass="active" PageSize="15" OnPageChanged="AspNetPager1_PageChanged">
+                        </webdiyer:AspNetPager>
 
-                        <webdiyer:AspNetPager ID="AspNetPager1" runat="server" Width="100%" UrlPaging="false" CssClass="pagination" LayoutType="Ul" PagingButtonLayoutType="UnorderedList" PagingButtonSpacing="0" CurrentPageButtonClass="active" PageSize="2" OnPageChanged="AspNetPager1_PageChanged">
-        </webdiyer:AspNetPager>
-                      
                     </td>
                 </tr>
             </table>

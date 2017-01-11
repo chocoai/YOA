@@ -190,7 +190,7 @@ a {
     }
 
 table {
-    border: 0px;
+    border-width: 4px;
     border-image-width: 0px;
     border-collapse: collapse;
 }
@@ -214,4 +214,7 @@ table {
     cursor: default;
     background-color: #337ab7;
     border-color: #337ab7;
+}
+td.filter_box {
+        text-align:center;
 }
