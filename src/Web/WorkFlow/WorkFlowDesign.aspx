@@ -101,7 +101,7 @@
                 <td valign="middle" style="border-bottom: #006633 1px dashed; height: 30px; ">&nbsp;<img src="../images/BanKuaiJianTou.gif" />
                 <a class="hei" href="../Main/MyDesk.aspx">桌面</a>&nbsp;>>&nbsp;工作流程&nbsp;>>&nbsp;流程定义
                     &nbsp; &nbsp; &nbsp;&nbsp;
-                    <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Underline="True" Text="流程名称："></asp:Label></td>
+                    <asp:Label ID="Label1" runat="server" Font-Bold="True"   Text="流程名称："></asp:Label></td>
                 <td align="right" valign="middle" style="border-bottom: #006633 1px dashed; height: 30px;">
                     <span style="color: #cccccc">*右键单击空白页面新建节点</span> &nbsp;&nbsp;
                     <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">列表显示模式</asp:LinkButton>

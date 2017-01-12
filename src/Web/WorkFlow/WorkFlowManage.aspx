@@ -138,7 +138,7 @@
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="流程名称">
                             <ItemTemplate>                                
-                                <asp:HyperLink ID="HyperLink1" runat="server" Font-Underline="True"
+                                <asp:HyperLink ID="HyperLink1" runat="server"  
                                     NavigateUrl='<%# "WorkFlowView.aspx?ID="+ DataBinder.Eval(Container.DataItem, "ID")%>'><%# DataBinder.Eval(Container.DataItem, "WorkFlowName")%></asp:HyperLink>
                             </ItemTemplate>                            
                             <ItemStyle HorizontalAlign="Left" />

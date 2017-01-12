@@ -149,7 +149,7 @@
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="需求内容">
                             <ItemTemplate>                                
-                                <asp:HyperLink ID="HyperLink1" runat="server" Font-Underline="True"
+                                <asp:HyperLink ID="HyperLink1" runat="server"  
                                     NavigateUrl='<%# "NeedView.aspx?ID="+ DataBinder.Eval(Container.DataItem, "ID")%>'><%# DataBinder.Eval(Container.DataItem, "NeedContent")%></asp:HyperLink>
                             </ItemTemplate>                            
                             <ItemStyle HorizontalAlign="Left" />

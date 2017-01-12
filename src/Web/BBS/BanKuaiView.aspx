@@ -136,7 +136,7 @@
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="帖子主题">
                             <ItemTemplate>                                
-                                &nbsp;<img src="../images/child.gif" align="absMiddle" />&nbsp;<asp:HyperLink ID="HyperLink1" runat="server" Font-Underline="True"
+                                &nbsp;<img src="../images/child.gif" align="absMiddle" />&nbsp;<asp:HyperLink ID="HyperLink1" runat="server"  
                                     NavigateUrl='<%# "TieZiView.aspx?ID="+ DataBinder.Eval(Container.DataItem, "ID")%>'><%# DataBinder.Eval(Container.DataItem, "TitleStr")%></asp:HyperLink>
                                 <asp:Image ID="Image1" runat="server" AlternateText='<%#DataBinder.Eval(Container.DataItem, "PaiXu")%>' ImageAlign="AbsMiddle" ImageUrl="../images/ico_clip.gif" />
                             </ItemTemplate>                            

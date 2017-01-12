@@ -139,7 +139,7 @@
                         <asp:TemplateField HeaderText="红头文件">
                             <ItemTemplate>
                                 <img src="../images/user_group.gif" />
-                                <asp:HyperLink ID="HyperLink1" runat="server" Font-Underline="True"
+                                <asp:HyperLink ID="HyperLink1" runat="server"  
                                     NavigateUrl='<%# "../UploadFile/" + DataBinder.Eval(Container.DataItem, "FilePath") %>' ForeColor="Blue">[打开文件]</asp:HyperLink>
                             </ItemTemplate>
                             <ItemStyle HorizontalAlign="Left" />

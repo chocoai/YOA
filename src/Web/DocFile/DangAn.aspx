@@ -134,7 +134,7 @@
                                 <input id="CheckBoxAll" onclick="CheckAll()"  type="checkbox" />
                             </HeaderTemplate>
                         </asp:TemplateField>
-					<asp:TemplateField HeaderText="文件名称"> <ItemTemplate> <img src="../images/filetype/doc.gif" style="vertical-align: middle" />  <asp:HyperLink ID="HyperLink1" runat="server" Font-Underline="True" NavigateUrl='<%# "DangAnView.aspx?ID="+ DataBinder.Eval(Container.DataItem, "ID")%>'><%# DataBinder.Eval(Container.DataItem, "FileName")%></asp:HyperLink> </ItemTemplate>   <ItemStyle HorizontalAlign="Left" />  </asp:TemplateField> 
+					<asp:TemplateField HeaderText="文件名称"> <ItemTemplate> <img src="../images/filetype/doc.gif" style="vertical-align: middle" />  <asp:HyperLink ID="HyperLink1" runat="server"   NavigateUrl='<%# "DangAnView.aspx?ID="+ DataBinder.Eval(Container.DataItem, "ID")%>'><%# DataBinder.Eval(Container.DataItem, "FileName")%></asp:HyperLink> </ItemTemplate>   <ItemStyle HorizontalAlign="Left" />  </asp:TemplateField> 
 					<asp:BoundField DataField="JuanKuName" HeaderText="所属卷库" ></asp:BoundField>     
 					<asp:BoundField DataField="FileSerils" HeaderText="文件编号" ></asp:BoundField>     
 					<asp:BoundField DataField="FileTitle" HeaderText="文件主题" ></asp:BoundField>   

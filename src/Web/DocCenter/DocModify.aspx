@@ -44,12 +44,12 @@
                 现有文件：</td>
             <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
                 <img src="../images/ico_clip.gif" />
-                <asp:HyperLink ID="HyperLink1" runat="server" Font-Underline="True" Target="_blank">[HyperLink1]</asp:HyperLink>&nbsp;
+                <asp:HyperLink ID="HyperLink1" runat="server"   Target="_blank">[HyperLink1]</asp:HyperLink>&nbsp;
                 &nbsp;<img src="../images/Button/Read.gif" /><asp:HyperLink ID="HyperLink2" runat="server"
-                    Font-Underline="True" ForeColor="Blue" NavigateUrl="../DsoFramer/ReadFile.aspx"
+                      ForeColor="Blue" NavigateUrl="../DsoFramer/ReadFile.aspx"
                     Target="_blank">阅读</asp:HyperLink>&nbsp;
                 <img src="../images/Button/Read.gif" /><asp:HyperLink ID="HyperLink3" runat="server"
-                    Font-Underline="True" ForeColor="Blue" Target="_blank" NavigateUrl="../DsoFramer/ReadFile.aspx">编辑</asp:HyperLink>
+                      ForeColor="Blue" Target="_blank" NavigateUrl="../DsoFramer/ReadFile.aspx">编辑</asp:HyperLink>
                 &nbsp;<asp:Label ID="Label1" runat="server" Visible="False"></asp:Label>
                 <asp:Label ID="Label2" runat="server" Visible="False"></asp:Label>
                 <asp:Label ID="Label3" runat="server" Visible="False"></asp:Label>

@@ -37,7 +37,7 @@
 	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
 		<asp:Label id="lblProjectName" runat="server"></asp:Label>
         &nbsp;&nbsp;
-        <asp:HyperLink ID="HyperLink1" runat="server" Font-Underline="True" ForeColor="Blue"
+        <asp:HyperLink ID="HyperLink1" runat="server"   ForeColor="Blue"
             NavigateUrl="TuXingJinDu.aspx?ProjectName=0">图形化进度显示</asp:HyperLink></td></tr>
 	<tr>
 	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">

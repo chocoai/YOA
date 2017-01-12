@@ -55,7 +55,7 @@
             <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
                 <asp:Label ID="Label4" runat="server"></asp:Label>
                 &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; [
-                <asp:HyperLink ID="HyperLink1" runat="server" Font-Underline="True" ForeColor="Blue">发内部邮件</asp:HyperLink>
+                <asp:HyperLink ID="HyperLink1" runat="server"   ForeColor="Blue">发内部邮件</asp:HyperLink>
                 ]</td>
         </tr>
         <tr>

@@ -133,7 +133,7 @@
                                 <input id="CheckBoxAll" onclick="CheckAll()"  type="checkbox" />
                             </HeaderTemplate>
                         </asp:TemplateField>
-					<asp:TemplateField HeaderText="车辆名称"> <ItemTemplate> <asp:HyperLink ID="HyperLink1" runat="server" Font-Underline="True" NavigateUrl='<%# "CarInfoView.aspx?ID="+ DataBinder.Eval(Container.DataItem, "ID")%>'><%# DataBinder.Eval(Container.DataItem, "CarName")%></asp:HyperLink> </ItemTemplate>   <ItemStyle HorizontalAlign="Left" />  </asp:TemplateField> 
+					<asp:TemplateField HeaderText="车辆名称"> <ItemTemplate> <asp:HyperLink ID="HyperLink1" runat="server"   NavigateUrl='<%# "CarInfoView.aspx?ID="+ DataBinder.Eval(Container.DataItem, "ID")%>'><%# DataBinder.Eval(Container.DataItem, "CarName")%></asp:HyperLink> </ItemTemplate>   <ItemStyle HorizontalAlign="Left" />  </asp:TemplateField> 
 					<asp:BoundField DataField="CarPaiHao" HeaderText="车牌号" ></asp:BoundField>     
 					<asp:BoundField DataField="CarXingHao" HeaderText="厂牌型号" ></asp:BoundField>     
 					<asp:BoundField DataField="LeiXing" HeaderText="车辆类型" ></asp:BoundField>     

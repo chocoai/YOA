@@ -119,7 +119,7 @@
                                 <asp:TemplateField HeaderText="文件主题">
                                     <ItemTemplate>
                                         <img src="../images/filetype/doc.gif" />
-                                        <asp:HyperLink ID="HyperLink1" runat="server" Font-Underline="True"
+                                        <asp:HyperLink ID="HyperLink1" runat="server"  
                                             NavigateUrl='<%# "FileView.aspx?ID="+ DataBinder.Eval(Container.DataItem, "ID")%>'><%# DataBinder.Eval(Container.DataItem, "TitleStr")%></asp:HyperLink>
                                     </ItemTemplate>
                                     <ItemStyle HorizontalAlign="Left" />

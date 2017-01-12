@@ -135,7 +135,7 @@
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="印章名称">
                             <ItemTemplate>                                
-                                <asp:HyperLink ID="HyperLink1" runat="server" Font-Underline="True"
+                                <asp:HyperLink ID="HyperLink1" runat="server"  
                                     NavigateUrl='<%# "YinZhangView.aspx?ID="+ DataBinder.Eval(Container.DataItem, "ID")%>'><%# DataBinder.Eval(Container.DataItem, "YinZhangName")%></asp:HyperLink>
                             </ItemTemplate>                            
                             <ItemStyle HorizontalAlign="Left" />

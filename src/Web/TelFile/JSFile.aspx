@@ -129,7 +129,7 @@
                                 <input id="CheckBoxAll" onclick="CheckAll()"  type="checkbox" />
                             </HeaderTemplate>
                         </asp:TemplateField>
-					<asp:TemplateField HeaderText="文件夹名称"> <ItemTemplate> <img src="../images/filetype/dir.gif" /> <asp:HyperLink ID="HyperLink1" runat="server" Font-Underline="True" NavigateUrl='<%# "GetFile.aspx?DicID="+ DataBinder.Eval(Container.DataItem, "ID")+"&DicName="+ DataBinder.Eval(Container.DataItem, "DicName")%>'><%# DataBinder.Eval(Container.DataItem, "DicName")%></asp:HyperLink> </ItemTemplate>   <ItemStyle HorizontalAlign="Left" />  </asp:TemplateField> 
+					<asp:TemplateField HeaderText="文件夹名称"> <ItemTemplate> <img src="../images/filetype/dir.gif" /> <asp:HyperLink ID="HyperLink1" runat="server"   NavigateUrl='<%# "GetFile.aspx?DicID="+ DataBinder.Eval(Container.DataItem, "ID")+"&DicName="+ DataBinder.Eval(Container.DataItem, "DicName")%>'><%# DataBinder.Eval(Container.DataItem, "DicName")%></asp:HyperLink> </ItemTemplate>   <ItemStyle HorizontalAlign="Left" />  </asp:TemplateField> 
 					<asp:BoundField DataField="Backinfo" HeaderText="简要说明" ></asp:BoundField>     
 					<asp:BoundField DataField="UserName" HeaderText="创建人" ></asp:BoundField>     
 					<asp:BoundField DataField="TimeStr" HeaderText="创建时间" ></asp:BoundField>     

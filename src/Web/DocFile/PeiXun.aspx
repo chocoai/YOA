@@ -133,7 +133,7 @@
                                 <input id="CheckBoxAll" onclick="CheckAll()"  type="checkbox" />
                             </HeaderTemplate>
                         </asp:TemplateField>
-					<asp:TemplateField HeaderText="培训名称"> <ItemTemplate> <asp:HyperLink ID="HyperLink1" runat="server" Font-Underline="True" NavigateUrl='<%# "PeiXunView.aspx?ID="+ DataBinder.Eval(Container.DataItem, "ID")%>'><%# DataBinder.Eval(Container.DataItem, "PeiXunName")%></asp:HyperLink> </ItemTemplate>   <ItemStyle HorizontalAlign="Left" />  </asp:TemplateField> 
+					<asp:TemplateField HeaderText="培训名称"> <ItemTemplate> <asp:HyperLink ID="HyperLink1" runat="server"   NavigateUrl='<%# "PeiXunView.aspx?ID="+ DataBinder.Eval(Container.DataItem, "ID")%>'><%# DataBinder.Eval(Container.DataItem, "PeiXunName")%></asp:HyperLink> </ItemTemplate>   <ItemStyle HorizontalAlign="Left" />  </asp:TemplateField> 
 					<asp:BoundField DataField="PeiXunUser" HeaderText="培训人" ></asp:BoundField>    
 					<asp:BoundField DataField="StartDate" HeaderText="开始时间" ></asp:BoundField>     
 					<asp:BoundField DataField="EndDate" HeaderText="结束时间" ></asp:BoundField> 

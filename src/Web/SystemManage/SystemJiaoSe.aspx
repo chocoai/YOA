@@ -136,7 +136,7 @@
                         <asp:TemplateField HeaderText="角色名称">
                             <ItemTemplate>
                                 <img src="../images/user_group.gif" />
-                                <asp:HyperLink ID="HyperLink1" runat="server" Font-Underline="True"
+                                <asp:HyperLink ID="HyperLink1" runat="server"  
                                     NavigateUrl='<%# "SystemJiaoSeView.aspx?ID="+ DataBinder.Eval(Container.DataItem, "ID")%>'><%# DataBinder.Eval(Container.DataItem, "JiaoSeName")%></asp:HyperLink>
                             </ItemTemplate>                            
                             <ItemStyle HorizontalAlign="Left" />

@@ -147,7 +147,7 @@
                         </asp:BoundField>                         
                         <asp:TemplateField HeaderText="统计数量">
                             <ItemTemplate>                                
-                                <asp:HyperLink ID="HyperLink1" runat="server" Font-Underline="True"
+                                <asp:HyperLink ID="HyperLink1" runat="server"  
                                     NavigateUrl='<%# "CustomInfo.aspx?TextStr="+ DataBinder.Eval(Container.DataItem, "TongJiFenLei")+"&DropStr="+ DataBinder.Eval(Container.DataItem, "DropStr")%>'><%# DataBinder.Eval(Container.DataItem, "TongJiShuLiang")%> </asp:HyperLink>
                             </ItemTemplate>    
                             </asp:TemplateField>                     

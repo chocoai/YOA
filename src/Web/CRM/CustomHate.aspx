@@ -143,7 +143,7 @@
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="投诉内容">
                             <ItemTemplate>                                
-                                <asp:HyperLink ID="HyperLink1" runat="server" Font-Underline="True"
+                                <asp:HyperLink ID="HyperLink1" runat="server"  
                                     NavigateUrl='<%# "TouSuView.aspx?ID="+ DataBinder.Eval(Container.DataItem, "ID")%>'><%# DataBinder.Eval(Container.DataItem, "TouSuWho")%></asp:HyperLink>
                             </ItemTemplate>                            
                             <ItemStyle HorizontalAlign="Left" />

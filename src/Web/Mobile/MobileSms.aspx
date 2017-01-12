@@ -120,10 +120,7 @@
                         <asp:GridView ID="GVData" runat="server" CssClass="table table-striped table-hover" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False"
                             OnRowDataBound="GVData_RowDataBound" PageSize="15"
                             Width="100%" GridLines="None">
-                            <PagerSettings Mode="NumericFirstLast" Visible="False" />
-                            <PagerStyle BackColor="LightSteelBlue" HorizontalAlign="Right" />
                             <HeaderStyle BackColor="#006599" Font-Size="12px" ForeColor="White" Height="20px" />
-                            <AlternatingRowStyle BackColor="WhiteSmoke" />
                             <Columns>
                                 <asp:TemplateField>
                                     <ItemTemplate>
@@ -139,7 +136,7 @@
                                 <asp:BoundField DataField="ContentStr" HeaderText="短信内容"></asp:BoundField>
                                 <asp:BoundField DataField="TimeStr" HeaderText="发送时间"></asp:BoundField>
                             </Columns>
-                            <RowStyle HorizontalAlign="Center" Height="25px" />
+                            <RowStyle HorizontalAlign="left"  />
                             <EmptyDataTemplate>
                                 <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                     <tr>

@@ -43,7 +43,7 @@
                 现有印章图片：</td>
             <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
                 <img src="../images/ico_clip.gif" />
-                <asp:HyperLink ID="HyperLink1" runat="server" Font-Underline="True" Target="_blank">[HyperLink1]</asp:HyperLink></td>
+                <asp:HyperLink ID="HyperLink1" runat="server"   Target="_blank">[HyperLink1]</asp:HyperLink></td>
         </tr>
         <tr>
             <td align="right" style="width: 170px; height: 25px; background-color: #cccccc">

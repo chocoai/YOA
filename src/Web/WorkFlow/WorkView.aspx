@@ -52,7 +52,7 @@
                 <td style="background-color: #ffffff; height: 25px; padding-left:5px;" >
                     <asp:Label ID="Label1" runat="server"></asp:Label>
                     &nbsp; &nbsp; 当前节点：<asp:Label ID="Label2" runat="server"></asp:Label>
-                    &nbsp; &nbsp; &nbsp;<asp:HyperLink ID="HyperLink1" runat="server" Font-Underline="True"
+                    &nbsp; &nbsp; &nbsp;<asp:HyperLink ID="HyperLink1" runat="server"  
                         Target="_blank">流程图</asp:HyperLink></td>
         </tr>
         <tr>

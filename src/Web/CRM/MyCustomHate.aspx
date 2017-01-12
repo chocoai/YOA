@@ -144,7 +144,7 @@
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="投诉内容">
                             <ItemTemplate>                                
-                                <asp:HyperLink ID="HyperLink1" runat="server" Font-Underline="True"
+                                <asp:HyperLink ID="HyperLink1" runat="server"  
                                     NavigateUrl='<%# "TouSuView.aspx?ID="+ DataBinder.Eval(Container.DataItem, "ID")%>'><%# DataBinder.Eval(Container.DataItem, "TouSuWho")%></asp:HyperLink>
                             </ItemTemplate>                            
                             <ItemStyle HorizontalAlign="Left" />
@@ -191,7 +191,7 @@
                 <asp:ImageButton ID="ButtonGo" runat="server" OnClientClick="javascript:return CheckValuePiece();"  ImageUrl="../images/Button/Jump.jpg" OnClick="ButtonGo_Click" />
                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                 <img align="absMiddle" src="../images/TreeImages/test.gif" /><asp:HyperLink ID="HyperLink2"
-                    runat="server" Font-Bold="True" Font-Underline="True" ForeColor="Red" NavigateUrl="~/CRM/CustomHate.aspx?Type=Share">查看共享业务数据</asp:HyperLink></td>
+                    runat="server" Font-Bold="True"   ForeColor="Red" NavigateUrl="~/CRM/CustomHate.aspx?Type=Share">查看共享业务数据</asp:HyperLink></td>
         </tr>
         </table>
     </form>

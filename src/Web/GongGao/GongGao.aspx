@@ -145,7 +145,7 @@
                             </HeaderTemplate>
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="信息主题">
-                            <ItemTemplate><asp:HyperLink ID="HyperLink1" runat="server" Font-Underline="True"
+                            <ItemTemplate><asp:HyperLink ID="HyperLink1" runat="server"  
                                     NavigateUrl='<%# "GongGaoView.aspx?ID="+ DataBinder.Eval(Container.DataItem, "ID")%>'><%# DataBinder.Eval(Container.DataItem, "TitleStr")%></asp:HyperLink>
                             </ItemTemplate>                            
                             <ItemStyle HorizontalAlign="Left" />
@@ -157,7 +157,7 @@
                             <ItemStyle Width="150px" />
                         </asp:BoundField>                        
                     </Columns>
-                    <RowStyle HorizontalAlign="Center" Height="25px" />
+                    <RowStyle HorizontalAlign="Center" />
                 <EmptyDataTemplate>
                     <table border="0" cellpadding="0" cellspacing="0" width="100%">
                         <tr>

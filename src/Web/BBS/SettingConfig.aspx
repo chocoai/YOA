@@ -142,7 +142,7 @@
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="简要介绍">
                             <ItemTemplate>
-                                &nbsp;<asp:HyperLink ID="HyperLink1" NavigateUrl='<%# "BanKuaiView.aspx?ID="+ DataBinder.Eval(Container.DataItem, "ID") %>' runat="server" Font-Bold="True" Font-Underline="True" ForeColor="Black"><%#DataBinder.Eval(Container.DataItem, "BanKuaiName")%></asp:HyperLink><br />
+                                &nbsp;<asp:HyperLink ID="HyperLink1" NavigateUrl='<%# "BanKuaiView.aspx?ID="+ DataBinder.Eval(Container.DataItem, "ID") %>' runat="server" Font-Bold="True"   ForeColor="Black"><%#DataBinder.Eval(Container.DataItem, "BanKuaiName")%></asp:HyperLink><br />
                                 &nbsp;<img src="../images/JianTou.gif" /><asp:Label ID="Label1" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "BanKuaiMiaoShu")%>'></asp:Label><br />
                                 &nbsp;版主：<asp:Label ID="Label2" runat="server" Text='<%# Bind("BanZhuList") %>'></asp:Label>
                             </ItemTemplate>

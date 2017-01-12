@@ -141,7 +141,7 @@
                         <asp:TemplateField HeaderText="文件名">
                             <ItemTemplate>
                                 <asp:Image ID="Image1" runat="server" Height="16px" ImageAlign="AbsMiddle" Width="16px" />
-                                <asp:HyperLink ID="HyperLink1" runat="server" Font-Underline="True"
+                                <asp:HyperLink ID="HyperLink1" runat="server"  
                                     NavigateUrl='<%# "DocView.aspx?ID="+ DataBinder.Eval(Container.DataItem, "ID")%>'><%# DataBinder.Eval(Container.DataItem, "FileName")%></asp:HyperLink>
                             </ItemTemplate>                            
                             <ItemStyle HorizontalAlign="Left" />

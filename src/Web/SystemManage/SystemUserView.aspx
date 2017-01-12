@@ -41,7 +41,7 @@
                 <td style="background-color: #ffffff; height: 25px; padding-left:5px;" >
                     <asp:Label ID="Label1" runat="server"></asp:Label>
                     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [<asp:HyperLink ID="HyperLink1" runat="server"
-                        Font-Underline="True" ForeColor="Red" NavigateUrl="../LanEmail/LanEmailAdd.aspx">给其发送内部邮件</asp:HyperLink>]</td>
+                          ForeColor="Red" NavigateUrl="../LanEmail/LanEmailAdd.aspx">给其发送内部邮件</asp:HyperLink>]</td>
         </tr>
         <tr>
             <td align="right" style="width: 170px; height: 25px; background-color: #cccccc">

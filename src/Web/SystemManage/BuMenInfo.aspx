@@ -141,7 +141,7 @@
                         <asp:TemplateField HeaderText="部门名称">
                             <ItemTemplate>
                                 <img src="../images/user_group.gif" />
-                                <asp:HyperLink ID="HyperLink1" runat="server" Font-Underline="True"
+                                <asp:HyperLink ID="HyperLink1" runat="server"  
                                     NavigateUrl='<%# "BuMenInfo.aspx?Type=" + Request.QueryString["Type"].ToString() + "&DirID="+ DataBinder.Eval(Container.DataItem, "ID")%>'><%# DataBinder.Eval(Container.DataItem, "BuMenName")%></asp:HyperLink>
                             </ItemTemplate>
                             <ItemStyle HorizontalAlign="Left" />

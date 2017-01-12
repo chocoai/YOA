@@ -176,7 +176,7 @@
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="邮件主题">
                             <ItemTemplate>
-                                <asp:HyperLink ID="HyperLink1" runat="server" Font-Underline="True"
+                                <asp:HyperLink ID="HyperLink1" runat="server"  
                                     NavigateUrl='<%# "EmailView.aspx?ID="+ DataBinder.Eval(Container.DataItem, "ID")%>'><%# DataBinder.Eval(Container.DataItem, "EmailTitle")%></asp:HyperLink>
                             </ItemTemplate>
                             <ItemStyle HorizontalAlign="Left" />

@@ -148,7 +148,7 @@
                                     </asp:CommandField>
                                     <asp:TemplateField>
                                         <ItemTemplate>
-                                            <asp:LinkButton ID="LinkButton4" runat="server" CommandName="Delete" CommandArgument='<%#DataBinder.Eval(Container.DataItem, "ID")%>' Font-Underline="True" ForeColor="Blue">移除</asp:LinkButton>
+                                            <asp:LinkButton ID="LinkButton4" runat="server" CommandName="Delete" CommandArgument='<%#DataBinder.Eval(Container.DataItem, "ID")%>'   ForeColor="Blue">移除</asp:LinkButton>
                                         </ItemTemplate>
                                         
                                     </asp:TemplateField>

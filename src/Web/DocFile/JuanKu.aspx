@@ -133,10 +133,10 @@
                                 <input id="CheckBoxAll" onclick="CheckAll()"  type="checkbox" />
                             </HeaderTemplate>
                         </asp:TemplateField>
-					<asp:TemplateField HeaderText="¾í¿âÃû³Æ"> <ItemTemplate><img src="../images/filetype/dir.gif" style="vertical-align: middle" /> <asp:HyperLink ID="HyperLink1" runat="server" Font-Underline="True" NavigateUrl='<%# "JuanKuView.aspx?JuanKuName="+DataBinder.Eval(Container.DataItem, "JuanKuName")+"&ID="+ DataBinder.Eval(Container.DataItem, "ID")%>'><%# DataBinder.Eval(Container.DataItem, "JuanKuName")%></asp:HyperLink> 
+					<asp:TemplateField HeaderText="¾í¿âÃû³Æ"> <ItemTemplate><img src="../images/filetype/dir.gif" style="vertical-align: middle" /> <asp:HyperLink ID="HyperLink1" runat="server"   NavigateUrl='<%# "JuanKuView.aspx?JuanKuName="+DataBinder.Eval(Container.DataItem, "JuanKuName")+"&ID="+ DataBinder.Eval(Container.DataItem, "ID")%>'><%# DataBinder.Eval(Container.DataItem, "JuanKuName")%></asp:HyperLink> 
 					
 					
-                        <asp:HyperLink ID="HyperLink2" runat="server" Font-Underline="True" NavigateUrl='<%# "DangAn.aspx?JuanKuName="+DataBinder.Eval(Container.DataItem, "JuanKuName") %>' ForeColor="Blue">[´ò¿ª¾í¿â]</asp:HyperLink>
+                        <asp:HyperLink ID="HyperLink2" runat="server"   NavigateUrl='<%# "DangAn.aspx?JuanKuName="+DataBinder.Eval(Container.DataItem, "JuanKuName") %>' ForeColor="Blue">[´ò¿ª¾í¿â]</asp:HyperLink>
                     </ItemTemplate>   <ItemStyle HorizontalAlign="Left" />  </asp:TemplateField> 
 					<asp:BoundField DataField="JuanKuSerils" HeaderText="¾í¿â±àºÅ" ></asp:BoundField>     
 					<asp:BoundField DataField="SuoShuBuMen" HeaderText="ËùÊô²¿ÃÅ" ></asp:BoundField> 

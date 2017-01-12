@@ -146,7 +146,7 @@
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="服务主题">
                             <ItemTemplate>                                
-                                <asp:HyperLink ID="HyperLink1" runat="server" Font-Underline="True"
+                                <asp:HyperLink ID="HyperLink1" runat="server"  
                                     NavigateUrl='<%# "FuWuView.aspx?ID="+ DataBinder.Eval(Container.DataItem, "ID")%>'><%# DataBinder.Eval(Container.DataItem, "FuWuTitle")%></asp:HyperLink>
                             </ItemTemplate>                            
                             <ItemStyle HorizontalAlign="Left" />
@@ -191,7 +191,7 @@
                     Height="20px" Width="33px"></asp:TextBox>
                 页&nbsp;
                 <asp:ImageButton ID="ButtonGo" runat="server" OnClientClick="javascript:return CheckValuePiece();"  ImageUrl="../images/Button/Jump.jpg" OnClick="ButtonGo_Click" />
-                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img src="../images/TreeImages/test.gif" align="absMiddle" /><asp:HyperLink ID="HyperLink2" runat="server" Font-Bold="True" Font-Underline="True"
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img src="../images/TreeImages/test.gif" align="absMiddle" /><asp:HyperLink ID="HyperLink2" runat="server" Font-Bold="True"  
                     ForeColor="Red" NavigateUrl="~/CRM/CustomService.aspx?Type=Share">查看共享业务数据</asp:HyperLink></td>
         </tr>
         </table>

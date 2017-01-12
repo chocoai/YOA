@@ -133,7 +133,7 @@
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="工作名称">
                             <ItemTemplate>                                
-                                <asp:HyperLink ID="HyperLink1" runat="server" Font-Underline="True"
+                                <asp:HyperLink ID="HyperLink1" runat="server"  
                                     NavigateUrl='<%# "WorkView.aspx?ID="+ DataBinder.Eval(Container.DataItem, "ID")%>'><%# DataBinder.Eval(Container.DataItem, "WorkName")%></asp:HyperLink>
                             </ItemTemplate>                            
                             <ItemStyle HorizontalAlign="Left" />
@@ -146,7 +146,7 @@
                         </asp:BoundField> 
                         <asp:TemplateField HeaderText="节点名称">
                             <ItemTemplate>                                
-                                <asp:HyperLink ID="HyperLink11" runat="server" Font-Underline="True" Target="_blank" 
+                                <asp:HyperLink ID="HyperLink11" runat="server"   Target="_blank" 
                                     NavigateUrl='<%# "JustShowWorkFlow.aspx?ID="+ DataBinder.Eval(Container.DataItem, "WorkFlowID")%>'><%# DataBinder.Eval(Container.DataItem, "JieDianName")%></asp:HyperLink>
                             </ItemTemplate>                            
                             <ItemStyle HorizontalAlign="Center" />
