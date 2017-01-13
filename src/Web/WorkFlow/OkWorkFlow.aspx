@@ -1,4 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="OkWorkFlow.aspx.cs" Inherits="WorkFlow_OkWorkFlow" %>
+<%@ Register Assembly="AspNetPager" Namespace="Wuqi.Webdiyer" TagPrefix="webdiyer" %>
 <html>
 	<head>
 		<title>政务OA</title>
@@ -7,6 +8,8 @@
     <script src="../Scripts/jQuery/jquery-3.1.1.min.js"></script>
     <script src="../Scripts/jquery-ui/jquery-ui.min.js"></script>
     <script src="../Scripts/Public.js"></script>
+        <script src="../bootstrap-3.3.0/js/bootstrap.min.js"></script>
+    <link href="../bootstrap-3.3.0/css/bootstrap.min.css" rel="stylesheet" />
     <script type="text/javascript">
         var dialog;
         function selectNameConditionCallback(returndata) {
@@ -127,35 +130,44 @@
 <body>
     <form id="form1" runat="server">
     <div>    
-     <table style="width: 100%" border="0" cellpadding="0" cellspacing="0">            
+     <table style="width: 100%" border="0" cellpadding="0" cellspacing="0"> 
+         <tr>
+                    <td colspan="2" valign="middle" style="height: 30px;">
+                        <ol class="breadcrumb">
+                            <li><a href="../Main/MyDesk.aspx">桌面</a></li>
+                            <li>工作流程</li>
+                            <li class="active">归档工作</li>
+                        </ol>
+
+                    </td>
+                </tr>           
             <tr>
-                <td valign="middle" style="border-bottom: #006633 1px dashed; height: 30px; ">&nbsp;<img src="../images/BanKuaiJianTou.gif" />
-                <a class="hei" href="../Main/MyDesk.aspx">桌面</a>&nbsp;>>&nbsp;归档工作</td>
-                <td align="right" valign="middle" style="border-bottom: #006633 1px dashed; height: 30px;">
-                    工作名称：<asp:TextBox ID="TextBox1" runat="server" Height="20px" Width="45px"></asp:TextBox><img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPWorkToDo&LieName=WorkName&callbackFun=selectNameConditionCallback',350,400);"
-                        src="../images/Button/search.gif" />
-                    表单：<asp:TextBox ID="TextBox2" runat="server" Height="20px" Width="45px"></asp:TextBox><img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPWorkToDo&LieName=FormName&callbackFun=selectFormConditionCallback',350,400);"
-                        src="../images/Button/search.gif" />
-                    创建人：<asp:TextBox ID="TextBox3" runat="server" Height="20px" Width="45px"></asp:TextBox><img class="HerCss" onclick="openDialog('../Main/SelectUser.aspx?TableName=ERPUser&LieName=UserName&callbackFun=selectCreaterConditionCallback',350,400);"
-                        src="../images/Button/search.gif" />归档：<asp:TextBox ID="TextBox4" runat="server"
-                            Height="20px" Width="45px"></asp:TextBox><img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPWorkFlow&LieName=GuiDangType&callbackFun=selectGroupConditionCallback',350,400);"
-                        src="../images/Button/search.gif" /><asp:ImageButton
-                        ID="ImageButton4" runat="server" ImageAlign="AbsMiddle" ImageUrl="../images/Button/BtnSerch.jpg"
-                        OnClick="ImageButton4_Click" />&nbsp;<asp:ImageButton ID="ImageButton3" runat="server"
-                            ImageAlign="AbsMiddle" ImageUrl="../images/Button/BtnDel.jpg" OnClick="ImageButton3_Click"
-                            OnClientClick="javascript:return CheckDel();" />&nbsp;<asp:ImageButton ID="ImageButton2" runat="server" ImageUrl="../images/Button/BtnReport.jpg" ImageAlign="AbsMiddle" OnClick="ImageButton2_Click" /><img src="../images/Button/JianGe.jpg" /><img class="HerCss" onclick="javascript:window.history.go(-1)" src="../images/Button/BtnExit.jpg" />&nbsp;</td>
+                <td colspan="2" class="filter_box">
+                        <div class="form-group">
+                            工作名称：<asp:TextBox ID="TextBox1" CssClass="form-control" runat="server" Width="100px"></asp:TextBox>
+                            <a onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPWorkToDo&LieName=WorkName&callbackFun=selectNameConditionCallback',350,400);"><span class="glyphicon glyphicon-filter glyphicon-size-md"></span></a>
+                            表单：<asp:TextBox ID="TextBox2" CssClass="form-control" runat="server" Width="100px"></asp:TextBox>
+                            <a onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPWorkToDo&LieName=FormName&callbackFun=selectFormConditionCallback',350,400);"><span class="glyphicon glyphicon-filter glyphicon-size-md"></span></a>
+                            创建人：<asp:TextBox ID="TextBox3" CssClass="form-control" runat="server" Width="100px"></asp:TextBox>
+                            <a onclick="openDialog('../Main/SelectUser.aspx?TableName=ERPUser&LieName=UserName&callbackFun=selectCreaterConditionCallback',350,400);"><span class="glyphicon glyphicon-filter glyphicon-size-md"></span></a>
+                            归档：<asp:TextBox CssClass="form-control" ID="TextBox4" runat="server" Width="100px"></asp:TextBox>
+                            <a onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPWorkFlow&LieName=GuiDangType&callbackFun=selectGroupConditionCallback',350,400);"><span class="glyphicon glyphicon-filter glyphicon-size-md"></span></a>
+                            <asp:Button ID="ImageButton4" OnClick="ImageButton4_Click" CssClass="btn btn-default" runat="server" Text="查询" />&nbsp;
+                             &nbsp;<asp:Button ID="ImageButton3" runat="server" CssClass="btn btn-danger" OnClientClick="javascript:return CheckDel();" Text="删除" OnClick="ImageButton3_Click" />
+                            &nbsp;<asp:Button ID="ImageButton2" CssClass="btn btn-info" runat="server" OnClick="ImageButton2_Click" Text="导出" />&nbsp;
+                            <button class="btn btn-default" onclick="javascript:window.history.go(-1)">返回</button>&nbsp;
+                        </div>
+                    </td>
             </tr>
         </table>
         
     </div>
         <table style="width: 100%">
             <tr>
-            <td ><asp:GridView ID="GVData" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False"
-                    BorderStyle="Solid" BorderWidth="1px" OnRowDataBound="GVData_RowDataBound" PageSize="15"
-                    Width="100%">
-                    <PagerSettings Mode="NumericFirstLast" Visible="False" />
-                    <PagerStyle BackColor="LightSteelBlue" HorizontalAlign="Right" />
-                    <HeaderStyle BackColor="#006599" Font-Size="12px" ForeColor="White" Height="20px" /><AlternatingRowStyle BackColor="WhiteSmoke" />
+            <td ><asp:GridView ID="GVData" CssClass="table table-striped table-hover" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False"
+                    OnRowDataBound="GVData_RowDataBound" PageSize="15"
+                    Width="100%" GridLines="None">
+                    <HeaderStyle BackColor="#006599" Font-Size="12px" ForeColor="White" Height="20px" />
                     <Columns>
                         <asp:TemplateField>
                             <ItemTemplate>
@@ -196,8 +208,7 @@
                 <EmptyDataTemplate>
                     <table border="0" cellpadding="0" cellspacing="0" width="100%">
                         <tr>
-                            <td align="center" style="border-right: black 1px; border-top: black 1px;
-                                border-left: black 1px; border-bottom: black 1px; background-color: whitesmoke;">
+                            <td>
                                 该列表中暂时无数据！</td>
                         </tr>
                     </table>
@@ -206,23 +217,9 @@
                 </td>
         </tr>
         <tr>
-            <td style="border-top: #000000 1px solid;border-bottom: #000000 1px solid">
-                <asp:ImageButton ID="BtnFirst" runat="server" CommandName="First" ImageUrl="../images/Button/First.jpg"
-                    OnClick="PagerButtonClick" />
-                <asp:ImageButton ID="BtnPre" runat="server" CommandName="Pre" ImageUrl="../images/Button/Pre.jpg"
-                    OnClick="PagerButtonClick" />
-                <asp:ImageButton ID="BtnNext" runat="server" CommandName="Next" ImageUrl="../images/Button/Next.jpg"
-                    OnClick="PagerButtonClick" />
-                <asp:ImageButton ID="BtnLast" runat="server" CommandName="Last" ImageUrl="../images/Button/Last.jpg"
-                    OnClick="PagerButtonClick" />
-                &nbsp;第<asp:Label ID="LabCurrentPage" runat="server" Text="Label"></asp:Label>页&nbsp; 共<asp:Label
-                    ID="LabPageSum" runat="server" Text="Label"></asp:Label>页&nbsp;
-                <asp:TextBox ID="TxtPageSize" runat="server" CssClass="TextBoxCssUnder2" Height="20px"
-                    Width="35px">15</asp:TextBox>
-                行每页 &nbsp; 转到第<asp:TextBox ID="GoPage" runat="server" CssClass="TextBoxCssUnder2"
-                    Height="20px" Width="33px"></asp:TextBox>
-                页&nbsp;
-                <asp:ImageButton ID="ButtonGo" runat="server" OnClientClick="javascript:return CheckValuePiece();"  ImageUrl="../images/Button/Jump.jpg" OnClick="ButtonGo_Click" />
+           <td>
+                    <webdiyer:AspNetPager ID="AspNetPager1" runat="server" Width="100%" UrlPaging="false" CssClass="pagination" LayoutType="Ul" PagingButtonLayoutType="UnorderedList" PagingButtonSpacing="0" CurrentPageButtonClass="active" PageSize="15" OnPageChanged="AspNetPager1_PageChanged">
+                    </webdiyer:AspNetPager>
                 </td>
         </tr>
         </table>

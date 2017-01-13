@@ -21,7 +21,7 @@ public partial class WorkFlow_FormType : System.Web.UI.Page
             ImageButton1.Visible = ZWL.Common.PublicMethod.StrIFIn("|080m|", ZWL.Common.PublicMethod.GetSessionValue("QuanXian"));
         }
     }
-    protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+    protected void ImageButton1_Click(object sender, EventArgs e)
     {
         ZWL.DBUtility.DbHelperSQL.ExecuteSQL("update ERPFormType set FormTypeList='"+this.TextBox1.Text+"'");
         ZWL.Common.MessageBox.Show(this, "修改表单类别设置成功！");
