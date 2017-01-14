@@ -1,8 +1,12 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Meeting.aspx.cs" Inherits="Meeting_Meeting" %>
+<%@ Register Assembly="AspNetPager" Namespace="Wuqi.Webdiyer" TagPrefix="webdiyer" %>
 <html>
 	<head>
 		<title>政务OA</title>
   <LINK href="../Style/Style.css" type="text/css" rel="STYLESHEET">
+        <script src="../Scripts/jQuery/jquery-3.1.1.min.js"></script>
+    <script src="../bootstrap-3.3.0/js/bootstrap.min.js"></script>
+    <link href="../bootstrap-3.3.0/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <SCRIPT LANGUAGE="JavaScript">
 		  		  var a;    
@@ -125,32 +129,39 @@
 <body>
     <form id="form1" runat="server">
     <div>    
-     <table style="width: 100%" border="0" cellpadding="0" cellspacing="0">            
-            <tr>
-                <td valign="middle" style="border-bottom: #006633 1px dashed; height: 30px; ">&nbsp;<img src="../images/BanKuaiJianTou.gif" />
-                <a class="hei" href="../Main/MyDesk.aspx">桌面</a>&nbsp;>>&nbsp;会议管理&nbsp;>>&nbsp;网络会议
-                </td>
-                <td align="right" valign="middle" style="border-bottom: #006633 1px dashed; height: 30px;">
-                    查询：<asp:TextBox ID="TextBox1" runat="server" Height="20px" Width="60px"></asp:TextBox><asp:ImageButton
-                        ID="ImageButton4" runat="server" ImageAlign="AbsMiddle" ImageUrl="../images/Button/BtnSerch.jpg"
-                        OnClick="ImageButton4_Click" />&nbsp;&nbsp; &nbsp;
-                    <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/images/Button/ShenPiOK.jpg" ImageAlign="AbsMiddle" OnClick="ImageButton1_Click" OnClientClick="javascript:return CheckDel1();" />
-                    <asp:ImageButton ID="ImageButton5" runat="server" ImageAlign="AbsMiddle" ImageUrl="~/images/Button/ShenPiNo.jpg"
-                        OnClick="ImageButton5_Click" OnClientClick="javascript:return CheckDel1();" />
-                    <asp:ImageButton ID="ImageButton3" runat="server" OnClientClick="javascript:return CheckDel();" ImageUrl="../images/Button/BtnDel.jpg" ImageAlign="AbsMiddle" OnClick="ImageButton3_Click" />   
-                    &nbsp;<asp:ImageButton ID="ImageButton2" runat="server" ImageUrl="../images/Button/BtnReport.jpg" ImageAlign="AbsMiddle" OnClick="ImageButton2_Click" /><img src="../images/Button/JianGe.jpg" /><img class="HerCss" onclick="javascript:window.history.go(-1)" src="../images/Button/BtnExit.jpg" />&nbsp;</td>
+     <table style="width: 100%" border="0" cellpadding="0" cellspacing="0">  
+         <tr>
+                    <td colspan="2" valign="middle" style="height: 30px;">
+                        <ol class="breadcrumb">
+                            <li><a href="../Main/MyDesk.aspx">桌面</a></li>
+                            <li>会议管理</li>
+                            <li class="active">网络会议</li>
+                        </ol>
+
+                    </td>
+                </tr>         
+            <tr><td colspan="2" class="filter_box">
+                        <div class="form-group">
+                    查询：<asp:TextBox ID="TextBox1" CssClass="form-control" runat="server"  Width="100px"></asp:TextBox>
+                            <asp:Button ID="ImageButton4" Text="查询"  CssClass="btn btn-default"  runat="server"  OnClick="ImageButton4_Click" />&nbsp;&nbsp; &nbsp;
+                    <asp:Button ID="ImageButton1" runat="server" CssClass="btn btn-success"  Text="通过"   OnClientClick="javascript:return CheckDel1();"  OnClick="ImageButton1_Click" />&nbsp;
+                    &nbsp;
+                    <asp:Button ID="ImageButton5" CssClass="btn btn-primary"  Text="拒绝"  runat="server" OnClientClick="javascript:return CheckDel();" OnClick="ImageButton5_Click" />&nbsp;
+                      <asp:Button ID="ImageButton3" Text="删除"  CssClass="btn btn-danger"  runat="server" OnClientClick="javascript:return CheckDel();" OnClick="ImageButton3_Click" />  
+                            &nbsp;<asp:Button ID="ImageButton2" CssClass="btn btn-info"  Text="导出"  runat="server"  OnClick="ImageButton2_Click" />
+                   <button class="btn btn-default" onclick="javascript:window.history.go(-1)">返回</button>&nbsp;
+                             </div>
+                    </td>
             </tr>
         </table>
         
     </div>
         <table style="width: 100%">
             <tr>
-            <td ><asp:GridView ID="GVData" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False"
-                    BorderStyle="Solid" BorderWidth="1px" OnRowDataBound="GVData_RowDataBound" PageSize="15"
-                    Width="100%">
-                    <PagerSettings Mode="NumericFirstLast" Visible="False" />
-                    <PagerStyle BackColor="LightSteelBlue" HorizontalAlign="Right" />
-                    <HeaderStyle BackColor="#006599" Font-Size="12px" ForeColor="White" Height="20px" /><AlternatingRowStyle BackColor="WhiteSmoke" />
+            <td ><asp:GridView ID="GVData" CssClass="table table-striped table-hover"  runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False"
+                     OnRowDataBound="GVData_RowDataBound" PageSize="15"
+                    Width="100%" GridLines="None">
+                    <HeaderStyle BackColor="#006599" Font-Size="12px" ForeColor="White" Height="20px" />
                     <Columns>
                         <asp:TemplateField>
                             <ItemTemplate>
@@ -185,12 +196,12 @@
                         <asp:BoundField DataField="NowState" HeaderText="审核状态" >
                         </asp:BoundField>
                     </Columns>
+                    <PagerSettings Visible="False" />
                     <RowStyle HorizontalAlign="Center" Height="25px" />
                 <EmptyDataTemplate>
                     <table border="0" cellpadding="0" cellspacing="0" width="100%">
                         <tr>
-                            <td align="center" style="border-right: black 1px; border-top: black 1px;
-                                border-left: black 1px; border-bottom: black 1px; background-color: whitesmoke;">
+                            <td align="center">
                                 该列表中暂时无数据！</td>
                         </tr>
                     </table>
@@ -199,23 +210,10 @@
                 </td>
         </tr>
         <tr>
-            <td style="border-top: #000000 1px solid;border-bottom: #000000 1px solid">
-                <asp:ImageButton ID="BtnFirst" runat="server" CommandName="First" ImageUrl="../images/Button/First.jpg"
-                    OnClick="PagerButtonClick" />
-                <asp:ImageButton ID="BtnPre" runat="server" CommandName="Pre" ImageUrl="../images/Button/Pre.jpg"
-                    OnClick="PagerButtonClick" />
-                <asp:ImageButton ID="BtnNext" runat="server" CommandName="Next" ImageUrl="../images/Button/Next.jpg"
-                    OnClick="PagerButtonClick" />
-                <asp:ImageButton ID="BtnLast" runat="server" CommandName="Last" ImageUrl="../images/Button/Last.jpg"
-                    OnClick="PagerButtonClick" />
-                &nbsp;第<asp:Label ID="LabCurrentPage" runat="server" Text="Label"></asp:Label>页&nbsp; 共<asp:Label
-                    ID="LabPageSum" runat="server" Text="Label"></asp:Label>页&nbsp;
-                <asp:TextBox ID="TxtPageSize" runat="server" CssClass="TextBoxCssUnder2" Height="20px"
-                    Width="35px">15</asp:TextBox>
-                行每页 &nbsp; 转到第<asp:TextBox ID="GoPage" runat="server" CssClass="TextBoxCssUnder2"
-                    Height="20px" Width="33px"></asp:TextBox>
-                页&nbsp;
-                <asp:ImageButton ID="ButtonGo" runat="server" OnClientClick="javascript:return CheckValuePiece();"  ImageUrl="../images/Button/Jump.jpg" OnClick="ButtonGo_Click" /></td>
+            <td>
+                    <webdiyer:AspNetPager ID="AspNetPager1" runat="server" Width="100%" UrlPaging="false" CssClass="pagination" LayoutType="Ul" PagingButtonLayoutType="UnorderedList" PagingButtonSpacing="0" CurrentPageButtonClass="active" PageSize="15" OnPageChanged="AspNetPager1_PageChanged">
+                    </webdiyer:AspNetPager>
+                </td>
         </tr>
         </table>
     </form>

@@ -106,7 +106,7 @@
                         <ol class="breadcrumb">
                             <li><a href="../Main/MyDesk.aspx">桌面</a></li>
                             <li>办公用品</li>
-                            <li class="active">办公用品管理</li>
+                            <li class="active">办公用品申请</li>
                         </ol>
                     </td>
                 </tr>          
