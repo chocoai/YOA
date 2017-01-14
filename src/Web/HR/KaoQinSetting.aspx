@@ -1,8 +1,12 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="KaoQinSetting.aspx.cs" Inherits="HR_KaoQinSetting" %>
+<%@ Register Assembly="AspNetPager" Namespace="Wuqi.Webdiyer" TagPrefix="webdiyer" %>
 <html>
 	<head>
 		<title>政务OA</title>
   <LINK href="../Style/Style.css" type="text/css" rel="STYLESHEET">
+        <script src="../Scripts/jQuery/jquery-3.1.1.min.js"></script>
+    <script src="../bootstrap-3.3.0/js/bootstrap.min.js"></script>
+    <link href="../bootstrap-3.3.0/css/bootstrap.min.css" rel="stylesheet" />
   <script language="javascript">
   function PrintTable()
     {
@@ -15,28 +19,37 @@
 <body>
     <form id="form1" runat="server">
     <div>    
-     <table id="PrintHide" style="width: 100%" border="0" cellpadding="0" cellspacing="0">            
+     <table id="PrintHide" style="width: 100%" border="0" cellpadding="0" cellspacing="0">    
+         <tr>
+                    <td colspan="2" valign="middle" style="height: 30px;">
+                        <ol class="breadcrumb">
+                            <li><a href="../Main/MyDesk.aspx">桌面</a></li>
+                            <li>个人考勤</li>
+                            <li class="active">上下班登记时间设置</li>
+                        </ol>
+
+                    </td>
+                </tr>         
+            <tr>        
             <tr>
-                <td valign="middle" style="border-bottom: #006633 1px dashed; height: 30px;">&nbsp;<img src="../images/BanKuaiJianTou.gif" />
-                <a class="hei" href="../Main/MyDesk.aspx">桌面</a>&nbsp;>>&nbsp;个人考勤&nbsp;>>&nbsp;上下班登记时间设置
-                </td>
-                <td align="right" valign="middle" style="border-bottom: #006633 1px dashed; height: 30px;">
-                    <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/images/Button/Submit.jpg"
-                        OnClick="ImageButton1_Click" />
-                    <img src="../images/Button/JianGe.jpg" />&nbsp;
-                    <img class="HerCss" onclick="javascript:window.history.go(-1)" src="../images/Button/BtnExit.jpg" />&nbsp;</td>
+                <td colspan="2" class="filter_box">
+                        <div class="form-group">
+                    <asp:Button  Text="提交" CssClass="btn btn-primary" ID="ImageButton1" runat="server" OnClick="ImageButton1_Click" />
+                    <button class="btn btn-default" onclick="javascript:window.history.go(-1)">返回</button>&nbsp;
+                        </div>
+                    </td>
             </tr>
             <tr>
-            <td height="3px" colspan="2" style="background-color: #ffffff"></td>
+            <td height="3px" colspan="2" ></td>
         </tr>
         </table>
-    <table style="width: 100%" bgcolor="#999999" border="0" cellpadding="2" cellspacing="1">            
+    <table style="width: 100%" border="0" class="table table-striped table-hover"  >            
         
         <tr>
-            <td align="right" style="width: 267px; background-color: #cccccc; height: 30px;" >
+            <td align="right" style="width: 267px;" >
                 第<strong><span style="color: #ff0033"> 一 </span></strong>次登记规定时间(<span style="color: #0000ff">上班</span>)：</td>
-                <td style="background-color: #ffffff; height: 30px; padding-left:5px;" >
-                    <asp:DropDownList ID="DropDownList1" runat="server" CssClass="DropCss">
+                <td >
+                    <asp:DropDownList ID="DropDownList1" runat="server" style="width:80px;" CssClass="form-control">
                         <asp:ListItem>未设置</asp:ListItem>
                         <asp:ListItem>00</asp:ListItem>
                         <asp:ListItem>01</asp:ListItem>
@@ -63,7 +76,7 @@
                         <asp:ListItem>22</asp:ListItem>
                         <asp:ListItem>23</asp:ListItem>
                     </asp:DropDownList>
-                    时<asp:DropDownList ID="DropDownList2" runat="server" CssClass="DropCss">
+                    时<asp:DropDownList ID="DropDownList2" runat="server" style="width:80px;" CssClass="form-control">
                         <asp:ListItem>未设置</asp:ListItem>
                         <asp:ListItem>00</asp:ListItem>
                         <asp:ListItem>01</asp:ListItem>
@@ -129,10 +142,10 @@
                     分 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 在此时间后登记即为“迟到”</td>
         </tr>
         <tr>
-            <td align="right" style="width: 267px; height: 30px; background-color: #cccccc">
+            <td align="right" style="width: 267px;">
                 第<strong><span style="color: #ff0033"> 二 </span></strong>次登记规定时间(<span style="color: #0000ff">下班</span>)：</td>
-            <td style="padding-left: 5px; height: 30px; background-color: #ffffff">
-                <asp:DropDownList ID="DropDownList3" runat="server" CssClass="DropCss">
+            <td style="height: 30px; background-color: #ffffff">
+                <asp:DropDownList ID="DropDownList3" runat="server" style="width:80px;" CssClass="form-control">
                     <asp:ListItem>未设置</asp:ListItem>
                     <asp:ListItem>00</asp:ListItem>
                     <asp:ListItem>01</asp:ListItem>
@@ -159,7 +172,7 @@
                     <asp:ListItem>22</asp:ListItem>
                     <asp:ListItem>23</asp:ListItem>
                 </asp:DropDownList>
-                时<asp:DropDownList ID="DropDownList4" runat="server" CssClass="DropCss">
+                时<asp:DropDownList ID="DropDownList4" runat="server" style="width:80px;" CssClass="form-control">
                     <asp:ListItem>未设置</asp:ListItem>
                     <asp:ListItem>00</asp:ListItem>
                     <asp:ListItem>01</asp:ListItem>
@@ -225,10 +238,10 @@
                 分 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 在此时间前登记即为“早退”</td>
         </tr>
         <tr>
-            <td align="right" style="width: 267px; height: 30px; background-color: #cccccc">
+            <td align="right" style="width: 267px;">
                 第<strong><span style="color: #ff0033;"> 三 </span></strong>次登记规定时间(<span style="color: #0000ff">上班</span>)：</td>
-            <td style="padding-left: 5px; height: 30px; background-color: #ffffff">
-                <asp:DropDownList ID="DropDownList5" runat="server" CssClass="DropCss">
+            <td style="padding-left: 5px; height: 30px;">
+                <asp:DropDownList ID="DropDownList5" runat="server" style="width:80px;" CssClass="form-control">
                     <asp:ListItem>未设置</asp:ListItem>
                     <asp:ListItem>00</asp:ListItem>
                     <asp:ListItem>01</asp:ListItem>
@@ -255,7 +268,7 @@
                     <asp:ListItem>22</asp:ListItem>
                     <asp:ListItem>23</asp:ListItem>
                 </asp:DropDownList>
-                时<asp:DropDownList ID="DropDownList6" runat="server" CssClass="DropCss">
+                时<asp:DropDownList ID="DropDownList6" runat="server" style="width:80px;" CssClass="form-control">
                     <asp:ListItem>未设置</asp:ListItem>
                     <asp:ListItem>00</asp:ListItem>
                     <asp:ListItem>01</asp:ListItem>
@@ -321,10 +334,10 @@
                 分 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 在此时间后登记即为“迟到”</td>
         </tr>
         <tr>
-            <td align="right" style="width: 267px; height: 30px; background-color: #cccccc">
+            <td align="right" style="width: 267px;">
                 第 <strong><span style="color: #ff0033">四 </span></strong>次登记规定时间(<span style="color: #0000ff">下班</span>)：</td>
-            <td style="padding-left: 5px; height: 30px; background-color: #ffffff">
-                <asp:DropDownList ID="DropDownList7" runat="server" CssClass="DropCss">
+            <td style=" height: 30px;">
+                <asp:DropDownList ID="DropDownList7" runat="server" style="width:80px;" CssClass="form-control">
                     <asp:ListItem>未设置</asp:ListItem>
                     <asp:ListItem>00</asp:ListItem>
                     <asp:ListItem>01</asp:ListItem>
@@ -351,7 +364,7 @@
                     <asp:ListItem>22</asp:ListItem>
                     <asp:ListItem>23</asp:ListItem>
                 </asp:DropDownList>
-                时<asp:DropDownList ID="DropDownList8" runat="server" CssClass="DropCss">
+                时<asp:DropDownList ID="DropDownList8" runat="server" style="width:80px;" CssClass="form-control">
                     <asp:ListItem>未设置</asp:ListItem>
                     <asp:ListItem>00</asp:ListItem>
                     <asp:ListItem>01</asp:ListItem>
@@ -417,10 +430,10 @@
                 分 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 在此时间前登记即为“早退”</td>
         </tr>
         <tr>
-            <td align="right" style="width: 267px; height: 30px; background-color: #cccccc">
+            <td align="right" style="width: 267px; height: 30px; ">
                 第 <strong><span style="color: #ff0033">五 </span></strong>次登记规定时间(<span style="color: #0000ff">上班</span>)：</td>
-            <td style="padding-left: 5px; height: 30px; background-color: #ffffff">
-                <asp:DropDownList ID="DropDownList9" runat="server" CssClass="DropCss">
+            <td style=" height: 30px;">
+                <asp:DropDownList ID="DropDownList9" runat="server" style="width:80px;" CssClass="form-control">
                     <asp:ListItem>未设置</asp:ListItem>
                     <asp:ListItem>00</asp:ListItem>
                     <asp:ListItem>01</asp:ListItem>
@@ -447,7 +460,7 @@
                     <asp:ListItem>22</asp:ListItem>
                     <asp:ListItem>23</asp:ListItem>
                 </asp:DropDownList>
-                时<asp:DropDownList ID="DropDownList10" runat="server" CssClass="DropCss">
+                时<asp:DropDownList ID="DropDownList10" runat="server" style="width:80px;" CssClass="form-control">
                     <asp:ListItem>未设置</asp:ListItem>
                     <asp:ListItem>00</asp:ListItem>
                     <asp:ListItem>01</asp:ListItem>
@@ -513,10 +526,10 @@
                 分 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 在此时间后登记即为“迟到”</td>
         </tr>
         <tr>
-            <td align="right" style="width: 267px; height: 30px; background-color: #cccccc">
+            <td align="right" style="width: 267px; height: 30px;">
                 第 <strong><span style="color: #ff0033">六 </span></strong>次登记规定时间(<span style="color: #0000ff">下班</span>)：</td>
-            <td style="padding-left: 5px; height: 30px; background-color: #ffffff">
-                <asp:DropDownList ID="DropDownList11" runat="server" CssClass="DropCss">
+            <td style="height: 30px;">
+                <asp:DropDownList ID="DropDownList11" runat="server" style="width:80px;" CssClass="form-control">
                     <asp:ListItem>未设置</asp:ListItem>
                     <asp:ListItem>00</asp:ListItem>
                     <asp:ListItem>01</asp:ListItem>
@@ -543,7 +556,7 @@
                     <asp:ListItem>22</asp:ListItem>
                     <asp:ListItem>23</asp:ListItem>
                 </asp:DropDownList>
-                时<asp:DropDownList ID="DropDownList12" runat="server" CssClass="DropCss">
+                时<asp:DropDownList ID="DropDownList12" runat="server" style="width:80px;" CssClass="form-control">
                     <asp:ListItem>未设置</asp:ListItem>
                     <asp:ListItem>00</asp:ListItem>
                     <asp:ListItem>01</asp:ListItem>

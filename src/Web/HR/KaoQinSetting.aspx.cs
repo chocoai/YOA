@@ -43,7 +43,7 @@ public partial class HR_KaoQinSetting : System.Web.UI.Page
             ImageButton1.Visible = ZWL.Common.PublicMethod.StrIFIn("|040m|", ZWL.Common.PublicMethod.GetSessionValue("QuanXian"));
         }
     }
-    protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+    protected void ImageButton1_Click(object sender, EventArgs e)
     {
         ZWL.BLL.ERPKaoQinSetting Model = new ZWL.BLL.ERPKaoQinSetting();
         Model.ID = int.Parse(ZWL.DBUtility.DbHelperSQL.GetSHSLInt("select top 1 [ID] FROM ERPKaoQinSetting"));
