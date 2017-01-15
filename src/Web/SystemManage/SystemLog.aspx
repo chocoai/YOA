@@ -1,4 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="SystemLog.aspx.cs" Inherits="SystemManage_SystemLog" %>
+<%@ Register Assembly="AspNetPager" Namespace="Wuqi.Webdiyer" TagPrefix="webdiyer" %>
 <html>
 	<head>
 		<title>政务OA</title>
@@ -7,6 +8,8 @@
     <script src="../Scripts/jQuery/jquery-3.1.1.min.js"></script>
     <script src="../Scripts/jquery-ui/jquery-ui.min.js"></script>
     <script src="../Scripts/Public.js"></script>
+    <script src="../bootstrap-3.3.0/js/bootstrap.min.js"></script>
+    <link href="../bootstrap-3.3.0/css/bootstrap.min.css" rel="stylesheet" />
     <script type="text/javascript">
         var dialog;
         function selectConditionCallback(returndata) {
@@ -109,30 +112,38 @@
 <body>
     <form id="form1" runat="server">
     <div>    
-     <table style="width: 100%" border="0" cellpadding="0" cellspacing="0">            
+     <table style="width: 100%" border="0" cellpadding="0" cellspacing="0">  
+         <tr>
+                    <td colspan="2" valign="middle" style="height: 30px;">
+                        <ol class="breadcrumb">
+                            <li><a href="../Main/MyDesk.aspx">桌面</a></li>
+                            <li>系统管理</li>
+                            <li class="active">红头文件管理</li>
+                        </ol>
+                    </td>
+                </tr>             
             <tr>
-                <td valign="middle" style="border-bottom: #006633 1px dashed; height: 30px;">&nbsp;<img src="../images/BanKuaiJianTou.gif" />
-                <a class="hei" href="../Main/MyDesk.aspx">桌面</a>&nbsp;>>&nbsp;系统管理&nbsp;>>&nbsp;系统日志管理
-                </td>
-                <td align="right" valign="middle" style="border-bottom: #006633 1px dashed; height: 30px;">                    用户：<asp:TextBox ID="TextBox2" runat="server" Height="20px" Width="60px"></asp:TextBox>
-                    <img class="HerCss" onclick="openDialog('../Main/SelectUser.aspx?TableName=ERPUser&LieName=UserName&callbackFun=selectConditionCallback',350,400);" src="../images/Button/search.gif" />
+                <td colspan="2" class="filter_box">
+                        <div class="form-group">
+                    用户：<asp:TextBox ID="TextBox2"  CssClass="form-control"  runat="server"  Width="100px"></asp:TextBox>
+                    <a onclick="openDialog('../Main/SelectUser.aspx?TableName=ERPUser&LieName=UserName&callbackFun=selectConditionCallback',350,400);"><span class="glyphicon glyphicon-filter glyphicon-size-md"></span></a>
                     内容：
-                    <asp:TextBox ID="TextBox1" runat="server" Height="20px" Width="100px"></asp:TextBox><asp:ImageButton
-                        ID="ImageButton4" runat="server" ImageAlign="AbsMiddle" ImageUrl="../images/Button/BtnSerch.jpg"
-                        OnClick="ImageButton4_Click" />&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:ImageButton ID="ImageButton3" runat="server" OnClientClick="javascript:return CheckDel();" ImageUrl="../images/Button/BtnDel.jpg" ImageAlign="AbsMiddle" OnClick="ImageButton3_Click" />&nbsp;
-                    <asp:ImageButton ID="ImageButton2" runat="server" ImageAlign="AbsMiddle" ImageUrl="../images/Button/BtnReport.jpg"
-                        OnClick="ImageButton2_Click" /><img src="../images/Button/JianGe.jpg" /><img class="HerCss" onclick="javascript:window.history.go(-1)" src="../images/Button/BtnExit.jpg" />&nbsp;</td>
+                    <asp:TextBox ID="TextBox1"  CssClass="form-control"  runat="server"  Width="100px"></asp:TextBox>
+                    <asp:Button ID="ImageButton4" Text="查询" CssClass="btn btn-default"  runat="server" OnClick="ImageButton4_Click" />&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:Button ID="ImageButton3" Text="删除" CssClass="btn btn-danger"  runat="server" OnClientClick="javascript:return CheckDel();" OnClick="ImageButton3_Click" />&nbsp;
+                    <asp:Button ID="ImageButton2" Text="导出" CssClass="btn btn-info"  runat="server" 
+                        OnClick="ImageButton2_Click" />
+                            <button class="btn btn-default" onclick="javascript:window.history.go(-1)">返回</button>&nbsp;
+                  </div>
+                    </td>
             </tr>
         </table>
     <table style="width: 100%">            
         <tr>
-            <td ><asp:GridView ID="GVData" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False"
-                    BorderStyle="Solid" BorderWidth="1px" OnRowDataBound="GVData_RowDataBound" PageSize="15"
-                    Width="100%">
-                    <PagerSettings Mode="NumericFirstLast" Visible="False" />
-                    <PagerStyle BackColor="LightSteelBlue" HorizontalAlign="Right" />
-                    <HeaderStyle BackColor="#006599" Font-Size="12px" ForeColor="White" Height="20px" /><AlternatingRowStyle BackColor="WhiteSmoke" />
+            <td ><asp:GridView ID="GVData" CssClass="table table-striped table-hover"  runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False"
+                     OnRowDataBound="GVData_RowDataBound" PageSize="15"
+                    Width="100%" GridLines="None">
+                    <HeaderStyle BackColor="#006599" Font-Size="12px" ForeColor="White" Height="20px" />
                     <Columns>
                         <asp:TemplateField>
                             <ItemTemplate>
@@ -158,12 +169,12 @@
                             
                         </asp:BoundField> 
                     </Columns>
+                    <PagerSettings Visible="False" />
                     <RowStyle HorizontalAlign="Center" Height="25px" />
                     <EmptyDataTemplate>
                     <table border="0" cellpadding="0" cellspacing="0" width="100%">
                         <tr>
-                            <td align="center" style="border-right: black 1px; border-top: black 1px;
-                                border-left: black 1px; border-bottom: black 1px; background-color: whitesmoke;">
+                            <td align="center">
                                 该列表中暂时无数据！</td>
                         </tr>
                     </table>
@@ -172,23 +183,10 @@
                 </td>
         </tr>
         <tr>
-            <td style="border-top: #000000 1px solid;border-bottom: #000000 1px solid">
-                <asp:ImageButton ID="BtnFirst" runat="server" CommandName="First" ImageUrl="../images/Button/First.jpg"
-                    OnClick="PagerButtonClick" />
-                <asp:ImageButton ID="BtnPre" runat="server" CommandName="Pre" ImageUrl="../images/Button/Pre.jpg"
-                    OnClick="PagerButtonClick" />
-                <asp:ImageButton ID="BtnNext" runat="server" CommandName="Next" ImageUrl="../images/Button/Next.jpg"
-                    OnClick="PagerButtonClick" />
-                <asp:ImageButton ID="BtnLast" runat="server" CommandName="Last" ImageUrl="../images/Button/Last.jpg"
-                    OnClick="PagerButtonClick" />
-                &nbsp;第<asp:Label ID="LabCurrentPage" runat="server" Text="Label"></asp:Label>页&nbsp; 共<asp:Label
-                    ID="LabPageSum" runat="server" Text="Label"></asp:Label>页&nbsp;
-                <asp:TextBox ID="TxtPageSize" runat="server" CssClass="TextBoxCssUnder2" Height="20px"
-                    Width="35px">15</asp:TextBox>
-                行每页 &nbsp; 转到第<asp:TextBox ID="GoPage" runat="server" CssClass="TextBoxCssUnder2"
-                    Height="20px" Width="33px"></asp:TextBox>
-                页&nbsp;
-                <asp:ImageButton ID="ButtonGo" runat="server" OnClientClick="javascript:return CheckValuePiece();"  ImageUrl="../images/Button/Jump.jpg" OnClick="ButtonGo_Click" /></td>
+            <td>
+                    <webdiyer:AspNetPager ID="AspNetPager1" runat="server" Width="100%" UrlPaging="false" CssClass="pagination" LayoutType="Ul" PagingButtonLayoutType="UnorderedList" PagingButtonSpacing="0" CurrentPageButtonClass="active" PageSize="15" OnPageChanged="AspNetPager1_PageChanged">
+                    </webdiyer:AspNetPager>
+                </td>
         </tr>
         </table>
         
