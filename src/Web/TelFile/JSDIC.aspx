@@ -141,7 +141,7 @@
                             <asp:BoundField DataField="UserName" HeaderText="创建人"></asp:BoundField>
                             <asp:BoundField DataField="TimeStr" HeaderText="创建时间"></asp:BoundField>
                         </Columns>
-                        <RowStyle HorizontalAlign="Center" Height="25px" />
+                         <RowStyle HorizontalAlign="Left" Height="25px" />
                         <EmptyDataTemplate>
                             <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                 <tr>

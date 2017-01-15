@@ -150,7 +150,7 @@
 					<asp:BoundField DataField="EndDate" HeaderText="½áÊøÊ±¼ä" ></asp:BoundField> 
 </Columns>
                     <PagerSettings Visible="False" />
-                    <RowStyle HorizontalAlign="Center" Height="25px" />
+                     <RowStyle HorizontalAlign="Left" Height="25px" />
                 <EmptyDataTemplate>
                     <table border="0" cellpadding="0" cellspacing="0" width="100%">
                         <tr>
