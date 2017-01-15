@@ -18,7 +18,7 @@ public partial class Work_RiChengAdd : System.Web.UI.Page
             ZWL.Common.PublicMethod.CheckSession();
         }
     }
-    protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+    protected void ImageButton1_Click(object sender, EventArgs e)
     {
         ZWL.BLL.ERPAnPai Model = new ZWL.BLL.ERPAnPai();
         Model.TitleStr = this.TextBox1.Text;

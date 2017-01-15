@@ -18,7 +18,7 @@ public partial class Work_WorkRiZhiAdd : System.Web.UI.Page
             ZWL.Common.PublicMethod.CheckSession();
         }
     }
-    protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+    protected void ImageButton1_Click(object sender, EventArgs e)
     {
         ZWL.BLL.ERPWorkRiZhi Model = new ZWL.BLL.ERPWorkRiZhi();
         Model.TitleStr = this.TextBox1.Text;

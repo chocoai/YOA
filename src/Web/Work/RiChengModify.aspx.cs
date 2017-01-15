@@ -38,7 +38,7 @@ public partial class Work_RiChengModify : System.Web.UI.Page
             this.txtIFShare.Text = Model.GongXiangWho;
         }
     }
-    protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+    protected void ImageButton1_Click(object sender, EventArgs e)
     {
         ZWL.BLL.ERPAnPai Model = new ZWL.BLL.ERPAnPai();
         Model.TitleStr = this.TextBox1.Text;

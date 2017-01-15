@@ -24,7 +24,7 @@ public partial class Mobile_MobileSmsAdd : System.Web.UI.Page
             { }
         }
     }
-    protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+    protected void ImageButton1_Click(object sender, EventArgs e)
     {
         ZWL.BLL.ERPMobile MyModel = new ZWL.BLL.ERPMobile();
 
@@ -48,7 +48,7 @@ public partial class Mobile_MobileSmsAdd : System.Web.UI.Page
 
         ZWL.Common.MessageBox.ShowAndRedirect(this, "手机短信发送成功！", "MobileSms.aspx");
     }
-    protected void ImageButton2_Click(object sender, ImageClickEventArgs e)
+    protected void ImageButton2_Click(object sender, EventArgs e)
     {
         ZWL.BLL.ERPMobile MyModel = new ZWL.BLL.ERPMobile();
 

@@ -24,7 +24,7 @@ public partial class Work_WorkRiZhiModify : System.Web.UI.Page
             this.TextBox5.Text = Model.TypeStr;
         }
     }
-    protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+    protected void ImageButton1_Click(object sender, EventArgs e)
     {
         ZWL.BLL.ERPWorkRiZhi Model = new ZWL.BLL.ERPWorkRiZhi();
         Model.TitleStr = this.TextBox1.Text;

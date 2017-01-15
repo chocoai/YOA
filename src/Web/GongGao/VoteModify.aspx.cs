@@ -22,7 +22,7 @@ public partial class GongGao_VoteModify : System.Web.UI.Page
             this.TextBox2.Text = MyModel.ContentStr;
         }
     }
-    protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+    protected void ImageButton1_Click(object sender, EventArgs e)
     {
         ZWL.BLL.ERPVote Model = new ZWL.BLL.ERPVote();
         Model.TitleStr = this.TextBox1.Text;

@@ -165,6 +165,11 @@ select.form-control {
     display: inline;
     height: 30px;
 }
+input[type=file].form-control {
+    display: inline;
+    height: 34px;
+}
+
 .glyphicon-size-md {
     font-size: 16px;
 }
@@ -217,4 +222,10 @@ table {
 }
 td.filter_box {
         text-align:center;
+}
+.Wdate {
+width:100px;
+}
+select.date_select {
+    width:80px;
 }
