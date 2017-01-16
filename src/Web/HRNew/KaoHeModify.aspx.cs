@@ -32,7 +32,7 @@ public partial class HRNew_KaoHeModify : System.Web.UI.Page
 			this.txtTimeStr.Text=Model.TimeStr.ToString();
 		}
 	}
-	protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+	protected void ImageButton1_Click(object sender, EventArgs e)
 	{
 		ZWL.BLL.ERPKaoHe Model = new ZWL.BLL.ERPKaoHe();
 		

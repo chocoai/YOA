@@ -31,7 +31,7 @@ public partial class Personal_MailSetting : System.Web.UI.Page
             ImageButton1.Visible = ZWL.Common.PublicMethod.StrIFIn("|023m|", ZWL.Common.PublicMethod.GetSessionValue("QuanXian"));
         }
     }
-    protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+    protected void ImageButton1_Click(object sender, EventArgs e)
     {
         ZWL.BLL.ERPPOPAndSMTP MyModel = new ZWL.BLL.ERPPOPAndSMTP();
         MyModel.ID = int.Parse(ZWL.Common.PublicMethod.GetSessionValue("UserID"));

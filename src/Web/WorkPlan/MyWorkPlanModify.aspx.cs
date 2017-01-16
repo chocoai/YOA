@@ -27,7 +27,7 @@ public partial class WorkPlan_MyWorkPlanModify : System.Web.UI.Page
             ZWL.Common.PublicMethod.BindDDL(this.CheckBoxList1, ZWL.Common.PublicMethod.GetSessionValue("WenJianList"));
         }
     }
-    protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+    protected void ImageButton1_Click(object sender, EventArgs e)
     {
         ZWL.BLL.ERPWorkPlan Model = new ZWL.BLL.ERPWorkPlan();
         Model.ID = int.Parse(Request.QueryString["ID"].ToString());

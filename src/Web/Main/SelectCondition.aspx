@@ -10,6 +10,9 @@
 		<meta name="vs_defaultClientScript" content="JavaScript">
 		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
 		<base target=_self />	
+         <script src="../Scripts/jQuery/jquery-3.1.1.min.js"></script>
+    <script src="../bootstrap-3.3.0/js/bootstrap.min.js"></script>
+    <link href="../bootstrap-3.3.0/css/bootstrap.min.css" rel="stylesheet" />
 		<script  language="javascript">			
 		    var  getFromParent=window.dialogArguments;  
 		    function CheckSelect()
@@ -47,22 +50,23 @@
 </HEAD>
 	<body scroll="no">
 		<form id="Form1" method="post" runat="server">
-			<table border="0" width="100%" cellspacing="0" cellpadding="0" height="100%" bordercolorlight="#c0c0c0" bordercolordark="#ffffff">
+			<table border="0" width="100%" cellspacing="0" cellpadding="0" height="100%" >
 				<tr>
-					<td height="22" background="../images/show_02.gif" align="left" style="font-size: 12px; font-family: 宋体"> 　请选择您需要的项，然后点“确定”！</td>
+					<td height="25" align="left" style="font-size: 12px; font-family: 宋体"> 　请选择您需要的项，然后点“确定”！</td>
 				</tr>
 				<tr>
-			    <td valign="top" style="text-align: center">				  查询：<asp:TextBox ID="TextBox1" runat="server" Height="20px" Width="100px"></asp:TextBox><asp:ImageButton
-                        ID="ImageButton4" runat="server" ImageAlign="AbsMiddle" ImageUrl="../images/Button/BtnSerch.jpg"
-                        OnClick="ImageButton4_Click" /><br />
-                    <table  border="0" cellspacing="0" cellpadding="0" style="width: 318px; height: 49px">
+			    <td valign="top" style="text-align: center">
+                    <div class="form-group">				  
+                    查询：<asp:TextBox ID="TextBox1" CssClass="form-control" runat="server"  Width="150px"></asp:TextBox>
+                    <asp:Button ID="ImageButton4" CssClass="btn btn-primary" runat="server" Text="查询" OnClick="ImageButton4_Click" /><br />
+                    </div>
+                        <table  border="0" cellspacing="0" cellpadding="0" style="width: 318px; height: 49px">
                     <tr>
                         <td colspan="2" style="height: 31px; text-align: center;">
                         
                             <asp:GridView ID="GridView1" runat="server" AllowSorting="True"
-                                AutoGenerateColumns="False" BorderWidth="1px" Width="100%" ShowHeader="False" AllowPaging="True" OnPageIndexChanging="GridView1_PageIndexChanging" PageSize="10">
-                                <PagerSettings FirstPageText="首页" LastPageText="最后一页" NextPageText="下一页" PreviousPageText="上一页" />
-                                <FooterStyle BackColor="#F2F5FA" />
+                               CssClass="table table-striped table-hover"   AutoGenerateColumns="False" BorderWidth="1px" Width="100%" ShowHeader="False" AllowPaging="True" OnPageIndexChanging="GridView1_PageIndexChanging" PageSize="10" GridLines="None">
+                                <PagerSettings FirstPageText="首页" LastPageText="最后一页" NextPageText="下一页" PreviousPageText="上一页" Visible="False" />
                                 <Columns>
                                     <asp:TemplateField>
                                         <ItemTemplate>
@@ -88,13 +92,9 @@
                     </tr>
                       <tr>
                           <td colspan="2" style="height: 31px; text-align: center;">
-                              &nbsp;<INPUT  TYPE="button"  VALUE="确定"  onclick="sendFromChild();" style="width: 70px" class="BottonCss"></td>
+                              &nbsp;<INPUT  TYPE="button"   class="btn btn-primary" VALUE="确定"  onclick="sendFromChild();" style="width:70px" ></td>
                       </tr>                        
                     </table></td>
-				</tr>
-				<tr>
-					<td height="22" background="../images/show_02.gif">
-					</td>
 				</tr>
 			</table>
 		</form>

@@ -21,7 +21,7 @@ public partial class Personal_MyShenPiModify : System.Web.UI.Page
             this.TextBox1.Text = MyModel.ContentStr;
         }
     }
-    protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+    protected void ImageButton1_Click(object sender, EventArgs e)
     {
         ZWL.BLL.ERPShenPi Model = new ZWL.BLL.ERPShenPi();
         Model.ID = int.Parse(Request.QueryString["ID"].ToString());

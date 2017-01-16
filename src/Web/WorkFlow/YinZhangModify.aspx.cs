@@ -26,7 +26,7 @@ public partial class WorkFlow_YinZhangModify : System.Web.UI.Page
             this.TextBox2.Text= MyModel.YinZhangMiMa;            
         }
     }
-    protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+    protected void ImageButton1_Click(object sender, EventArgs e)
     {
         //判断名称是否唯一性
         if (ZWL.Common.PublicMethod.IFExists("YinZhangName", "ERPYinZhang", int.Parse(Request.QueryString["ID"].ToString()), this.TextBox1.Text) == false)

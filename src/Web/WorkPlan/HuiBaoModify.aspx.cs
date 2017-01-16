@@ -27,7 +27,7 @@ public partial class WorkPlan_MyWorkPlanModify : System.Web.UI.Page
             ZWL.Common.PublicMethod.BindDDL(this.CheckBoxList1, ZWL.Common.PublicMethod.GetSessionValue("WenJianList"));
         }
     }
-    protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+    protected void ImageButton1_Click(object sender, EventArgs e)
     {
         ZWL.BLL.ERPHuiBao Model = new ZWL.BLL.ERPHuiBao();
         Model.ID = int.Parse(Request.QueryString["ID"].ToString());
@@ -48,7 +48,7 @@ public partial class WorkPlan_MyWorkPlanModify : System.Web.UI.Page
 
         ZWL.Common.MessageBox.ShowAndRedirect(this, "工作汇报修改成功！", "HuiBao.aspx");
     }
-    protected void ImageButton2_Click(object sender, ImageClickEventArgs e)
+    protected void ImageButton2_Click(object sender, EventArgs e)
     {
         string FileNameStr = ZWL.Common.PublicMethod.UploadFileIntoDir(this.FileUpload1, DateTime.Now.Ticks.ToString() + System.IO.Path.GetExtension(FileUpload1.PostedFile.FileName));
         if (ZWL.Common.PublicMethod.GetSessionValue("WenJianList").Trim() == "")
@@ -61,7 +61,7 @@ public partial class WorkPlan_MyWorkPlanModify : System.Web.UI.Page
         }
         ZWL.Common.PublicMethod.BindDDL(this.CheckBoxList1, ZWL.Common.PublicMethod.GetSessionValue("WenJianList"));
     }
-    protected void ImageButton3_Click(object sender, ImageClickEventArgs e)
+    protected void ImageButton3_Click(object sender, EventArgs e)
     {
         try
         {
@@ -78,7 +78,7 @@ public partial class WorkPlan_MyWorkPlanModify : System.Web.UI.Page
         { }
     }
 
-    protected void ImageButton5_Click(object sender, ImageClickEventArgs e)
+    protected void ImageButton5_Click(object sender, EventArgs e)
     {
         try
         {
@@ -90,7 +90,7 @@ public partial class WorkPlan_MyWorkPlanModify : System.Web.UI.Page
         catch
         { }
     }
-    protected void ImageButton6_Click(object sender, ImageClickEventArgs e)
+    protected void ImageButton6_Click(object sender, EventArgs e)
     {
         try
         {

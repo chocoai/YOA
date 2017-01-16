@@ -38,7 +38,7 @@ public partial class HRNew_RenShiHeTongModify : System.Web.UI.Page
 			this.txtTimeStr.Text=Model.TimeStr.ToString();
 		}
 	}
-	protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+	protected void ImageButton1_Click(object sender, EventArgs e)
 	{
 		ZWL.BLL.ERPRenShiHeTong Model = new ZWL.BLL.ERPRenShiHeTong();
 		

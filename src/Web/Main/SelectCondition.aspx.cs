@@ -54,7 +54,7 @@ public partial class SelectCondition : System.Web.UI.Page
         this.GridView1.PageIndex = e.NewPageIndex;
         DataBindToGridview();
     }
-    protected void ImageButton4_Click(object sender, ImageClickEventArgs e)
+    protected void ImageButton4_Click(object sender, EventArgs e)
     {
         DataBindToGridview();
     }

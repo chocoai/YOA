@@ -6,10 +6,13 @@
 <head runat="server">
     <meta name="viewport" content="width=device-width" />
     <title>政务OA</title>
-    <script src="Scripts/jquery.js"></script>
+    <link href="../Style/Style.css" type="text/css" rel="STYLESHEET">
+    <script src="../Scripts/jQuery/jquery-3.1.1.min.js"></script>
+    <script src="../bootstrap-3.3.0/js/bootstrap.min.js"></script>
+    <link href="../bootstrap-3.3.0/css/bootstrap.min.css" rel="stylesheet" />
     <style>
         body {
-            background: #ebebeb;
+            background: #008ead;
             font-family: "Helvetica Neue","Hiragino Sans GB","Microsoft YaHei","\9ED1\4F53",Arial,sans-serif;
             color: #222;
             font-size: 12px;
@@ -186,30 +189,33 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div class="top_div"></div>
-    <div style="background: rgb(255, 255, 255); margin: -100px auto auto; border: 1px solid rgb(231, 231, 231); border-image: none; width: 400px; height: 200px; text-align: center;">
-        <div style="width: 165px; height: 96px; position: absolute;">
-            <div class="tou"></div>
-            <div class="initial_left_hand" id="left_hand"></div>
-            <div class="initial_right_hand" id="right_hand"></div>
+        <div class="top_div">
         </div>
-        <p style="padding: 30px 0px 10px; position: relative;">
-            <span
-                class="u_logo"></span>
-           <asp:TextBox ID="LoginCode" class="inputtext" onfocus="this.select()" onmouseover="this.focus()" runat="server" Height="20px" Width="204px"></asp:TextBox>
-        </p>
-        <p style="position: relative;">
-            <span class="p_logo"></span>
-           <asp:TextBox ID="password" class="inputtext" onfocus="this.select()" onmouseover="this.focus()" runat="server" Height="20px" TextMode="Password" Width="204px" ></asp:TextBox>
-        </p>
-        <div style="height: 50px; line-height: 50px; margin-top: 30px; border-top-color: rgb(231, 231, 231); border-top-width: 1px; border-top-style: solid;">
-            <p style="margin: 0px 35px 20px 45px;">
-                <span style="float: left;" id="check"></span>
-                <span style="float: right; width: 174px;"><a style="color: rgb(204, 204, 204); margin-right: 10px;"
-                    href="web/index.html" ></a>&nbsp;<asp:Button ID="Button1" runat="server" Text="登陆" Height="21px" OnClick="Button1_Click" Width="39px" />
-                </span></p>
+        <div class="login_system_name">南县交通局政务OA系统</div>
+        <div style="background: rgb(255, 255, 255); margin: -100px auto auto; border: 1px solid rgb(231, 231, 231); border-image: none; width: 400px; height: 200px; text-align: center;">
+            <div style="width: 165px; height: 96px; position: absolute;">
+                <div class="tou"></div>
+                <div class="initial_left_hand" id="left_hand"></div>
+                <div class="initial_right_hand" id="right_hand"></div>
+            </div>
+            <p style="padding: 30px 0px 10px; position: relative;">
+                <span
+                    class="u_logo"></span>
+                <asp:TextBox ID="LoginCode" class="inputtext form-control" onfocus="this.select()" onmouseover="this.focus()" runat="server" Height="30px" Width="204px"></asp:TextBox>
+            </p>
+            <p style="position: relative;">
+                <span class="p_logo"></span>
+                <asp:TextBox ID="password" class="inputtext form-control" onfocus="this.select()" onmouseover="this.focus()" runat="server" Height="30px" TextMode="Password" Width="204px"></asp:TextBox>
+            </p>
+            <div style="height: 50px; line-height: 50px; margin-top: 30px; border-top-color: rgb(231, 231, 231); border-top-width: 1px; border-top-style: solid;">
+                <p style="margin: 0px 35px 20px 45px;">
+                    <span style="float: left;" id="check"></span>
+                    <span style="float: right; width: 174px;"><a style="color: rgb(204, 204, 204); margin-right: 10px;"
+                        href="web/index.html"></a>&nbsp;<asp:Button ID="Button1" runat="server" CssClass="btn btn-primary" Text="登陆" Height="30px" OnClick="Button1_Click" Width="70px" />
+                    </span>
+                </p>
+            </div>
         </div>
-    </div>
     </form>
 </body>
 </html>

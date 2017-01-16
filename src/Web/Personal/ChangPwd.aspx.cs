@@ -22,7 +22,7 @@ public partial class Personal_ChangPwd : System.Web.UI.Page
             ImageButton1.Visible = ZWL.Common.PublicMethod.StrIFIn("|022m|", ZWL.Common.PublicMethod.GetSessionValue("QuanXian"));
         }
     }
-    protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+    protected void ImageButton1_Click(object sender, EventArgs e)
     {
         ZWL.BLL.ERPUser MyModel = new ZWL.BLL.ERPUser();
         MyModel.ID = int.Parse(ZWL.Common.PublicMethod.GetSessionValue("UserID"));

@@ -18,7 +18,7 @@ public partial class Personal_MyMoBanAdd : System.Web.UI.Page
             ZWL.Common.PublicMethod.CheckSession();
         }
     }
-    protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+    protected void ImageButton1_Click(object sender, EventArgs e)
     {
         ZWL.BLL.ERPMoBan Model = new ZWL.BLL.ERPMoBan();
 

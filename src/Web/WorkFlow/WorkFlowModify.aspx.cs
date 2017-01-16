@@ -29,7 +29,7 @@ public partial class WorkFlow_WorkFlowModify : System.Web.UI.Page
             this.TextBox1.Text = MyModel.WorkFlowName;
         }
     }
-    protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+    protected void ImageButton1_Click(object sender, EventArgs e)
     {
         //判断工作流名称是否唯一性
         if (ZWL.Common.PublicMethod.IFExists("WorkFlowName", "ERPWorkFlow", int.Parse(Request.QueryString["ID"].ToString()), this.TextBox1.Text) == false)

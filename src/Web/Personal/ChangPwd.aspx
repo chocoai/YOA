@@ -3,45 +3,55 @@
 	<head>
 		<title>政务OA</title>
   <LINK href="../Style/Style.css" type="text/css" rel="STYLESHEET">
+        <script src="../Scripts/jQuery/jquery-3.1.1.min.js"></script>
+        <script src="../bootstrap-3.3.0/js/bootstrap.min.js"></script>
+    <link href="../bootstrap-3.3.0/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
     <form id="form1" runat="server">
     <div>    
-     <table id="PrintHide" style="width: 100%" border="0" cellpadding="0" cellspacing="0">            
+     <table id="PrintHide" style="width: 100%" border="0" cellpadding="0" cellspacing="0">   
+         <tr>
+                    <td colspan="2" valign="middle" style="height: 30px;">
+                        <ol class="breadcrumb">
+                            <li><a href="../Main/MyDesk.aspx">桌面</a></li>
+                            <li>个人设置</li>
+                            <li class="active">修改密码</li>
+                        </ol>
+
+                    </td>
+                </tr>         
             <tr>
-                <td valign="middle" style="border-bottom: #006633 1px dashed; height: 30px;">&nbsp;<img src="../images/BanKuaiJianTou.gif" />
-                <a class="hei" href="../Main/MyDesk.aspx">桌面</a>&nbsp;>>&nbsp;个人设置&nbsp;>>&nbsp;修改密码
-                </td>
-                <td align="right" valign="middle" style="border-bottom: #006633 1px dashed; height: 30px;">
-                    <asp:ImageButton ID="ImageButton1" runat="server" ImageAlign="AbsMiddle" ImageUrl="../images/Button/Submit.jpg" OnClick="ImageButton1_Click" />
-                    <img src="../images/Button/JianGe.jpg" />&nbsp;
-                    <img class="HerCss" onclick="javascript:window.history.go(-1)" src="../images/Button/BtnExit.jpg" />&nbsp;</td>
+                <td colspan="2" class="filter_box">
+                        <div class="form-group">
+                            <asp:Button ID="ImageButton1" Text="提交" CssClass="btn btn-primary" runat="server" OnClick="ImageButton1_Click" />
+                            &nbsp;&nbsp;
+                            <button class="btn btn-default" onclick="javascript:window.history.go(-1)">返回</button>&nbsp;
+                        </div>
+                    </td>
             </tr>
-            <tr>
-            <td height="3px" colspan="2" style="background-color: #ffffff"></td>
-        </tr>
         </table>
-    <table style="width: 100%" bgcolor="#999999" border="0" cellpadding="2" cellspacing="1">            
+    <table style="width: 100%"  class="table table-striped table-hover">            
         
         <tr>
-            <td align="right" style="width: 170px; background-color: #cccccc; height: 25px;" >
+            <td align="right" style="width: 170px;" >
                 用户名：</td>
-                <td style="background-color: #ffffff; height: 25px; padding-left:5px;" >
+                <td>
                     <asp:Label ID="Label1" runat="server"></asp:Label></td>
         </tr>
         <tr>
-            <td align="right" style="width: 170px; height: 25px; background-color: #cccccc">
+            <td align="right" style="width: 170px;">
                 用户密码：</td>
-            <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
-                <asp:TextBox ID="TextBox1" runat="server" TextMode="Password" Width="250px" Height="20px"></asp:TextBox>
+            <td >
+                <asp:TextBox ID="TextBox1" CssClass="form-control" runat="server" TextMode="Password" Width="250px" ></asp:TextBox>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TextBox1"
                     Display="Dynamic" ErrorMessage="*该项不能为空"></asp:RequiredFieldValidator></td>
         </tr>
         <tr>
-            <td align="right" style="width: 170px; height: 25px; background-color: #cccccc">
+            <td align="right" style="width: 170px;">
                 重复密码：</td>
-            <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
-                <asp:TextBox ID="TextBox2" runat="server" TextMode="Password" Width="250px" Height="20px"></asp:TextBox>
+            <td>
+                <asp:TextBox ID="TextBox2" CssClass="form-control"  runat="server" TextMode="Password" Width="250px"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="TextBox2"
                     Display="Dynamic" ErrorMessage="*该项不能为空"></asp:RequiredFieldValidator>
                 <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="TextBox1"

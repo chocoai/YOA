@@ -11,8 +11,6 @@ using System.Web.UI.HtmlControls;
 
 public partial class Car_CYDICAdd : System.Web.UI.Page
 {
-
-
 	protected void Page_Load(object sender, EventArgs e)
 	{
 		if (!Page.IsPostBack)
@@ -20,7 +18,7 @@ public partial class Car_CYDICAdd : System.Web.UI.Page
 			ZWL.Common.PublicMethod.CheckSession();			
 		}
 	}
-	protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+	protected void ImageButton1_Click(object sender, EventArgs e)
 	{
 		ZWL.BLL.ERPCYDIC Model = new ZWL.BLL.ERPCYDIC();
 		

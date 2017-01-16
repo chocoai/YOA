@@ -21,7 +21,7 @@ public partial class Office_OfficethingAdd : System.Web.UI.Page
 			
 		}
 	}
-	protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+	protected void ImageButton1_Click(object sender, EventArgs e)
 	{
 		ZWL.BLL.ERPOfficething Model = new ZWL.BLL.ERPOfficething();
 		

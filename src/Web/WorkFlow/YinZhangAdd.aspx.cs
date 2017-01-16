@@ -18,7 +18,7 @@ public partial class WorkFlow_YinZhangAdd : System.Web.UI.Page
             ZWL.Common.PublicMethod.CheckSession();
         }
     }
-    protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+    protected void ImageButton1_Click(object sender, EventArgs e)
     {
         //判断名称是否唯一性
         if (ZWL.Common.PublicMethod.IFExists("YinZhangName", "ERPYinZhang", 0, this.TextBox1.Text) == false)

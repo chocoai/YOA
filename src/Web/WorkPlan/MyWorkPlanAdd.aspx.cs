@@ -20,7 +20,7 @@ public partial class WorkPlan_MyWorkPlanAdd : System.Web.UI.Page
             ZWL.Common.PublicMethod.SetSessionValue("WenJianList", "");
         }
     }
-    protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+    protected void ImageButton1_Click(object sender, EventArgs e)
     {
         ZWL.BLL.ERPWorkPlan Model = new ZWL.BLL.ERPWorkPlan();
 

@@ -20,7 +20,7 @@ public partial class HRNew_KaoHeXMAdd : System.Web.UI.Page
 			ZWL.Common.PublicMethod.CheckSession();			
 		}
 	}
-	protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+	protected void ImageButton1_Click(object sender, EventArgs e)
 	{
 		ZWL.BLL.ERPKaoHeXM Model = new ZWL.BLL.ERPKaoHeXM();
 		

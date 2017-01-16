@@ -23,7 +23,7 @@ public partial class Personal_MyMoBanModify : System.Web.UI.Page
             this.TxtContent.Text = MyModel.ContentStr;
         }
     }
-    protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+    protected void ImageButton1_Click(object sender, EventArgs e)
     {
         ZWL.BLL.ERPMoBan Model = new ZWL.BLL.ERPMoBan();
         Model.ID = int.Parse(Request.QueryString["ID"].ToString());

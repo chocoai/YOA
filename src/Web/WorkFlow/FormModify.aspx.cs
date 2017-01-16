@@ -29,7 +29,7 @@ public partial class WorkFlow_FormModify : System.Web.UI.Page
             ZWL.Common.PublicMethod.BindDDL(this.DropDownList1, ZWL.Common.PublicMethod.GetSessionValue("TiaoJiaoList"));
         }
     }
-    protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+    protected void ImageButton1_Click(object sender, EventArgs e)
     {
         //判断名称是否唯一性
         if (ZWL.Common.PublicMethod.IFExists("FormName", "ERPForm", int.Parse(Request.QueryString["ID"].ToString()), this.TextBox1.Text) == false)

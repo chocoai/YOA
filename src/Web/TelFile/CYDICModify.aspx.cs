@@ -26,7 +26,7 @@ public partial class Car_CYDICModify : System.Web.UI.Page
 			this.txtTimeStr.Text=Model.TimeStr.ToString();
 		}
 	}
-	protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+	protected void ImageButton1_Click(object sender, EventArgs e)
 	{
 		ZWL.BLL.ERPCYDIC Model = new ZWL.BLL.ERPCYDIC();
 		

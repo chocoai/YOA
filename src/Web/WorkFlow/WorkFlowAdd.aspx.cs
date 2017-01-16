@@ -21,7 +21,7 @@ public partial class WorkFlow_WorkFlowAdd : System.Web.UI.Page
             ZWL.Common.PublicMethod.BindDDL(this.DropDownList2, ZWL.DBUtility.DbHelperSQL.GetSHSL("select top 1 FormTypeList from ERPFormType"));
         }
     }
-    protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+    protected void ImageButton1_Click(object sender, EventArgs e)
     {        
         //判断工作流名称是否唯一性
         if (ZWL.Common.PublicMethod.IFExists("WorkFlowName", "ERPWorkFlow", 0, this.TextBox1.Text) == false)

@@ -144,8 +144,8 @@
                             查询:<asp:TextBox ID="TextBox1" CssClass="form-control" runat="server" Width="100px"></asp:TextBox>
                             <asp:Button ID="ImageButton4" Text="查询" CssClass="btn btn-default" runat="server"
                                 OnClick="ImageButton4_Click" />&nbsp;
-                    <asp:Button ID="ImageButton1" Text="添加" CssClass="btn btn-primary" runat="server" OnClick="ImageButton1_Click" />
-                            <asp:Button ID="ImageButton5" Text="修改" CssClass="btn btn-primary" runat="server" OnClick="ImageButton5_Click" OnClientClick="javascript:return CheckModify();" />
+                    <asp:Button ID="ImageButton1" Text="通过" CssClass="btn btn-success" runat="server" OnClick="ImageButton1_Click" />
+                            <asp:Button ID="ImageButton5" Text="拒绝" CssClass="btn btn-danger" runat="server" OnClick="ImageButton5_Click" OnClientClick="javascript:return CheckModify();" />
                             <asp:Button ID="ImageButton3" Text="删除" CssClass="btn btn-danger" runat="server" OnClientClick="javascript:return CheckDel();" OnClick="ImageButton3_Click" />
                             &nbsp;<asp:Button ID="ImageButton2" Text="导出" CssClass="btn btn-info" runat="server" OnClick="ImageButton2_Click" />
                             <button class="btn btn-default" onclick="javascript:window.history.go(-1)">返回</button>&nbsp;

@@ -176,7 +176,7 @@ public partial class WorkFlow_WorkAdd : System.Web.UI.Page
         }
         return "0";
     }
-    protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+    protected void ImageButton1_Click(object sender, EventArgs e)
     {
         ZWL.BLL.ERPWorkToDo Model = new ZWL.BLL.ERPWorkToDo();
         Model.FormContent = this.TextBox3.Text;
@@ -267,7 +267,7 @@ public partial class WorkFlow_WorkAdd : System.Web.UI.Page
 
         ZWL.Common.MessageBox.ShowAndRedirect(this, "新工作添加成功！", "MyWorkFlow.aspx");
     }
-    protected void ImageButton2_Click(object sender, ImageClickEventArgs e)
+    protected void ImageButton2_Click(object sender, EventArgs e)
     {
         string FileNameStr = ZWL.Common.PublicMethod.UploadFileIntoDir(this.FileUpload1, DateTime.Now.Ticks.ToString() + System.IO.Path.GetExtension(FileUpload1.PostedFile.FileName));
         if (ZWL.Common.PublicMethod.GetSessionValue("WenJianList").Trim() == "")
@@ -280,7 +280,7 @@ public partial class WorkFlow_WorkAdd : System.Web.UI.Page
         }
         ZWL.Common.PublicMethod.BindDDL(this.CheckBoxList1, ZWL.Common.PublicMethod.GetSessionValue("WenJianList"));
     }
-    protected void ImageButton3_Click(object sender, ImageClickEventArgs e)
+    protected void ImageButton3_Click(object sender, EventArgs e)
     {
         try
         {
@@ -296,7 +296,7 @@ public partial class WorkFlow_WorkAdd : System.Web.UI.Page
         catch
         { }
     }
-    protected void ImageButton5_Click(object sender, ImageClickEventArgs e)
+    protected void ImageButton5_Click(object sender, EventArgs e)
     {
         try
         {
@@ -308,7 +308,7 @@ public partial class WorkFlow_WorkAdd : System.Web.UI.Page
         catch
         { }
     }
-    protected void ImageButton6_Click(object sender, ImageClickEventArgs e)
+    protected void ImageButton6_Click(object sender, EventArgs e)
     {
         try
         {

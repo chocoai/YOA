@@ -20,7 +20,7 @@ public partial class HRNew_KaoHeAdd : System.Web.UI.Page
 			ZWL.Common.PublicMethod.CheckSession();			
 		}
 	}
-	protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+	protected void ImageButton1_Click(object sender, EventArgs e)
 	{
 		ZWL.BLL.ERPKaoHe Model = new ZWL.BLL.ERPKaoHe();
 		

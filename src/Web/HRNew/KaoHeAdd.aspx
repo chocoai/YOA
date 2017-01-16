@@ -9,6 +9,8 @@
     <script src="../Scripts/Public.js"></script>
         <script src="../My97DatePicker/WdatePicker.js"></script>
     <link href="../My97DatePicker/skin/WdatePicker.css" rel="stylesheet" />
+         <link href="../bootstrap-3.3.0/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="../bootstrap-3.3.0/js/bootstrap.min.js"></script>
     <script type="text/javascript">
         var dialog;
         function selectKaoHeTitleConditionCallback(returndata) {
@@ -69,83 +71,89 @@
     <div>    
      <table id="PrintHide" style="width: 100%" border="0" cellpadding="0" cellspacing="0">            
             <tr>
-                <td valign="middle" style="border-bottom: #006633 1px dashed; height: 30px;">&nbsp;<img src="../images/BanKuaiJianTou.gif" />
-                <a class="hei" href="../Main/MyDesk.aspx">桌面</a>&nbsp;>>&nbsp;人力资源&nbsp;>>&nbsp;添加考核管理信息
-                </td>
-                <td align="right" valign="middle" style="border-bottom: #006633 1px dashed; height: 30px;">
-                    <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/images/Button/Submit.jpg"
-                        OnClick="ImageButton1_Click" />
-                    <img src="../images/Button/JianGe.jpg" />&nbsp;
-                    <img class="HerCss" onclick="javascript:window.history.go(-1)" src="../images/Button/BtnExit.jpg" />&nbsp;</td>
-            </tr>
-            <tr>
-            <td height="3px" colspan="2" style="background-color: #ffffff"></td>
-        </tr>
+                    <td colspan="2" valign="middle" style="height: 30px;">
+                        <ol class="breadcrumb">
+                            <li><a href="../Main/MyDesk.aspx">桌面</a></li>
+                            <li>人力资源</li>
+                            <li class="active">添加考核管理信息</li>
+                        </ol>
+
+                    </td>
+                </tr> 
+                <tr>
+                    <td colspan="2" class="filter_box">
+                        <div class="form-group">
+                            <asp:Button ID="ImageButton1" Text="提交" CssClass="btn btn-primary" runat="server" OnClick="ImageButton1_Click" />
+                            &nbsp;&nbsp;
+                            <button class="btn btn-default" onclick="javascript:window.history.go(-1)">返回</button>&nbsp;
+                        </div>
+                    </td>
+                </tr>
         </table>
-<table style="width: 100%" bgcolor="#999999" border="0" cellpadding="2" cellspacing="1">
+<table style="width: 100%" class="table">
 	<tr>
-	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">
+	<td style="width: 170px;" align="right">
 		考核主题：
 	</td>
-	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
+	<td  >
 		<asp:TextBox id="txtKaoHeTitle" runat="server" Width="350px"></asp:TextBox>
 		<img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPKaoHe&LieName=KaoHeTitle&callbackFun=selectKaoHeTitleConditionCallback',350,400)"  src="../images/Button/search.gif" />
 		<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtKaoHeTitle" ErrorMessage="*该项不可以为空"></asp:RequiredFieldValidator>
 	</td></tr>
 	<tr>
-	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">
+	<td style="width: 170px;" align="right">
 		考核员工：
 	</td>
-	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
+	<td  >
 		<asp:TextBox id="txtKaoHeUser" runat="server" Width="350px"></asp:TextBox>
 		<img class="HerCss" onclick="openDialog('../Main/SelectUser.aspx?TableName=ERPUser&LieName=UserName&callbackFun=selectKaoHeUserConditionCallback',350,400)" src="../images/Button/search.gif" />
 	</td></tr>
 	<tr>
-	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">
+	<td style="width: 170px;" align="right">
 		考核类别：
 	</td>
-	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
+	<td  >
 		<asp:TextBox id="txtKaoHeType" runat="server" Width="350px"></asp:TextBox>
 		<img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPKaoHe&LieName=KaoHeType&callbackFun=selectKaoHeTypeConditionCallback',350,400)"  src="../images/Button/search.gif" />
 	</td></tr>
 	<tr>
-	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">
+	<td style="width: 170px;" align="right">
 		考核日期：
 	</td>
-	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
+	<td  >
 		<asp:TextBox id="txtKaoHeDate" runat="server" Width="350px" CssClass="Wdate" onclick="WdatePicker()" ></asp:TextBox>
 	</td></tr>
 	<tr>
-	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">
+	<td style="width: 170px;" align="right">
 		考核项目总分：
 	</td>
-	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
+	<td  >
 		<asp:TextBox id="txtXiangMuFen" runat="server" Width="350px"></asp:TextBox>
 		<img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPKaoHe&LieName=XiangMuFen&callbackFun=selectXiangMuFenConditionCallback',350,400)"  src="../images/Button/search.gif" />
 	&nbsp;<a href="LookDefile.aspx?Type=XM" target="_blank" >【查看考核项目】</a>
 	</td></tr>
 	<tr>
-	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">
+	<td style="width: 170px;" align="right">
 		考核任务总分：
 	</td>
-	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
+	<td  >
 		<asp:TextBox id="txtRenWuFen" runat="server" Width="350px"></asp:TextBox>
 		<img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPKaoHe&LieName=RenWuFen&callbackFun=selectRenWuFenConditionCallback',350,400)"  src="../images/Button/search.gif" />
 	&nbsp;<a href="LookDefile.aspx?Type=RW" target="_blank" >【查看考核任务】</a>
 	</td></tr>
 	<tr>
-	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">
+	<td style="width: 170px;" align="right">
 		考核结论：
 	</td>
-	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
+	<td  >
 		<asp:TextBox id="txtKaoHeJieLun" runat="server" Width="350px"></asp:TextBox>
 		<img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPKaoHe&LieName=KaoHeJieLun&callbackFun=selectKaoHeJieLunConditionCallback',350,400)"  src="../images/Button/search.gif" />
 	</td></tr>
 	<tr>
-	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">
+	<td style="width: 170px;" align="right">
 		备注说明：
 	</td>
-	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
+	<td  >
 		<asp:TextBox id="txtBackInfo" runat="server" Width="350px" Height="60px" TextMode="MultiLine"></asp:TextBox></td></tr>
 </table>
 		</div>

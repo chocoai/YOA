@@ -25,7 +25,7 @@ public partial class Personal_SystemTiXing : System.Web.UI.Page
             ImageButton1.Visible = ZWL.Common.PublicMethod.StrIFIn("|021m|", ZWL.Common.PublicMethod.GetSessionValue("QuanXian"));
         }
     }
-    protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+    protected void ImageButton1_Click(object sender, EventArgs e)
     {
         ZWL.BLL.ERPTiXing MyModel = new ZWL.BLL.ERPTiXing();
         MyModel.ID = int.Parse(ZWL.Common.PublicMethod.GetSessionValue("UserID"));

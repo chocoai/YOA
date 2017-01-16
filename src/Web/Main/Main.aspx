@@ -7,7 +7,22 @@
     <script src="../Scripts/jQuery/jquery-3.1.1.min.js"></script>
     <link href="../bootstrap-3.3.0/css/bootstrap.min.css" rel="stylesheet" />
     <script src="../bootstrap-3.3.0/js/bootstrap.min.js"></script>
-    <script language="javascript">
+    <script type="text/javascript">
+        $(function () {
+            $("#ListTreeView").find("a").click(function () {
+
+                $("#ListTreeView").find("a.current_menu").removeClass("current_menu");
+                $(this).addClass("current_menu");
+                var parentMenu = $(this).parent().parent().parent().parent().parent();
+                if (typeof($(parentMenu).attr("id")) !="undefined" && $(parentMenu).attr("id").indexOf("ListTreeView") >= 0) {
+                    $(parentMenu).prev().find("a").addClass("current_menu");
+                }
+                var top_parentMenu = $(parentMenu).parent();
+                if (typeof ($(top_parentMenu).attr("id")) != "undefined" && $(top_parentMenu).attr("id").indexOf("ListTreeView") >= 0) {
+                    $(top_parentMenu).prev().find("a").addClass("current_menu");
+                }
+            });
+        });
         function visible_click() {
             if (td1.className == "") {
                 td1.className = "tddisp";
@@ -107,7 +122,7 @@
                                                 <tr>
                                                     <td background="../images/Tree_03.jpg" style="padding-bottom: 3px; padding-top: 5px; padding-left: 10px; padding-right: 10px;">
                                                         <div style="overflow: auto; height: 100%; scrollbar-face-color: #ffffff; scrollbar-highlight-color: #6fa4d0; scrollbar-shadow-color: #6fa4d0; scrollbar-3dlight-color: #e6e6e6; scrollbar-arrow-color: #6fa4d0; scrollbar-track-color: #ffffff; scrollbar-darkshadow-color: #e6e6e6;">
-                                                            <asp:TreeView ID="ListTreeView" runat="server" ExpandDepth="0" ShowLines="True" ForeColor="Black">
+                                                            <asp:TreeView ID="ListTreeView" runat="server" ExpandDepth="0" ShowLines="True">
                                                                 <ParentNodeStyle HorizontalPadding="2px" />
                                                                 <RootNodeStyle HorizontalPadding="2px" />
                                                                 <LeafNodeStyle HorizontalPadding="2px" />

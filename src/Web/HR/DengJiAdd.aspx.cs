@@ -18,7 +18,7 @@ public partial class HR_DengJiAdd : System.Web.UI.Page
             ZWL.Common.PublicMethod.CheckSession();
         }
     }
-    protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+    protected void ImageButton1_Click(object sender, EventArgs e)
     {
         ZWL.BLL.ERPDengJi Model = new ZWL.BLL.ERPDengJi();
         Model.UserName = ZWL.Common.PublicMethod.GetSessionValue("UserName");        
