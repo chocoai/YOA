@@ -18,7 +18,7 @@ public partial class Work_TongXunLuAdd : System.Web.UI.Page
             ZWL.Common.PublicMethod.CheckSession();
         }
     }
-    protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+    protected void ImageButton1_Click(object sender, EventArgs e)
     {
         ZWL.BLL.ERPTongXunLu Model = new ZWL.BLL.ERPTongXunLu();
         Model.UserName = ZWL.Common.PublicMethod.GetSessionValue("UserName");

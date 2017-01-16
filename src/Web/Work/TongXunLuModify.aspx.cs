@@ -44,7 +44,7 @@ public partial class Work_TongXunLuModify : System.Web.UI.Page
             this.TxtContent.Text = Model.BackInfo;
         }
     }
-    protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+    protected void ImageButton1_Click(object sender, EventArgs e)
     {
         ZWL.BLL.ERPTongXunLu Model = new ZWL.BLL.ERPTongXunLu();
         Model.ID = int.Parse(Request.QueryString["ID"].ToString());

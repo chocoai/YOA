@@ -165,6 +165,10 @@ select.form-control {
     display: inline;
     height: 30px;
 }
+radio.form-control {
+    display: inline;
+    height: 30px;
+}
 input[type=file].form-control {
     display: inline;
     height: 34px;

@@ -8,6 +8,8 @@
     <script src="../Scripts/jQuery/jquery-3.1.1.min.js"></script>
     <script src="../bootstrap-3.3.0/js/bootstrap.min.js"></script>
     <link href="../bootstrap-3.3.0/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="../My97DatePicker/WdatePicker.js"></script>
+    <link href="../My97DatePicker/skin/WdatePicker.css" rel="stylesheet" />
     <script language="javascript">
         function PrintTable() {
             document.getElementById("PrintHide").style.visibility = "hidden"
