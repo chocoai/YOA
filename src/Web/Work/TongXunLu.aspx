@@ -145,7 +145,7 @@
                             <asp:BoundField DataField="Email" HeaderText="电子邮件"></asp:BoundField>
                             <asp:BoundField DataField="IfShare" HeaderText="是否共享"></asp:BoundField>
                         </Columns>
-                        <RowStyle HorizontalAlign="Center" />
+                        <RowStyle HorizontalAlign="Left"  />
                         <EmptyDataTemplate>
                             <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                 <tr>

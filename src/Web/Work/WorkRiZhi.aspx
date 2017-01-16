@@ -141,7 +141,7 @@
                             <asp:BoundField DataField="TypeStr" HeaderText="日志类型"></asp:BoundField>
                             <asp:BoundField DataField="TimeStr" HeaderText="撰写时间"></asp:BoundField>
                         </Columns>
-                        <RowStyle HorizontalAlign="Center" />
+                        <RowStyle HorizontalAlign="Left"  />
                         <EmptyDataTemplate>
                             <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                 <tr>
