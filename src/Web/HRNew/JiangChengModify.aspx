@@ -1,7 +1,7 @@
 <%@ Page Language="C#" AutoEventWireup="true" CodeFile="JiangChengModify.aspx.cs" Inherits="HRNew_JiangChengModify" %>
 <html>
 	<head>
-		<title>CN-Soft 2009 网络智能办公系统</title>
+		<title>政务OA</title>
         <link href="../Style/jquery-ui/jquery-ui.min.css" rel="stylesheet" />
     <script src="../Scripts/jQuery/jquery-3.1.1.min.js"></script>
     <script src="../Scripts/jquery-ui/jquery-ui.min.js"></script>

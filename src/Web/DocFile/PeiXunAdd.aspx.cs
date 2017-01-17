@@ -22,7 +22,7 @@ public partial class DocFile_PeiXunAdd : System.Web.UI.Page
 			 ZWL.Common.PublicMethod.SetSessionValue("WenJianList", "");
 		}
 	}
-	protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+	protected void ImageButton1_Click(object sender, EventArgs e)
 	{
 		ZWL.BLL.ERPPeiXun Model = new ZWL.BLL.ERPPeiXun();
 		

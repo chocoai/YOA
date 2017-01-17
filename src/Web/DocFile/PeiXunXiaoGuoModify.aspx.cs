@@ -28,7 +28,7 @@ public partial class DocFile_PeiXunXiaoGuoModify : System.Web.UI.Page
 			this.txtTimeStr.Text=Model.TimeStr.ToString();
 		}
 	}
-	protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+	protected void ImageButton1_Click(object sender, EventArgs e)
 	{
 		ZWL.BLL.ERPPeiXunXiaoGuo Model = new ZWL.BLL.ERPPeiXunXiaoGuo();
 		

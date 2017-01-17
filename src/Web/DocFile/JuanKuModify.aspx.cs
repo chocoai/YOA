@@ -28,7 +28,7 @@ public partial class DocFile_JuanKuModify : System.Web.UI.Page
 			this.txtTimeStr.Text=Model.TimeStr.ToString();
 		}
 	}
-	protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+	protected void ImageButton1_Click(object sender, EventArgs e)
 	{
 		ZWL.BLL.ERPJuanKu Model = new ZWL.BLL.ERPJuanKu();
 		

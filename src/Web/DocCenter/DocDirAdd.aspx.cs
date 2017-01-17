@@ -18,7 +18,7 @@ public partial class DocCenter_DocDirAdd : System.Web.UI.Page
             ZWL.Common.PublicMethod.CheckSession();
         }
     }
-    protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+    protected void ImageButton1_Click(object sender, EventArgs e)
     {        
         ZWL.BLL.ERPFileList MyModel = new ZWL.BLL.ERPFileList();
         MyModel.FileName = this.TextBox1.Text;

@@ -23,7 +23,7 @@ public partial class SystemManage_SystemSetting : System.Web.UI.Page
             ImageButton1.Visible = ZWL.Common.PublicMethod.StrIFIn("|073m|", ZWL.Common.PublicMethod.GetSessionValue("QuanXian"));
         }
     }
-    protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+    protected void ImageButton1_Click(object sender, EventArgs e)
     {
         ZWL.BLL.ERPSystemSetting MyModel = new ZWL.BLL.ERPSystemSetting();
         MyModel.FileType = "|"+TextBox1.Text.Trim().Replace(",","||")+"|";

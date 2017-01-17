@@ -25,7 +25,7 @@ public partial class SystemManage_BuMenInfoModify : System.Web.UI.Page
             this.TextBox5.Text = MyBuMen.BackInfo;
         }
     }
-    protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+    protected void ImageButton1_Click(object sender, EventArgs e)
     {
         if (ZWL.Common.PublicMethod.IFExists("BuMenName", "ERPBuMen", int.Parse(Request.QueryString["ID"].ToString()), this.TextBox1.Text) == true)
         {

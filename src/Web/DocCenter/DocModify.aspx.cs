@@ -33,7 +33,7 @@ public partial class DocCenter_DocModify : System.Web.UI.Page
             this.HyperLink3.NavigateUrl = "../DsoFramer/EditFile.aspx?FilePath=" + this.Label3.Text;
         }
     }
-    protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+    protected void ImageButton1_Click(object sender, EventArgs e)
     {
         if (this.FileUpload1.FileName.Trim().Length > 0)
         {

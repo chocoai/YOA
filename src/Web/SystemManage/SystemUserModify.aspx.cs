@@ -62,7 +62,7 @@ public partial class SystemManage_SystemUserModify : System.Web.UI.Page
             ZWL.Common.PublicMethod.BindDDL(this.CheckBoxList1, ZWL.Common.PublicMethod.GetSessionValue("WenJianList"));
         }
     }
-    protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+    protected void ImageButton1_Click(object sender, EventArgs e)
     {
         if (ZWL.Common.PublicMethod.IFExists("UserName", "ERPUser", int.Parse(Request.QueryString["ID"].ToString()), this.TextBox1.Text) == true)
         {

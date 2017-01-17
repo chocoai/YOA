@@ -10,6 +10,8 @@
     <script src="../Scripts/Public.js"></script>
     <script src="../My97DatePicker/WdatePicker.js"></script>
     <link href="../My97DatePicker/skin/WdatePicker.css" rel="stylesheet" />
+    <link href="../bootstrap-3.3.0/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="../bootstrap-3.3.0/js/bootstrap.min.js"></script>
     <script type="text/javascript">
         var dialog;
         function selectConditionNameCallback(returndata) {
@@ -87,111 +89,117 @@
         <div>
             <table id="PrintHide" style="width: 100%" border="0" cellpadding="0" cellspacing="0">
                 <tr>
-                    <td valign="middle" style="border-bottom: #006633 1px dashed; height: 30px;">&nbsp;<img src="../images/BanKuaiJianTou.gif" />
-                        <a class="hei" href="../Main/MyDesk.aspx">桌面</a>&nbsp;>>&nbsp;档案文书&nbsp;>>&nbsp;修改档案信息
+                    <td colspan="2" valign="middle" style="height: 30px;">
+                        <ol class="breadcrumb">
+                            <li><a href="../Main/MyDesk.aspx">桌面</a></li>
+                            <li>档案文书</li>
+                            <li class="active">修改档案信息</li>
+                        </ol>
+
                     </td>
-                    <td align="right" valign="middle" style="border-bottom: #006633 1px dashed; height: 30px;">
-                        <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/images/Button/Submit.jpg"
-                            OnClick="ImageButton1_Click" />
-                        <img src="../images/Button/JianGe.jpg" />&nbsp;
-                    <img class="HerCss" onclick="javascript:window.history.go(-1)" src="../images/Button/BtnExit.jpg" />&nbsp;</td>
-                </tr>
-                <tr>
-                    <td height="3px" colspan="2" style="background-color: #ffffff"></td>
+                </tr> 
+                 <tr>
+                    <td colspan="2" class="filter_box">
+                        <div class="form-group">
+                            <asp:Button ID="ImageButton1" Text="提交" CssClass="btn btn-primary" runat="server" OnClick="ImageButton1_Click" />
+                            &nbsp;&nbsp;
+                            <button class="btn btn-default" onclick="javascript:window.history.go(-1)">返回</button>&nbsp;
+                        </div>
+                    </td>
                 </tr>
             </table>
-            <table style="width: 100%" bgcolor="#999999" border="0" cellpadding="2" cellspacing="1">
+            <table style="width: 100%" class="table">
                 <tr>
-                    <td style="width: 170px; height: 25px; background-color: #cccccc" align="right">文件名称：
+                    <td style="width: 170px;" align="right">文件名称：
                     </td>
-                    <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
+                    <td>
                         <asp:TextBox ID="txtFileName" runat="server" Width="350px"></asp:TextBox>
                         <img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPDangAn&LieName=FileName&callbackFun=selectConditionNameCallback',350,400)" src="../images/Button/search.gif" />
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtFileName" ErrorMessage="*该项不可以为空"></asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>
-                    <td style="width: 170px; height: 25px; background-color: #cccccc" align="right">所属卷库：
+                    <td style="width: 170px;" align="right">所属卷库：
                     </td>
-                    <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
+                    <td>
                         <asp:TextBox ID="txtJuanKuName" runat="server" Width="350px"></asp:TextBox>
                         <img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPJuanKu&LieName=JuanKuName&callbackFun=selectConditionLibCallback',350,400)" src="../images/Button/search.gif" />
                     </td>
                 </tr>
                 <tr>
-                    <td style="width: 170px; height: 25px; background-color: #cccccc" align="right">文件编号：
+                    <td style="width: 170px;" align="right">文件编号：
                     </td>
-                    <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
+                    <td>
                         <asp:TextBox ID="txtFileSerils" runat="server" Width="350px"></asp:TextBox>
                         <img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPDangAn&LieName=FileSerils&callbackFun=selectConditionFileNumCallback',350,400)" src="../images/Button/search.gif" />
                     </td>
                 </tr>
                 <tr>
-                    <td style="width: 170px; height: 25px; background-color: #cccccc" align="right">文件主题：
+                    <td style="width: 170px;" align="right">文件主题：
                     </td>
-                    <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
+                    <td>
                         <asp:TextBox ID="txtFileTitle" runat="server" Width="350px"></asp:TextBox>
                         <img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPDangAn&LieName=FileTitle&callbackFun=selectConditionFileThemeCallback',350,400)" src="../images/Button/search.gif" />
                     </td>
                 </tr>
                 <tr>
-                    <td style="width: 170px; height: 25px; background-color: #cccccc" align="right">发文单位：
+                    <td style="width: 170px;" align="right">发文单位：
                     </td>
-                    <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
+                    <td>
                         <asp:TextBox ID="txtFaWenDanWei" runat="server" Width="350px"></asp:TextBox>
                         <img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPDangAn&LieName=FaWenDanWei&callbackFun=selectConditionSenderCallback',350,400)" src="../images/Button/search.gif" />
                     </td>
                 </tr>
                 <tr>
-                    <td style="width: 170px; height: 25px; background-color: #cccccc" align="right">发文日期：
+                    <td style="width: 170px;" align="right">发文日期：
                     </td>
-                    <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
+                    <td>
                         <asp:TextBox ID="txtFaWenDate" runat="server" Width="350px" CssClass="Wdate" onclick="WdatePicker()"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
-                    <td style="width: 170px; height: 25px; background-color: #cccccc" align="right">密级：
+                    <td style="width: 170px;" align="right">密级：
                     </td>
-                    <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
+                    <td>
                         <asp:TextBox ID="txtMiJi" runat="server" Width="350px"></asp:TextBox>
                         <img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPDangAn&LieName=MiJi&callbackFun=selectConditionSecretLevelCallback',350,400)" src="../images/Button/search.gif" />
                     </td>
                 </tr>
                 <tr>
-                    <td style="width: 170px; height: 25px; background-color: #cccccc" align="right">紧急：
+                    <td style="width: 170px;" align="right">紧急：
                     </td>
-                    <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
+                    <td>
                         <asp:TextBox ID="txtJingJi" runat="server" Width="350px"></asp:TextBox>
                         <img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPDangAn&LieName=JingJi&callbackFun=selectConditionUrgencyCallback',350,400)" src="../images/Button/search.gif" />
                     </td>
                 </tr>
                 <tr>
-                    <td style="width: 170px; height: 25px; background-color: #cccccc" align="right">文件分类：
+                    <td style="width: 170px;" align="right">文件分类：
                     </td>
-                    <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
+                    <td>
                         <asp:TextBox ID="txtTypeStr" runat="server" Width="350px"></asp:TextBox>
                         <img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPDangAn&LieName=TypeStr&callbackFun=selectConditionFileCategoryCallback',350,400)" src="../images/Button/search.gif" />
                     </td>
                 </tr>
                 <tr>
-                    <td style="width: 170px; height: 25px; background-color: #cccccc" align="right">公文类别：
+                    <td style="width: 170px;" align="right">公文类别：
                     </td>
-                    <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
+                    <td>
                         <asp:TextBox ID="txtGongWenType" runat="server" Width="350px"></asp:TextBox>
                         <img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPDangAn&LieName=GongWenType&callbackFun=selectConditionPubFileCategoryCallback',350,400)" src="../images/Button/search.gif" />
                     </td>
                 </tr>
                 <tr>
-                    <td style="width: 170px; height: 25px; background-color: #cccccc" align="right">文件页数：
+                    <td style="width: 170px;" align="right">文件页数：
                     </td>
-                    <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
+                    <td>
                         <asp:TextBox ID="txtFilePage" runat="server" Width="350px"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
-                    <td style="width: 170px; height: 25px; background-color: #cccccc" align="right">附件文件：
+                    <td style="width: 170px;" align="right">附件文件：
                     </td>
-                    <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
+                    <td>
                         <asp:CheckBoxList ID="CheckBoxList1" runat="server" RepeatColumns="4" RepeatDirection="Horizontal">
                         </asp:CheckBoxList>&nbsp;<asp:ImageButton ID="ImageButton3" runat="server" CausesValidation="False"
                             ImageAlign="AbsMiddle" ImageUrl="../images/Button/DelFile.jpg" OnClick="ImageButton3_Click" />
@@ -203,31 +211,31 @@
                     ImageUrl="~/images/Button/EditFile.gif" OnClick="ImageButton5_Click" /></td>
                 </tr>
                 <tr>
-                    <td align="right" style="width: 170px; height: 25px; background-color: #cccccc">上传附件：</td>
-                    <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
+                    <td align="right" style="width: 170px;">上传附件：</td>
+                    <td>
                         <asp:FileUpload ID="FileUpload1" runat="server" Width="350px" />
                         <asp:ImageButton ID="ImageButton2" runat="server" CausesValidation="False" ImageAlign="AbsMiddle"
                             ImageUrl="../images/Button/UpLoad.jpg" OnClick="ImageButton2_Click" />
                     </td>
                 </tr>
                 <tr>
-                    <td style="width: 170px; height: 25px; background-color: #cccccc" align="right">备注信息：
+                    <td style="width: 170px;" align="right">备注信息：
                     </td>
-                    <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
+                    <td>
                         <asp:TextBox ID="txtBackInfo" runat="server" Width="350px" Height="60px" TextMode="MultiLine"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
-                    <td style="width: 170px; height: 25px; background-color: #cccccc" align="right">录入人：
+                    <td style="width: 170px;" align="right">录入人：
                     </td>
-                    <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
+                    <td>
                         <asp:TextBox ID="txtUserName" runat="server" Width="350px" Enabled="False"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
-                    <td style="width: 170px; height: 25px; background-color: #cccccc" align="right">录入时间：
+                    <td style="width: 170px;" align="right">录入时间：
                     </td>
-                    <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
+                    <td>
                         <asp:TextBox ID="txtTimeStr" runat="server" Width="350px" Enabled="False"></asp:TextBox>
                     </td>
                 </tr>

@@ -18,7 +18,7 @@ public partial class Meeting_MeetingAdd : System.Web.UI.Page
             ZWL.Common.PublicMethod.CheckSession();
         }
     }
-    protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+    protected void ImageButton1_Click(object sender, EventArgs e)
     {
         ZWL.BLL.ERPMeeting Model = new ZWL.BLL.ERPMeeting();
         Model.ChuXiRen = this.TextBox4.Text;

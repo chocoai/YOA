@@ -23,7 +23,7 @@ public partial class SystemManage_RedHeadModify : System.Web.UI.Page
             this.TextBox1.Text = MyModel.FileName;
         }
     }
-    protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+    protected void ImageButton1_Click(object sender, EventArgs e)
     {
         string FileNameStr = ZWL.Common.PublicMethod.UploadFileIntoDir(this.FileUpload1, DateTime.Now.Ticks.ToString() + System.IO.Path.GetExtension(FileUpload1.PostedFile.FileName));
         if (FileNameStr.Trim().Length > 0)

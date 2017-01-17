@@ -27,7 +27,7 @@ public partial class SystemManage_SystemJiaoSeAdd : System.Web.UI.Page
             }
         }
     }
-    protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+    protected void ImageButton1_Click(object sender, EventArgs e)
     {
         if (ZWL.Common.PublicMethod.IFExists("JiaoSeName", "ERPJiaoSe", 0, this.TextBox1.Text) == true)
         {

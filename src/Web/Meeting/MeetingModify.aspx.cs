@@ -36,7 +36,7 @@ public partial class Meeting_MeetingModify : System.Web.UI.Page
             this.DropDownList4.SelectedValue = DateTime.Parse(Model.JieShuTime.ToString()).Minute.ToString("D2");            
         }
     }
-    protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+    protected void ImageButton1_Click(object sender, EventArgs e)
     {
         ZWL.BLL.ERPMeeting Model = new ZWL.BLL.ERPMeeting();
         Model.ID = int.Parse(Request.QueryString["ID"].ToString());

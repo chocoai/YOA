@@ -18,7 +18,7 @@ public partial class DocCenter_DocAdd : System.Web.UI.Page
             ZWL.Common.PublicMethod.CheckSession();
         }
     }
-    protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+    protected void ImageButton1_Click(object sender, EventArgs e)
     {
         string FileNameStr = ZWL.Common.PublicMethod.UploadFileIntoDir(this.FileUpload1, DateTime.Now.Ticks.ToString() + System.IO.Path.GetExtension(FileUpload1.PostedFile.FileName));
         if (FileNameStr.Trim().Length > 0)

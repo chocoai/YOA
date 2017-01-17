@@ -2,7 +2,7 @@
 <%@ Register Assembly="CKEditor.NET" Namespace="CKEditor.NET" TagPrefix="CKEditor" %>
 <html>
 	<head>
-		<title>CN-Soft 2009 网络智能办公系统</title>
+		<title>政务OA</title>
   <LINK href="../Style/Style.css" type="text/css" rel="STYLESHEET">
         <link href="../Style/jquery-ui/jquery-ui.min.css" rel="stylesheet" />
     <script src="../Scripts/jQuery/jquery-3.1.1.min.js"></script>
@@ -10,6 +10,8 @@
     <script src="../Scripts/Public.js"></script>
         <script src="../My97DatePicker/WdatePicker.js"></script>
     <link href="../My97DatePicker/skin/WdatePicker.css" rel="stylesheet" />
+         <link href="../bootstrap-3.3.0/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="../bootstrap-3.3.0/js/bootstrap.min.js"></script>
     <script type="text/javascript">
         var dialog;
         function selectPeiXunNameConditionCallback(returndata) {
@@ -46,63 +48,69 @@
     <div>    
      <table id="PrintHide" style="width: 100%" border="0" cellpadding="0" cellspacing="0">            
             <tr>
-                <td valign="middle" style="border-bottom: #006633 1px dashed; height: 30px;">&nbsp;<img src="../images/BanKuaiJianTou.gif" />
-                <a class="hei" href="../Main/MyDesk.aspx">桌面</a>&nbsp;>>&nbsp;培训管理&nbsp;>>&nbsp;修改培训日志信息
-                </td>
-                <td align="right" valign="middle" style="border-bottom: #006633 1px dashed; height: 30px;">
-                    <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/images/Button/Submit.jpg"
-                        OnClick="ImageButton1_Click" />
-                    <img src="../images/Button/JianGe.jpg" />&nbsp;
-                    <img class="HerCss" onclick="javascript:window.history.go(-1)" src="../images/Button/BtnExit.jpg" />&nbsp;</td>
-            </tr>
-            <tr>
-            <td height="3px" colspan="2" style="background-color: #ffffff"></td>
-        </tr>
+                    <td colspan="2" valign="middle" style="height: 30px;">
+                        <ol class="breadcrumb">
+                            <li><a href="../Main/MyDesk.aspx">桌面</a></li>
+                            <li>培训管理</li>
+                            <li class="active">修改培训日志信息</li>
+                        </ol>
+
+                    </td>
+                </tr> 
+         <tr>
+                    <td colspan="2" class="filter_box">
+                        <div class="form-group">
+                            <asp:Button ID="ImageButton1" Text="提交" CssClass="btn btn-primary" runat="server" OnClick="ImageButton1_Click" />
+                            &nbsp;&nbsp;
+                            <button class="btn btn-default" onclick="javascript:window.history.go(-1)">返回</button>&nbsp;
+                        </div>
+                    </td>
+                </tr>
         </table>
-<table style="width: 100%" bgcolor="#999999" border="0" cellpadding="2" cellspacing="1">
+<table style="width: 100%" class="table">
 	<tr>
-	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">
+	<td style="width: 170px;" align="right">
 		培训名称：
 	</td>
-	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
+	<td>
 		<asp:TextBox id="txtPeiXunName" runat="server" Width="350px"></asp:TextBox>
 		<img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPPeiXun&LieName=PeiXunName&callbackFun=selectPeiXunNameConditionCallback',350,400)"  src="../images/Button/search.gif" />
 		<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtPeiXunName" ErrorMessage="*该项不可以为空"></asp:RequiredFieldValidator>
 	</td></tr>
 	<tr>
-	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">
+	<td style="width: 170px;" align="right">
 		日志主题：
 	</td>
-	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
+	<td>
 		<asp:TextBox id="txtRiJiTitle" runat="server" Width="350px"></asp:TextBox>
 		<img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPPeiXunRiJi&LieName=RiJiTitle&callbackFun=selectRiJiTitleConditionCallback',350,400)"  src="../images/Button/search.gif" />
 	</td></tr>
 	<tr>
-	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">
+	<td style="width: 170px;" align="right">
 		日志日期：
 	</td>
-	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
+	<td>
 		<asp:TextBox id="txtRiJiDate" runat="server" Width="350px" CssClass="Wdate" onclick="WdatePicker()"></asp:TextBox>
 	
 	</td></tr>
 	<tr>
-	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">
+	<td style="width: 170px;" align="right">
 		日志内容：
 	</td>
-	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
+	<td>
 		<CKEditor:CKEditorControl ID="txtRiJiContent" BasePath="~/ckeditor" runat="server" UIColor="#BFEE62" Language="zh-cn" EnterMode="BR"></CKEditor:CKEditorControl>
 	</td></tr>
 	<tr>
-	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">
+	<td style="width: 170px;" align="right">
 		录入人：
 	</td>
-	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
+	<td>
 		<asp:TextBox id="txtUserName" runat="server" Width="350px" Enabled="False"></asp:TextBox></td></tr>
 	<tr>
-	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">
+	<td style="width: 170px;" align="right">
 		录入时间：
 	</td>
-	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
+	<td>
 		<asp:TextBox id="txtTimeStr" runat="server" Width="350px" Enabled="False"></asp:TextBox></td></tr>
 </table>
 		</div>

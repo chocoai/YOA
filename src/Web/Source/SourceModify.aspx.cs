@@ -31,7 +31,7 @@ public partial class Source_SourceModify : System.Web.UI.Page
 			this.txtBackInfo.Text=Model.BackInfo.ToString();
 		}
 	}
-	protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+	protected void ImageButton1_Click(object sender, EventArgs e)
 	{
 		ZWL.BLL.ERPSource Model = new ZWL.BLL.ERPSource();
 		

@@ -24,7 +24,7 @@ public partial class DocCenter_DirModify : System.Web.UI.Page
             this.RadioButtonList1.SelectedValue = MyModel.IfShare;
         }
     }
-    protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+    protected void ImageButton1_Click(object sender, EventArgs e)
     {
         ZWL.BLL.ERPFileList MyModel = new ZWL.BLL.ERPFileList();
         MyModel.ID = int.Parse(Request.QueryString["ID"].ToString());

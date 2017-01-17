@@ -31,7 +31,7 @@ public partial class Car_CarInfoModify : System.Web.UI.Page
 			this.txtBackInfo.Text=Model.BackInfo.ToString();
 		}
 	}
-	protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+	protected void ImageButton1_Click(object sender, EventArgs e)
 	{
 		ZWL.BLL.ERPCarInfo Model = new ZWL.BLL.ERPCarInfo();
 		

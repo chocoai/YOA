@@ -21,7 +21,7 @@ public partial class Office_GuDingJiLuAdd : System.Web.UI.Page
             this.txtGDName.Text = Request.QueryString["GDName"].ToString();
 		}
 	}
-	protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+	protected void ImageButton1_Click(object sender, EventArgs e)
 	{
 		ZWL.BLL.ERPGuDingJiLu Model = new ZWL.BLL.ERPGuDingJiLu();
 		

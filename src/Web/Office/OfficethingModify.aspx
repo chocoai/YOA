@@ -1,7 +1,7 @@
 <%@ Page Language="C#" AutoEventWireup="true" CodeFile="OfficethingModify.aspx.cs" Inherits="Office_OfficethingModify" %>
 <html>
 	<head>
-		<title>CN-Soft 2009 网络智能办公系统</title>
+		<title>政务OA</title>
   <LINK href="../Style/Style.css" type="text/css" rel="STYLESHEET">
         <link href="../Style/jquery-ui/jquery-ui.min.css" rel="stylesheet" />
     <script src="../Scripts/jQuery/jquery-3.1.1.min.js"></script>

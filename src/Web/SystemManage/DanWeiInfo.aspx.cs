@@ -40,7 +40,7 @@ public partial class SystemManage_DanWeiInfo : System.Web.UI.Page
             { }
         }
     }
-    protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+    protected void ImageButton1_Click(object sender, EventArgs e)
     {
         ZWL.BLL.ERPDanWeiInfo MyDanWei = new ZWL.BLL.ERPDanWeiInfo();
         MyDanWei.DanWeiName=TextBox1.Text.Trim();

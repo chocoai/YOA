@@ -23,7 +23,7 @@ public partial class DocFile_DangAnAdd : System.Web.UI.Page
              this.txtJuanKuName.Text = Request.QueryString["JuanKuName"].ToString();
 		}
 	}
-	protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+	protected void ImageButton1_Click(object sender, EventArgs e)
 	{
 		ZWL.BLL.ERPDangAn Model = new ZWL.BLL.ERPDangAn();
 		

@@ -35,7 +35,7 @@ public partial class Office_GuDingModify : System.Web.UI.Page
 			this.txtBackInfo.Text=Model.BackInfo.ToString();
 		}
 	}
-	protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+	protected void ImageButton1_Click(object sender, EventArgs e)
 	{
 		ZWL.BLL.ERPGuDing Model = new ZWL.BLL.ERPGuDing();
 		

@@ -21,7 +21,7 @@ public partial class DocFile_PeiXunRiJiAdd : System.Web.UI.Page
             this.txtPeiXunName.Text = Request.QueryString["PeiXunName"].ToString();
 		}
 	}
-	protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+	protected void ImageButton1_Click(object sender, EventArgs e)
 	{
 		ZWL.BLL.ERPPeiXunRiJi Model = new ZWL.BLL.ERPPeiXunRiJi();
 		

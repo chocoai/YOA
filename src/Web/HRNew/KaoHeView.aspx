@@ -1,7 +1,7 @@
 <%@ Page Language="C#" AutoEventWireup="true" CodeFile="KaoHeView.aspx.cs" Inherits="HRNew_KaoHeView" %>
 <html>
 	<head>
-		<title>CN-Soft 2009 网络智能办公系统</title>
+		<title>政务OA</title>
   <LINK href="../Style/Style.css" type="text/css" rel="STYLESHEET">
   <script language="javascript">
   function PrintTable()

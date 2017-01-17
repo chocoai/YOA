@@ -37,7 +37,7 @@ public partial class Car_CarShiYongModify : System.Web.UI.Page
 			this.txtBackInfo.Text=Model.BackInfo.ToString();
 		}
 	}
-	protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+	protected void ImageButton1_Click(object sender, EventArgs e)
 	{
 		ZWL.BLL.ERPCarShiYong Model = new ZWL.BLL.ERPCarShiYong();
 		

@@ -32,7 +32,7 @@ public partial class SystemManage_SystemJiaoSeModify : System.Web.UI.Page
             }
         }
     }
-    protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+    protected void ImageButton1_Click(object sender, EventArgs e)
     {
         if (ZWL.Common.PublicMethod.IFExists("JiaoSeName", "ERPJiaoSe", int.Parse(Request.QueryString["ID"].ToString()), this.TextBox1.Text) == true)
         {

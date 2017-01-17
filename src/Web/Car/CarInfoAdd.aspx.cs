@@ -21,7 +21,7 @@ public partial class Car_CarInfoAdd : System.Web.UI.Page
 			
 		}
 	}
-	protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+	protected void ImageButton1_Click(object sender, EventArgs e)
 	{
 		ZWL.BLL.ERPCarInfo Model = new ZWL.BLL.ERPCarInfo();
 		

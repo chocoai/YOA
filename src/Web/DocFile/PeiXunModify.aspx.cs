@@ -35,7 +35,7 @@ public partial class DocFile_PeiXunModify : System.Web.UI.Page
 			this.txtTimeStr.Text=Model.TimeStr.ToString();
 		}
 	}
-	protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+	protected void ImageButton1_Click(object sender, EventArgs e)
 	{
 		ZWL.BLL.ERPPeiXun Model = new ZWL.BLL.ERPPeiXun();
 		
