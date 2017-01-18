@@ -71,9 +71,8 @@
             <td align="right" style="width: 170px;" >
                 审批人：</td>
                 <td>
-                    <asp:TextBox ID="TextBox1" runat="server" Width="100px"></asp:TextBox>
-                    <img class="HerCss" onclick="openDialog('../Main/SelectUser.aspx?TableName=ERPUser&LieName=UserName&callbackFun=selectCheckerConditionCallback',350,400)"
-                        src="../images/Button/search.gif" />&nbsp;
+                    <asp:TextBox ID="TextBox1" CssClass="form-control" runat="server" Width="100px"></asp:TextBox>
+                     <a onclick="openDialog('../Main/SelectUser.aspx?TableName=ERPUser&LieName=UserName&callbackFun=selectCheckerConditionCallback',350,400)"><span class="glyphicon glyphicon-filter glyphicon-size-md"></span></a>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TextBox1"
                         ErrorMessage="*该项不能为空"></asp:RequiredFieldValidator></td>
         </tr>
@@ -81,14 +80,14 @@
             <td align="right" style="width: 170px;">
                 申请原因：</td>
             <td>
-                <asp:TextBox ID="TextBox2" runat="server" Height="60px" TextMode="MultiLine" Width="350px"></asp:TextBox></td>
+                <asp:TextBox ID="TextBox2" CssClass="form-control" runat="server" Height="60px" TextMode="MultiLine" Width="350px"></asp:TextBox></td>
         </tr>
         <tr>
             <td align="right" style="width: 170px;">
                 开始时间：</td>
             <td>
-                <asp:TextBox ID="TextBox3" runat="server" Width="150px" CssClass="Wdate" onclick="WdatePicker()"></asp:TextBox>
-                <asp:DropDownList ID="DropDownList1" runat="server">
+                <asp:TextBox ID="TextBox3" runat="server" Width="150px" CssClass="Wdate form-control" onclick="WdatePicker()"></asp:TextBox>
+                <asp:DropDownList ID="DropDownList1" Width="70px" CssClass="form-control" runat="server">
                     <asp:ListItem>00</asp:ListItem>
                     <asp:ListItem>01</asp:ListItem>
                     <asp:ListItem>02</asp:ListItem>
@@ -113,7 +112,7 @@
                     <asp:ListItem>21</asp:ListItem>
                     <asp:ListItem>22</asp:ListItem>
                     <asp:ListItem>23</asp:ListItem>
-                </asp:DropDownList>：<asp:DropDownList ID="DropDownList2" runat="server">
+                </asp:DropDownList>：<asp:DropDownList ID="DropDownList2" Width="70px" CssClass="form-control" runat="server">
                     <asp:ListItem>00</asp:ListItem>
                     <asp:ListItem>01</asp:ListItem>
                     <asp:ListItem>02</asp:ListItem>
@@ -185,8 +184,8 @@
             <td align="right" style="width: 170px;">
                 结束时间：</td>
             <td>
-                <asp:TextBox ID="TextBox4" runat="server" Width="150px" CssClass="Wdate" onclick="WdatePicker()"></asp:TextBox>
-               <asp:DropDownList ID="DropDownList3" runat="server">
+                <asp:TextBox ID="TextBox4" runat="server" Width="150px" CssClass="Wdate form-control" onclick="WdatePicker()"></asp:TextBox>
+               <asp:DropDownList ID="DropDownList3"  Width="70px" CssClass="form-control" runat="server">
                         <asp:ListItem>00</asp:ListItem>
                         <asp:ListItem>01</asp:ListItem>
                         <asp:ListItem>02</asp:ListItem>
@@ -211,7 +210,7 @@
                         <asp:ListItem>21</asp:ListItem>
                         <asp:ListItem>22</asp:ListItem>
                         <asp:ListItem>23</asp:ListItem>
-                    </asp:DropDownList>：<asp:DropDownList ID="DropDownList4" runat="server">
+                    </asp:DropDownList>：<asp:DropDownList ID="DropDownList4" Width="70px" CssClass="form-control" runat="server">
                         <asp:ListItem>00</asp:ListItem>
                         <asp:ListItem>01</asp:ListItem>
                         <asp:ListItem>02</asp:ListItem>

@@ -65,50 +65,50 @@
         </table>
 <table style="width: 100%" class="table">
 	<tr>
-	<td style="width: 170px;" align="right">
-		申请物品：
-	</td>
-	<td>
-		<asp:TextBox id="txtShenQingThing" runat="server" Width="350px"></asp:TextBox>
-		<img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPOfficething&LieName=ShenQingThing&callbackFun=selectConditionThingCallback',350,400)"  src="../images/Button/search.gif" />
-		<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtShenQingThing" ErrorMessage="*该项不可以为空"></asp:RequiredFieldValidator>
-	</td></tr>
-	<tr>
-	<td style="width: 170px;" align="right">
-		申请类别：
-	</td>
-	<td>
-		<asp:TextBox id="txtTypeStr" runat="server" Width="350px"></asp:TextBox>
-		<img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPOfficething&LieName=TypeStr&callbackFun=selectConditionCategoryCallback',350,400)"  src="../images/Button/search.gif" />
-	</td></tr>
-	<tr>
-	<td style="width: 170px;" align="right">
-		申请数量：
-	</td>
-	<td>
-		<asp:TextBox id="txtShengQingNum" runat="server" Width="350px"></asp:TextBox>
-		<img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPOfficething&LieName=ShengQingNum&callbackFun=selectConditionNumberCallback',350,400)"  src="../images/Button/search.gif" />
-	</td></tr>
+                    <td style="width: 170px;" align="right">申请物品：
+                    </td>
+                    <td>
+                        <asp:TextBox ID="txtShenQingThing" CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
+                        <a onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPOfficething&LieName=ShenQingThing&callbackFun=selectConditionThingCallback',350,400)"><span class="glyphicon glyphicon-filter glyphicon-size-md"></span></a>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtShenQingThing" ErrorMessage="*该项不可以为空"></asp:RequiredFieldValidator>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 170px;" align="right">申请类别：
+                    </td>
+                    <td>
+                        <asp:TextBox ID="txtTypeStr" CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
+                        <a onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPOfficething&LieName=TypeStr&callbackFun=selectConditionCategoryCallback',350,400)"><span class="glyphicon glyphicon-filter glyphicon-size-md"></span></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 170px;" align="right">申请数量：
+                    </td>
+                    <td>
+                        <asp:TextBox ID="txtShengQingNum" CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
+                        <a onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPOfficething&LieName=ShengQingNum&callbackFun=selectConditionNumberCallback',350,400)"><span class="glyphicon glyphicon-filter glyphicon-size-md"></span></a>
+                    </td>
+                </tr>
 	<tr>
 	<td style="width: 170px;" align="right">
 		当前状态：
 	</td>
 	<td>
-		<asp:TextBox id="txtNowState" runat="server" Width="350px" Enabled="False"></asp:TextBox>
+		<asp:TextBox id="txtNowState" CssClass="form-control" runat="server" Width="350px" Enabled="False"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td style="width: 170px;" align="right">
 		申请人：
 	</td>
 	<td>
-		<asp:TextBox id="txtUserName" runat="server" Width="350px" Enabled="False"></asp:TextBox>
+		<asp:TextBox id="txtUserName" CssClass="form-control" runat="server" Width="350px" Enabled="False"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td style="width: 170px;" align="right">
 		申请时间：
 	</td>
 	<td>
-		<asp:TextBox id="txtTimeStr" runat="server" Width="350px" Enabled="False"></asp:TextBox>
+		<asp:TextBox id="txtTimeStr" CssClass="form-control" runat="server" Width="350px" Enabled="False"></asp:TextBox>
 	</td></tr>
 </table>
 		</div>

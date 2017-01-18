@@ -71,8 +71,8 @@
                     <td style="width: 170px;" align="right">资产名称：
                     </td>
                     <td>
-                        <asp:TextBox ID="txtGDName" runat="server" Width="350px"></asp:TextBox>
-                        <img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPGuDing&LieName=GDName&callbackFun=selectConditionThingNameCallback',350,400)" src="../images/Button/search.gif" />
+                        <asp:TextBox ID="txtGDName" CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
+                        <a onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPGuDing&LieName=GDName&callbackFun=selectConditionThingNameCallback',350,400)"><span class="glyphicon glyphicon-filter glyphicon-size-md"></span></a>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtGDName" ErrorMessage="*该项不可以为空"></asp:RequiredFieldValidator>
                     </td>
                 </tr>
@@ -80,28 +80,28 @@
                     <td style="width: 170px;" align="right">折旧类别：
                     </td>
                     <td>
-                        <asp:TextBox ID="txtZJType" runat="server" Width="350px"></asp:TextBox>
-                        <img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPGuDingJiLu&LieName=ZJType&callbackFun=selectConditionThingCategoryCallback',350,400)" src="../images/Button/search.gif" />
+                        <asp:TextBox ID="txtZJType" CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
+                        <a onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPGuDingJiLu&LieName=ZJType&callbackFun=selectConditionThingCategoryCallback',350,400)"><span class="glyphicon glyphicon-filter glyphicon-size-md"></span></a>
                     </td>
                 </tr>
                 <tr>
                     <td style="width: 170px;" align="right">折旧日期：
                     </td>
                     <td>
-                        <asp:TextBox ID="txtZJDate" runat="server" Width="350px" CssClass="Wdate" onclick="WdatePicker()"></asp:TextBox>
+                        <asp:TextBox ID="txtZJDate" runat="server" Width="350px" CssClass="Wdate form-control" onclick="WdatePicker()"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
                     <td style="width: 170px;" align="right">折旧金额：
                     </td>
                     <td>
-                        <asp:TextBox ID="txtZJJinE" runat="server" Width="350px"></asp:TextBox></td>
+                        <asp:TextBox ID="txtZJJinE" CssClass="form-control" runat="server" Width="350px"></asp:TextBox></td>
                 </tr>
                 <tr>
                     <td style="width: 170px;" align="right">备注说明：
                     </td>
                     <td>
-                        <asp:TextBox ID="txtBackInfo" runat="server" Width="350px" Height="60px" TextMode="MultiLine"></asp:TextBox></td>
+                        <asp:TextBox ID="txtBackInfo" CssClass="form-control" runat="server" Width="350px" Height="60px" TextMode="MultiLine"></asp:TextBox></td>
                 </tr>
             </table>
         </div>

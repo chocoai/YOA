@@ -97,8 +97,8 @@
 		资产名称：
 	</td>
 	<td>
-		<asp:TextBox id="txtGDName" runat="server" Width="350px"></asp:TextBox>
-		<img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPGuDing&LieName=GDName&callbackFun=selectConditionThingNameCallback',350,400)"  src="../images/Button/search.gif" />
+		<asp:TextBox id="txtGDName" CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
+		<a onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPGuDing&LieName=GDName&callbackFun=selectConditionThingNameCallback',350,400)"><span class="glyphicon glyphicon-filter glyphicon-size-md"></span></a>
 		<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtGDName" ErrorMessage="*该项不可以为空"></asp:RequiredFieldValidator>
 	</td></tr>
 	<tr>
@@ -106,68 +106,68 @@
 		资产编号：
 	</td>
 	<td>
-		<asp:TextBox id="txtGDSerils" runat="server" Width="350px"></asp:TextBox>
-		<img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPGuDing&LieName=GDSerils&callbackFun=selectConditionThingNumCallback',350,400)"  src="../images/Button/search.gif" />
+		<asp:TextBox id="txtGDSerils" CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
+        <a onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPGuDing&LieName=GDSerils&callbackFun=selectConditionThingNumCallback',350,400)"><span class="glyphicon glyphicon-filter glyphicon-size-md"></span></a>
 	</td></tr>
 	<tr>
 	<td style="width: 170px;" align="right">
 		资产类别：
 	</td>
 	<td>
-		<asp:TextBox id="txtGDType" runat="server" Width="350px"></asp:TextBox>
-		<img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPGuDing&LieName=GDType&callbackFun=selectConditionThingCategoryCallback',350,400)"  src="../images/Button/search.gif" />
+		<asp:TextBox id="txtGDType" CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
+		<a onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPGuDing&LieName=GDType&callbackFun=selectConditionThingCategoryCallback',350,400)"><span class="glyphicon glyphicon-filter glyphicon-size-md"></span></a>
 	</td></tr>
 	<tr>
 	<td style="width: 170px;" align="right">
 		所属部门：
 	</td>
 	<td>
-		<asp:TextBox id="txtSuoShuBuMen" runat="server" Width="350px"></asp:TextBox>
-		<img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPBuMen&LieName=BuMenName&callbackFun=selectConditionDepartCallback',350,400)"  src="../images/Button/search.gif" />
+		<asp:TextBox id="txtSuoShuBuMen" CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
+		<a onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPBuMen&LieName=BuMenName&callbackFun=selectConditionDepartCallback',350,400)"><span class="glyphicon glyphicon-filter glyphicon-size-md"></span></a>
 	</td></tr>
 	<tr>
 	<td style="width: 170px;" align="right">
 		资产原值：
 	</td>
 	<td>
-		<asp:TextBox id="txtGDAllCount" runat="server" Width="350px"></asp:TextBox>
+		<asp:TextBox id="txtGDAllCount" CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td style="width: 170px;" align="right">
 		资产残值：
 	</td>
 	<td>
-		<asp:TextBox id="txtNowCount" runat="server" Width="350px"></asp:TextBox>
+		<asp:TextBox id="txtNowCount" CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td style="width: 170px;" align="right">
 		折旧年限：
 	</td>
 	<td>
-		<asp:TextBox id="txtNianXian" runat="server" Width="350px"></asp:TextBox>
+		<asp:TextBox id="txtNianXian" CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td style="width: 170px;" align="right">
 		资产性质：
 	</td>
 	<td>
-		<asp:TextBox id="txtGDXingZhi" runat="server" Width="350px"></asp:TextBox>
-		<img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPGuDing&LieName=GDXingZhi&callbackFun=selectConditionThingXinZhiCallback',350,400)"  src="../images/Button/search.gif" />
+		<asp:TextBox id="txtGDXingZhi" CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
+		<a onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPGuDing&LieName=GDXingZhi&callbackFun=selectConditionThingXinZhiCallback',350,400)"><span class="glyphicon glyphicon-filter glyphicon-size-md"></span></a>
 	</td></tr>
 	<tr>
 	<td style="width: 170px;" align="right">
 		启用时间：
 	</td>
 	<td>
-		<asp:TextBox id="txtQiYongDate" runat="server" Width="350px" CssClass="Wdate" onclick="WdatePicker()"></asp:TextBox>
+		<asp:TextBox id="txtQiYongDate" runat="server" Width="350px" CssClass="Wdate form-control" onclick="WdatePicker()"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td style="width: 170px;" align="right">
 		保管人：
 	</td>
 	<td>
-		<asp:TextBox id="txtBaoGuanUser" runat="server" Width="350px"></asp:TextBox>
-		<img class="HerCss" onclick="openDialog('../Main/SelectUser.aspx?TableName=ERPUser&LieName=UserName&callbackFun=selectConditionThingProtectorCallback',350,400)" src="../images/Button/search.gif" />
+		<asp:TextBox id="txtBaoGuanUser" CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
+		<a onclick="openDialog('../Main/SelectUser.aspx?TableName=ERPUser&LieName=UserName&callbackFun=selectConditionThingProtectorCallback',350,400)"><span class="glyphicon glyphicon-filter glyphicon-size-md"></span></a>
 	</td></tr>
 	<tr>
 	<td style="width: 170px;" align="right">

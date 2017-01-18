@@ -79,78 +79,78 @@
         </table>
 <table style="width: 100%"  class="table"1">
 	<tr>
-	<td style="width: 170px;" align="right">
-		职员用户：
-	</td>
-	<td >
-		<asp:TextBox id="txtJCUser" runat="server" Width="350px"></asp:TextBox>
-		<img class="HerCss" onclick="openDialog('../Main/SelectUser.aspx?TableName=ERPUser&LieName=UserName&callbackFun=selectJCUserConditionCallback',350,400)" src="../images/Button/search.gif" />
-		<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtJCUser" ErrorMessage="*该项不可以为空"></asp:RequiredFieldValidator>
-	</td></tr>
-	<tr>
-	<td style="width: 170px;" align="right">
-		奖惩区分：
-	</td>
-	<td >
-		<asp:TextBox id="txtJiangChengQuFen" runat="server" Width="350px"></asp:TextBox>
-		<img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPJiangCheng&LieName=JiangChengQuFen&callbackFun=selectJiangChengQuFenConditionCallback',350,400)"  src="../images/Button/search.gif" />
-	</td></tr>
-	<tr>
-	<td style="width: 170px;" align="right">
-		奖惩类别：
-	</td>
-	<td >
-		<asp:TextBox id="txtJiangChengType" runat="server" Width="350px"></asp:TextBox>
-		<img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPJiangCheng&LieName=JiangChengType&callbackFun=selectJiangChengTypeConditionCallback',350,400)"  src="../images/Button/search.gif" />
-	</td></tr>
-	<tr>
-	<td style="width: 170px;" align="right">
-		授予单位：
-	</td>
-	<td >
-		<asp:TextBox id="txtShouYuDanWei" runat="server" Width="350px"></asp:TextBox>
-		<img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPJiangCheng&LieName=ShouYuDanWei&callbackFun=selectShouYuDanWeiConditionCallback',350,400)"  src="../images/Button/search.gif" />
-	</td></tr>
-	<tr>
-	<td style="width: 170px;" align="right">
-		奖惩日期：
-	</td>
-	<td >
-		<asp:TextBox id="txtJiangChengDate" runat="server" Width="350px" CssClass="Wdate" onclick="WdatePicker()" ></asp:TextBox>
-	</td></tr>
-	<tr>
-	<td style="width: 170px;" align="right">
-		奖惩名目：
-	</td>
-	<td >
-		<asp:TextBox id="txtJiangChengMingMu" runat="server" Width="350px" Height="60px" TextMode="MultiLine"></asp:TextBox>
-	</td></tr>
-	<tr>
-	<td style="width: 170px;" align="right">
-		奖惩原因：
-	</td>
-	<td >
-		<asp:TextBox id="txtJiangChengYuanYin" runat="server" Width="350px" Height="60px" TextMode="MultiLine"></asp:TextBox>
-	</td></tr>
-	<tr>
-	<td style="width: 170px;" align="right">
-		备注说明：
-	</td>
-	<td >
-		<asp:TextBox id="txtBackInfo" runat="server" Width="350px" Height="60px" TextMode="MultiLine"></asp:TextBox>
-	</td></tr>
+                    <td style="width: 170px;" align="right">职员用户：
+                    </td>
+                    <td>
+                        <asp:TextBox ID="txtJCUser" CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
+                        <a onclick="openDialog('../Main/SelectUser.aspx?TableName=ERPUser&LieName=UserName&callbackFun=selectJCUserConditionCallback',350,400)"><span class="glyphicon glyphicon-filter glyphicon-size-md"></span></a>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtJCUser" ErrorMessage="*该项不可以为空"></asp:RequiredFieldValidator>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 170px;" align="right">奖惩区分：
+                    </td>
+                    <td>
+                        <asp:TextBox ID="txtJiangChengQuFen" CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
+                        <a onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPJiangCheng&LieName=JiangChengQuFen&callbackFun=selectJiangChengQuFenConditionCallback',350,400)"><span class="glyphicon glyphicon-filter glyphicon-size-md"></span></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 170px;" align="right">奖惩类别：
+                    </td>
+                    <td>
+                        <asp:TextBox ID="txtJiangChengType" CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
+                        <a onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPJiangCheng&LieName=JiangChengType&callbackFun=selectJiangChengTypeConditionCallback',350,400)"><span class="glyphicon glyphicon-filter glyphicon-size-md"></span></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 170px;" align="right">授予单位：
+                    </td>
+                    <td>
+                        <asp:TextBox ID="txtShouYuDanWei" CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
+                        <a onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPJiangCheng&LieName=ShouYuDanWei&callbackFun=selectShouYuDanWeiConditionCallback',350,400)"><span class="glyphicon glyphicon-filter glyphicon-size-md"></span></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 170px;" align="right">奖惩日期：
+                    </td>
+                    <td>
+                        <asp:TextBox ID="txtJiangChengDate" runat="server" Width="350px" CssClass="Wdate form-control" onclick="WdatePicker()"></asp:TextBox>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 170px;" align="right">奖惩名目：
+                    </td>
+                    <td>
+                        <asp:TextBox ID="txtJiangChengMingMu" CssClass="form-control" runat="server" Width="350px" Height="60px" TextMode="MultiLine"></asp:TextBox>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 170px;" align="right">奖惩原因：
+                    </td>
+                    <td>
+                        <asp:TextBox ID="txtJiangChengYuanYin" CssClass="form-control" runat="server" Width="350px" Height="60px" TextMode="MultiLine"></asp:TextBox>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 170px;" align="right">备注说明：
+                    </td>
+                    <td>
+                        <asp:TextBox ID="txtBackInfo" CssClass="form-control" runat="server" Width="350px" Height="60px" TextMode="MultiLine"></asp:TextBox>
+                    </td>
+                </tr>
 	<tr>
 	<td style="width: 170px;" align="right">
 		录入人：
 	</td>
 	<td >
-		<asp:TextBox id="txtUserName" runat="server" Width="350px" Enabled="False"></asp:TextBox></td></tr>
+		<asp:TextBox id="txtUserName" CssClass="form-control" runat="server" Width="350px" Enabled="False"></asp:TextBox></td></tr>
 	<tr>
 	<td style="width: 170px;" align="right">
 		录入时间：
 	</td>
 	<td >
-		<asp:TextBox id="txtTimeStr" runat="server" Width="350px" Enabled="False"></asp:TextBox></td></tr>
+		<asp:TextBox id="txtTimeStr" CssClass="form-control" runat="server" Width="350px" Enabled="False"></asp:TextBox></td></tr>
 </table>
 		</div>
 	</form>
