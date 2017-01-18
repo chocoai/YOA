@@ -109,12 +109,13 @@
                 </tr>
         </table>
 <table style="width: 100%"  class="table">
-	<tr>
+	  <tr>
                     <td style="width: 170px;" align="right">员工用户：
                     </td>
                     <td >
-                        <asp:TextBox ID="txtHeTongUser" runat="server" Width="350px"></asp:TextBox>
-                        <img class="HerCss" onclick="openDialog('../Main/SelectUser.aspx?TableName=ERPUser&LieName=UserName&callbackFun=selectUserConditionCallback',500,400)" src="../images/Button/search.gif" />
+                        <asp:TextBox ID="txtHeTongUser" CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
+                         <a onclick="openDialog('../Main/SelectUser.aspx?TableName=ERPUser&LieName=UserName&callbackFun=selectUserConditionCallback',500,400);"><span class="glyphicon glyphicon-filter glyphicon-size-md"></span></a>
+     
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtHeTongUser" ErrorMessage="*该项不可以为空"></asp:RequiredFieldValidator>
                     </td>
                 </tr>
@@ -122,40 +123,42 @@
                     <td style="width: 170px;" align="right">合同状态：
                     </td>
                     <td >
-                        <asp:TextBox ID="txtNowState" runat="server" Width="350px"></asp:TextBox>
-                        <img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPRenShiHeTong&LieName=NowState&callbackFun=selectContractStatusConditionCallback',350,400)" src="../images/Button/search.gif" />
+                        <asp:TextBox ID="txtNowState" CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
+                        <a onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPRenShiHeTong&LieName=NowState&callbackFun=selectContractStatusConditionCallback',350,400);"><span class="glyphicon glyphicon-filter glyphicon-size-md"></span></a>
+              
                     </td>
                 </tr>
                 <tr>
                     <td style="width: 170px;" align="right">合同编号：
                     </td>
                     <td >
-                        <asp:TextBox ID="txtSerils" runat="server" Width="350px"></asp:TextBox>
-                        <img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPRenShiHeTong&LieName=Serils&callbackFun=selectContractNoConditionCallback',350,400)" src="../images/Button/search.gif" />
+                        <asp:TextBox ID="txtSerils" CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
+                         <a onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPRenShiHeTong&LieName=Serils&callbackFun=selectContractNoConditionCallback',350,400)"><span class="glyphicon glyphicon-filter glyphicon-size-md"></span></a>
                     </td>
                 </tr>
                 <tr>
                     <td style="width: 170px;" align="right">合同类型：
                     </td>
                     <td >
-                        <asp:TextBox ID="txtTypeStr" runat="server" Width="350px"></asp:TextBox>
-                        <img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPRenShiHeTong&LieName=TypeStr&callbackFun=selecContractTypeConditionCallback',350,400)" src="../images/Button/search.gif" />
+                        <asp:TextBox ID="txtTypeStr" CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
+                        <a onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPRenShiHeTong&LieName=TypeStr&callbackFun=selecContractTypeConditionCallback',350,400)"><span class="glyphicon glyphicon-filter glyphicon-size-md"></span></a>
+                        
                     </td>
                 </tr>
                 <tr>
                     <td style="width: 170px;" align="right">是否有竞业条款：
                     </td>
                     <td >
-                        <asp:TextBox ID="txtJingYe" runat="server" Width="350px"></asp:TextBox>
-                        <img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPRenShiHeTong&LieName=JingYe&callbackFun=selectJingYeConditionCallback',350,400)" src="../images/Button/search.gif" />
+                        <asp:TextBox ID="txtJingYe" CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
+                        <a onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPRenShiHeTong&LieName=JingYe&callbackFun=selectJingYeConditionCallback',350,400)"><span class="glyphicon glyphicon-filter glyphicon-size-md"></span></a>
                     </td>
                 </tr>
                 <tr>
                     <td style="width: 170px;" align="right">是否有保密协议：
                     </td>
                     <td >
-                        <asp:TextBox ID="txtBaoMiXieYi" runat="server" Width="350px"></asp:TextBox>
-                        <img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPRenShiHeTong&LieName=BaoMiXieYi&callbackFun=selectBaoMiXieYiConditionCallback',350,400)" src="../images/Button/search.gif" />
+                        <asp:TextBox ID="txtBaoMiXieYi" CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
+                        <a onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPRenShiHeTong&LieName=BaoMiXieYi&callbackFun=selectBaoMiXieYiConditionCallback',350,400)"><span class="glyphicon glyphicon-filter glyphicon-size-md"></span></a>
                     </td>
                 </tr>
                 <tr>
@@ -176,8 +179,9 @@
                     <td style="width: 170px;" align="right">鉴证机关：
                     </td>
                     <td >
-                        <asp:TextBox ID="txtJianZhengJiGuan" runat="server" Width="350px"></asp:TextBox>
-                        <img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPRenShiHeTong&LieName=JianZhengJiGuan&callbackFun=selectJianZhengJiGuanConditionCallback',350,400)" src="../images/Button/search.gif" />
+                        <asp:TextBox ID="txtJianZhengJiGuan" CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
+                        <a onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPRenShiHeTong&LieName=JianZhengJiGuan&callbackFun=selectJianZhengJiGuanConditionCallback',350,400)"><span class="glyphicon glyphicon-filter glyphicon-size-md"></span></a>
+                        
                     </td>
                 </tr>
                 <tr>
@@ -191,48 +195,43 @@
                     <td style="width: 170px;" align="right">违约责任：
                     </td>
                     <td >
-                        <asp:TextBox ID="txtWeiYueZeRen" runat="server" Width="350px" Height="60px" TextMode="MultiLine"></asp:TextBox></td>
+                        <asp:TextBox ID="txtWeiYueZeRen" CssClass="form-control" runat="server" Width="350px" Height="60px" TextMode="MultiLine"></asp:TextBox></td>
                 </tr>
                 <tr>
                     <td style="width: 170px;" align="right">其他事宜：
                     </td>
                     <td >
-                        <asp:TextBox ID="txtBackInfo" runat="server" Width="350px" Height="60px" TextMode="MultiLine"></asp:TextBox></td>
+                        <asp:TextBox ID="txtBackInfo"  CssClass="form-control" runat="server" Width="350px" Height="60px" TextMode="MultiLine"></asp:TextBox></td>
                 </tr>
-                <tr>
-                    <td style="width: 170px;" align="right">附件文件：
-                    </td>
-                    <td >
+                  <tr>
+                    <td align="right" style="width: 170px;">附件：</td>
+                    <td>
                         <asp:CheckBoxList ID="CheckBoxList1" runat="server" RepeatColumns="4" RepeatDirection="Horizontal">
-                        </asp:CheckBoxList>&nbsp;<asp:ImageButton ID="ImageButton3" runat="server" CausesValidation="False"
-                            ImageAlign="AbsMiddle" ImageUrl="../images/Button/DelFile.jpg" OnClick="ImageButton3_Click" />
+                        </asp:CheckBoxList>&nbsp;<asp:Button ID="ImageButton3" Text="删除文件" CssClass="btn btn-danger" runat="server" CausesValidation="False"
+                           OnClick="ImageButton3_Click" />
                         &nbsp; &nbsp;
-                <asp:ImageButton ID="ImageButton4" runat="server" CausesValidation="False" ImageAlign="AbsMiddle"
-                    ImageUrl="~/images/Button/ReadFile.gif" OnClick="ImageButton4_Click" />
+                <asp:Button ID="ImageButton4"  Text="读取文件" CssClass="btn btn-info" runat="server" CausesValidation="False" OnClick="ImageButton4_Click" />
                         &nbsp; &nbsp;&nbsp;
-                <asp:ImageButton ID="ImageButton5" runat="server" CausesValidation="False" ImageAlign="AbsMiddle"
-                    ImageUrl="~/images/Button/EditFile.gif" OnClick="ImageButton5_Click" /></td>
+                <asp:Button ID="ImageButton5" Text="编辑文件" CssClass="btn btn-primary" runat="server" CausesValidation="False"  OnClick="ImageButton5_Click" /></td>
                 </tr>
                 <tr>
                     <td align="right" style="width: 170px;">上传附件：</td>
-                    <td >
+                    <td>
                         <asp:FileUpload ID="FileUpload1" runat="server" Width="350px" />
-                        <asp:ImageButton ID="ImageButton2" runat="server" CausesValidation="False" ImageAlign="AbsMiddle"
-                            ImageUrl="../images/Button/UpLoad.jpg" OnClick="ImageButton2_Click" />
-                    </td>
+                        <asp:Button ID="ImageButton2" Text="上传" CssClass="btn btn-primary" runat="server" CausesValidation="False" OnClick="ImageButton2_Click" /></td>
                 </tr>
 	<tr>
 	<td style="width: 170px;" align="right">
 		录入人：
 	</td>
 	<td >
-		<asp:TextBox id="txtUserName" runat="server" Width="350px" Enabled="False"></asp:TextBox></td></tr>
+		<asp:TextBox id="txtUserName" CssClass="form-control" runat="server" Width="350px" Enabled="False"></asp:TextBox></td></tr>
 	<tr>
 	<td style="width: 170px;" align="right">
 		录入时间：
 	</td>
 	<td >
-		<asp:TextBox id="txtTimeStr" runat="server" Width="350px" Enabled="False"></asp:TextBox></td></tr>
+		<asp:TextBox id="txtTimeStr" CssClass="form-control" runat="server" Width="350px" Enabled="False"></asp:TextBox></td></tr>
 </table>
 		</div>
 	</form>

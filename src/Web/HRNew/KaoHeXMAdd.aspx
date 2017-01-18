@@ -70,8 +70,8 @@
 		考核项目：
 	</td>
 	<td >
-		<asp:TextBox id="txtXiangMuName" runat="server" Width="350px"></asp:TextBox>
-		<img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPKaoHeXM&LieName=XiangMuName&callbackFun=selectXiangMuNameConditionCallback',350,400)"  src="../images/Button/search.gif" />
+		<asp:TextBox id="txtXiangMuName" CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
+		<a onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPKaoHeXM&LieName=XiangMuName&callbackFun=selectXiangMuNameConditionCallback',350,400)"><span class="glyphicon glyphicon-filter glyphicon-size-md"></span></a>
 		<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtXiangMuName" ErrorMessage="*该项不可以为空"></asp:RequiredFieldValidator>
 	</td></tr>
 	<tr>
@@ -79,23 +79,23 @@
 		所占分值：
 	</td>
 	<td >
-		<asp:TextBox id="txtFenZhi" runat="server" Width="350px"></asp:TextBox>
-		<img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPKaoHeXM&LieName=FenZhi&callbackFun=selectFenZhiConditionCallback',350,400)"  src="../images/Button/search.gif" />
+		<asp:TextBox id="txtFenZhi" CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
+        <a onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPKaoHeXM&LieName=FenZhi&callbackFun=selectFenZhiConditionCallback',350,400)"><span class="glyphicon glyphicon-filter glyphicon-size-md"></span></a>
 	</td></tr>
 	<tr>
 	<td style="width: 170px" align="right">
 		考核依据：
 	</td>
 	<td >
-		<asp:TextBox id="txtKaoHeYiJu" runat="server" Width="350px"></asp:TextBox>
-		<img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPKaoHeXM&LieName=KaoHeYiJu&callbackFun=selectKaoHeYiJuConditionCallback',350,400)"  src="../images/Button/search.gif" />
+		<asp:TextBox id="txtKaoHeYiJu" CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
+        <a onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPKaoHeXM&LieName=KaoHeYiJu&callbackFun=selectKaoHeYiJuConditionCallback',350,400)"><span class="glyphicon glyphicon-filter glyphicon-size-md"></span></a>
 	</td></tr>
 	<tr>
 	<td style="width: 170px" align="right">
 		备注说明：
 	</td>
 	<td >
-		<asp:TextBox id="txtBackInfo" runat="server" Width="350px" Height="60px" TextMode="MultiLine"></asp:TextBox></td></tr>
+		<asp:TextBox id="txtBackInfo" CssClass="form-control" runat="server" Width="350px" Height="60px" TextMode="MultiLine"></asp:TextBox></td></tr>
 </table>
 		</div>
 	</form>

@@ -56,36 +56,35 @@
                 <tr>
                     <td align="right" style="width: 170px;">计划主题：</td>
                     <td>
-                        <asp:TextBox ID="TextBox1" runat="server" Width="350px"></asp:TextBox>
+                        <asp:TextBox ID="TextBox1" CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TextBox1"
                             ErrorMessage="*该项不可以为空"></asp:RequiredFieldValidator></td>
                 </tr>
                 <tr>
                     <td align="right" style="width: 170px;">允许查看人：</td>
                     <td >
-                        <asp:TextBox ID="TextBox2" runat="server" Width="350px"></asp:TextBox>
-                        <img class="HerCss" onclick="openDialog('../Main/SelectUser.aspx?TableName=ERPUser&LieName=UserName&callbackFun=selectUserCallback',350,400);"
-                            src="../images/Button/search.gif" /></td>
+                        <asp:TextBox ID="TextBox2" CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
+                         <a onclick="openDialog('../Main/SelectUser.aspx?TableName=ERPUser&LieName=UserName&callbackFun=selectUserCallback',350,400);"><span class="glyphicon glyphicon-filter glyphicon-size-md"></span></a>
+                      </td>
                 </tr>
                 <tr>
                     <td align="right" style="width: 170px;">附件：</td>
                     <td >
                         <asp:CheckBoxList ID="CheckBoxList1" runat="server" RepeatColumns="4" RepeatDirection="Horizontal">
-                        </asp:CheckBoxList>&nbsp;<asp:ImageButton ID="ImageButton3" runat="server" CausesValidation="False"
-                            ImageAlign="AbsMiddle" ImageUrl="../images/Button/DelFile.jpg" OnClick="ImageButton3_Click" />
+                        </asp:CheckBoxList>&nbsp;<asp:Button Text="删除文件" CssClass="btn btn-danger" ID="ImageButton3" runat="server" CausesValidation="False"
+                             OnClick="ImageButton3_Click" />
                         &nbsp; &nbsp;
-                <asp:ImageButton ID="ImageButton5" runat="server" CausesValidation="False" ImageAlign="AbsMiddle"
-                    ImageUrl="~/images/Button/ReadFile.gif" OnClick="ImageButton5_Click" />
+                <asp:Button ID="ImageButton5" runat="server" Text="读取文件" CssClass="btn btn-info"  CausesValidation="False" I
+                     OnClick="ImageButton5_Click" />
                         &nbsp; &nbsp;&nbsp;
-                <asp:ImageButton ID="ImageButton6" runat="server" CausesValidation="False" ImageAlign="AbsMiddle"
-                    ImageUrl="~/images/Button/EditFile.gif" OnClick="ImageButton6_Click" /></td>
+                <asp:Button ID="ImageButton6" runat="server" Text="编辑文件" CssClass="btn btn-primary" CausesValidation="False"
+                    OnClick="ImageButton6_Click" /></td>
                 </tr>
                 <tr>
                     <td align="right" style="width: 170px;">上传附件：</td>
                     <td >
                         <asp:FileUpload ID="FileUpload1" runat="server" Width="350px" />
-                        <asp:ImageButton ID="ImageButton2" runat="server" CausesValidation="False" ImageAlign="AbsMiddle"
-                            ImageUrl="../images/Button/UpLoad.jpg" OnClick="ImageButton2_Click" /></td>
+                        <asp:Button ID="ImageButton2" Text="上传" CssClass="btn btn-primary" runat="server" CausesValidation="False" OnClick="ImageButton2_Click" /></td>
                 </tr>
                 <tr>
                     <td align="right" style="width: 170px;">计划内容：</td>
