@@ -88,8 +88,8 @@
 		车辆名称：
 	</td>
 	<td>
-		<asp:TextBox id="txtCarName" runat="server" Width="350px"></asp:TextBox>
-		<img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPCarInfo&LieName=CarName&callbackFun=selectCarNameConditionCallback',350,400);"  src="../images/Button/search.gif" />
+		<asp:TextBox id="txtCarName" CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
+		<a onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPCarInfo&LieName=CarName&callbackFun=selectCarNameConditionCallback',350,400);"><span class="glyphicon glyphicon-filter glyphicon-size-md"></span></a>
 		<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtCarName" ErrorMessage="*该项不可以为空"></asp:RequiredFieldValidator>
 	</td></tr>
 	<tr>
@@ -97,59 +97,59 @@
 		车牌号：
 	</td>
 	<td>
-		<asp:TextBox id="txtCarPaiHao" runat="server" Width="350px"></asp:TextBox>
-		<img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPCarInfo&LieName=CarPaiHao&callbackFun=selectCarPaiHaoConditionCallback',350,400);"  src="../images/Button/search.gif" />
+		<asp:TextBox id="txtCarPaiHao" CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
+		<a onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPCarInfo&LieName=CarPaiHao&callbackFun=selectCarPaiHaoConditionCallback',350,400);"><span class="glyphicon glyphicon-filter glyphicon-size-md"></span></a>
 	</td></tr>
 	<tr>
 	<td style="width: 170px;" align="right">
 		厂牌型号：
 	</td>
 	<td>
-		<asp:TextBox id="txtCarXingHao" runat="server" Width="350px"></asp:TextBox>
-		<img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPCarInfo&LieName=CarXingHao&callbackFun=selectCarXingHaoConditionCallback',350,400);"  src="../images/Button/search.gif" />
+		<asp:TextBox id="txtCarXingHao" CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
+		<a onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPCarInfo&LieName=CarXingHao&callbackFun=selectCarXingHaoConditionCallback',350,400);"><span class="glyphicon glyphicon-filter glyphicon-size-md"></span></a>
 	</td></tr>
 	<tr>
 	<td style="width: 170px;" align="right">
 		车辆类型：
 	</td>
 	<td>
-		<asp:TextBox id="txtLeiXing" runat="server" Width="350px"></asp:TextBox>
-		<img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPCarInfo&LieName=LeiXing&callbackFun=selectLeiXingConditionCallback',350,400);"  src="../images/Button/search.gif" />
+		<asp:TextBox id="txtLeiXing" CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
+		<a onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPCarInfo&LieName=LeiXing&callbackFun=selectLeiXingConditionCallback',350,400);"><span class="glyphicon glyphicon-filter glyphicon-size-md"></span></a>
 	</td></tr>
 	<tr>
 	<td style="width: 170px;" align="right">
 		驾驶员：
 	</td>
 	<td>
-		<asp:TextBox id="txtDriverUser" runat="server" Width="350px"></asp:TextBox>
-		<img class="HerCss" onclick="openDialog('../Main/SelectUser.aspx?TableName=ERPUser&LieName=UserName&callbackFun=selectDriverUserConditionCallback',350,400);" src="../images/Button/search.gif" />
+		<asp:TextBox id="txtDriverUser" CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
+		<a onclick="openDialog('../Main/SelectUser.aspx?TableName=ERPUser&LieName=UserName&callbackFun=selectDriverUserConditionCallback',350,400);"><span class="glyphicon glyphicon-filter glyphicon-size-md"></span></a>
 	</td></tr>
 	<tr>
 	<td style="width: 170px;" align="right">
 		当前状态：
 	</td>
 	<td>
-		<asp:TextBox id="txtNowState" runat="server" Width="350px"></asp:TextBox>
-		<img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPCarInfo&LieName=NowState&callbackFun=selectNowStateConditionCallback',350,400);"  src="../images/Button/search.gif" />
+		<asp:TextBox id="txtNowState" CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
+        <a onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPCarInfo&LieName=NowState&callbackFun=selectNowStateConditionCallback',350,400);"><span class="glyphicon glyphicon-filter glyphicon-size-md"></span></a>
 	</td></tr>
 	<tr>
 	<td style="width: 170px;" align="right">
 		录入人：
 	</td>
 	<td>
-		<asp:TextBox id="txtUserName" runat="server" Width="350px" Enabled="False"></asp:TextBox></td></tr>
+		<asp:TextBox id="txtUserName" CssClass="form-control" runat="server" Width="350px" Enabled="False"></asp:TextBox></td></tr>
 	<tr>
 	<td style="width: 170px;" align="right">
 		录入时间：
 	</td>
 	<td>
-		<asp:TextBox id="txtTimeStr" runat="server" Width="350px" Enabled="False"></asp:TextBox></td></tr>
+		<asp:TextBox id="txtTimeStr" CssClass="form-control" runat="server" Width="350px" Enabled="False"></asp:TextBox></td></tr>
 	<tr>
 	<td style="width: 170px;" align="right">
 		备注信息：
 	</td>
 	<td>
-		<asp:TextBox id="txtBackInfo" runat="server" Width="350px" Height="60px" TextMode="MultiLine"></asp:TextBox></td></tr>
+		<asp:TextBox id="txtBackInfo" CssClass="form-control" runat="server" Width="350px" Height="60px" TextMode="MultiLine"></asp:TextBox></td></tr>
 </table>
 		</div>
 	</form>

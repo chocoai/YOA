@@ -83,7 +83,7 @@ function selectEndDateConditionCallback(returndata) {
             <td align="right" style="width: 170px;">
                 会议标题：</td>
             <td>
-                <asp:TextBox ID="TextBox1" runat="server" Width="350px"></asp:TextBox>
+                <asp:TextBox ID="TextBox1" CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TextBox1"
                     ErrorMessage="*该项不可以为空"></asp:RequiredFieldValidator></td>
         </tr>
@@ -91,21 +91,21 @@ function selectEndDateConditionCallback(returndata) {
             <td align="right" style="width: 170px;">
                 会议主题：</td>
             <td>
-                <asp:TextBox ID="TextBox2" runat="server" Width="350px"></asp:TextBox></td>
+                <asp:TextBox ID="TextBox2" CssClass="form-control" runat="server" Width="350px"></asp:TextBox></td>
         </tr>
         <tr>
             <td align="right" style="width: 170px;">
                 会议描述：</td>
             <td>
-                <asp:TextBox ID="TextBox3" runat="server" Width="350px"></asp:TextBox></td>
+                <asp:TextBox ID="TextBox3" CssClass="form-control" runat="server" Width="350px"></asp:TextBox></td>
         </tr>
         <tr>
             <td align="right" style="width: 170px;">
                 会议出席人：</td>
             <td>
-                <asp:TextBox ID="TextBox4" runat="server" Width="350px"></asp:TextBox>
-                <img class="HerCss" onclick="openDialog('../Main/SelectUser.aspx?TableName=ERPUser&LieName=UserName&callbackFun=selectJoinerConditionCallback',350,400)"
-                    src="../images/Button/search.gif" />&nbsp;<asp:CheckBox ID="CHKSMS" runat="server"
+                <asp:TextBox ID="TextBox4" CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
+                <a onclick="openDialog('../Main/SelectUser.aspx?TableName=ERPUser&LieName=UserName&callbackFun=selectJoinerConditionCallback',350,400)"><span class="glyphicon glyphicon-filter glyphicon-size-md"></span></a>
+                &nbsp;<asp:CheckBox ID="CHKSMS" runat="server"
                         Checked="True" /><img src="../images/TreeImages/@sms.gif" />短消息<asp:CheckBox ID="CHKMOB"
                             runat="server" /><img src="../images/TreeImages/mobile_sms.gif" />短信</td>
         </tr>
@@ -113,9 +113,8 @@ function selectEndDateConditionCallback(returndata) {
             <td align="right" style="width: 170px;">
                 网络会议室IP地址：</td>
             <td>
-                <asp:TextBox ID="TextBox5" runat="server" Width="350px"></asp:TextBox>
-                <img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPMeeting&LieName=WangLuoHuiYiShiIP&callbackFun=selectAddressConditionCallback',350,400)"
-                    src="../images/Button/search.gif" />
+                <asp:TextBox ID="TextBox5" CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
+                <a onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPMeeting&LieName=WangLuoHuiYiShiIP&callbackFun=selectAddressConditionCallback',350,400)"><span class="glyphicon glyphicon-filter glyphicon-size-md"></span></a>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="TextBox5"
                     Display="Dynamic" ErrorMessage="*该项不可以为空"></asp:RequiredFieldValidator></td>
         </tr>
@@ -123,16 +122,17 @@ function selectEndDateConditionCallback(returndata) {
             <td align="right" style="width: 170px;">
                 会议主持人：</td>
             <td>
-                <asp:TextBox ID="TextBox6" runat="server" Width="350px"></asp:TextBox>
-                <img class="HerCss" onclick="openDialog('../Main/SelectUser.aspx?TableName=ERPUser&LieName=UserName&callbackFun=selectHolderConditionCallback',350,400)"
-                    src="../images/Button/search.gif" /></td>
+                <asp:TextBox ID="TextBox6" CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
+                <a onclick="openDialog('../Main/SelectUser.aspx?TableName=ERPUser&LieName=UserName&callbackFun=selectHolderConditionCallback',350,400)"><span class="glyphicon glyphicon-filter glyphicon-size-md"></span></a>
+
+            </td>
         </tr>
         <tr>
             <td align="right" style="width: 170px;">
                 开始时间：</td>
             <td>
-                <asp:TextBox ID="TextBox7" runat="server" Width="150px" CssClass="Wdate" onclick="WdatePicker()"></asp:TextBox>
-                <asp:DropDownList ID="DropDownList1" runat="server">
+                <asp:TextBox ID="TextBox7" runat="server" Width="150px" CssClass="Wdate form-control" onclick="WdatePicker()"></asp:TextBox>
+                <asp:DropDownList ID="DropDownList1" style="width:80px;" CssClass="form-control" runat="server">
                     <asp:ListItem>00</asp:ListItem>
                     <asp:ListItem>01</asp:ListItem>
                     <asp:ListItem>02</asp:ListItem>
@@ -157,7 +157,7 @@ function selectEndDateConditionCallback(returndata) {
                     <asp:ListItem>21</asp:ListItem>
                     <asp:ListItem>22</asp:ListItem>
                     <asp:ListItem>23</asp:ListItem>
-                </asp:DropDownList>：<asp:DropDownList ID="DropDownList2" runat="server">
+                </asp:DropDownList>：<asp:DropDownList ID="DropDownList2" style="width:80px;" CssClass="form-control" runat="server">
                     <asp:ListItem>00</asp:ListItem>
                     <asp:ListItem>01</asp:ListItem>
                     <asp:ListItem>02</asp:ListItem>
@@ -229,8 +229,8 @@ function selectEndDateConditionCallback(returndata) {
             <td align="right" style="width: 170px;">
                 结束时间：</td>
             <td>
-                <asp:TextBox ID="TextBox8" runat="server" Width="150px" CssClass="Wdate" onclick="WdatePicker()"></asp:TextBox>
-                <asp:DropDownList ID="DropDownList3" runat="server">
+                <asp:TextBox ID="TextBox8"  runat="server" Width="150px" CssClass="Wdate form-control" onclick="WdatePicker()"></asp:TextBox>
+                <asp:DropDownList ID="DropDownList3" style="width:80px;" CssClass="form-control" runat="server">
                         <asp:ListItem>00</asp:ListItem>
                         <asp:ListItem>01</asp:ListItem>
                         <asp:ListItem>02</asp:ListItem>
@@ -255,7 +255,7 @@ function selectEndDateConditionCallback(returndata) {
                         <asp:ListItem>21</asp:ListItem>
                         <asp:ListItem>22</asp:ListItem>
                         <asp:ListItem>23</asp:ListItem>
-                    </asp:DropDownList>：<asp:DropDownList ID="DropDownList4" runat="server">
+                    </asp:DropDownList>：<asp:DropDownList style="width:80px;" CssClass="form-control" ID="DropDownList4" runat="server">
                         <asp:ListItem>00</asp:ListItem>
                         <asp:ListItem>01</asp:ListItem>
                         <asp:ListItem>02</asp:ListItem>

@@ -51,8 +51,7 @@
                     </td>
                 </tr>
         </table>
-    <table style="width: 100%" class="table">            
-        
+    <table style="width: 100%" class="table">   
         <tr>
             <td align="right" style="width: 170px;" >
                 部门名称：</td>
@@ -65,27 +64,28 @@
             <td align="right" style="width: 170px;">
                 部门主管：</td>
             <td>
-                <asp:TextBox ID="TextBox2" runat="server" Width="350px"></asp:TextBox>
-                <img class="HerCss" onclick="openDialog('../Main/SelectUser.aspx?TableName=ERPUser&LieName=UserName&callbackFun=selectUserCallback',350,400);"
-                    src="../images/Button/search.gif" /></td>
+                <asp:TextBox ID="TextBox2" CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
+                <a onclick="openDialog('../Main/SelectUser.aspx?TableName=ERPUser&LieName=UserName&callbackFun=selectUserCallback',350,400);"><span class="glyphicon glyphicon-filter glyphicon-size-md"></span></a>
+
+            </td>
         </tr>
         <tr>
             <td align="right" style="width: 170px;">
                 联系电话：</td>
             <td>
-                <asp:TextBox ID="TextBox3" runat="server" Width="350px"></asp:TextBox></td>
+                <asp:TextBox ID="TextBox3" CssClass="form-control" runat="server" Width="350px"></asp:TextBox></td>
         </tr>
         <tr>
             <td align="right" style="width: 170px;">
                 传真：</td>
             <td>
-                <asp:TextBox ID="TextBox4" runat="server" Width="350px"></asp:TextBox></td>
+                <asp:TextBox ID="TextBox4" CssClass="form-control" runat="server" Width="350px"></asp:TextBox></td>
         </tr>
         <tr>
             <td align="right" style="width: 170px;">
                 备注信息：</td>
             <td>
-                <asp:TextBox ID="TextBox5" runat="server" Width="350px"></asp:TextBox></td>
+                <asp:TextBox ID="TextBox5" CssClass="form-control" runat="server" Width="350px"></asp:TextBox></td>
         </tr>
         </table></div>
     </form>

@@ -77,8 +77,8 @@
 		车辆名称：
 	</td>
 	<td>
-		<asp:TextBox id="txtCarName" runat="server" Width="350px"></asp:TextBox>
-		<img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPCarInfo&LieName=CarName&callbackFun=selectCarNameConditionCallback',350,400);"  src="../images/Button/search.gif" />
+		<asp:TextBox id="txtCarName" CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
+		<a onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPCarInfo&LieName=CarName&callbackFun=selectCarNameConditionCallback',350,400);"><span class="glyphicon glyphicon-filter glyphicon-size-md"></span></a>
 		<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtCarName" ErrorMessage="*该项不可以为空"></asp:RequiredFieldValidator>
 	</td></tr>
 	<tr>
@@ -86,7 +86,7 @@
 		维护日期：
 	</td>
 	<td>
-		<asp:TextBox id="txtWeiHuRiQi" runat="server" Width="350px" CssClass="Wdate" onclick="WdatePicker()"></asp:TextBox>
+		<asp:TextBox id="txtWeiHuRiQi" runat="server" Width="350px" CssClass="Wdate form-control" onclick="WdatePicker()"></asp:TextBox>
 		
 	</td></tr>
 	<tr>
@@ -94,37 +94,37 @@
 		维护类型：
 	</td>
 	<td>
-		<asp:TextBox id="txtWeiHuLeiXing" runat="server" Width="350px"></asp:TextBox>
-		<img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPCarWeiHu&LieName=WeiHuLeiXing&callbackFun=selectWeiHuLeiXingConditionCallback',350,400);"  src="../images/Button/search.gif" />
+		<asp:TextBox id="txtWeiHuLeiXing" CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
+		<a onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPCarWeiHu&LieName=WeiHuLeiXing&callbackFun=selectWeiHuLeiXingConditionCallback',350,400);"><span class="glyphicon glyphicon-filter glyphicon-size-md"></span></a>
 	</td></tr>
 	<tr>
 	<td style="width: 170px;" align="right">
 		维护原因：
 	</td>
 	<td>
-		<asp:TextBox id="txtWeiHuYuanYin" runat="server" Width="350px" Height="60px" TextMode="MultiLine"></asp:TextBox>
+		<asp:TextBox id="txtWeiHuYuanYin" CssClass="form-control" runat="server" Width="350px" Height="60px" TextMode="MultiLine"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td style="width: 170px;" align="right">
 		经办人：
 	</td>
 	<td>
-		<asp:TextBox id="txtJingBanUser" runat="server" Width="350px"></asp:TextBox>
-		<img class="HerCss" onclick="openDialog('../Main/SelectUser.aspx?TableName=ERPUser&LieName=UserName&callbackFun=selectJingBanUserConditionCallback',350,400);" src="../images/Button/search.gif" />
+		<asp:TextBox id="txtJingBanUser" CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
+		<a onclick="openDialog('../Main/SelectUser.aspx?TableName=ERPUser&LieName=UserName&callbackFun=selectJingBanUserConditionCallback',350,400);"><span class="glyphicon glyphicon-filter glyphicon-size-md"></span></a>
 	</td></tr>
 	<tr>
 	<td style="width: 170px;" align="right">
 		维护费用：
 	</td>
 	<td>
-		<asp:TextBox id="txtWeiHuFeiYong" runat="server" Width="350px"></asp:TextBox>
+		<asp:TextBox id="txtWeiHuFeiYong" CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td style="width: 170px;" align="right">
 		备注信息：
 	</td>
 	<td>
-		<asp:TextBox id="txtBackInfo" runat="server" Width="350px" Height="60px" TextMode="MultiLine"></asp:TextBox>
+		<asp:TextBox id="txtBackInfo" CssClass="form-control" runat="server" Width="350px" Height="60px" TextMode="MultiLine"></asp:TextBox>
 	</td></tr>
 </table>
 		</div>

@@ -37,7 +37,7 @@
             <td align="right" style="width: 170px;" >
                 单位名称：</td>
                 <td>
-                    <asp:TextBox ID="TextBox1" runat="server" CssClass="inputCss" Width="365px"></asp:TextBox>
+                    <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control" Width="365px"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TextBox1"
                         ErrorMessage="*该项不可以为空"></asp:RequiredFieldValidator></td>
         </tr>
@@ -45,49 +45,49 @@
             <td align="right" style="width: 170px;">
                 电话：</td>
             <td>
-                <asp:TextBox ID="TextBox2" runat="server" CssClass="inputCss" Width="365px"></asp:TextBox></td>
+                <asp:TextBox ID="TextBox2" runat="server" CssClass="form-control" Width="365px"></asp:TextBox></td>
         </tr>
         <tr>
             <td align="right" style="width: 170px;">
                 传真：</td>
             <td>
-                <asp:TextBox ID="TextBox3" runat="server" CssClass="inputCss" Width="365px"></asp:TextBox></td>
+                <asp:TextBox ID="TextBox3" runat="server" CssClass="form-control" Width="365px"></asp:TextBox></td>
         </tr>
         <tr>
             <td align="right" style="width: 170px;">
                 邮编：</td>
             <td>
-                <asp:TextBox ID="TextBox4" runat="server" CssClass="inputCss" Width="365px"></asp:TextBox></td>
+                <asp:TextBox ID="TextBox4" runat="server" CssClass="form-control" Width="365px"></asp:TextBox></td>
         </tr>
         <tr>
             <td align="right" style="width: 170px;">
                 地址：</td>
             <td>
-                <asp:TextBox ID="TextBox5" runat="server" CssClass="inputCss" Width="365px"></asp:TextBox></td>
+                <asp:TextBox ID="TextBox5" runat="server" CssClass="form-control" Width="365px"></asp:TextBox></td>
         </tr>
         <tr>
             <td align="right" style="width: 170px;">
                 网站：</td>
             <td>
-                <asp:TextBox ID="TextBox6" runat="server" CssClass="inputCss" Width="365px"></asp:TextBox></td>
+                <asp:TextBox ID="TextBox6" runat="server" CssClass="form-control" Width="365px"></asp:TextBox></td>
         </tr>
         <tr>
             <td align="right" style="width: 170px;">
                 电子信箱：</td>
             <td>
-                <asp:TextBox ID="TextBox7" runat="server" CssClass="inputCss" Width="365px"></asp:TextBox></td>
+                <asp:TextBox ID="TextBox7" runat="server" CssClass="form-control" Width="365px"></asp:TextBox></td>
         </tr>
         <tr>
             <td align="right" style="width: 170px;">
                 开户行：</td>
             <td>
-                <asp:TextBox ID="TextBox8" runat="server" CssClass="inputCss" Width="365px"></asp:TextBox></td>
+                <asp:TextBox ID="TextBox8" runat="server" CssClass="form-control" Width="365px"></asp:TextBox></td>
         </tr>
         <tr>
             <td align="right" style="width: 170px;">
                 账号：</td>
             <td>
-                <asp:TextBox ID="TextBox9" runat="server" CssClass="inputCss" Width="365px"></asp:TextBox></td>
+                <asp:TextBox ID="TextBox9" runat="server" CssClass="form-control" Width="365px"></asp:TextBox></td>
         </tr>
         </table></div>
     </form>

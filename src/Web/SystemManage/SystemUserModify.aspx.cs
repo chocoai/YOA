@@ -130,7 +130,7 @@ public partial class SystemManage_SystemUserModify : System.Web.UI.Page
         }
     }
 
-    protected void ImageButton2_Click(object sender, ImageClickEventArgs e)
+    protected void ImageButton2_Click(object sender, EventArgs e)
     {
         string FileNameStr = ZWL.Common.PublicMethod.UploadFileIntoDir(this.FileUpload1, DateTime.Now.Ticks.ToString() + System.IO.Path.GetExtension(FileUpload1.PostedFile.FileName));
         if (ZWL.Common.PublicMethod.GetSessionValue("WenJianList").Trim() == "")
@@ -143,7 +143,7 @@ public partial class SystemManage_SystemUserModify : System.Web.UI.Page
         }
         ZWL.Common.PublicMethod.BindDDL(this.CheckBoxList1, ZWL.Common.PublicMethod.GetSessionValue("WenJianList"));
     }
-    protected void ImageButton3_Click(object sender, ImageClickEventArgs e)
+    protected void ImageButton3_Click(object sender, EventArgs e)
     {
         try
         {

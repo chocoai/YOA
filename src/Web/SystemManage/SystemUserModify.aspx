@@ -135,7 +135,7 @@
             <td align="right" style="width: 170px;" >
                 用户名：</td>
                 <td>
-                    <asp:TextBox ID="TextBox1" runat="server" Width="350px"></asp:TextBox>
+                    <asp:TextBox ID="TextBox1" CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TextBox1"
                         ErrorMessage="*该项不可以为空"></asp:RequiredFieldValidator></td>
         </tr>
@@ -143,7 +143,7 @@
             <td align="right" style="width: 170px;">
                 用户密码：</td>
             <td>
-                <asp:TextBox ID="TextBox2" runat="server" Width="350px" Height="23px"></asp:TextBox>
+                <asp:TextBox ID="TextBox2" CssClass="form-control" runat="server" Width="350px" Height="23px"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="TextBox2"
                     ErrorMessage="*该项不可以为空"></asp:RequiredFieldValidator>
             </td>
@@ -152,7 +152,7 @@
             <td align="right" style="width: 170px;">
                 登录账号：</td>
             <td>
-                <asp:TextBox ID="TextBox3" runat="server" Width="350px"></asp:TextBox>
+                <asp:TextBox ID="TextBox3" CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="TextBox3"
                     ErrorMessage="*该项不可以为空"></asp:RequiredFieldValidator></td>
         </tr>
@@ -160,45 +160,45 @@
             <td align="right" style="width: 170px;">
                 用户编号：</td>
             <td>
-                <asp:TextBox ID="TextBox4" runat="server" Width="350px"></asp:TextBox></td>
+                <asp:TextBox ID="TextBox4" CssClass="form-control" runat="server" Width="350px"></asp:TextBox></td>
         </tr>
         <tr>
             <td align="right" style="width: 170px;">
                 所属部门：</td>
             <td>
-                <asp:TextBox ID="TextBox5" runat="server" Width="350px"></asp:TextBox>
-                <img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPBuMen&LieName=BuMenName&callbackFun=selectDepartConditionCallback',350,400);"
-                    src="../images/Button/search.gif" /></td>
+                <asp:TextBox ID="TextBox5" CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
+                <a onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPBuMen&LieName=BuMenName&callbackFun=selectDepartConditionCallback',350,400);"><span class="glyphicon glyphicon-filter glyphicon-size-md"></span></a>
+            </td>
         </tr>
         <tr>
             <td align="right" style="width: 170px;">
                 所属角色：</td>
             <td>
-                <asp:TextBox ID="TextBox6" runat="server" Width="350px"></asp:TextBox>
-                <img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPJiaoSe&LieName=JiaoSeName&callbackFun=selectRoleConditionCallback',350,400);"
-                    src="../images/Button/search.gif" /></td>
+                <asp:TextBox ID="TextBox6" CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
+                <a onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPJiaoSe&LieName=JiaoSeName&callbackFun=selectRoleConditionCallback',350,400);"><span class="glyphicon glyphicon-filter glyphicon-size-md"></span></a>
+                </td>
         </tr>
         <tr>
             <td align="right" style="width: 170px;">
                 职位：</td>
             <td>
-                <asp:TextBox ID="TextBox7" runat="server" Width="350px"></asp:TextBox>
-                <img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPUser&LieName=ZhiWei&callbackFun=selectTitleConditionCallback',350,400);"
-                    src="../images/Button/search.gif" /></td>
+                <asp:TextBox ID="TextBox7" CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
+                <a onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPUser&LieName=ZhiWei&callbackFun=selectTitleConditionCallback',350,400);"><span class="glyphicon glyphicon-filter glyphicon-size-md"></span></a>
+                </td>
         </tr>
         <tr>
             <td align="right" style="width: 170px;">
                 在岗状态：</td>
             <td>
-                <asp:TextBox ID="TextBox8" runat="server" Width="350px"></asp:TextBox>
-                <img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPUser&LieName=ZaiGang&callbackFun=selectOnlineConditionCallback',350,400);"
-                    src="../images/Button/search.gif" /></td>
+                <asp:TextBox ID="TextBox8" CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
+                <a onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPUser&LieName=ZaiGang&callbackFun=selectOnlineConditionCallback',350,400);"><span class="glyphicon glyphicon-filter glyphicon-size-md"></span></a>
+                </td>
         </tr>
         <tr>
             <td align="right" style="width: 170px;">
                 Email地址：</td>
             <td>
-                <asp:TextBox ID="TextBox9" runat="server" Width="350px"></asp:TextBox></td>
+                <asp:TextBox ID="TextBox9" CssClass="form-control" runat="server" Width="350px"></asp:TextBox></td>
         </tr>
         <tr>
             <td align="right" style="width: 170px;">
@@ -213,15 +213,15 @@
             <td align="right" style="width: 170px;">
                 性别：</td>
             <td>
-                <asp:TextBox ID="TextBox10" runat="server" Width="350px"></asp:TextBox>
-                <img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPUser&LieName=Sex&callbackFun=selectSexConditionCallback',350,400);"
-                    src="../images/Button/search.gif" /></td>
+                <asp:TextBox ID="TextBox10" CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
+                <a onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPUser&LieName=Sex&callbackFun=selectSexConditionCallback',350,400);"><span class="glyphicon glyphicon-filter glyphicon-size-md"></span></a>
+                </td>
         </tr>
         <tr>
             <td align="right" style="width: 170px;">
                 备注信息：</td>
             <td>
-                <asp:TextBox ID="TextBox11" runat="server" Height="75px" TextMode="MultiLine" Width="350px"></asp:TextBox></td>
+                <asp:TextBox ID="TextBox11" CssClass="form-control" runat="server" Height="75px" TextMode="MultiLine" Width="350px"></asp:TextBox></td>
         </tr>
         <tr>
             <td align="center" colspan="2">
@@ -231,196 +231,197 @@
             <td align="right" style="width: 170px;">
                 出生日期：</td>
             <td>
-                <asp:TextBox ID="TextBox12" runat="server" Width="350px"  CssClass="Wdate" onclick="WdatePicker()"></asp:TextBox>
-               </td>
+                <asp:TextBox ID="TextBox12"  runat="server" Width="350px"  CssClass="Wdate form-control" onclick="WdatePicker()"></asp:TextBox>
+             </td>
         </tr>
         <tr>
             <td align="right" style="width: 170px;">
                 民族：</td>
             <td>
-                <asp:TextBox ID="TextBox13" runat="server" Width="350px"></asp:TextBox>
-                <img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPUser&LieName=MingZu&callbackFun=selectNationConditionCallback',350,400);"
-                    src="../images/Button/search.gif" /></td>
+                <asp:TextBox ID="TextBox13" CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
+                <a onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPUser&LieName=MingZu&callbackFun=selectNationConditionCallback',350,400);"><span class="glyphicon glyphicon-filter glyphicon-size-md"></span></a>
+            </td>
         </tr>
         <tr>
             <td align="right" style="width: 170px;">
                 身份证号：</td>
             <td>
-                <asp:TextBox ID="TextBox14" runat="server" Width="350px"></asp:TextBox></td>
+                <asp:TextBox ID="TextBox14" CssClass="form-control" runat="server" Width="350px"></asp:TextBox></td>
         </tr>
         <tr>
             <td align="right" style="width: 170px;">
                 婚姻状况：</td>
             <td>
-                <asp:TextBox ID="TextBox15" runat="server" Width="350px"></asp:TextBox>
-                <img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPUser&LieName=HunYing&callbackFun=selectMarrierConditionCallback',350,400);"
-                    src="../images/Button/search.gif" /></td>
+                <asp:TextBox ID="TextBox15" CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
+                <a onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPUser&LieName=HunYing&callbackFun=selectMarrierConditionCallback',350,400);"><span class="glyphicon glyphicon-filter glyphicon-size-md"></span></a>
+                </td>
         </tr>
         <tr>
             <td align="right" style="width: 170px;">
                 政治面貌：</td>
             <td>
-                <asp:TextBox ID="TextBox16" runat="server" Width="350px"></asp:TextBox>
-                <img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPUser&LieName=ZhengZhiMianMao&callbackFun=selectPolicyConditionCallback',350,400);"
-                    src="../images/Button/search.gif" /></td>
+                <asp:TextBox ID="TextBox16" CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
+                <a onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPUser&LieName=ZhengZhiMianMao&callbackFun=selectPolicyConditionCallback',350,400);"><span class="glyphicon glyphicon-filter glyphicon-size-md"></span></a>
+                </td>
         </tr>
         <tr>
             <td align="right" style="width: 170px;">
                 籍贯：</td>
             <td>
-                <asp:TextBox ID="TextBox17" runat="server" Width="350px"></asp:TextBox>
-                <img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPUser&callbackFun=selectBorthPlaceConditionCallback',350,400);"
-                    src="../images/Button/search.gif" /></td>
+                <asp:TextBox ID="TextBox17" CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
+                <a onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPUser&callbackFun=selectBorthPlaceConditionCallback',350,400);"><span class="glyphicon glyphicon-filter glyphicon-size-md"></span></a>
+                </td>
         </tr>
         <tr>
             <td align="right" style="width: 170px;">
                 户口所在地：</td>
             <td>
-                <asp:TextBox ID="TextBox18" runat="server" Width="350px"></asp:TextBox></td>
+                <asp:TextBox ID="TextBox18" CssClass="form-control" runat="server" Width="350px"></asp:TextBox></td>
         </tr>
         <tr>
             <td align="right" style="width: 170px;">
                 学历：</td>
             <td>
-                <asp:TextBox ID="TextBox19" runat="server" Width="350px"></asp:TextBox>
-                <img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPUser&LieName=XueLi&callbackFun=selectDegreeConditionCallback',350,400);"
-                    src="../images/Button/search.gif" /></td>
+                <asp:TextBox ID="TextBox19" CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
+                <a onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPUser&LieName=XueLi&callbackFun=selectDegreeConditionCallback',350,400);"><span class="glyphicon glyphicon-filter glyphicon-size-md"></span></a>
+                </td>
         </tr>
         <tr>
             <td align="right" style="width: 170px;">
                 职称：</td>
             <td>
-                <asp:TextBox ID="TextBox20" runat="server" Width="350px"></asp:TextBox>
-                <img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPUser&LieName=ZhiCheng&callbackFun=selectWorkLevelConditionCallback',350,400);"
-                    src="../images/Button/search.gif" /></td>
+                <asp:TextBox ID="TextBox20" CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
+                <a onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPUser&LieName=ZhiCheng&callbackFun=selectWorkLevelConditionCallback',350,400);"><span class="glyphicon glyphicon-filter glyphicon-size-md"></span></a>
+                </td>
         </tr>
         <tr>
             <td align="right" style="width: 170px;">
                 毕业院校：</td>
             <td>
-                <asp:TextBox ID="TextBox21" runat="server" Width="350px"></asp:TextBox>
-                <img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPUser&LieName=BiYeYuanXiao&callbackFun=selectSchoolConditionCallback',350,400);"
-                    src="../images/Button/search.gif" /></td>
+                <asp:TextBox ID="TextBox21" CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
+                <a onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPUser&LieName=BiYeYuanXiao&callbackFun=selectSchoolConditionCallback',350,400);"><span class="glyphicon glyphicon-filter glyphicon-size-md"></span></a>
+               </td>
         </tr>
         <tr>
             <td align="right" style="width: 170px;">
                 专业：</td>
             <td>
-                <asp:TextBox ID="TextBox22" runat="server" Width="350px"></asp:TextBox>
-                <img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPUser&LieName=ZhuanYe&callbackFun=selectProfesionConditionCallback',350,400);"
-                    src="../images/Button/search.gif" /></td>
+                <asp:TextBox ID="TextBox22" CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
+                <a onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPUser&LieName=ZhuanYe&callbackFun=selectProfesionConditionCallback',350,400);"><span class="glyphicon glyphicon-filter glyphicon-size-md"></span></a>
+                </td>
         </tr>
         <tr>
             <td align="right" style="width: 170px;">
                 参加工作时间：</td>
             <td>
-                <asp:TextBox ID="TextBox23" runat="server" Width="350px"  CssClass="Wdate" onclick="WdatePicker()"></asp:TextBox></td>
+                <asp:TextBox ID="TextBox23" runat="server" Width="350px"  CssClass="Wdate form-control" onclick="WdatePicker()"></asp:TextBox></td>
         </tr>
         <tr>
             <td align="right" style="width: 170px;">
                 加入本单位时间：</td>
             <td>
-                <asp:TextBox ID="TextBox24" runat="server" Width="350px"  CssClass="Wdate" onclick="WdatePicker()"></asp:TextBox>
+                <asp:TextBox ID="TextBox24" runat="server" Width="350px" CssClass="Wdate form-control" onclick="WdatePicker()"></asp:TextBox>
                </td>
         </tr>
         <tr>
             <td align="right" style="width: 170px;">
                 手机号码：</td>
             <td>
-                <asp:TextBox ID="TextBox25" runat="server" Width="350px"></asp:TextBox></td>
+                <asp:TextBox ID="TextBox25" CssClass="form-control" runat="server" Width="350px"></asp:TextBox></td>
         </tr>
         <tr>
             <td align="right" style="width: 170px;">
                 家庭详细住址：</td>
             <td>
-                <asp:TextBox ID="TextBox26" runat="server" Height="75px" TextMode="MultiLine" Width="350px"></asp:TextBox></td>
+                <asp:TextBox ID="TextBox26" CssClass="form-control" runat="server" Height="75px" TextMode="MultiLine" Width="350px"></asp:TextBox></td>
         </tr>
         <tr>
             <td align="right" style="width: 170px;">
                 岗位变动情况：</td>
             <td>
-                <asp:TextBox ID="TextBox27" runat="server" Height="75px" TextMode="MultiLine" Width="350px"></asp:TextBox></td>
+                <asp:TextBox ID="TextBox27" CssClass="form-control" runat="server" Height="75px" TextMode="MultiLine" Width="350px"></asp:TextBox></td>
         </tr>
         <tr>
             <td align="right" style="width: 170px;">
                 教育背景：</td>
             <td>
-                <asp:TextBox ID="TextBox28" runat="server" Height="75px" TextMode="MultiLine" Width="350px"></asp:TextBox></td>
+                <asp:TextBox ID="TextBox28" CssClass="form-control" runat="server" Height="75px" TextMode="MultiLine" Width="350px"></asp:TextBox></td>
         </tr>
         <tr>
             <td align="right" style="width: 170px;">
                 工作简历：</td>
             <td>
-                <asp:TextBox ID="TextBox29" runat="server" Height="75px" TextMode="MultiLine" Width="350px"></asp:TextBox></td>
+                <asp:TextBox ID="TextBox29" CssClass="form-control" runat="server" Height="75px" TextMode="MultiLine" Width="350px"></asp:TextBox></td>
         </tr>
         <tr>
             <td align="right" style="width: 170px;">
                 社会关系：</td>
             <td>
-                <asp:TextBox ID="TextBox30" runat="server" Height="75px" TextMode="MultiLine" Width="350px"></asp:TextBox></td>
+                <asp:TextBox ID="TextBox30" CssClass="form-control" runat="server" Height="75px" TextMode="MultiLine" Width="350px"></asp:TextBox></td>
         </tr>
         <tr>
             <td align="right" style="width: 170px;">
                 奖惩记录：</td>
             <td>
-                <asp:TextBox ID="TextBox31" runat="server" Height="75px" TextMode="MultiLine" Width="350px"></asp:TextBox></td>
+                <asp:TextBox ID="TextBox31" CssClass="form-control" runat="server" Height="75px" TextMode="MultiLine" Width="350px"></asp:TextBox></td>
         </tr>
         <tr>
             <td align="right" style="width: 170px;">
                 职务情况：</td>
             <td>
-                <asp:TextBox ID="TextBox32" runat="server" Height="75px" TextMode="MultiLine" Width="350px"></asp:TextBox></td>
+                <asp:TextBox ID="TextBox32" CssClass="form-control" runat="server" Height="75px" TextMode="MultiLine" Width="350px"></asp:TextBox></td>
         </tr>
         <tr>
             <td align="right" style="width: 170px;">
                 培训记录：</td>
             <td>
-                <asp:TextBox ID="TextBox33" runat="server" Height="75px" TextMode="MultiLine" Width="350px"></asp:TextBox></td>
+                <asp:TextBox ID="TextBox33" CssClass="form-control" runat="server" Height="75px" TextMode="MultiLine" Width="350px"></asp:TextBox></td>
         </tr>
         <tr>
             <td align="right" style="width: 170px;">
                 担保记录：</td>
             <td>
-                <asp:TextBox ID="TextBox34" runat="server" Height="75px" TextMode="MultiLine" Width="350px"></asp:TextBox></td>
+                <asp:TextBox ID="TextBox34" CssClass="form-control" runat="server" Height="75px" TextMode="MultiLine" Width="350px"></asp:TextBox></td>
         </tr>
         <tr>
             <td align="right" style="width: 170px;">
                 劳动合同签订情况：</td>
             <td>
-                <asp:TextBox ID="TextBox35" runat="server" Height="75px" TextMode="MultiLine" Width="350px"></asp:TextBox></td>
+                <asp:TextBox ID="TextBox35" CssClass="form-control" runat="server" Height="75px" TextMode="MultiLine" Width="350px"></asp:TextBox></td>
         </tr>
         <tr>
             <td align="right" style="width: 170px;">
                 社保缴纳情况：</td>
             <td>
-                <asp:TextBox ID="TextBox36" runat="server" Height="75px" TextMode="MultiLine" Width="350px"></asp:TextBox></td>
+                <asp:TextBox ID="TextBox36" CssClass="form-control" runat="server" Height="75px" TextMode="MultiLine" Width="350px"></asp:TextBox></td>
         </tr>
         <tr>
             <td align="right" style="width: 170px;">
                 体检记录：</td>
             <td>
-                <asp:TextBox ID="TextBox37" runat="server" Height="75px" TextMode="MultiLine" Width="350px"></asp:TextBox></td>
+                <asp:TextBox ID="TextBox37" CssClass="form-control" runat="server" Height="75px" TextMode="MultiLine" Width="350px"></asp:TextBox></td>
         </tr>
         <tr>
             <td align="right" style="width: 170px;">
                 备 注：</td>
             <td>
-                <asp:TextBox ID="TextBox38" runat="server" Height="75px" TextMode="MultiLine" Width="350px"></asp:TextBox></td>
+                <asp:TextBox ID="TextBox38" CssClass="form-control" runat="server" Height="75px" TextMode="MultiLine" Width="350px"></asp:TextBox></td>
         </tr>
         <tr>
             <td align="right" style="width: 170px;">
                 附件：</td>
             <td>
                 <asp:CheckBoxList ID="CheckBoxList1" runat="server" RepeatDirection="Horizontal" RepeatColumns="4">
-                </asp:CheckBoxList>&nbsp;<asp:ImageButton ID="ImageButton3" runat="server" CausesValidation="False"
-                    ImageAlign="AbsMiddle" ImageUrl="../images/Button/DelFile.jpg" OnClick="ImageButton3_Click" /></td>
+                </asp:CheckBoxList>&nbsp;
+                <asp:Button ID="ImageButton3" CssClass="btn btn-danger" Text="删除" runat="server" CausesValidation="False"
+                    ImageAlign="AbsMiddle"  OnClick="ImageButton3_Click" /></td>
         </tr>
         <tr>
             <td align="right" style="width: 170px;">
                 上传附件：</td>
             <td>
                 <asp:FileUpload ID="FileUpload1" runat="server" Width="350px" />
-                <asp:ImageButton ID="ImageButton2" runat="server" ImageAlign="AbsMiddle" ImageUrl="../images/Button/UpLoad.jpg" OnClick="ImageButton2_Click" CausesValidation="False" /></td>
+                <asp:Button ID="ImageButton2" CssClass="btn btn-primary" Text="上传" runat="server" ImageAlign="AbsMiddle"  OnClick="ImageButton2_Click" CausesValidation="False" /></td>
         </tr>
         </table></div>
     </form>

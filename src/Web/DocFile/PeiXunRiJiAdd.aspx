@@ -73,8 +73,8 @@
 		培训名称：
 	</td>
 	<td>
-		<asp:TextBox id="txtPeiXunName" runat="server" Width="350px"></asp:TextBox>
-		<img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPPeiXun&LieName=PeiXunName&callbackFun=selectPeiXunNameConditionCallback',350,400)"  src="../images/Button/search.gif" />
+		<asp:TextBox id="txtPeiXunName" CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
+		<a onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPPeiXun&LieName=PeiXunName&callbackFun=selectPeiXunNameConditionCallback',350,400)"><span class="glyphicon glyphicon-filter glyphicon-size-md"></span></a>
 		<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtPeiXunName" ErrorMessage="*该项不可以为空"></asp:RequiredFieldValidator>
 	</td></tr>
 	<tr>
@@ -82,15 +82,15 @@
 		日志主题：
 	</td>
 	<td>
-		<asp:TextBox id="txtRiJiTitle" runat="server" Width="350px"></asp:TextBox>
-		<img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPPeiXunRiJi&LieName=RiJiTitle&callbackFun=selectRiJiTitleConditionCallback',350,400)"  src="../images/Button/search.gif" />
+		<asp:TextBox id="txtRiJiTitle" CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
+		<a onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPPeiXunRiJi&LieName=RiJiTitle&callbackFun=selectRiJiTitleConditionCallback',350,400)"><span class="glyphicon glyphicon-filter glyphicon-size-md"></span></a>
 	</td></tr>
 	<tr>
 	<td style="width: 170px;" align="right">
 		日志日期：
 	</td>
 	<td>
-		<asp:TextBox id="txtRiJiDate" runat="server" Width="350px" CssClass="Wdate" onclick="WdatePicker()"></asp:TextBox>
+		<asp:TextBox id="txtRiJiDate" runat="server" Width="350px" CssClass="Wdate form-control" onclick="WdatePicker()"></asp:TextBox>
 		
 	</td></tr>
 	<tr>

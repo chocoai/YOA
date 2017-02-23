@@ -71,70 +71,71 @@
         </table>
 <table style="width: 100%" class="table">
 	<tr>
-	<td style="width: 170px;" align="right">
-		资源名称：
-	</td>
-	<td>
-		<asp:TextBox id="txtSourceName" runat="server" Width="350px"></asp:TextBox>
-		<img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPSource&LieName=SourceName&callbackFun=selectSourceNameConditionCallback',350,400)"  src="../images/Button/search.gif" />
-		<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtSourceName" ErrorMessage="*该项不可以为空"></asp:RequiredFieldValidator>
-	</td></tr>
-	<tr>
-	<td style="width: 170px;" align="right">
-		申请人：
-	</td>
-	<td>
-		<asp:TextBox id="txtShengQingUser" runat="server" Width="350px"></asp:TextBox>
-		<img class="HerCss" onclick="openDialog('../Main/SelectUser.aspx?TableName=ERPUser&LieName=UserName&callbackFun=selectShengQingUserConditionCallback',350,400)" src="../images/Button/search.gif" />
-	</td></tr>
-	<tr>
-	<td style="width: 170px;" align="right">
-		使用人：
-	</td>
-	<td>
-		<asp:TextBox id="txtShiYongUser" runat="server" Width="350px"></asp:TextBox>
-		<img class="HerCss" onclick="openDialog('../Main/SelectUser.aspx?TableName=ERPUser&LieName=UserName&callbackFun=selectShiYongUserConditionCallback',350,400)" src="../images/Button/search.gif" />
-	</td></tr>
-	<tr>
-	<td style="width: 170px;" align="right">
-		使用时限：
-	</td>
-	<td>
-		<asp:TextBox id="txtShiYongShiXian" runat="server" Width="350px"></asp:TextBox>
-		<img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPSource&LieName=ShiYongShiXian&callbackFun=selectShiYongShiXianConditionCallback',350,400)"  src="../images/Button/search.gif" />
-	</td></tr>
-	<tr>
-	<td style="width: 170px;" align="right">
-		资源描述：
-	</td>
-	<td>
-		<asp:TextBox id="txtSourceMiaoShu" runat="server" Width="350px" Height="60px" TextMode="MultiLine"></asp:TextBox></td></tr>
+                    <td style="width: 170px;" align="right">资源名称：
+                    </td>
+                    <td>
+                        <asp:TextBox ID="txtSourceName" CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
+                        <a onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPSource&LieName=SourceName&callbackFun=selectSourceNameConditionCallback',350,400)"><span class="glyphicon glyphicon-filter glyphicon-size-md"></span></a>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtSourceName" ErrorMessage="*该项不可以为空"></asp:RequiredFieldValidator>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 170px;" align="right">申请人：
+                    </td>
+                    <td>
+                        <asp:TextBox ID="txtShengQingUser" CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
+                        <a onclick="openDialog('../Main/SelectUser.aspx?TableName=ERPUser&LieName=UserName&callbackFun=selectShengQingUserConditionCallback',350,400)"><span class="glyphicon glyphicon-filter glyphicon-size-md"></span></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 170px;" align="right">使用人：
+                    </td>
+                    <td>
+                        <asp:TextBox ID="txtShiYongUser" CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
+                        <a onclick="openDialog('../Main/SelectUser.aspx?TableName=ERPUser&LieName=UserName&callbackFun=selectShiYongUserConditionCallback',350,400)"><span class="glyphicon glyphicon-filter glyphicon-size-md"></span></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 170px;" align="right">使用时限：
+                    </td>
+                    <td>
+                        <asp:TextBox ID="txtShiYongShiXian" CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
+                        <a onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPSource&LieName=ShiYongShiXian&callbackFun=selectShiYongShiXianConditionCallback',350,400)"><span class="glyphicon glyphicon-filter glyphicon-size-md"></span></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 170px;" align="right">资源描述：
+                    </td>
+                    <td>
+                        <asp:TextBox ID="txtSourceMiaoShu" CssClass="form-control" runat="server" Width="350px" Height="60px" TextMode="MultiLine"></asp:TextBox>
+                    </td>
+                </tr>
 	<tr>
 	<td style="width: 170px;" align="right">
 		当前状态：
 	</td>
 	<td>
-		<asp:TextBox id="txtNowState" runat="server" Width="350px" Enabled="False"></asp:TextBox></td></tr>
+		<asp:TextBox id="txtNowState" runat="server" CssClass="form-control" Width="350px" Enabled="False"></asp:TextBox></td></tr>
 	<tr>
 	<td style="width: 170px;" align="right">
 		录入人：
 	</td>
 	<td>
-		<asp:TextBox id="txtUserName" runat="server" Width="350px" Enabled="False"></asp:TextBox>
+		<asp:TextBox id="txtUserName" runat="server" CssClass="form-control" Width="350px" Enabled="False"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td style="width: 170px;" align="right">
 		录入时间：
 	</td>
 	<td>
-		<asp:TextBox id="txtTimeStr" runat="server" Width="350px" Enabled="False"></asp:TextBox>
+		<asp:TextBox id="txtTimeStr" runat="server" CssClass="form-control" Width="350px" Enabled="False"></asp:TextBox>
 	</td></tr>
 	<tr>
 	<td style="width: 170px;" align="right">
 		备注说明：
 	</td>
 	<td>
-		<asp:TextBox id="txtBackInfo" runat="server" Width="350px" Height="60px" TextMode="MultiLine"></asp:TextBox></td></tr>
+		<asp:TextBox id="txtBackInfo" runat="server" CssClass="form-control" Width="350px" Height="60px" TextMode="MultiLine"></asp:TextBox></td></tr>
 </table>
 		</div>
 	</form>

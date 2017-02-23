@@ -44,7 +44,7 @@
             <td align="right" style="width: 170px;">
                 文件夹名称：</td>
             <td>
-                    <asp:TextBox ID="TextBox1" runat="server" Width="350px"></asp:TextBox>
+                    <asp:TextBox ID="TextBox1" CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TextBox1"
                         ErrorMessage="*该项不可以为空"></asp:RequiredFieldValidator></td>
         </tr>
@@ -52,7 +52,7 @@
             <td align="right" style="width: 170px;">
                 文件夹编号：</td>
             <td>
-                <asp:TextBox ID="TextBox2" runat="server" Width="350px"></asp:TextBox></td>
+                <asp:TextBox ID="TextBox2" CssClass="form-control" runat="server" Width="350px"></asp:TextBox></td>
         </tr>
         <tr>
             <td align="right" style="width: 170px;">

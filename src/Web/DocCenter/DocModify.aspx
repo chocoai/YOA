@@ -68,7 +68,7 @@
             <td align="right" style="width: 170px;">
                 文件编号：</td>
             <td>
-                    <asp:TextBox ID="TextBox1" runat="server" Width="350px"></asp:TextBox></td>
+                    <asp:TextBox ID="TextBox1" CssClass="form-control" runat="server" Width="350px"></asp:TextBox></td>
         </tr>
         <tr>
             <td align="right" style="width: 170px;">

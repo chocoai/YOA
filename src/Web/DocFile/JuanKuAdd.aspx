@@ -68,8 +68,8 @@
                     <td style="width: 170px;" align="right">卷库名称：
                     </td>
                     <td>
-                        <asp:TextBox ID="txtJuanKuName" runat="server" Width="350px"></asp:TextBox>
-                        <img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPJuanKu&LieName=JuanKuName&callbackFun=selectConditionNameCallback',350,400)" src="../images/Button/search.gif" />
+                        <asp:TextBox ID="txtJuanKuName"  CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
+                        <a onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPJuanKu&LieName=JuanKuName&callbackFun=selectConditionNameCallback',350,400)"><span class="glyphicon glyphicon-filter glyphicon-size-md"></span></a>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtJuanKuName" ErrorMessage="*该项不可以为空"></asp:RequiredFieldValidator>
                     </td>
                 </tr>
@@ -77,23 +77,23 @@
                     <td style="width: 170px;" align="right">卷库编号：
                     </td>
                     <td>
-                        <asp:TextBox ID="txtJuanKuSerils" runat="server" Width="350px"></asp:TextBox>
-                        <img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPJuanKu&LieName=JuanKuSerils&callbackFun=selectConditionNumCallback',350,400)" src="../images/Button/search.gif" />
+                        <asp:TextBox ID="txtJuanKuSerils" CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
+                        <a onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPJuanKu&LieName=JuanKuSerils&callbackFun=selectConditionNumCallback',350,400)"><span class="glyphicon glyphicon-filter glyphicon-size-md"></span></a>
                     </td>
                 </tr>
                 <tr>
                     <td style="width: 170px;" align="right">所属部门：
                     </td>
                     <td>
-                        <asp:TextBox ID="txtSuoShuBuMen" runat="server" Width="350px"></asp:TextBox>
-                        <img class="HerCss" onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPBuMen&LieName=BuMenName&callbackFun=selectConditionDepartCallback',350,400)" src="../images/Button/search.gif" />
+                        <asp:TextBox ID="txtSuoShuBuMen" CssClass="form-control" runat="server" Width="350px"></asp:TextBox>
+                        <a onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPBuMen&LieName=BuMenName&callbackFun=selectConditionDepartCallback',350,400)"><span class="glyphicon glyphicon-filter glyphicon-size-md"></span></a>
                     </td>
                 </tr>
                 <tr>
                     <td style="width: 170px;" align="right">备注说明：
                     </td>
                     <td>
-                        <asp:TextBox ID="txtBackInfo" runat="server" Width="350px" Height="60px" TextMode="MultiLine"></asp:TextBox></td>
+                        <asp:TextBox ID="txtBackInfo" CssClass="form-control" runat="server" Width="350px" Height="60px" TextMode="MultiLine"></asp:TextBox></td>
                 </tr>
             </table>
         </div>

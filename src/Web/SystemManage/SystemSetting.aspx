@@ -37,7 +37,7 @@
             <td align="right" style="width: 170px;" >
                 允许上传的文件类型：</td>
                 <td>
-                    <asp:TextBox ID="TextBox1" runat="server" CssClass="inputCss" Width="448px"></asp:TextBox>
+                    <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control" Width="448px"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TextBox1"
                         ErrorMessage="*该项不可以为空" Display="Dynamic"></asp:RequiredFieldValidator>如：doc,jpg,xls</td>
         </tr>

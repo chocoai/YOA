@@ -72,7 +72,8 @@
                     <td align="right" style="width: 170px;">附件：</td>
                     <td>
                         <asp:CheckBoxList ID="CheckBoxList1" runat="server" RepeatColumns="4" RepeatDirection="Horizontal">
-                        </asp:CheckBoxList>&nbsp;<asp:Button ID="ImageButton3" Text="删除文件" CssClass="btn btn-danger" runat="server" CausesValidation="False"
+                        </asp:CheckBoxList>&nbsp;
+                        <asp:Button ID="ImageButton3" Text="删除文件" CssClass="btn btn-danger" runat="server" CausesValidation="False"
                             ImageAlign="AbsMiddle" ImageUrl="../images/Button/DelFile.jpg" OnClick="ImageButton3_Click" />
                         &nbsp; &nbsp;
                 <asp:Button ID="ImageButton5"  Text="读取文件" CssClass="btn btn-info" runat="server" CausesValidation="False" OnClick="ImageButton5_Click" />
