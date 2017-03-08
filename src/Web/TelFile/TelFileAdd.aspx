@@ -90,7 +90,7 @@
                         </td>
                 </tr>
                 <tr>
-                    <td align="right" style="width: 170px;">穿越后归档到：</td>
+                    <td align="right" style="width: 170px;">归档到：</td>
                     <td >
                         <asp:DropDownList ID="DropDownList1" runat="server" Width="350px"  CssClass="form-control">
                             <asp:ListItem Value="0">不归档查看</asp:ListItem>

@@ -171,7 +171,7 @@
                                     <asp:HyperLink ID="HyperLink11" runat="server" Target="_blank"
                                         NavigateUrl='<%# "JustShowWorkFlow.aspx?ID="+ DataBinder.Eval(Container.DataItem, "WorkFlowID")%>'><%# DataBinder.Eval(Container.DataItem, "JieDianName")%></asp:HyperLink>
                                 </ItemTemplate>
-                                <ItemStyle HorizontalAlign="Center" />
+                                <ItemStyle HorizontalAlign="Left" />
                             </asp:TemplateField>
                             <asp:BoundField DataField="StateNow" HeaderText="当前状态"></asp:BoundField>
                             <asp:TemplateField HeaderText="办理">
@@ -179,7 +179,7 @@
                                     <asp:HyperLink ID="HyperLink2" runat="server"
                                         NavigateUrl='<%# "WorkToDo.aspx?ID="+ DataBinder.Eval(Container.DataItem, "ID") %>' ForeColor="Blue">[办理]</asp:HyperLink>
                                 </ItemTemplate>
-                                <ItemStyle HorizontalAlign="Center" />
+                                <ItemStyle HorizontalAlign="Left" />
                             </asp:TemplateField>
                         </Columns>
                         <PagerSettings Visible="False" />

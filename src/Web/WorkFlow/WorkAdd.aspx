@@ -22,9 +22,11 @@
             {
             }
             else
-            {        
-                //alert(imgidstr);
-                imgidstr.src = "http://" + window.location.host + "<%=System.Configuration.ConfigurationManager.AppSettings["OARoot"] %>/UploadFile/" + returndata;  
+            {
+                $("#img6698").attr("src", "http://" + window.location.host + "/UploadFile/" + returndata); 
+                if (dialog != null) {
+                    dialog.dialog("close");
+                }
             }
         }
     </script>

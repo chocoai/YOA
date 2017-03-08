@@ -127,7 +127,7 @@
                 <td colspan="2" class="filter_box">
                         <div class="form-group">
                     部门：<asp:TextBox ID="TextBox2" runat="server"  CssClass="form-control" Width="100px"></asp:TextBox>
-                             <a onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPBuMen&LieName=BuMenName&callbackFun=selectConditionCallback',500,350);"><span class="glyphicon glyphicon-filter glyphicon-size-md"></span></a>
+                             <a onclick="openDialog('../Main/SelectCondition.aspx?TableName=ERPBuMen&LieName=BuMenName&callbackFun=selectConditionCallback',400,550);"><span class="glyphicon glyphicon-filter glyphicon-size-md"></span></a>
                     用户名：<asp:TextBox ID="TextBox1"  CssClass="form-control" runat="server" Width="100px"></asp:TextBox>
                             <asp:Button ID="ImageButton4"  Text="查询" CssClass="btn btn-default" runat="server" 
                         OnClick="ImageButton4_Click" />&nbsp;

@@ -41,12 +41,11 @@ public partial class Main_SelectYinZhang : System.Web.UI.Page
             MyModel.UserName = ZWL.Common.PublicMethod.GetSessionValue("UserName");
             MyModel.Add();
 
-            Response.Write("<script language=javascript>window.returnValue =\"" + this.DropDownList1.SelectedValue.ToString() + "\";window.close();</script>");
+            Response.Write("<script language=javascript>window.parent[\"selectyinzhangCallback\"]('"+ this.DropDownList1.SelectedValue.ToString() + "');</script>");
         }
         else
         {
             Response.Write("<script>alert('印章密码错误！');</script>");
-            Response.Write("<script language=javascript> window.returnValue =\"\";</script>");
         }
     }
 }
