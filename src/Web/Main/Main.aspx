@@ -14,7 +14,7 @@
                 $("#ListTreeView").find("a.current_menu").removeClass("current_menu");
                 $(this).addClass("current_menu");
                 var parentMenu = $(this).parent().parent().parent().parent().parent();
-                if (typeof($(parentMenu).attr("id")) !="undefined" && $(parentMenu).attr("id").indexOf("ListTreeView") >= 0) {
+                if (typeof ($(parentMenu).attr("id")) != "undefined" && $(parentMenu).attr("id").indexOf("ListTreeView") >= 0) {
                     $(parentMenu).prev().find("a").addClass("current_menu");
                 }
                 var top_parentMenu = $(parentMenu).parent();
@@ -44,7 +44,7 @@
                     <img src="../images/product.png" /></td>
                 <td height="50" background="../images/TitleBg.gif" width="48%" align="right">
                     <%=DateTime.Now.ToString("yyyy年M月d日") %>
-                   <%-- <script language="JavaScript">
+                    <%-- <script language="JavaScript">
                         today = new Date();
                         function initArray() {
                             this.length = initArray.arguments.length
@@ -105,13 +105,13 @@
 
                                             <table width="185" height="100%" border="0" cellpadding="0" cellspacing="0">
                                                 <tr>
-                                                    <td style="height:20px; background-color:#FFFFFF;" >
-                                                        <ul class="nav nav-tabs" role="tablist" style="margin-left:10px;">
+                                                    <td style="height: 20px; background-color: #FFFFFF;">
+                                                        <ul class="nav nav-tabs" role="tablist" style="margin-left: 10px;">
                                                             <li role="presentation" class="active"><a target="rform" href="OnlineUser.aspx"><span class="glyphicon glyphicon-user"></span></a></li>
                                                             <li role="presentation"><a target="rform" href="../Mobile/MobileSms.aspx"><span class="glyphicon glyphicon-comment"></span></a></li>
-                                                            <li role="presentation"><a target="rform" href="../LanEmail/LanEmailShou.aspx"><span class="glyphicon glyphicon-envelope"></span</a></li>
+                                                            <li role="presentation"><a target="rform" href="../LanEmail/LanEmailShou.aspx"><span class="glyphicon glyphicon-envelope"></span></a></li>
                                                         </ul>
-                                                       <%-- &nbsp;&nbsp;&nbsp;&nbsp;
+                                                        <%-- &nbsp;&nbsp;&nbsp;&nbsp;
                                                         <span style="color: #ffffff">导航&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                             <a class="hei" target="rform" href="OnlineUser.aspx">组织</a>&nbsp;&nbsp;
                                                             <a class="hei" target="rform" href="../Mobile/MobileSms.aspx">短信</a>
@@ -450,7 +450,7 @@
                                                                     &nbsp;&nbsp;<a class="bai" target="rform" href="../HR/ShangXiaBanDengJi.aspx"><img align="absMiddle" height="16" border="0" src="../images/TreeImages/attendance.gif" width="16" />&nbsp;上下班登记&nbsp;</a>
                                                                     &nbsp;&nbsp;<a class="bai" target="rform" href="../WorkFlow/MyWorkFlow.aspx"><img align="absMiddle" height="16" border="0" src="../images/TreeImages/workflow.gif" width="16" />&nbsp;我的工作&nbsp;</a>
                                                                 </td>
-                                                                <td align="right">
+                                                                <td  align="right">
                                                                     <a class="bai" href="MyDesk.aspx" target="rform">
                                                                         <img align="absMiddle" alt="我的办公桌" border="0" height="16" src="../images/TreeImages/mytable.gif"
                                                                             width="16" />&nbsp;桌面</a>&nbsp;
@@ -490,8 +490,8 @@
                         <tr>
                             <td valign="middle">&nbsp;&nbsp;<iframe name="bform" frameborder="0" marginheight="0" marginwidth="0" width="500px" height="20px"
                                 src="Blank.aspx" border="0"></iframe>
-                                    <asp:Label ID="Label1" runat="server" Font-Bold="True" ForeColor="Red" Text=""
-                                        Visible="True"></asp:Label></td>
+                                <asp:Label ID="Label1" runat="server" Font-Bold="True" ForeColor="Red" Text=""
+                                    Visible="True"></asp:Label></td>
                         </tr>
                     </table>
                 </td>

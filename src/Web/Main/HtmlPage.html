@@ -1,0 +1,369 @@
+﻿<html>
+<head>
+    <title>OA管理系统</title>
+
+    <link href="../Style/indexNew1.css" rel="stylesheet" />
+    <link href="../Style/jquery.dialog.css" rel="stylesheet" />
+    <link href="../Style/base.css" rel="stylesheet" />
+    <script src="../JS/jquery-1.5.1.js"></script>
+    <script src="../JS/jquery-1.11.1.min.js"></script>
+
+    <script type="text/javascript">
+        function stops() {
+            return false;
+        }
+        document.oncontextmenu = stops;
+
+
+
+    </script>
+
+    <script type="text/javascript" >
+        $(document).ready(function () {
+            $(".subnav li a").click(function () {
+                var ID = $(this).attr('id');
+
+                if (css(".subnav li ul")) {
+                    $(".subnav li ul").hide();
+                    $(this).attr('id', '0');
+                }
+                else {
+
+                    $(".subnav li ul").show();
+                    $(this).attr('id', '1');
+                }
+
+            });
+
+            ////Mouseup textarea false  
+            //$(".subnav li ul").mouseup(function () {
+            //    return false
+            //});
+            //$(".subnav li a").mouseup(function () {
+            //    return false
+            //});
+
+
+            ////Textarea without editing.  
+            //$(document).mouseup(function () {
+            //    $(".subnav li ul").hide();
+            //    $(".subnav li a").attr('id', '');
+            //});
+
+        });
+    </script>
+
+<!--    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.subnav li').click(function () {
+                if ($(this).css('display') == 'none') {
+                    $(this).children('li').slideDown(100).children('ul').children('li');
+                    if ($(this).css('display') == 'block') {
+                        $(this).children('li').children('ul').children('li').slideUp(100);
+                    }
+                } else {
+                    //控制自身菜单下子菜单隐藏
+                    $(this).siblings('ul').slideUp(100);
+                    //控制自身菜单下子菜单隐藏
+                    $(this).siblings('ul').children('li').children('ul').slideUp(100);
+                }
+            })
+        });
+</script>-->
+
+    <!--    <script type="text/javascript">
+        $(document).ready(function () {
+            var menuParent = $('.nav > .nav-header > div');//获取menu下的父层的DIV
+            var menuList = $('.subnav');
+            $('.nav > .office > .nav-header').each(function (i) {//获取列表的大标题并遍历
+                $(this).click(function () {
+                    if ($(subnav[i]).css('display') == 'none') {
+                        $(subnav[i]).slideDown(300);
+                    }
+                    else {
+                        $(subnav[i]).slideUp(300);
+                    }
+                });
+            });
+        });
+    </script>-->
+</head>
+
+<body>
+    <div id="container">
+        <div id="hd">
+            <div class="hd-wrap ue-clear">
+                <div class="top-light"></div>
+                <h1 class="logo"></h1>
+                <div class="login-info ue-clear">
+                    <div class="welcome ue-clear"><span>欢迎您,</span><a class="user-name">Admin</a></div>
+                    <div class="login-msg ue-clear">
+                        <a class="msg-txt">消息</a>
+                        <a class="msg-num">10</a>
+                    </div>
+                </div>
+                <div class="toolbar ue-clear">
+                    <a class="home-btn">首页</a>
+                    <a class="quit-btn exit"></a>
+                </div>
+            </div>
+        </div>
+        <div id="bd">
+            <div class="wrap ue-clear">
+                <div class="sidebar">
+                    <h2 class="sidebar-header">
+                        <p>功能导航</p>
+                    </h2>
+
+                    <ul class="nav">
+                        <li class="office">
+                            <div class="nav-header"><a href="javascript:;" class="ue-clear"><span>我的办公桌</span><i class="icon"></i></a></div>
+                            <ul class="subnav">
+                                <li><a style="background: url(../images/TreeImages/email.gif) no-repeat left;"><span>内部邮件</span></a>
+                                    <ul>
+                                        <li style="background: url(../images/TreeImages/inbox.gif) no-repeat left;"><a>收件箱</a></li>
+                                        <li style="background: url(../images/TreeImages/outbox.gif) no-repeat left;"><a>草稿箱</a></li>
+                                        <li style="background: url(../images/TreeImages/sentbox.gif) no-repeat left;"><a>已发送</a></li>
+                                        <li style="background: url(../images/TreeImages/trash.gif) no-repeat left;"><a>已删除</a></li>
+                                    </ul>
+                                </li>
+
+                                <li><a style="background: url(../images/TreeImages/webmail.gif) no-repeat left;"><span>Internet邮件</span></a>
+                                                                        <ul>
+                                        <li style="background: url(../images/TreeImages/inbox.gif) no-repeat left;"><a>收件箱</a></li>
+                                        <li style="background: url(../images/TreeImages/outbox.gif) no-repeat left;"><a>草稿箱</a></li>
+                                        <li style="background: url(../images/TreeImages/sentbox.gif) no-repeat left;"><a>已发送</a></li>
+                                        <li style="background: url(../images/TreeImages/trash.gif) no-repeat left;"><a>已删除</a></li>
+                                    </ul>
+                                </li>
+                                <li><a style="background: url(../images/TreeImages/mobile_sms.gif) no-repeat left;"><span>手机短信</span></a></li>
+                                <li><a style="background: url(../images/TreeImages/notify.gif) no-repeat left;"><span>公告通知</span></a>
+                                                                        <ul>
+                                        <li style="background: url(../images/TreeImages/inbox.gif) no-repeat left;"><a>单位公告通知</a></li>
+                                        <li style="background: url(../images/TreeImages/outbox.gif) no-repeat left;"><a>部门公告通知</a></li>
+                                    </ul>
+                                </li>
+                                <li><a style="background: url(../images/TreeImages/vote.gif) no-repeat left;"><span>投票</span></a></li>
+                                <li><a style="background: url(../images/TreeImages/calendar.gif) no-repeat left;"><span>日程安排</span></a>
+                                                                        <ul>
+                                        <li style="background: url(../images/TreeImages/inbox.gif) no-repeat left;"><a>收件箱</a></li>
+                                        <li style="background: url(../images/TreeImages/outbox.gif) no-repeat left;"><a>草稿箱</a></li>
+                                        <li style="background: url(../images/TreeImages/sentbox.gif) no-repeat left;"><a>已发送</a></li>
+                                        <li style="background: url(../images/TreeImages/trash.gif) no-repeat left;"><a>已删除</a></li>
+                                    </ul>
+                                </li>
+                                <li><a style="background: url(../images/TreeImages/diary.gif) no-repeat left;"><span>工作日志</span></a></li>
+                                <li><a style="background: url(../images/TreeImages/address.gif) no-repeat left;"><span>通讯簿</span></a>
+                                                                        <ul>
+                                        <li style="background: url(../images/TreeImages/inbox.gif) no-repeat left;"><a>收件箱</a></li>
+                                        <li style="background: url(../images/TreeImages/outbox.gif) no-repeat left;"><a>草稿箱</a></li>
+                                        <li style="background: url(../images/TreeImages/sentbox.gif) no-repeat left;"><a>已发送</a></li>
+                                        <li style="background: url(../images/TreeImages/trash.gif) no-repeat left;"><a>已删除</a></li>
+                                    </ul>
+                                </li>
+                                <li><a style="background: url(../images/TreeImages/meeting.gif) no-repeat left;"><span>我的会议</span></a></li>
+                                <li><a style="background: url(../images/TreeImages/person_info.gif) no-repeat left;"><span>个人设置</span></a>
+                                                                        <ul>
+                                        <li style="background: url(../images/TreeImages/inbox.gif) no-repeat left;"><a>收件箱</a></li>
+                                        <li style="background: url(../images/TreeImages/outbox.gif) no-repeat left;"><a>草稿箱</a></li>
+                                        <li style="background: url(../images/TreeImages/sentbox.gif) no-repeat left;"><a>已发送</a></li>
+                                        <li style="background: url(../images/TreeImages/trash.gif) no-repeat left;"><a>已删除</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="gongwen">
+                            <div class="nav-header"><a href="javascript:;" class="ue-clear"><span>工作流程</span><i class="icon"></i></a></div>
+                            <ul class="subnav">
+                                <li style="background: url(../images/TreeImages/workflow.gif) no-repeat left;"><a>工作管理</a></li>
+                                <li style="background: url(../images/TreeImages/system.gif) no-repeat left;"><a>表单定义</a></li>
+                                <li style="background: url(../images/TreeImages/erp.gif) no-repeat left;"><a>工作流程</a></li>
+                                <li style="background: url(../images/TreeImages/erp.gif) no-repeat left;"><a>印章管理</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-info">
+                            <div class="nav-header"><a href="javascript:;" class="ue-clear"><span>公文收发</span><i class="icon"></i></a></div>
+                            <ul class="subnav">
+                                <li style="background: url(../images/TreeImages/netdisk.gif) no-repeat left;"><a>接收文件</a></li>
+                                <li style="background: url(../images/TreeImages/netdisk.gif) no-repeat left;"><a>传阅文件</a></li>
+                                <li style="background: url(../images/TreeImages/netdisk.gif) no-repeat left;"><a>接收文件浏览</a></li>
+                                <li style="background: url(../images/TreeImages/netdisk.gif) no-repeat left;"><a>传阅文件浏览</a></li>
+                                <li style="background: url(../images/TreeImages/netdisk.gif) no-repeat left;"><a>接收文件分类</a></li>
+                                <li style="background: url(../images/TreeImages/netdisk.gif) no-repeat left;"><a>传阅文件分类</a></li>
+                            </ul>
+                        </li>
+                        <li class="konwledge">
+                            <div class="nav-header"><a class="ue-clear"><span>工作管理</span><i class="icon"></i></a></div>
+                            <ul class="subnav">
+                                <li style="background: url(../images/TreeImages/work_plan.gif) no-repeat left;"><a>我的计划</a></li>
+                                <li style="background: url(../images/TreeImages/work_plan.gif) no-repeat left;"><a>计划管理</a></li>
+                                <li style="background: url(../images/TreeImages/work_plan.gif) no-repeat left;"><a>我的汇报</a></li>
+                                <li style="background: url(../images/TreeImages/work_plan.gif) no-repeat left;"><a>汇报管理</a></li>
+                            </ul>
+                        </li>
+                        <li class="agency">
+                            <div class="nav-header"><a class="ue-clear"><span>人力资源管理</span><i class="icon"></i></a></div>
+                            <ul class="subnav">
+                                <li style="background: url(../images/TreeImages/hrms.gif) no-repeat left;"><a>人事档案</a></li>
+                                <li style="background: url(../images/TreeImages/hrms.gif) no-repeat left;"><a>人事合同</a></li>
+                                <li style="background: url(../images/TreeImages/pro.gif) no-repeat left;"><a>人员考核</a></li>
+                                <li style="background: url(../images/TreeImages/score.gif) no-repeat left;"><a>奖惩记录</a></li>
+                                <li style="background: url(../images/TreeImages/attendance.gif) no-repeat left;"><a>个人考勤</a></li>
+                                <li style="background: url(../images/TreeImages/attendance.gif) no-repeat left;"><a>考勤批示</a></li>
+                                <li style="background: url(../images/TreeImages/person_info.gif) no-repeat left;"><a>考勤设置</a></li>
+                                <li style="background: url(../images/TreeImages/attendance.gif) no-repeat left;"><a>考勤明细</a></li>
+                                <li style="background: url(../images/TreeImages/finance.gif) no-repeat left;"><a>考勤查询统计</a></li>
+                            </ul>
+                        </li>
+                        <li class="email">
+                            <div class="nav-header"><a class="ue-clear"><span>办公用品管理</span><i class="icon"></i></a></div>
+                            <ul class="subnav">
+                                <li style="background: url(../images/TreeImages/diary.gif) no-repeat left;"><a>办公用品申请</a></li>
+                                <li style="background: url(../images/TreeImages/office_Product.gif) no-repeat left;"><a>办公用品管理</a></li>
+                            </ul>
+                        </li>
+                        <li class="gdzcgl">
+                            <div class="nav-header"><a class="ue-clear"><span>固定资产管理</span><i class="icon"></i></a></div>
+                            <ul class="subnav">
+                                <li style="background: url(../images/TreeImages/@asset.gif) no-repeat left;"><a>固定资产管理</a></li>
+                                <li style="background: url(../images/TreeImages/@asset.gif) no-repeat left;"><a>资产折旧记录</a></li>
+                            </ul>
+                        </li>
+                        <li class="dawsgl">
+                            <div class="nav-header"><a class="ue-clear"><span>档案文书管理</span><i class="icon"></i></a></div>
+                            <ul class="subnav">
+                                <li style="background: url(../images/TreeImages/file_folder.gif) no-repeat left;"><a>卷库管理</a></li>
+                                <li style="background: url(../images/TreeImages/file_folder.gif) no-repeat left;"><a>档案管理</a></li>
+                                <li style="background: url(../images/TreeImages/file_folder.gif) no-repeat left;"><a>档案销毁</a></li>
+                            </ul>
+                        </li>
+                        <li class="pxgl">
+                            <div class="nav-header"><a class="ue-clear"><span>培训管理</span><i class="icon"></i></a></div>
+                            <ul class="subnav">
+                                <li style="background: url(../images/TreeImages/file_folder.gif) no-repeat left;"><a>培训信息</a></li>
+                                <li style="background: url(../images/TreeImages/file_folder.gif) no-repeat left;"><a>培训日志</a></li>
+                                <li style="background: url(../images/TreeImages/file_folder.gif) no-repeat left;"><a>效果评估</a></li>
+                            </ul>
+                        </li>
+                        <li class="wlhygl">
+                            <div class="nav-header"><a class="ue-clear"><span>网络会议管理</span><i class="icon"></i></a></div>
+                            <ul class="subnav">
+                                <li style="background: url(../images/TreeImages/meeting.gif) no-repeat left;"><a>我的会议</a></li>
+                                <li style="background: url(../images/TreeImages/meeting.gif) no-repeat left;"><a>会议申请</a></li>
+                                <li style="background: url(../images/TreeImages/meeting.gif) no-repeat left;"><a>会议管理</a></li>
+                                <li style="background: url(../images/TreeImages/meeting.gif) no-repeat left;"><a>会议查询</a></li>
+                            </ul>
+                        </li>
+                        <li class="zytpgl">
+                            <div class="nav-header"><a class="ue-clear"><span>资源调配管理</span><i class="icon"></i></a></div>
+                            <ul class="subnav">
+                                <li style="background: url(../images/TreeImages/@infofind.gif) no-repeat left;"><a>资源申请</a></li>
+                                <li style="background: url(../images/TreeImages/@infofind.gif) no-repeat left;"><a>资源管理</a></li>
+                            </ul>
+                        </li>
+                        <li class="clxxgl">
+                            <div class="nav-header"><a class="ue-clear"><span>车辆信息管理</span><i class="icon"></i></a></div>
+                            <ul class="subnav">
+                                <li style="background: url(../images/TreeImages/vehicle.gif) no-repeat left;"><a>车辆使用申请</a></li>
+                                <li style="background: url(../images/TreeImages/vehicle.gif) no-repeat left;"><a>车辆使用管理</a></li>
+                                <li style="background: url(../images/TreeImages/vehicle.gif) no-repeat left;"><a>车辆维护申请</a></li>
+                                <li style="background: url(../images/TreeImages/vehicle.gif) no-repeat left;"><a>车辆维护管理</a></li>
+                                <li style="background: url(../images/TreeImages/vehicle.gif) no-repeat left;"><a>车辆信息管理</a></li>
+                            </ul>
+                        </li>
+                        <li class="zzjgxx">
+                            <div class="nav-header"><a class="ue-clear"><span>组织机构信息</span><i class="icon"></i></a></div>
+                            <ul class="subnav">
+                                <li style="background: url(../images/TreeImages/@hrms.gif) no-repeat left;"><a>单位信息查询</a></li>
+                                <li style="background: url(../images/TreeImages/@hrms.gif) no-repeat left;"><a>部门信息查询</a></li>
+                                <li style="background: url(../images/TreeImages/@hrms.gif) no-repeat left;"><a>用户信息查询</a></li>
+                            </ul>
+                        </li>
+                        <li class="wjwdzx">
+                            <div class="nav-header"><a class="ue-clear"><span>文件文档中心</span><i class="icon"></i></a></div>
+                            <ul class="subnav">
+                                <li style="background: url(../images/TreeImages/file_folder.gif) no-repeat left;"><a>个人文件</a></li>
+                                <li style="background: url(../images/TreeImages/file_folder.gif) no-repeat left;"><a>电子刊物</a></li>
+                                <li style="background: url(../images/TreeImages/file_folder.gif) no-repeat left;"><a>单位文件</a></li>
+                                <li style="background: url(../images/TreeImages/file_folder.gif) no-repeat left;"><a>共享文件</a></li>
+                                <li style="background: url(../images/TreeImages/netdisk.gif) no-repeat left;"><a>我的硬盘</a></li>
+                                <li style="background: url(../images/TreeImages/netdisk.gif) no-repeat left;"><a>共享硬盘</a></li>
+                                <li style="background: url(../images/TreeImages/trash.gif) no-repeat left;"><a>回收站</a></li>
+                            </ul>
+                        </li>
+                        <li class="xxzhjl">
+                            <div class="nav-header"><a class="ue-clear"><span>信息综合交流</span><i class="icon"></i></a></div>
+                            <ul class="subnav">
+                                <li style="background: url(../images/TreeImages/bbs2.gif) no-repeat left;"><a>论坛BBS</a></li>
+                                <li style="background: url(../images/TreeImages/chatroom.gif) no-repeat left;"><a>内部聊天室</a></li>
+                            </ul>
+                        </li>
+                        <li class="system">
+                            <div class="nav-header"><a class="ue-clear"><span>系统管理</span><i class="icon"></i></a></div>
+                            <ul class="subnav">
+                                <li style="background: url(../images/TreeImages/@netmeeting.gif) no-repeat left;"><a>单位信息管理</a></li>
+                                <li style="background: url(../images/TreeImages/@netmeeting.gif) no-repeat left;"><a>部门信息管理</a></li>
+                                <li style="background: url(../images/TreeImages/@netmeeting.gif) no-repeat left;"><a>用户信息管理</a></li>
+                                <li style="background: url(../images/TreeImages/@netmeeting.gif) no-repeat left;"><a>角色信息管理</a></li>
+                                <li style="background: url(../images/TreeImages/score.gif) no-repeat left;"><a>红头文件管理</a></li>
+                                <li style="background: url(../images/TreeImages/score.gif) no-repeat left;"><a>系统日志管理</a></li>
+                                <li style="background: url(../images/TreeImages/test.gif) no-repeat left;"><a>系统参数设置</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            <div class="content">
+                <iframe src="MyDeskNew.aspx" id="iframe" width="100%" height="100%" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+    <div id="ft" class="ue-clear">
+        <div class="ft-left">
+            <span>xxxx</span>
+            <em>Office&nbsp;System</em>
+        </div>
+        <div class="ft-right">
+            <span>Automation</span>
+            <em>V2.0&nbsp;2017</em>
+        </div>
+    </div>
+    </div>
+
+    <script src="../JS/jquery.js"></script>
+    <script src="../JS/common.js"></script>
+    <script src="../JS/core.js"></script>
+    <script src="../JS/jquery.dialog.js"></script>
+    <script src="../JS/index.js"></script>
+    <div style="position: fixed; z-index: 9999; top: 0; left: 0; right: 0; bottom: 0; display: none"></div>
+    <div class="ui-dialog-panel" style="display: none; position: fixed; left: 478px; top: 194px;">
+        <div class="ui-dialog">
+            <div class="ui-dialog-hd" style="cursor: move;">
+                <h6><span class="dialog-hd-lc"></span>提示信息<span class="dialog-hd-rc"></span></h6>
+                <a href="javascript:;" class="ui-dialog-close ue-state-default"><i></i></a>
+            </div>
+            <div class="exitDialog ui-dialog-content" style="display: block; width: 400px; height: 200px;">
+                <div class="dialog-content">
+                    <div class="ui-dialog-icon"></div>
+                    <div class="ui-dialog-text">
+                        <p class="dialog-content">你确定要退出系统？</p>
+                        <p class="tips">如果是请点击“确定”，否则点“取消”</p>
+
+                        <div class="buttons">
+                            <input type="button" class="button long2 ok" value="确定">
+                            <input type="button" class="button long2 normal" value="取消">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="ui-dialog-leftYY"></div>
+        <div class="ui-dialog-rightYY"></div>
+        <div class="ui-dialog-bottomLeft"></div>
+        <div class="ui-dialog-bottomRight"></div>
+        <div class="ui-dialog-bottomCenter"></div>
+    </div>
+
+
+</body>
+</html>
