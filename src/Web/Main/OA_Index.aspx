@@ -76,6 +76,7 @@
 
 <body>
     <div id="container">
+        <input type="hidden" id="hldQuanXian" value="<%=QuanXian %>" />
         <div id="hd">
             <div class="hd-wrap ue-clear">
                 <div class="top-light"></div>

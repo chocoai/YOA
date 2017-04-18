@@ -60,7 +60,7 @@
     </script>
 </head>
 <body scroll="no" onload="setInterval(nowtime,1000)">
-    <div id="container" >
+  <%--  <div id="container" >
         <div id="hd">
             <div class="hd-wrap ue-clear">
                 <div class="top-light"></div>
@@ -352,7 +352,7 @@
                 <em>V2.0&nbsp;2017</em>
             </div>
         </div>
-    </div>
+    </div>--%>
     
     <form id="main" method="post" runat="server">
         <table width="100%" height="100%" cellspacing="0" cellpadding="0" border="0">
