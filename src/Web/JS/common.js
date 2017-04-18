@@ -18,14 +18,14 @@ $(document).ready(function () {
             }
         });
     }
-    if (!!!$('.opt-panel').size() && !!!$('.system-switch').size()) {
+    if (!!!$('.opt-panel').length && !!!$('.system-switch').length) {
         $(document).click(function (e) {
             $(top.window.document).find('.opt-panel').hide().end().find('.system-switch').hide();
             $(top.window.document).find('.more-info').removeClass('active').end().find('.logo-icon').removeClass('active');
         });
     }
 
-    if (!!!$('.more-bab-list').size()) {
+    if (!!!$('.more-bab-list').length) {
         $(document).click(function (e) {
             $(top.window.document).find('iframe').contents().find('.more-bab-list').hide();
             $(top.window.document).find('iframe').contents().find('.tab-more').removeClass('active');

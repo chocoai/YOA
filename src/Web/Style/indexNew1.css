@@ -7,12 +7,12 @@ body{ font-family:'微软雅黑';background:#2a83cf;}
 #hd .hd-wrap .top-light{ position:absolute; width:346px; height:74px; background:url(../images/indexNew/toplight.png); top:0; left:0;}
 h1{ float:left; margin:14px 0 0 24px; width:246px; height:54px; background:url(../images/indexNew);position:relative;top:1px;}
 .login-info{ float:left; margin:38px 0 0 23px; height:18px;}
-.login-info .welcome{ float:left; padding-left:20px; width:90px; height:18px; line-height:18px; background:url(../images/indexNew/topuser.png) no-repeat left bottom; font-size:14px; color:#fff;}
+.login-info .welcome{ float:left; padding-left:20px; width:150px; height:18px; line-height:18px; background:url(../images/indexNew/topuser.png) no-repeat left bottom; font-size:14px; color:#fff;}
 .login-info .welcome span{ float:left;}
 .login-info .welcome .user-name{ float:left; color:#fff;}
 .login-info .login-msg{ float:left; margin-left:22px;}
 .login-info .login-msg a{ float:left; height:18px; line-height:18px;}
-.login-info .login-msg a.msg-txt{ float:left; padding-left:20px; width:28px; background:url(../images/indexNew/topmail.png) no-repeat left center; color:#fff; font-size:14px;}
+.login-info .login-msg a.msg-txt{ float:left; padding-left:20px; width:50px; background:url(../images/indexNew/topmail.png) no-repeat left center; color:#fff; font-size:14px;}
 .login-info .login-msg a.msg-num{ float:left; width:16px; height:9px; margin:6px 0 0 4px; background:url(../images/indexNew/countbg.png); color:#fff; line-height:9px; font-size:9px; text-align: center;}
 .toolbar{ float:right; margin:20px 14px 0 0;}
 .toolbar a{ float:left; height:42px; line-height:42px;}
