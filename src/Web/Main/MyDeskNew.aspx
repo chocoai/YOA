@@ -6,294 +6,260 @@
 <head>
     <link href="../Style/home.css" rel="stylesheet" />
     <link href="../Style/base.css" rel="stylesheet" />
-<title>OA系统</title>
-<script type="text/javascript">
-    function stops() {
-        return false;
-    }
-    document.oncontextmenu = stops;
-</script>
+    <title>OA系统</title>
+    <script type="text/javascript">
+        function stops() {
+            return false;
+        }
+        document.oncontextmenu = stops;
+    </script>
 </head>
 
 <body>
-<div class="article toolbar">
-	<div class="title ue-clear">
-    	<h2>常用工具</h2>
-        <a href="javascript:;" class="more">更多</a>
-    </div>
-    <div class="content">
-    	<ul class="toollist ue-clear">
-    		<li>
-            	<a href="javascript:;" class="img"><img src="../images/indexNew/icon01.png"></a>
-                <p><a href="javascript:;">通知公告</a></p>
-            </li>
-            <li>
-            	<a href="javascript:;" class="img"><img src="../images/indexNew/icon02.png"></a>
-                <p><a href="javascript:;">知识库</a></p>
-            </li>
-            <li>
-            	<a href="javascript:;" class="img"><img src="../images/indexNew/icon03.png"></a>
-                <p><a href="javascript:;">密码修改</a></p>
-            </li>
-            <li>
-            	<a href="javascript:;" class="img"><img src="../images/indexNew/icon04.png"></a>
-                <p><a href="javascript:;">日程安排</a></p>
-            </li>
-            <li>
-            	<a href="javascript:;" class="img"><img src="../images/indexNew/icon05.png"></a>
-                <p><a href="javascript:;">添加文章</a></p>
-            </li>
-            <li>
-            	<a href="javascript:;" class="img"><img src="../images/indexNew/icon06.png"></a>
-                <p><a href="javascript:;">网络硬盘</a></p>
-            </li>
-            <li>
-            	<a href="javascript:;" class="img"><img src="../images/indexNew/icon07.png"></a>
-                <p><a href="javascript:;">参数信息</a></p>
-            </li>
-            <li>
-            	<a href="javascript:;" class="img"><img src="../images/indexNew/icon08.png"></a>
-                <p><a href="javascript:;">回收站</a></p>
-            </li>
-            <li>
-            	<a href="javascript:;" class="img"><img src="../images/indexNew/icon09.png"></a>
-                <p><a href="javascript:;">系统配置</a></p>
-            </li>
-            <li class="add-btn">
-            	<img src="../images/indexNew/add.png">
-            </li>
-    	</ul>
-        
-    </div>
-</div>
-<div class="article half notice">
-	<div class="wrap-l">
+    <div class="article toolbar">
         <div class="title ue-clear">
-            <h2>通知公告</h2>
+            <h2>常用工具</h2>
             <a href="javascript:;" class="more">更多</a>
         </div>
         <div class="content">
-        	<ul class="notice-list">
-            	<li class="ue-clear">
-                	<a href="javascript:;" class="notice-title">中国移动关于设立作风建设监督举报电话的公告</a>
-                    <div class="notice-time">05-08</div>
+            <ul class="toollist ue-clear">
+                <li>
+                    <a href="../GongGao/GongGao.aspx?Type=单位" class="img">
+                        <img src="../images/indexNew/icon01.png"></a>
+                    <p><a href="../GongGao/GongGao.aspx?Type=单位">通知公告</a></p>
                 </li>
-                <li class="ue-clear">
-                	<a href="javascript:;" class="notice-title">关于公示全市中国移动办公生产双主体责任名单的通知</a>
-                    <div class="notice-time">05-08</div>
+                <li>
+                    <a href="../DocFile/JuanKu.aspx" class="img">
+                        <img src="../images/indexNew/icon02.png"></a>
+                    <p><a href="../DocFile/JuanKu.aspx">档案文书</a></p>
                 </li>
-                <li class="ue-clear">
-                	<a href="javascript:;" class="notice-title">南京市中国移动支付系统安全管理责任人名单</a>
-                    <div class="notice-time">05-08</div>
+                <li>
+                    <a href="../Personal/ChangPwd.aspx" class="img">
+                        <img src="../images/indexNew/icon03.png"></a>
+                    <p><a href="../Personal/ChangPwd.aspx">密码修改</a></p>
                 </li>
-                <li class="ue-clear">
-                	<a href="javascript:;" class="notice-title">2014年全市通信行业安全生产工作要点</a>
-                    <div class="notice-time">05-08</div>
+                <li>
+                    <a href="../Work/ManageRiCheng.aspx" class="img">
+                        <img src="../images/indexNew/icon04.png"></a>
+                    <p><a href="../Work/ManageRiCheng.aspx">日程安排</a></p>
                 </li>
-                <li class="ue-clear">
-                	<a href="javascript:;" class="notice-title">中国移动南京公司关于表彰各位员工的规定</a>
-                    <div class="notice-time">05-08</div>
+                <li>
+                    <a href="../Work/WorkRiZhiAdd.aspx" class="img">
+                        <img src="../images/indexNew/icon05.png"></a>
+                    <p><a href="../Work/WorkRiZhiAdd.aspx">添加日志</a></p>
+                </li>
+                <li>
+                    <a href="../Meeting/MyMeeting.aspx" class="img">
+                        <img src="../images/indexNew/icon06.png"></a>
+                    <p><a href="../Meeting/MyMeeting.aspx">网络会议</a></p>
+                </li>
+                <li>
+                    <a href="../SystemManage/SystemSetting.aspx" class="img">
+                        <img src="../images/indexNew/icon07.png"></a>
+                    <p><a href="../SystemManage/SystemSetting.aspx">参数信息</a></p>
+                </li>
+                <%--   <li>
+                    <a href="javascript:;" class="img">
+                        <img src="../images/indexNew/icon08.png"></a>
+                    <p><a href="javascript:;">回收站</a></p>
+                </li>--%>
+                <li>
+                    <a href="../SystemManage/SystemJiaoSe.aspx" class="img">
+                        <img src="../images/indexNew/icon09.png"></a>
+                    <p><a href="../SystemManage/SystemJiaoSe.aspx">系统配置</a></p>
+                </li>
+                <li class="add-btn">
+                    <img src="../images/indexNew/add.png">
                 </li>
             </ul>
+
         </div>
     </div>
-</div>
-<div class="article half matter">
-	<div class="wrap-r">
-        <div class="title ue-clear">
-            <h2 class="title-list">
-                <ul class="ue-clear">
-                    <li class="current"><a href="javascript:;">待办事项</a></li>
-                    <li><a href="javascript:;">已办事项</a></li>
-                </ul>
-            </h2>
-            <a href="javascript:;" class="more">更多</a>
-        </div>
-        <div class="content">
-        	<div class="matter-content current ue-clear">
-            	<div class="today">
-                	<p class="year">2014年5月</p>
-                    <p class="date">10</p>
-                </div>
-                <ul class="matter-list">
-                	<li class="ue-clear">
-                    	<span class="matter-time">05-08</span>
-                        <a href="javascript:;" class="matter-title">下午2点中国移动召开2014年工作会议</a>
-                    </li>
-                    <li class="ue-clear">
-                    	<span class="matter-time">05-08</span>
-                        <a href="javascript:;" class="matter-title">上交本年度市局工作报告提纲</a>
-                    </li>
-                    <li class="ue-clear">
-                    	<span class="matter-time">05-08</span>
-                        <a href="javascript:;" class="matter-title">领取南京政府办公室公务员津贴</a>
-                    </li>
-                    <li class="ue-clear">
-                    	<span class="matter-time">05-08</span>
-                        <a href="javascript:;" class="matter-title">南京2014年全国移动技术投标大会报名事宜</a>
-                    </li>
-                    <li class="ue-clear">
-                    	<span class="matter-time">05-08</span>
-                        <a href="javascript:;" class="matter-title">参加市政府举办的互动活动并宣传单位</a>
-                    </li>
-                </ul>
+    <div class="article half notice">
+        <div class="wrap-l">
+            <div class="title ue-clear">
+                <h2>通知公告</h2>
+                <a href="../GongGao/GongGao.aspx?Type=单位" class="more">更多</a>
             </div>
-            <div class="matter-content ue-clear">
-            	<div class="today">
-                	<p class="year">2014年5月</p>
-                    <p class="date">10</p>
-                </div>
-                <ul class="matter-list">
-                	<li class="ue-clear">
-                    	<span class="matter-time">05-08</span>
-                        <a href="javascript:;" class="matter-title">领取南京政府办公室公务员津贴</a>
-                    </li>
-                    <li class="ue-clear">
-                    	<span class="matter-time">05-08</span>
-                        <a href="javascript:;" class="matter-title">南京2014年全国移动技术投标大会报名事宜</a>
-                    </li>
-                    <li class="ue-clear">
-                    	<span class="matter-time">05-08</span>
-                        <a href="javascript:;" class="matter-title">领取南京政府办公室公务员津贴</a>
-                    </li>
-                    <li class="ue-clear">
-                    	<span class="matter-time">05-08</span>
-                        <a href="javascript:;" class="matter-title">南京2014年全国移动技术投标大会报名事宜</a>
-                    </li>
-                    <li class="ue-clear">
-                    	<span class="matter-time">05-08</span>
-                        <a href="javascript:;" class="matter-title">参加市政府举办的互动活动并宣传单位</a>
-                    </li>
+            <div class="content">
+                <ul class="notice-list">
+                    <asp:Repeater ID="rptNotice" runat="server">
+                        <ItemTemplate>
+                            <li class="ue-clear">
+                                <a href="../GongGao/GongGaoView.aspx?ID=<%# Eval("ID") %>" class="notice-title"><%# Eval("TitleStr") %></a>
+                                <div class="notice-time"><%# Convert.ToDateTime(Eval("TimeStr")).ToString("MM-dd") %></div>
+                            </li>
+                        </ItemTemplate>
+                    </asp:Repeater>
                 </ul>
             </div>
         </div>
     </div>
-</div>
-<div class="article half duty">
-	<div class="wrap-l">
-        <div class="title ue-clear">
-            <h2>领导值岗</h2>
-            <a href="javascript:;" class="more">更多</a>
-        </div>
-        <div class="content">
-        	<table>
-            	<thead>
-                	<tr>
-                    	<th class="date">日期</th>
-                        <th class="week">星期</th>
-                        <th class="leader">值班领导</th>
-                        <th class="contact">联系方式</th>
-                        <th class="remark">备注</th>
-                    </tr>
-                </thead>
-                <tbody>
-                	<tr style="background-color: rgb(239, 246, 250);">
-                    	<td class="date">05-08</td>
-                        <td class="week">星期一</td>
-                        <td class="leader">刘秀全</td>
-                        <td class="contact">139039409876</td>
-                        <td class="remark"></td>
-                    </tr>
-                    <tr>
-                    	<td class="date">05-09</td>
-                        <td class="week">星期一</td>
-                        <td class="leader">刘秀全</td>
-                        <td class="contact">139039409876</td>
-                        <td class="remark"></td>
-                    </tr>
-                    <tr style="background-color: rgb(239, 246, 250);">
-                    	<td class="date">05-10</td>
-                        <td class="week">星期一</td>
-                        <td class="leader">刘秀全</td>
-                        <td class="contact">139039409876</td>
-                        <td class="remark"></td>
-                    </tr>
-                    <tr>
-                    	<td class="date">05-08</td>
-                        <td class="week">星期一</td>
-                        <td class="leader">刘秀全</td>
-                        <td class="contact">139039409876</td>
-                        <td class="remark"></td>
-                    </tr>
-                    <tr style="background-color: rgb(239, 246, 250);">
-                    	<td class="date">05-08</td>
-                        <td class="week">星期一</td>
-                        <td class="leader">刘秀全</td>
-                        <td class="contact">139039409876</td>
-                        <td class="remark"></td>
-                    </tr>
-                </tbody>
-            </table>
+    <div class="article half matter">
+        <div class="wrap-r">
+            <div class="title ue-clear">
+                <h2 class="title-list">
+                    <ul class="ue-clear">
+                        <li class="current"><a href="javascript:void(0);">单位通告</a></li>
+                        <li><a href="javascript:void(0);">部门通告</a></li>
+                    </ul>
+                </h2>
+                <a href="../GongGao/GongGao.aspx?Type=单位" class="more">更多</a>
+            </div>
+            <div class="content">
+                <div class="matter-content current ue-clear">
+                    <div class="today">
+                        <p class="year"><%=DateTime.Now.ToString("yyyy年M月") %></p>
+                        <p class="date"><%=DateTime.Now.Day %></p>
+                    </div>
+                    <ul class="matter-list">
+                        <asp:Repeater ID="rtpNoticeOfCompany" runat="server">
+                            <ItemTemplate>
+                                <li class="ue-clear">
+                                    <span class="matter-time"><%# Convert.ToDateTime(Eval("TimeStr")).ToString("MM-dd") %></span>
+                                    <a href="../GongGao/GongGaoView.aspx?ID=<%# Eval("ID") %>" class="matter-title"><%# Eval("TitleStr") %></a>
+                                </li>
+                            </ItemTemplate>
+                        </asp:Repeater>
+                    </ul>
+                </div>
+                <div class="matter-content ue-clear">
+                    <div class="today">
+                        <p class="year"><%=DateTime.Now.ToString("yyyy年M月") %></p>
+                        <p class="date"><%=DateTime.Now.Day %></p>
+                    </div>
+                    <ul class="matter-list">
+                        <asp:Repeater ID="rtpNoticeOfDepart" runat="server">
+                            <ItemTemplate>
+                                <li class="ue-clear">
+                                    <span class="matter-time"><%# Convert.ToDateTime(Eval("TimeStr")).ToString("MM-dd") %></span>
+                                    <a href="../GongGao/GongGaoView.aspx?ID=<%# Eval("ID") %>" class="matter-title"><%# Eval("TitleStr") %></a>
+                                </li>
+                            </ItemTemplate>
+                        </asp:Repeater>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
-</div>
-<div class="article half email">
-	<div class="wrap-r">
-        <div class="title ue-clear">
-            <h2>未读邮件</h2>
-            <a href="javascript:;" class="more">更多</a>
-        </div>
-        <div class="content">
-        	<table>
-            	<thead>
-                	<tr>
-                    	<th class="icon"></th>
-                        <th class="sender">发件人</th>
-                        <th class="subject">主题</th>
-                        <th class="time last-item">时间</th>
-                    </tr>
-                </thead>
-                <tbody>
-                	<tr class="tody">
-                    	<td colspan="4"><div class="td-wrap"><em>今天</em><a href="javascript:;">(3封)</a></div></td>
-                    </tr>
-                    <tr>
-                    	<td class="icon"><div class="td-wrap"></div></td>
-                        <td class="sender"><div class="td-wrap">办公室</div></td>
-                        <td class="subject"><div class="td-wrap"><a href="javascript:;">关于移动所有工作人员薪资调整的说明文件</a></div></td>
-                        <td class="time"><div class="td-wrap">22分钟前</div></td>
-                    </tr>
-                    <tr>
-                    	<td class="icon"><div class="td-wrap"></div></td>
-                        <td class="sender"><div class="td-wrap">行政部</div></td>
-                        <td class="subject"><div class="td-wrap"><a href="javascript:;">行政廉洁形象建设工程要点会议纪要</a></div></td>
-                        <td class="time"><div class="td-wrap">1小时前</div></td>
-                    </tr>
-                    <tr class="open">
-                    	<td class="icon"><div class="td-wrap"></div></td>
-                        <td class="sender"><div class="td-wrap">局长</div></td>
-                        <td class="subject"><div class="td-wrap"><a href="javascript:;">部门劳动节放假相关通知</a></div></td>
-                        <td class="time"><div class="td-wrap">今天14:23</div></td>
-                    </tr>
-                    <tr>
-                    	<td class="icon"><div class="td-wrap"></div></td>
-                        <td class="sender"><div class="td-wrap">自贡水务</div></td>
-                        <td class="subject"><div class="td-wrap"><a href="javascript:;">2014年度所有公务员征税政策文件下载</a></div></td>
-                        <td class="time"><div class="td-wrap">今天10:23</div></td>
-                    </tr>
-                    <tr>
-                    	<td class="icon"><div class="td-wrap"></div></td>
-                        <td class="sender"><div class="td-wrap">办公室</div></td>
-                        <td class="subject"><div class="td-wrap"><a href="javascript:;">关于移动所有工作人员薪资调整的说明文件</a></div></td>
-                        <td class="time"><div class="td-wrap">22分钟前</div></td>
-                    </tr>
-                </tbody>
-            </table>
+    <div class="article half duty">
+        <div class="wrap-l">
+            <div class="title ue-clear">
+                <h2>领导值岗</h2>
+                <a href="javascript:;" class="more">更多</a>
+            </div>
+            <div class="content">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="date">日期</th>
+                            <th class="week">星期</th>
+                            <th class="leader">值班领导</th>
+                            <th class="contact">联系方式</th>
+                            <th class="remark">备注</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background-color: rgb(239, 246, 250);">
+                            <td class="date">05-08</td>
+                            <td class="week">星期一</td>
+                            <td class="leader">刘秀全</td>
+                            <td class="contact">139039409876</td>
+                            <td class="remark"></td>
+                        </tr>
+                        <tr>
+                            <td class="date">05-09</td>
+                            <td class="week">星期一</td>
+                            <td class="leader">刘秀全</td>
+                            <td class="contact">139039409876</td>
+                            <td class="remark"></td>
+                        </tr>
+                        <tr style="background-color: rgb(239, 246, 250);">
+                            <td class="date">05-10</td>
+                            <td class="week">星期一</td>
+                            <td class="leader">刘秀全</td>
+                            <td class="contact">139039409876</td>
+                            <td class="remark"></td>
+                        </tr>
+                        <tr>
+                            <td class="date">05-08</td>
+                            <td class="week">星期一</td>
+                            <td class="leader">刘秀全</td>
+                            <td class="contact">139039409876</td>
+                            <td class="remark"></td>
+                        </tr>
+                        <tr style="background-color: rgb(239, 246, 250);">
+                            <td class="date">05-08</td>
+                            <td class="week">星期一</td>
+                            <td class="leader">刘秀全</td>
+                            <td class="contact">139039409876</td>
+                            <td class="remark"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
-</div>
+    <div class="article half email">
+        <div class="wrap-r">
+            <div class="title ue-clear">
+                <h2>未读邮件</h2>
+                <a href="../LanEmail/LanEmailShou.aspx" class="more">更多</a>
+            </div>
+            <div class="content">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="icon"></th>
+                            <th class="sender">发件人</th>
+                            <th class="subject">主题</th>
+                            <th class="time last-item">时间</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <%-- <tr class="tody">
+                            <td colspan="4">
+                                <div class="td-wrap"><em>今天</em><a href="javascript:;">(3封)</a></div>
+                            </td>
+                        </tr>--%>
+                        <asp:Repeater ID="rtpInnerMail" runat="server">
+                            <ItemTemplate>
+                                <li class="ue-clear">
+                                    <tr  class="<%#Eval("EmailState").ToString()=="已读"?"":"open" %>">
+                                        <td class="icon">
+                                            <div class="td-wrap"></div>
+                                        </td>
+                                        <td class="sender">
+                                            <div class="td-wrap"><%#Eval("FromUser") %></div>
+                                        </td>
+                                        <td class="subject">
+                                            <div class="td-wrap"><a href="../LanEmail/EmailView.aspx?ID=<%#Eval("Id") %>"><%#Eval("EmailTitle") %></a></div>
+                                        </td>
+                                        <td class="time">
+                                            <div class="td-wrap"><%# Eval("TimeStr") %></div>
+                                        </td>
+                                    </tr>
+                                </li>
+                            </ItemTemplate>
+                        </asp:Repeater>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
     <script src="../JS/jquery.js"></script>
     <script src="../JS/common.js"></script>
-<!--<script type="text/javascript" src="js/jquery.js"></script>
+    <!--<script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/common.js"></script>-->
-<script type="text/javascript">
-    $(".title-list ul").on("click", "li", function () {
-        var aIndex = $(this).index();
-        $(this).addClass("current").siblings().removeClass("current");
-        $(".matter-content").removeClass("current").eq(aIndex).addClass("current");
-    });
+    <script type="text/javascript">
+        $(".title-list ul").on("click", "li", function () {
+            var aIndex = $(this).index();
+            $(this).addClass("current").siblings().removeClass("current");
+            $(".matter-content").removeClass("current").eq(aIndex).addClass("current");
+        });
 
-    $(".duty").find("tbody").find("tr:even").css("backgroundColor", "#eff6fa");
-</script>
+        $(".duty").find("tbody").find("tr:even").css("backgroundColor", "#eff6fa");
+    </script>
 
-</body></html>
+</body>
+</html>

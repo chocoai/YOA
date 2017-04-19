@@ -61,3 +61,9 @@ dl, dt, dd, ol, ul, li{list-style:none;}
 .select-wrap ul{ display:none; background:#fff;position:absolute; left:0; top:30px;  width:260px; border:1px solid #c5d6e0;border-top:none;z-index: 222;}
 .select-wrap ul li{ padding-left:10px; line-height:28px; cursor:pointer;}
 .select-wrap ul li:hover{ background:url(../images/formbtnbg.png) repeat-x;}
+.logo {
+    font-size:38px;
+    color:#FFFFFF;
+    padding:10px 20px;
+    font-weight:bold;
+}
