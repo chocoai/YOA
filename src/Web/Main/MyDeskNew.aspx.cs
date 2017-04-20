@@ -18,10 +18,9 @@ public partial class Main_Default : System.Web.UI.Page
 
     public void DataBindList()
     {
-        DataSet notices = ZWL.DBUtility.DbHelperSQL.GetDataSet("select top 5 * from ERPGongGao  order by ID desc");
-        rptNotice.DataSource = notices;
-        rptNotice.DataBind();
-
+        DataSet nowWorkFlows = ZWL.DBUtility.DbHelperSQL.GetDataSet("select top 6 * from ERPWorkToDo where  StateNow='正在办理' and ','+ShenPiRenList+',' like '%," + ZWL.Common.PublicMethod.GetSessionValue("UserName") + ",%' order by ID desc");
+        rptNowWorkFlow.DataSource = nowWorkFlows;
+        rptNowWorkFlow.DataBind();
 
         DataSet noticesOfCompany = ZWL.DBUtility.DbHelperSQL.GetDataSet("select top 5 * from ERPGongGao where TypeStr='部门' and UserBuMen='" + ZWL.Common.PublicMethod.GetSessionValue("Department") + "' order by ID desc");
         rtpNoticeOfCompany.DataSource = noticesOfCompany;
@@ -34,5 +33,9 @@ public partial class Main_Default : System.Web.UI.Page
         DataSet innerMail = ZWL.DBUtility.DbHelperSQL.GetDataSet("select top 6 * from ERPLanEmail where ToUser='" + ZWL.Common.PublicMethod.GetSessionValue("UserName") + "' and (EmailState='未读' or EmailState='已读')  order by ID desc");
         rtpInnerMail.DataSource = innerMail;
         rtpInnerMail.DataBind();
+
+        DataSet plans = ZWL.DBUtility.DbHelperSQL.GetDataSet("select top 5 * from ERPAnPai where UserName='" + ZWL.Common.PublicMethod.GetSessionValue("UserName") + "' order by ID desc");
+        rptPlan.DataSource = plans;
+        rptPlan.DataBind();
     }
 }

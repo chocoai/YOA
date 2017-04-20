@@ -51,8 +51,9 @@
 .duty .content table tr{ line-height:30px;}
 .duty .content table thead th{ font-weight:bold;}
 .duty .content table .date{ width:55px; text-align:center;}
-.duty .content table td.week{ width:82px; text-align:center;}
-.duty .content table th.week{ padding-left:24px;}
+.duty .content table td.week{ width:82px; text-align:left;}
+.duty .content table td.week a{text-align:left;color:#000000;}
+.duty .content table th.week{ text-align:left;}
 .duty .content table .leader{ width:54px; padding-left:16px;}
 .duty .content table .contact{ width:120px; padding-left:42px;}
 .duty .content table .remark{ padding-left:33px; width:76px;}

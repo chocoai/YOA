@@ -1,76 +1,77 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="EmailView.aspx.cs" Inherits="LanEmail_EmailView" %>
+
 <html>
-	<head>
-		<title>政务OA</title>
-  <LINK href="../Style/Style.css" type="text/css" rel="STYLESHEET">
-  <script language="javascript">
-  function PrintTable()
-    {
-        document.getElementById("PrintHide") .style.visibility="hidden"    
-        print();
-        document.getElementById("PrintHide") .style.visibility="visible"    
-    }
-  </script>
+<head>
+    <title>政务OA</title>
+    <link href="../Style/Style.css" type="text/css" rel="STYLESHEET">
+    <script src="../Scripts/jQuery/jquery-3.1.1.min.js"></script>
+    <script src="../bootstrap-3.3.0/js/bootstrap.min.js"></script>
+    <link href="../bootstrap-3.3.0/css/bootstrap.min.css" rel="stylesheet" />
+    <script language="javascript">
+        function PrintTable() {
+            document.getElementById("PrintHide").style.visibility = "hidden"
+            print();
+            document.getElementById("PrintHide").style.visibility = "visible"
+        }
+    </script>
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>    
-     <table id="PrintHide" style="width: 100%" border="0" cellpadding="0" cellspacing="0">            
-            <tr>
-                <td valign="middle" style="border-bottom: #006633 1px dashed; height: 30px;">&nbsp;<img src="../images/BanKuaiJianTou.gif" />
-                <a class="hei" href="../Main/MyDesk.aspx">桌面</a>&nbsp;>>&nbsp;内部邮件&nbsp;>>&nbsp;查看邮件
-                </td>
-                <td align="right" valign="middle" style="border-bottom: #006633 1px dashed; height: 30px;"><img class="HerCss" onclick="PrintTable()" src="../images/Button/BtnPrint.jpg" />
-                    <img src="../images/Button/JianGe.jpg" />&nbsp;
+        <div>
+            <table id="PrintHide" style="width: 100%" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td colspan="2" valign="middle" style="height: 30px;">
+                        <ol class="breadcrumb">
+                            <li><a href="../Main/MyDesk.aspx">桌面</a></li>
+                            <li>内部邮件</li>
+                            <li class="active">查看邮件</li>
+                        </ol>
+
+                    </td>
+                    <td align="right" valign="middle" style="height: 30px;">
+                        <img class="HerCss" onclick="PrintTable()" src="../images/Button/BtnPrint.jpg" />
+                        <img src="../images/Button/JianGe.jpg" />&nbsp;
                     <img class="HerCss" onclick="javascript:window.history.go(-1)" src="../images/Button/BtnExit.jpg" />&nbsp;</td>
-            </tr>
-            <tr>
-            <td height="3px" colspan="2" style="background-color: #ffffff"></td>
-        </tr>
-        </table>
-    <table style="width: 100%" bgcolor="#999999" border="0" cellpadding="2" cellspacing="1">            
-        
-        <tr>
-            <td align="right" style="width: 170px; background-color: #cccccc; height: 25px;" >
-                邮件主题：</td>
-                <td style="background-color: #ffffff; height: 25px; padding-left:5px;" >
-                    <asp:Label ID="Label1" runat="server"></asp:Label></td>
-        </tr>
-        <tr>
-            <td align="right" style="width: 170px; height: 25px; background-color: #cccccc">
-                发送人：</td>
-            <td style="height: 25px; background-color: #ffffff; padding-left:5px;">
-                <asp:Label ID="Label2" runat="server"></asp:Label>
-                &nbsp; 
-                <a class="BlueCss" href="LanEmailAdd.aspx?Type=HuiFu&ID=<%=Request.QueryString["ID"].ToString()%>">回复</a> 
-                &nbsp; 
-                <a class="BlueCss" href="LanEmailAdd.aspx?Type=ZhuanFa&ID=<%=Request.QueryString["ID"].ToString()%>">转发</a> </td>
-        </tr>
-        <tr>
-            <td align="right" style="width: 170px; height: 25px; background-color: #cccccc">
-                接收人：</td>
-            <td style="height: 25px; background-color: #ffffff; padding-left:5px;">
-                <asp:Label ID="Label3" runat="server"></asp:Label></td>
-        </tr>
-        <tr>
-            <td align="right" style="width: 170px; height: 25px; background-color: #cccccc">
-                发送时间：</td>
-            <td style="height: 25px; background-color: #ffffff; padding-left:5px;">
-                <asp:Label ID="Label4" runat="server"></asp:Label></td>
-        </tr>
-        <tr>
-            <td align="right" style="width: 170px; height: 25px; background-color: #cccccc">
-                邮件附件：</td>
-            <td style="height: 25px; background-color: #ffffff; padding-left:5px;">
-                <asp:Label ID="Label5" runat="server"></asp:Label></td>
-        </tr>
-        <tr>
-            <td align="right" style="width: 170px; height: 25px; background-color: #cccccc">
-                邮件内容：</td>
-            <td style="height: 25px; background-color: #ffffff; padding-left:5px;">
-                <asp:Label ID="Label6" runat="server"></asp:Label></td>
-        </tr>
-        </table></div>
+                </tr>
+            </table>
+            <table style="width: 100%" class="table">
+
+                <tr>
+                    <td align="right" style="width: 170px;">邮件主题：</td>
+                    <td >
+                        <asp:Label ID="Label1" runat="server"></asp:Label></td>
+                </tr>
+                <tr>
+                    <td align="right" style="width: 170px; ">发送人：</td>
+                    <td >
+                        <asp:Label ID="Label2" runat="server"></asp:Label>
+                        &nbsp; 
+                <a class="btn btn-primary" href="LanEmailAdd.aspx?Type=HuiFu&ID=<%=Request.QueryString["ID"].ToString()%>">回复</a>
+                        &nbsp; 
+                <a class="btn btn-primary" href="LanEmailAdd.aspx?Type=ZhuanFa&ID=<%=Request.QueryString["ID"].ToString()%>">转发</a> </td>
+                </tr>
+                <tr>
+                    <td align="right" style="width: 170px;">接收人：</td>
+                    <td>
+                        <asp:Label ID="Label3" runat="server"></asp:Label></td>
+                </tr>
+                <tr>
+                    <td align="right" style="width: 170px;">发送时间：</td>
+                    <td>
+                        <asp:Label ID="Label4" runat="server"></asp:Label></td>
+                </tr>
+                <tr>
+                    <td align="right" style="width: 170px;">邮件附件：</td>
+                    <td >
+                        <asp:Label ID="Label5" runat="server"></asp:Label></td>
+                </tr>
+                <tr>
+                    <td align="right" style="width: 170px;">邮件内容：</td>
+                    <td >
+                        <asp:Label ID="Label6" runat="server"></asp:Label></td>
+                </tr>
+            </table>
+        </div>
     </form>
 </body>
 </html>

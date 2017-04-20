@@ -3,6 +3,9 @@
 	<head>
 		<title>政务OA</title>
   <LINK href="../Style/Style.css" type="text/css" rel="STYLESHEET">
+         <script src="../Scripts/jQuery/jquery-3.1.1.min.js"></script>
+    <script src="../bootstrap-3.3.0/js/bootstrap.min.js"></script>
+    <link href="../bootstrap-3.3.0/css/bootstrap.min.css" rel="stylesheet" />
   <script language="javascript">
   function PrintTable()
     {
@@ -17,108 +20,110 @@
     <div>    
      <table id="PrintHide" style="width: 100%" border="0" cellpadding="0" cellspacing="0">            
             <tr>
-                <td valign="middle" style="border-bottom: #006633 1px dashed; height: 30px;">&nbsp;<img src="../images/BanKuaiJianTou.gif" />
-                <a class="hei" href="../Main/MyDesk.aspx">桌面</a>&nbsp;>>&nbsp;固定资产&nbsp;>>&nbsp;查看固定资产信息
-                </td>
-                <td align="right" valign="middle" style="border-bottom: #006633 1px dashed; height: 30px;">
-                    <img class="HerCss" onclick="PrintTable()" src="../images/Button/BtnPrint.jpg" />
-                    <img src="../images/Button/JianGe.jpg" />&nbsp;
+                    <td colspan="2" valign="middle" style="height: 30px;">
+                        <ol class="breadcrumb">
+                            <li><a href="../Main/MyDesk.aspx">桌面</a></li>
+                            <li>固定资产</li>
+                            <li class="active">查看固定资产信息</li>
+                        </ol>
+
+                    </td>
+                    <td align="right" valign="middle" style="height: 30px;">
+                        <img class="HerCss" onclick="PrintTable()" src="../images/Button/BtnPrint.jpg" />
+                        <img src="../images/Button/JianGe.jpg" />&nbsp;
                     <img class="HerCss" onclick="javascript:window.history.go(-1)" src="../images/Button/BtnExit.jpg" />&nbsp;</td>
-            </tr>
-            <tr>
-            <td height="3px" colspan="2" style="background-color: #ffffff"></td>
-        </tr>
+                </tr>
         </table>
-<table style="width: 100%" bgcolor="#999999" border="0" cellpadding="2" cellspacing="1">
+<table style="width: 100%" class="table" >
 	<tr>
-	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">
+	<td style="width: 170px;" align="right">
 		资产名称：
 	</td>
-	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
+	<td>
 		<asp:Label id="lblGDName" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
-	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">
+	<td style="width: 170px;" align="right">
 		资产编号：
 	</td>
-	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
+	<td>
 		<asp:Label id="lblGDSerils" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
-	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">
+	<td style="width: 170px;" align="right">
 		资产类别：
 	</td>
-	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
+	<td>
 		<asp:Label id="lblGDType" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
-	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">
+	<td style="width: 170px;" align="right">
 		所属部门：
 	</td>
-	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
+	<td>
 		<asp:Label id="lblSuoShuBuMen" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
-	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">
+	<td style="width: 170px;" align="right">
 		资产原值：
 	</td>
-	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
+	<td>
 		<asp:Label id="lblGDAllCount" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
-	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">
+	<td style="width: 170px;" align="right">
 		资产残值：
 	</td>
-	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
+	<td>
 		<asp:Label id="lblNowCount" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
-	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">
+	<td style="width: 170px;" align="right">
 		折旧年限：
 	</td>
-	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
+	<td>
 		<asp:Label id="lblNianXian" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
-	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">
+	<td style="width: 170px;" align="right">
 		资产性质：
 	</td>
-	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
+	<td>
 		<asp:Label id="lblGDXingZhi" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
-	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">
+	<td style="width: 170px;" align="right">
 		启用时间：
 	</td>
-	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
+	<td>
 		<asp:Label id="lblQiYongDate" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
-	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">
+	<td style="width: 170px;" align="right">
 		保管人：
 	</td>
-	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
+	<td>
 		<asp:Label id="lblBaoGuanUser" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
-	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">
+	<td style="width: 170px;" align="right">
 		录入人：
 	</td>
-	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
+	<td>
 		<asp:Label id="lblUserName" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
-	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">
+	<td style="width: 170px;" align="right">
 		录入时间：
 	</td>
-	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
+	<td>
 		<asp:Label id="lblTimeStr" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
-	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">
+	<td style="width: 170px;" align="right">
 		备注说明：
 	</td>
-	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
+	<td>
 		<asp:Label id="lblBackInfo" runat="server"></asp:Label>
 	</td></tr>
 </table>

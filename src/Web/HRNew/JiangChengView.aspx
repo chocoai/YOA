@@ -3,6 +3,9 @@
 	<head>
 		<title>政务OA</title>
   <LINK href="../Style/Style.css" type="text/css" rel="STYLESHEET">
+         <script src="../Scripts/jQuery/jquery-3.1.1.min.js"></script>
+    <script src="../bootstrap-3.3.0/js/bootstrap.min.js"></script>
+    <link href="../bootstrap-3.3.0/css/bootstrap.min.css" rel="stylesheet" />
   <script language="javascript">
   function PrintTable()
     {
@@ -16,88 +19,90 @@
     <form id="form1" runat="server">
     <div>    
      <table id="PrintHide" style="width: 100%" border="0" cellpadding="0" cellspacing="0">            
-            <tr>
-                <td valign="middle" style="border-bottom: #006633 1px dashed; height: 30px;">&nbsp;<img src="../images/BanKuaiJianTou.gif" />
-                <a class="hei" href="../Main/MyDesk.aspx">桌面</a>&nbsp;>>&nbsp;人力资源&nbsp;>>&nbsp;查看奖惩记录信息
-                </td>
-                <td align="right" valign="middle" style="border-bottom: #006633 1px dashed; height: 30px;">
-                    <img class="HerCss" onclick="PrintTable()" src="../images/Button/BtnPrint.jpg" />
-                    <img src="../images/Button/JianGe.jpg" />&nbsp;
+             <tr>
+                    <td colspan="2" valign="middle" style="height: 30px;">
+                        <ol class="breadcrumb">
+                            <li><a href="../Main/MyDesk.aspx">桌面</a></li>
+                            <li>人力资源</li>
+                            <li class="active">查看奖惩记录信息</li>
+                        </ol>
+
+                    </td>
+                    <td align="right" valign="middle" style="height: 30px;">
+                        <img class="HerCss" onclick="PrintTable()" src="../images/Button/BtnPrint.jpg" />
+                        <img src="../images/Button/JianGe.jpg" />&nbsp;
                     <img class="HerCss" onclick="javascript:window.history.go(-1)" src="../images/Button/BtnExit.jpg" />&nbsp;</td>
-            </tr>
-            <tr>
-            <td height="3px" colspan="2" style="background-color: #ffffff"></td>
-        </tr>
+                </tr>
         </table>
-<table style="width: 100%" bgcolor="#999999" border="0" cellpadding="2" cellspacing="1">
+<table style="width: 100%" class="table">
 	<tr>
-	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">
+	<td style="width: 170px;" align="right">
 		职员用户：
 	</td>
-	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
+	<td>
 		<asp:Label id="lblJCUser" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
-	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">
+	<td style="width: 170px;" align="right">
 		奖惩区分：
 	</td>
-	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
+	<td>
 		<asp:Label id="lblJiangChengQuFen" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
-	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">
+	<td style="width: 170px;" align="right">
 		奖惩类别：
 	</td>
-	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
+	<td>
 		<asp:Label id="lblJiangChengType" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
-	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">
+	<td style="width: 170px;" align="right">
 		授予单位：
 	</td>
-	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
+	<td>
 		<asp:Label id="lblShouYuDanWei" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
-	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">
+	<td style="width: 170px;" align="right">
 		奖惩日期：
 	</td>
-	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
+	<td>
 		<asp:Label id="lblJiangChengDate" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
-	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">
+	<td style="width: 170px;" align="right">
 		奖惩名目：
 	</td>
-	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
+	<td>
 		<asp:Label id="lblJiangChengMingMu" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
-	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">
+	<td style="width: 170px;" align="right">
 		奖惩原因：
 	</td>
-	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
+	<td>
 		<asp:Label id="lblJiangChengYuanYin" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
-	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">
+	<td style="width: 170px;" align="right">
 		备注说明：
 	</td>
-	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
+	<td>
 		<asp:Label id="lblBackInfo" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
-	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">
+	<td style="width: 170px;" align="right">
 		录入人：
 	</td>
-	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
+	<td>
 		<asp:Label id="lblUserName" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
-	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">
+	<td style="width: 170px;" align="right">
 		录入时间：
 	</td>
-	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
+	<td>
 		<asp:Label id="lblTimeStr" runat="server"></asp:Label>
 	</td></tr>
 </table>

@@ -78,15 +78,15 @@
     <div class="article half notice">
         <div class="wrap-l">
             <div class="title ue-clear">
-                <h2>通知公告</h2>
-                <a href="../GongGao/GongGao.aspx?Type=单位" class="more">更多</a>
+                <h2>待办工作</h2>
+                <a href="../WorkFlow/NowWorkFlow.aspx" class="more">更多</a>
             </div>
             <div class="content">
                 <ul class="notice-list">
-                    <asp:Repeater ID="rptNotice" runat="server">
+                    <asp:Repeater ID="rptNowWorkFlow" runat="server">
                         <ItemTemplate>
                             <li class="ue-clear">
-                                <a href="../GongGao/GongGaoView.aspx?ID=<%# Eval("ID") %>" class="notice-title"><%# Eval("TitleStr") %></a>
+                                <a href="../WorkFlow/WorkView.aspx?ID=<%# Eval("ID") %>" class="notice-title"><%# Eval("WorkName") %></a>
                                 <div class="notice-time"><%# Convert.ToDateTime(Eval("TimeStr")).ToString("MM-dd") %></div>
                             </li>
                         </ItemTemplate>
@@ -145,56 +145,33 @@
     <div class="article half duty">
         <div class="wrap-l">
             <div class="title ue-clear">
-                <h2>领导值岗</h2>
-                <a href="javascript:;" class="more">更多</a>
+                <h2>日程安排</h2>
+                <a href="../Work/RiCheng.aspx" class="more">更多</a>
             </div>
             <div class="content">
                 <table>
                     <thead>
                         <tr>
                             <th class="date">日期</th>
-                            <th class="week">星期</th>
-                            <th class="leader">值班领导</th>
-                            <th class="contact">联系方式</th>
-                            <th class="remark">备注</th>
+                            <th class="week">主题</th>
+                            <th class="leader">类型</th>
+                            <th class="contact">开始时间</th>
+                            <th class="remark">结束时间</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr style="background-color: rgb(239, 246, 250);">
-                            <td class="date">05-08</td>
-                            <td class="week">星期一</td>
-                            <td class="leader">刘秀全</td>
-                            <td class="contact">139039409876</td>
-                            <td class="remark"></td>
-                        </tr>
-                        <tr>
-                            <td class="date">05-09</td>
-                            <td class="week">星期一</td>
-                            <td class="leader">刘秀全</td>
-                            <td class="contact">139039409876</td>
-                            <td class="remark"></td>
-                        </tr>
-                        <tr style="background-color: rgb(239, 246, 250);">
-                            <td class="date">05-10</td>
-                            <td class="week">星期一</td>
-                            <td class="leader">刘秀全</td>
-                            <td class="contact">139039409876</td>
-                            <td class="remark"></td>
-                        </tr>
-                        <tr>
-                            <td class="date">05-08</td>
-                            <td class="week">星期一</td>
-                            <td class="leader">刘秀全</td>
-                            <td class="contact">139039409876</td>
-                            <td class="remark"></td>
-                        </tr>
-                        <tr style="background-color: rgb(239, 246, 250);">
-                            <td class="date">05-08</td>
-                            <td class="week">星期一</td>
-                            <td class="leader">刘秀全</td>
-                            <td class="contact">139039409876</td>
-                            <td class="remark"></td>
-                        </tr>
+                        <asp:Repeater ID="rptPlan" runat="server">
+                            <ItemTemplate>
+                                
+                                <tr <%#(Container.ItemIndex+1)%2==0?"":"style='background-color:rgb(239, 246, 250);'" %> >
+                                    <td class="date"><%#string.IsNullOrEmpty(Eval("TimeStr").ToString())?"":Convert.ToDateTime(Eval("TimeStr")).ToString("MM-dd") %></td>
+                                    <td class="week"><a href="../Work/RiChengView.aspx?ID=<%#Eval("ID") %>"><%#Eval("TitleStr") %></a></td>
+                                    <td class="leader"><%#Eval("TypeStr") %></td>
+                                    <td class="contact"><%#Eval("TimeStart") %></td>
+                                    <td class="remark"><%#Eval("TimeEnd") %></td>
+                                </tr>
+                            </ItemTemplate>
+                        </asp:Repeater>
                     </tbody>
                 </table>
             </div>
@@ -225,7 +202,7 @@
                         <asp:Repeater ID="rtpInnerMail" runat="server">
                             <ItemTemplate>
                                 <li class="ue-clear">
-                                    <tr  class="<%#Eval("EmailState").ToString()=="已读"?"":"open" %>">
+                                    <tr class="<%#Eval("EmailState").ToString()=="已读"?"":"open" %>">
                                         <td class="icon">
                                             <div class="td-wrap"></div>
                                         </td>
