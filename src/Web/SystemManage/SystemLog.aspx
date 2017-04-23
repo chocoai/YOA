@@ -118,7 +118,7 @@
                         <ol class="breadcrumb">
                             <li><a href="../Main/MyDesk.aspx">桌面</a></li>
                             <li>系统管理</li>
-                            <li class="active">红头文件管理</li>
+                            <li class="active">系统日志管理</li>
                         </ol>
                     </td>
                 </tr>             

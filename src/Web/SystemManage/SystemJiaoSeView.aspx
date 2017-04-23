@@ -3,6 +3,9 @@
 	<head>
 		<title>政务OA</title>
   <LINK href="../Style/Style.css" type="text/css" rel="STYLESHEET">
+         <script src="../Scripts/jQuery/jquery-3.1.1.min.js"></script>
+    <script src="../bootstrap-3.3.0/js/bootstrap.min.js"></script>
+    <link href="../bootstrap-3.3.0/css/bootstrap.min.css" rel="stylesheet" />
   <script language="javascript">
   function PrintTable()
     {
@@ -17,45 +20,47 @@
     <div>    
      <table id="PrintHide" style="width: 100%" border="0" cellpadding="0" cellspacing="0">            
             <tr>
-                <td valign="middle" style="border-bottom: #006633 1px dashed; height: 30px;">&nbsp;<img src="../images/BanKuaiJianTou.gif" />
-                <a class="hei" href="../Main/MyDesk.aspx">桌面</a>&nbsp;>>&nbsp;系统管理&nbsp;>>&nbsp;查看角色
-                </td>
-                <td align="right" valign="middle" style="border-bottom: #006633 1px dashed; height: 30px;">
-                    &nbsp;<img class="HerCss" onclick="PrintTable()" src="../images/Button/BtnPrint.jpg" id="IMG1" />&nbsp;
-                    &nbsp;<img src="../images/Button/JianGe.jpg" />&nbsp;
+                    <td colspan="2" valign="middle" style="height: 30px;">
+                        <ol class="breadcrumb">
+                            <li><a href="../Main/MyDesk.aspx">桌面</a></li>
+                            <li>系统管理</li>
+                            <li class="active">查看角色</li>
+                        </ol>
+
+                    </td>
+                    <td align="right" valign="middle" style="height: 30px;">
+                        <img class="HerCss" onclick="PrintTable()" src="../images/Button/BtnPrint.jpg" />
+                        <img src="../images/Button/JianGe.jpg" />&nbsp;
                     <img class="HerCss" onclick="javascript:window.history.go(-1)" src="../images/Button/BtnExit.jpg" />&nbsp;</td>
-            </tr>
-            <tr>
-            <td height="3px" colspan="2" style="background-color: #ffffff"></td>
-        </tr>
+                </tr>
         </table>
-    <table style="width: 100%" bgcolor="#999999" border="0" cellpadding="2" cellspacing="1">            
+    <table style="width: 100%" class="table">            
         
         <tr>
-            <td align="right" style="width: 170px; background-color: #cccccc; height: 25px;" >
+            <td align="right" style="width: 170px;" >
                 角色名称：</td>
-                <td style="background-color: #ffffff; height: 25px; padding-left:5px;" >
+                <td>
                     <asp:Label ID="Label1" runat="server"></asp:Label></td>
         </tr>
         <tr>
-            <td align="right" style="width: 170px; height: 25px; background-color: #cccccc">
+            <td align="right" style="width: 170px;">
                 备注信息：</td>
-            <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
+            <td>
                 <asp:Label ID="Label2" runat="server"></asp:Label></td>
         </tr>        
         <tr>
             
-            <td align="right" style="width: 170px; height: 25px; background-color: #cccccc">
+            <td align="right" style="width: 170px;">
                 权限配置：</td>
-            <td style="padding-left: 5px; height: 25px; background-color: #ffffff">
+            <td>
                 </td>
         </tr>
         </table></div>
-        <table style="width: 100%" bgcolor="#999999" border="0" cellpadding="2" cellspacing="1">
+        <table style="width: 100%" class="table">
         <tr>
             
-            <td align="center" style="height: 25px; background-color: #ffffff" background="../images/BGLine.png">
-                <asp:CheckBoxList ID="CheckBoxList1" runat="server" RepeatColumns="8" RepeatDirection="Horizontal" Width="100%">
+            <td align="center">
+                <asp:CheckBoxList ID="CheckBoxList1"  CssClass="table table-striped table-hover" runat="server" RepeatColumns="8" RepeatDirection="Horizontal" Width="100%">
                    <asp:ListItem Value="001">办公桌--内部邮件--收件箱--查看</asp:ListItem>
                     <asp:ListItem Value="001a">添加</asp:ListItem>                    
                     <asp:ListItem Value="001d">删除</asp:ListItem>

@@ -3,6 +3,9 @@
 	<head>
 		<title>政务OA</title>
   <LINK href="../Style/Style.css" type="text/css" rel="STYLESHEET">
+        <script src="../Scripts/jQuery/jquery-3.1.1.min.js"></script>
+    <script src="../bootstrap-3.3.0/js/bootstrap.min.js"></script>
+    <link href="../bootstrap-3.3.0/css/bootstrap.min.css" rel="stylesheet" />
   <script language="javascript">
   function PrintTable()
     {
@@ -17,122 +20,124 @@
     <div>    
      <table id="PrintHide" style="width: 100%" border="0" cellpadding="0" cellspacing="0">            
             <tr>
-                <td valign="middle" style="border-bottom: #006633 1px dashed; height: 30px;">&nbsp;<img src="../images/BanKuaiJianTou.gif" />
-                <a class="hei" href="../Main/MyDesk.aspx">桌面</a>&nbsp;>>&nbsp;档案文书&nbsp;>>&nbsp;查看档案信息
-                </td>
-                <td align="right" valign="middle" style="border-bottom: #006633 1px dashed; height: 30px;">
-                    <img class="HerCss" onclick="PrintTable()" src="../images/Button/BtnPrint.jpg" />
-                    <img src="../images/Button/JianGe.jpg" />&nbsp;
+                    <td colspan="2" valign="middle" style="height: 30px;">
+                        <ol class="breadcrumb">
+                            <li><a href="../Main/MyDesk.aspx">桌面</a></li>
+                            <li>档案文书</li>
+                            <li class="active">查看档案信息</li>
+                        </ol>
+
+                    </td>
+                    <td align="right" valign="middle" style="height: 30px;">
+                        <img class="HerCss" onclick="PrintTable()" src="../images/Button/BtnPrint.jpg" />
+                        <img src="../images/Button/JianGe.jpg" />&nbsp;
                     <img class="HerCss" onclick="javascript:window.history.go(-1)" src="../images/Button/BtnExit.jpg" />&nbsp;</td>
-            </tr>
-            <tr>
-            <td height="3px" colspan="2" style="background-color: #ffffff"></td>
-        </tr>
+                </tr>
         </table>
-<table style="width: 100%" bgcolor="#999999" border="0" cellpadding="2" cellspacing="1">
+<table style="width: 100%" class="table">
 	<tr>
-	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">
+	<td style="width: 170px;" align="right">
 		文件名称：
 	</td>
-	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
+	<td>
 		<asp:Label id="lblFileName" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
-	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">
+	<td style="width: 170px;" align="right">
 		所属卷库：
 	</td>
-	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
+	<td>
 		<asp:Label id="lblJuanKuName" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
-	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">
+	<td style="width: 170px;" align="right">
 		文件编号：
 	</td>
-	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
+	<td>
 		<asp:Label id="lblFileSerils" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
-	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">
+	<td style="width: 170px;" align="right">
 		文件主题：
 	</td>
-	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
+	<td>
 		<asp:Label id="lblFileTitle" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
-	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">
+	<td style="width: 170px; " align="right">
 		发文单位：
 	</td>
-	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
+	<td>
 		<asp:Label id="lblFaWenDanWei" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
-	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">
+	<td style="width: 170px;" align="right">
 		发文日期：
 	</td>
-	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
+	<td  >
 		<asp:Label id="lblFaWenDate" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
-	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">
+	<td style="width: 170px; height:" align="right">
 		密级：
 	</td>
-	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
+	<td >
 		<asp:Label id="lblMiJi" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
-	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">
+	<td style="width: 170px;" align="right">
 		紧急：
 	</td>
-	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
+	<td >
 		<asp:Label id="lblJingJi" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
-	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">
+	<td style="width: 170px;" align="right">
 		文件分类：
 	</td>
-	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
+	<td>
 		<asp:Label id="lblTypeStr" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
-	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">
+	<td style="width: 170px;" align="right">
 		公文类别：
 	</td>
-	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
+	<td>
 		<asp:Label id="lblGongWenType" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
-	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">
+	<td style="width: 170px;" align="right">
 		文件页数：
 	</td>
-	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
+	<td>
 		<asp:Label id="lblFilePage" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
-	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">
+	<td style="width: 170px;" align="right">
 		附件文件：
 	</td>
-	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
+	<td>
 		<asp:Label id="lblFuJianList" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
-	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">
+	<td style="width: 170px;" align="right">
 		备注信息：
 	</td>
-	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
+	<td>
 		<asp:Label id="lblBackInfo" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
-	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">
+	<td style="width: 170px;" align="right">
 		录入人：
 	</td>
-	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
+	<td>
 		<asp:Label id="lblUserName" runat="server"></asp:Label>
 	</td></tr>
 	<tr>
-	<td style="width: 170px; height: 25px; background-color: #cccccc" align="right">
+	<td style="width: 170px;" align="right">
 		录入时间：
 	</td>
-	<td style="padding-left: 5px; height: 25px; background-color: #ffffff" >
+	<td>
 		<asp:Label id="lblTimeStr" runat="server"></asp:Label>
 	</td></tr>
 </table>
